@@ -1,24 +1,28 @@
-$color-pink: #ff2bdf
+$color-pink: #49D8F3
 $color-dark: #00031D
 $color-blue: #0035e3
-$color-mereblue: #434979
+$color-mereblue: #435679
+$color-merewhite: #8D9DBB
+$color-thumb: #98d7da
 
 .header.nav-inline-logo--true
-  position: absolute
   top: 0
   left: 0
   width: 100%
-  z-index: 999
   background-color: transparent
+  padding: 8px 0
   // background-image: linear-gradient(0deg, rgba(0,1,11,0) 0%, rgba(0,1,11,0.562062324929972) 100%)
   border-bottom: none
+
+  .main-nav-wrapper
+    z-index: 999
 
   .logo
     max-width: 272px
 
   .logo img
-    max-height: 90px
-    height: 90px
+    max-height: 56px
+    height: 56px
 
 .header-section .cart-container svg
   g, path
@@ -26,6 +30,156 @@ $color-mereblue: #434979
 
 .section .container .row h2.h4
   color: $color-mereblue
+  letter-spacing: -4px
+  font-size: 40px
+  font-weight: bold
+  margin-bottom: 0
+
+.section[data-id="featured_collection-Zq2hp"] .container .row h2.h4
+  color: $color-pink
+  text-shadow: 3px 3px rgba($color-blue, .3)
+
+.featured-collection--heading
+  margin-bottom: 16px
+
+.currency-language
+  vertical-align: middle
+  &_action
+    background-color: #0d132f
+    color: $color-mereblue
+    vertical-align: top
+    font-size: 10px
+    font-weight: bold
+    line-height: 24px
+    padding-top: 0
+    padding-bottom: 0
+    svg
+      width: 12px
+    path
+      fill: $color-mereblue
+
+.media-gallery-carousel__slide-image,
+.media-gallery-carousel .thumbnail-carousel .thumbnail-carousel-slide img
+  background-color: $color-thumb
+
+// .media-gallery-carousel .thumbnail-carousel .thumbnail-carousel-slide
+//   position: relative
+//   &::before
+//     content: ""
+//     display: block
+//     width: 100%
+//     padding-top: 100%
+//   img
+//     width: calc(100% - 8px)
+//     height: calc(100% - 8px)
+//     position: absolute
+//     top: 4px
+//     left: 4px
+//     max-height: unset
+//     border: none
+
+// .VueCarousel.thumbnail-carousel
+//   margin-left: -4px
+//   margin-right: -4px
+
+.footer-section .container
+  position: relative
+  text-align: center
+  a, p
+    color: $color-merewhite
+    font-size: 10px
+  .footer_content
+    border-top: 1px solid rgba($color-mereblue,.2)
+    padding-top: 32px
+
+  .row:not(:first-child)
+    display: inline-block
+    width: unset
+    white-space: nowrap
+    margin: 0
+    & > .col-12
+      display: inline-block
+      flex: unset
+      position: static
+      width: unset
+      margin: 0
+      padding: 0
+      max-width: unset
+      vertical-align: top
+      p
+        display: inline-block
+        line-height: 24px
+        vertical-align: top
+
+      a
+        line-height: 24px
+        display: inline-block
+        vertical-align: top
+
+    .footer-credits
+      position: relative
+
+    .footer-credits:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: $color-dark
+      z-index: 1
+      mix-blend-mode: color
+    .payment-icon
+      filter: grayscale(1)
+      opacity: .5
+      vertical-align: top
+      order: 1
+      margin-left: 8px
+      &:nth-of-type(2)
+        order: 0
+        margin-left: 0
+
+
+  .footer-copyright,
+  .footer-dmca
+    line-height: 24px
+
+  .row:not(:first-child):not(:last-child)
+    padding-top: 56px
+    & > .col-12:first-child
+      display: block
+      position: absolute
+      width: 100%
+      left: 0
+      margin-top: -32px
+      text-align: center
+
+  .footer-item
+    text-align: center
+    width: 100%
+    flex: unset
+    max-width: unset
+    &:not(:last-child)
+      margin-bottom: 32px
+
+    .site-footer__header
+      color: $color-mereblue
+      margin-bottom: 16px
+
+    .footer_link,
+    .toggle_content,
+    .toggle_content a
+      font-size: 10px
+      color: $color-merewhite
+    ul.list-style-none
+      margin-bottom: 0
+    .footer_link
+      display: inline-block
+      padding: 0 12px
+      text-transform: uppercase
+      margin-bottom: 0
+
+    &:nth-of-type(2)
+      display: none
+
 
 .section.featured-collection
   .flex-wrap.w-100
@@ -49,8 +203,9 @@ $color-mereblue: #434979
       z-index: 1
       opacity: 0
     .image-wrap
-      padding-top: 125%
-      filter: invert(0.9)
+      padding-top: 100%
+      background-color: $color-thumb
+      // filter: invert(0.9)
       &::before
         display: none
 
@@ -80,15 +235,12 @@ $color-mereblue: #434979
       opacity: 0.3
       font-weight: normal
 
-.VueCarousel .VueCarousel-inner
+[data-id="homepage_slideshow"] .VueCarousel .VueCarousel-inner
   height: calc(100vw / 21 * 10) !important
-  // transform: none !important
-  transition: 1s all cubic-bezier(.59,.14,.18,1) !important
-  // will-change: transform
+  transform: none !important
+  transition: 0s all cubic-bezier(.59,.14,.18,1) !important
+  will-change: transform
   position: static
-
-  .slideshow-section__background
-    height: calc(100vw / 21 * 10) !important
 
   .slideshow-section__caption,
   .slideshow-section__caption .content
@@ -96,12 +248,118 @@ $color-mereblue: #434979
     position: static
 
   .VueCarousel-slide
-    position: static
-
-  .VueCarousel-slidex
-    opacity: 0
+    opacity: 1
+    top: 0
+    left: 0
+    position: absolute
     &.VueCarousel-slide-active
       opacity: 1
+
+  .slideshow-section__background
+    height: calc(100vw / 21 * 10) !important
+
+  .slideshow-section__background img:nth-of-type(2),
+  .slideshow-section__background img:nth-of-type(3)
+    display: none
+
+.slideshow-section[data-id="homepage_slideshow"] .VueCarousel-pagination
+  .VueCarousel-dot
+    width: 6px !important
+    height: 6px !important
+    border-radius: 50%
+    background-color: rgba(white, .3) !important
+    margin: 12px 1px
+    &::before
+      display: none
+    &.VueCarousel-dot--active
+      background-color: $color-pink !important
+
+[data-id="product_page"] #detail-contents
+  color: $color-mereblue
+  .product__name
+    font-size: 12px
+    margin-bottom: 16px
+
+  .product__price
+    position: relative
+    margin-bottom: 32px
+    .product__price-span
+      color: $color-pink
+    .product__price-original
+      font-size: 16px
+      margin-bottom: -6px
+      opacity: .3
+      &::after
+        content: ""
+        display: block
+        width: 100%
+
+    .product__price-sale-msg
+      font-size: 11px
+      text-transform: uppercase
+      position: absolute
+      left: 0
+      top: 100%
+      border-radius: 0
+      padding: 1px 6px
+      letter-spacing: 1.2px
+      margin-top: 2px
+      margin-left: 2px
+
+  .product__size-guide
+    position: absolute
+    // background-color: rgba(red,.4)
+    right: 16px
+    color: $color-merewhite
+    font-size: 12px
+    &:hover
+      text-decoration: underline
+
+  label,
+  .label-link
+    font-size: 12px
+    span
+      margin-left: -6px
+
+  .product__summary
+    border-top: 1px solid rgba($color-mereblue, .2)
+    margin-top: 16px
+
+  .product__cart-form .btn
+    color: $color-dark
+
+  .product_collapse .toggle_content
+    font-size: 12px
+    color: $color-merewhite
+
+  .button-quantity
+    background-color: $color-mereblue
+
+    .button-quantity__layout-horizontal,
+    .button-quantity__layout-horizontal__control__increase,
+    input
+      border-color: $color-merewhite
+      color: $color-merewhite
+    input
+      background-color: transparent
+      color: white
+      font-weight: bold
+    .button-quantity__layout-horizontal__control__increase:hover,
+    .button-quantity__layout-horizontal__control__decrease:hover
+      background-color: $color-merewhite
+      color: white
+
+  .product__trust-badge
+    margin-top: 0
+    .product__divider
+      display: none
+
+.breadcrumb_text
+  display: none
+
+.cart-drawer .cart-drawer-container,
+.inside-modal__body
+  background-color: $color-pink
 
 @media (min-width: 1024px)
   .header.nav-inline-logo--true .container-fluid
@@ -128,45 +386,141 @@ $color-mereblue: #434979
       position: absolute
       width: 100%
       width: calc(100% + 80px)
-      background-color: rgba($color-dark,.6)
+      background-color: rgba($color-dark,.98)
       left: -40px
-      backdrop-filter: blur(20px)
+      // backdrop-filter: blur(20px)
       // height: 0
-      height: 420px
+      height: 320px
       will-change: height
       transition: all ease 0.2s
       transform: translate3d(0,-10%,0)
       opacity: 0
       pointer-events: none
+      border-bottom: 1px solid $color-pink
       // transition-delay: 1s
       // opacity: 0
 
-    &:hover::before
-      height: 420px
-      transform: translate3d(0,0,0)
-      // transition-delay: 0s
-      opacity: 1
-
     a.site-nav__link
       pointer-events: all
+      font-family: Lexend Zetta,sans-serif
+      font-size: 10px
+      letter-spacing: -0.5px
 
     a.site-nav__link:not(:hover)
       color: rgba(white, 0.8)
 
     .site-nav > .site-nav__item:hover a.site-nav__link
       color: $color-pink
+      text-shadow: 1px 1px $color-dark
+
+  .header-section.show_mega .nav.flex::before
+      transform: translate3d(0,0,0)
+      // transition-delay: 0s
+      opacity: 1
 
   .header .site-nav__dropdown
     background-color: transparent
+    border-top: none
     box-shadow: none
 
     a.site-nav__dropdown-link
-      padding: 4px 0
+      padding: 0
+      font-size: 10px
       text-transform: uppercase
       font-weight: normal
+      display: inline-block
+      position: relative
+      vertical-align: top
+      text-shadow: none
       &:hover
         background-color: transparent
+      &::before
+        content: attr(data-dropdown-rel)
+        color: $color-dark
+        z-index: 1
+        position: absolute
+        background-color: $color-pink
+        transition: width ease 0.2s
+        width: 0
+        overflow: hidden
+        right: 0
+      &:hover::before
+        text-shadow: none
+        width: 100%
+        left: 0
+        right: auto
 
+  [data-id="homepage_slideshow"] .VueCarousel .VueCarousel-inner
+
+    .slideshow-section__background img
+      transition: 0.75s width cubic-bezier(.59,.14,.18,1) !important
+      transform: translate3d(0,0,0)
+      will-change: width
+
+    .slideshow-section__background .sub_wrap-1,
+    .slideshow-section__background .sub_wrap-2,
+    .slideshow-section__background .sub_wrap-3
+      transition: 0.75s width cubic-bezier(.59,.14,.18,1) !important
+      background-color: red
+      overflow: hidden
+      transform: translate3d(0,0,0)
+      will-change: width
+      img
+        width: 100%
+        height: 100%
+        object-position: center
+        object-fit: cover
+    .slideshow-section__background .sub_wrap-2 img
+        object-position: left center
+    .slideshow-section__background .sub_wrap-3 img
+        object-position: right center
+
+    .slideshow-section__background .sub_wrap-1
+      width: 0
+      height: 100%
+      position: absolute
+      top: 0
+      right: 26%
+      display: block
+
+    .slideshow-section__background .sub_wrap-2,
+    .slideshow-section__background .sub_wrap-3
+      width: 0
+      height: 90%
+      position: absolute
+      top: 5%
+      right: 77%
+      display: block
+
+    .slideshow-section__background .sub_wrap-3
+      object-position: right center
+      right: 0
+
+    .VueCarousel-slide.VueCarousel-slide-active
+      .slideshow-section__background .sub_wrap-1
+        width: 48%
+        left: 26%
+        right: auto
+      .slideshow-section__background .sub_wrap-2,
+      .slideshow-section__background .sub_wrap-3
+        width: 23%
+        right: auto
+        left: 0
+      .slideshow-section__background .sub_wrap-3
+        left: 77%
+
+  .product-slider
+    .VueCarousel-inner
+      height: unset !important
+      display: block !important
+      .product-slide-image
+        margin-bottom: 20px
+    .thumbnail-carousel
+      display: none
+
+    .media-gallery-carousel__zoom
+      display: none !important
+      pointer-events: none
 
 body > span[style^='border-radius: 10px !important; text-indent: 12px !important; width: auto !important; height: 20px !important; padding: 0px 8px !important; text-align: center !important; vertical-align: middle !important; font: bold 11px / 20px "Helvetica Neue", Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important;'],
 body > span[style^='border-radius: 12px; width: 24px !important; height: 24px !important; background: url("data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMjIiIGhlaWdodD0iMj']
