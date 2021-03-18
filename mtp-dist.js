@@ -23,6 +23,8 @@ for (var i = 0; i < drop_navs.length; i++) {
 }
 
 var init_slides = function init_slides() {
+  console.log('init slides');
+
   var vue_slides = document.querySelectorAll('.section[data-id="homepage_slideshow"] .VueCarousel-slide .slideshow-section__background img');
   var first_slide = document.querySelector('.section[data-id="homepage_slideshow"] .VueCarousel-inner .VueCarousel-slide:first-child');
   if (!first_slide.classList.contains('VueCarousel-slide-active')) {
@@ -36,6 +38,8 @@ var init_slides = function init_slides() {
 
     defer_slides = setInterval(function () {
       if (the_image.getAttribute('lazy') == 'loaded') {
+        console.log('trigger slide');
+        clearInterval(defer_slides);
         var new_image_1 = the_image.cloneNode(true);
         var new_image_2 = the_image.cloneNode(true);
 
@@ -56,7 +60,6 @@ var init_slides = function init_slides() {
         image_wrap.appendChild(new_wrap_2);
 
         console.log('lazy_loaded');
-        clearInterval(defer_slides);
       }
     }, 100);
   };
@@ -69,9 +72,10 @@ var init_slides = function init_slides() {
 var main_content_observer = function main_content_observer(mutations) {
   console.log('Main content changed');
   var home_slider = document.querySelector('.section[data-id="homepage_slideshow"]');
+  var vueWrap = document.getElementById('gallery-carousel');
   if (home_slider) {
-    if (!main_content.classList.contains('mutated')) {
-      main_content.classList.add('mutated');
+    if (!vueWrap.classList.contains('mutated')) {
+      vueWrap.classList.add('mutated');
       init_slides();
     }
   }

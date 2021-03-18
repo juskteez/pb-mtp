@@ -21,6 +21,8 @@ for (let i = 0; i < drop_navs.length; i++) {
 }
 
 const init_slides = () => {
+  console.log('init slides')
+
   let vue_slides = document.querySelectorAll('.section[data-id="homepage_slideshow"] .VueCarousel-slide .slideshow-section__background img')
   let first_slide = document.querySelector('.section[data-id="homepage_slideshow"] .VueCarousel-inner .VueCarousel-slide:first-child')
   if (!first_slide.classList.contains('VueCarousel-slide-active')) {
@@ -34,6 +36,8 @@ const init_slides = () => {
 
     defer_slides = setInterval(() => {
       if (the_image.getAttribute('lazy') == 'loaded') {
+        console.log('trigger slide');
+        clearInterval(defer_slides)
         let new_image_1 = the_image.cloneNode(true)
         let new_image_2 = the_image.cloneNode(true)
 
@@ -54,7 +58,6 @@ const init_slides = () => {
         image_wrap.appendChild(new_wrap_2)
 
         console.log('lazy_loaded')
-        clearInterval(defer_slides)
       }
     }, 100);
   }
@@ -62,10 +65,11 @@ const init_slides = () => {
 
 const main_content_observer = (mutations) => {
   console.log('Main content changed')
-  let home_slider = document.querySelector('.section[data-id="homepage_slideshow"]')
+  let home_slider   = document.querySelector('.section[data-id="homepage_slideshow"]')
+  let vueWrap       = document.getElementById('gallery-carousel')
   if (home_slider) {
-    if (!main_content.classList.contains('mutated')) {
-      main_content.classList.add('mutated')
+    if (!vueWrap.classList.contains('mutated')) {
+      vueWrap.classList.add('mutated')
       init_slides()
     }
   }
