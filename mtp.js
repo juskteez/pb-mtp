@@ -64,11 +64,11 @@ const main_content_observer = (mutations) => {
   } else {
     if (main_content.classList.contains('stickies')) main_content.classList.remove('stickies')
   }
-  let product_names = document.querySelectorAll('.product__name-product.product__name')
-  if (product_names.length > 0) {
-    for (let i = 0; i < product_names.length; i++) {
-      let product_name = product_names[i].textContent
-      product_names[i].setAttribute('product-name', product_name)
+  let all_product_names = document.querySelectorAll('.product__name-product.product__name')
+  if (all_product_names.length > 0) {
+    for (let i = 0; i < all_product_names.length; i++) {
+      let product_name = all_product_names[i].textContent
+      all_product_names[i].setAttribute('product-name', product_name)
     }
   }
 }
