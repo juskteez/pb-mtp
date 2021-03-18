@@ -1,26 +1,26 @@
 'use strict';
 
-var main_content = document.querySelector('.default-layout');
+var main_content = document.getElementById('app');
 var drop_navs = document.querySelectorAll('.site-nav--has-dropdown');
 var header = document.querySelector('.header-section');
 
 var defer_drops = void 0;
 
-for (var i = 0; i < drop_navs.length; i++) {
-  drop_navs[i].addEventListener('mouseenter', function () {
-    clearTimeout(defer_drops);
-    if (!header.classList.contains('show_mega')) {
-      header.classList.add('show_mega');
-    }
-  });
-  drop_navs[i].addEventListener('mouseleave', function () {
-    defer_drops = setTimeout(function () {
-      if (header.classList.contains('show_mega')) {
-        header.classList.remove('show_mega');
-      }
-    }, 100);
-  });
-}
+// for (let i = 0; i < drop_navs.length; i++) {
+//   drop_navs[i].addEventListener('mouseenter', () => {
+//     clearTimeout(defer_drops)
+//     if (!header.classList.contains('show_mega')) {
+//       header.classList.add('show_mega')
+//     }
+//   })
+//   drop_navs[i].addEventListener('mouseleave', () => {
+//     defer_drops = setTimeout(() => {
+//       if (header.classList.contains('show_mega')) {
+//         header.classList.remove('show_mega')
+//       }
+//     }, 100);
+//   })
+// }
 
 var init_slides = function init_slides() {
   console.log('init slides');
@@ -31,8 +31,8 @@ var init_slides = function init_slides() {
     first_slide.classList.add('VueCarousel-slide-active');
   }
 
-  var _loop = function _loop(_i) {
-    var the_image = vue_slides[_i];
+  var _loop = function _loop(i) {
+    var the_image = vue_slides[i];
     var image_wrap = the_image.parentElement;
     var defer_slides = void 0;
 
@@ -64,8 +64,8 @@ var init_slides = function init_slides() {
     }, 100);
   };
 
-  for (var _i = 0; _i < vue_slides.length; _i++) {
-    _loop(_i);
+  for (var i = 0; i < vue_slides.length; i++) {
+    _loop(i);
   }
 };
 
@@ -73,7 +73,7 @@ var main_content_observer = function main_content_observer(mutations) {
   console.log('Main content changed');
   var home_slider = document.querySelector('.section[data-id="homepage_slideshow"]');
   var vueWrap = document.getElementById('gallery-carousel');
-  if (home_slider) {
+  if (home_slider && vueWrap) {
     if (!vueWrap.classList.contains('mutated')) {
       vueWrap.classList.add('mutated');
       init_slides();

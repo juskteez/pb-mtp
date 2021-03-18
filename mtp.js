@@ -1,24 +1,24 @@
-let main_content = document.querySelector('.default-layout')
+let main_content = document.getElementById('app')
 let drop_navs = document.querySelectorAll('.site-nav--has-dropdown')
 let header    = document.querySelector('.header-section')
 
 let defer_drops
 
-for (let i = 0; i < drop_navs.length; i++) {
-  drop_navs[i].addEventListener('mouseenter', () => {
-    clearTimeout(defer_drops)
-    if (!header.classList.contains('show_mega')) {
-      header.classList.add('show_mega')
-    }
-  })
-  drop_navs[i].addEventListener('mouseleave', () => {
-    defer_drops = setTimeout(() => {
-      if (header.classList.contains('show_mega')) {
-        header.classList.remove('show_mega')
-      }
-    }, 100);
-  })
-}
+// for (let i = 0; i < drop_navs.length; i++) {
+//   drop_navs[i].addEventListener('mouseenter', () => {
+//     clearTimeout(defer_drops)
+//     if (!header.classList.contains('show_mega')) {
+//       header.classList.add('show_mega')
+//     }
+//   })
+//   drop_navs[i].addEventListener('mouseleave', () => {
+//     defer_drops = setTimeout(() => {
+//       if (header.classList.contains('show_mega')) {
+//         header.classList.remove('show_mega')
+//       }
+//     }, 100);
+//   })
+// }
 
 const init_slides = () => {
   console.log('init slides')
@@ -67,7 +67,7 @@ const main_content_observer = (mutations) => {
   console.log('Main content changed')
   let home_slider   = document.querySelector('.section[data-id="homepage_slideshow"]')
   let vueWrap       = document.getElementById('gallery-carousel')
-  if (home_slider) {
+  if (home_slider && vueWrap) {
     if (!vueWrap.classList.contains('mutated')) {
       vueWrap.classList.add('mutated')
       init_slides()

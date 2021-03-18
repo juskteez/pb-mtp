@@ -285,7 +285,12 @@ $ff: Lexend Zetta,sans-serif
     &.VueCarousel-dot--active
       background-color: $color-pink !important
 
-[data-id="product_page"] #detail-contents
+.header-mobile .logo img
+  min-height: 32px
+  max-height: 32px
+
+[data-id="product_page"] #detail-contents,
+.personalize-header
   color: $color-mereblue
   .product__name
     font-size: 12px
@@ -794,6 +799,37 @@ $ff: Lexend Zetta,sans-serif
       font-family: $ff
       font-size: 12px
       letter-spacing: -0.5px
+  .section__content
+    color: $color-merewhite
+  .section__caption
+    color: $color-mereblue
+
+  .content-box
+    background-color: $color-faded
+    border-color: $color-mereblue
+    border-radius: 0
+    .s-control-label
+      color: $color-merewhite
+    input[type='radio']:checked ~ .s-control-label
+      color: white
+
+    input[type='radio']+.s-check
+      border-color: $color-mereblue
+      border-width: 2px
+      width: 16px
+      height: 16px
+      &::before
+        background-color: $color-dark
+        width: 6px
+        height: 6px
+
+    input[type='radio']:checked + .s-check
+
+    .content-box__row ~ .content-box__row
+      border-color: $color-mereblue
+
+    .content-box__row--secondary
+      background-color: $color-faded
 
   .main__content
     .section,
@@ -895,10 +931,23 @@ $ff: Lexend Zetta,sans-serif
     background-color: transparent
     border-top: none
     box-shadow: none
+    min-width: 120px
+
+    &::before
+      content: ""
+      position: absolute
+      width: calc(100% + 24px)
+      height: 100%
+      background-color: rgba($color-dark, .9)
+      top: 0
+      left: -12px
+      box-shadow: 0 0 0 1px $color-pink
 
     a.site-nav__dropdown-link
       padding: 0
-      font-size: 10px
+      font-size: 12px
+      line-height: 20px
+      padding: 4px 0
       text-transform: uppercase
       font-weight: normal
       display: inline-block
@@ -914,6 +963,8 @@ $ff: Lexend Zetta,sans-serif
         position: absolute
         background-color: $color-pink
         transition: width ease 0.2s
+        padding: 4px 0
+        top: 0
         width: 0
         overflow: hidden
         right: 0
