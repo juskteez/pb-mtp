@@ -69,6 +69,13 @@ var main_content_observer = function main_content_observer(mutations) {
   } else {
     if (main_content.classList.contains('stickies')) main_content.classList.remove('stickies');
   }
+  var product_names = doocument.querySelectorAll('.product__name-product.product__name');
+  if (product_names.length > 0) {
+    for (var i = 0; i < product_names.length; i++) {
+      var product_name = product_names[i].textContent;
+      product_names[i].setAttribute('product-name', product_name);
+    }
+  }
 };
 
 if (main_content) {
