@@ -680,8 +680,8 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
 .upsell-product-widget__carousel + .upsell-product-widget__carousel {
   padding-top: 40px; }
 
-.sticky-button .btn-add-to-cart:not(.disabled):not([disabled]) {
-  color: #00031D; }
+.product .sticky-button .btn-add-to-cart:not(.disabled):not([disabled]) {
+  color: #00031D !important; }
 
 .app-upsell .app-modal__background {
   background-color: rgba(0, 3, 29, 0.88); }
