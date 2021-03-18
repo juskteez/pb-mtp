@@ -701,6 +701,132 @@ $ff: Lexend Zetta,sans-serif
     box-shadow: none
     border: none
 
+.scoped
+  .notice
+    &.notice--error
+      background-color: #421c1e
+      a
+        color: white
+
+    .notice__text
+      font-size: 12px
+
+  .sidebar__after
+    box-shadow: none
+  .sidebar__content
+    color: $color-merewhite
+
+  .order-summary__section+.order-summary__section
+    border-color: rgba($color-mereblue, .5)
+  .total-line-table__footer .total-line td:before
+    background-color: rgba($color-mereblue, .5)
+
+  .total-line
+    font-size: 12px
+    line-height: 16px
+    td
+      padding-top: 8px
+      text-transform: uppercase
+
+    &__name .reduction-code
+      .reduction-code__text
+        color: $color-pink
+      svg
+        fill: $color-pink
+
+    &-table__footer td:first-child
+      padding-top: 48px
+
+    &-table__footer td:last-child
+      padding-top: 40px
+      .payment-due__price
+        color: $color-pink
+
+  .tags-list
+    margin: 0
+
+    .layout-flex__item
+      padding: 0
+
+  .tag
+    border-radius: 0
+    border: none
+    background-color: $color-mereblue
+    color: $color-merewhite
+
+    .reduction-code__text
+      color: $color-merewhite
+
+    .reduction-code__icon svg
+      fill: $color-merewhite
+
+  .checkout-product
+    &-table
+      border-spacing: 0
+    &-thumbnail
+      border-radius: 0
+      background-color: $color-thumb
+      border: none
+      width: 56px
+      height: 56px
+      &::after
+        border: none
+
+    &-thumbnail__quantity
+      background-color: $color-pink
+      width: 16px
+      height: 16px
+      line-height: 16px
+      min-width: unset
+      padding: 0
+      text-align: center
+      font-size: 11px
+      font-weight: bold
+      box-shadow: 0 0 0 1px $color-faded
+      color: $color-faded
+
+    &__price
+      font-size: 12px
+
+    &__name
+      color: $color-merewhite
+      text-transform: uppercase
+      font-family: $ff
+      font-size: 12px
+      letter-spacing: -0.5px
+
+  .main__content
+    .section,
+    .step__sections
+      border-color: $color-faded
+    .s-input__inner,
+    select
+      border-radius: 0
+      border-color: $color-mereblue
+      color: $color-merewhite
+
+    .field-message
+      font-size: 12px
+
+    .section__title
+      color: $color-pink
+      text-transform: uppercase
+      font-weight: normal
+      letter-spacing: -0.75px
+      .section__title--emphasis
+        line-height: 20px
+      svg
+        width: 20px
+        height: 20px
+      svg g[stroke]
+        stroke: $color-pink
+
+      svg g[fill="none"] path[fill]
+        fill: $color-pink
+      svg g[fill="none"] path[stroke="#FFF"]
+        fill: $color-dark
+        stroke: $color-dark
+
 @media (min-width: 1024px)
   .upsell-product-widget
     & &__carousel &__heading
