@@ -641,6 +641,12 @@ $ff: Lexend Zetta,sans-serif
 .default-layout.stickies
   padding-bottom: 32px
 
+.cart-section#cart
+  padding-bottom: 40px
+
+.product-cart__image img
+  background-color: $color-thumb
+
 .upsell-product-widget
   & &__carousel &__heading
     color: $color-mereblue
@@ -648,6 +654,52 @@ $ff: Lexend Zetta,sans-serif
     font-size: 14px
     a
       color: $color-merewhite
+
+  .VueCarousel .VueCarousel-wrapper
+    margin-bottom: -65px
+
+  .upsell-widget-product
+    &__image img
+      background-color: $color-thumb
+
+    &__desc
+      padding: 8px 0
+
+    &__name
+      font-family: $ff
+      text-transform: uppercase
+      letter-spacing: -0.5px
+      line-height: 16px
+      margin-bottom: 0
+    &__name > a.upsell-color-product-name
+      color: white !important
+      line-height: 16px
+      font-size: 12px
+      height: unset
+      min-height: unset
+      &:hover
+        text-decoration: none
+
+    &:hover .upsell-widget-product__name > a.upsell-color-product-name
+      color: $color-pink !important
+
+    &__prices
+      min-height: 16px !important
+
+    &__prices .upsell-widget-product__price
+      font-size: 10px
+      color: $color-merewhite !important
+
+    &__prices .upsell-widget-product__original-price
+      font-size: 10px
+      color: $color-mereblue
+      opacity: .3
+
+  .VueCarousel .upsell-widget-product
+    background-color: transparent
+    border-radius: 0
+    box-shadow: none
+    border: none
 
 @media (min-width: 1024px)
   .upsell-product-widget

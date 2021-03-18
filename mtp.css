@@ -608,12 +608,65 @@
 .default-layout.stickies {
   padding-bottom: 32px; }
 
+.cart-section#cart {
+  padding-bottom: 40px; }
+
+.product-cart__image img {
+  background-color: #98d7da; }
+
 .upsell-product-widget .upsell-product-widget__carousel .upsell-product-widget__heading {
   color: #435679;
   text-transform: uppercase;
   font-size: 14px; }
   .upsell-product-widget .upsell-product-widget__carousel .upsell-product-widget__heading a {
     color: #8D9DBB; }
+
+.upsell-product-widget .VueCarousel .VueCarousel-wrapper {
+  margin-bottom: -65px; }
+
+.upsell-product-widget .upsell-widget-product__image img {
+  background-color: #98d7da; }
+
+.upsell-product-widget .upsell-widget-product__desc {
+  padding: 8px 0; }
+
+.upsell-product-widget .upsell-widget-product__name {
+  font-family: Lexend Zetta, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  line-height: 16px;
+  margin-bottom: 0; }
+
+.upsell-product-widget .upsell-widget-product__name > a.upsell-color-product-name {
+  color: white !important;
+  line-height: 16px;
+  font-size: 12px;
+  height: unset;
+  min-height: unset; }
+  .upsell-product-widget .upsell-widget-product__name > a.upsell-color-product-name:hover {
+    text-decoration: none; }
+
+.upsell-product-widget .upsell-widget-product:hover .upsell-widget-product__name > a.upsell-color-product-name {
+  color: #49D8F3 !important; }
+
+.upsell-product-widget .upsell-widget-product__prices {
+  min-height: 16px !important; }
+
+.upsell-product-widget .upsell-widget-product__prices .upsell-widget-product__price {
+  font-size: 10px;
+  color: #8D9DBB !important; }
+
+.upsell-product-widget .upsell-widget-product__prices .upsell-widget-product__original-price {
+  font-size: 10px;
+  color: #435679;
+  opacity: .3; }
+
+.upsell-product-widget .VueCarousel .upsell-widget-product {
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none; }
 
 @media (min-width: 1024px) {
   .upsell-product-widget .upsell-product-widget__carousel .upsell-product-widget__heading {
