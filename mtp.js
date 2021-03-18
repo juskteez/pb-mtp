@@ -64,8 +64,8 @@ const main_content_observer = (mutations) => {
   console.log('Main content changed')
   let home_slider = document.querySelector('.section[data-id="homepage_slideshow"]')
   if (home_slider) {
-    if (!home_slider.classList.contains('mutated')) {
-      home_slider.classList.add('mutated')
+    if (!main_content.classList.contains('mutated')) {
+      main_content.classList.add('mutated')
       init_slides()
     }
   }
