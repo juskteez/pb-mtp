@@ -73,7 +73,7 @@ var main_content_observer = function main_content_observer(mutations) {
   if (all_product_names.length > 0) {
     for (var i = 0; i < all_product_names.length; i++) {
       var product_name = all_product_names[i].textContent;
-      all_product_names[i].setAttribute('product-name', product_name);
+      all_product_names[i].setAttribute('product-name', String(product_name).trim());
     }
   }
 };
