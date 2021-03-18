@@ -64,7 +64,7 @@ const main_content_observer = (mutations) => {
   } else {
     if (main_content.classList.contains('stickies')) main_content.classList.remove('stickies')
   }
-  let product_names = doocument.querySelectorAll('.product__name-product.product__name')
+  let product_names = document.querySelectorAll('.product__name-product.product__name')
   if (product_names.length > 0) {
     for (let i = 0; i < product_names.length; i++) {
       let product_name = product_names[i].textContent
