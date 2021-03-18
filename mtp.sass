@@ -2,8 +2,12 @@ $color-pink: #49D8F3
 $color-dark: #00031D
 $color-blue: #0035e3
 $color-mereblue: #435679
+$color-faded: #0d132f
 $color-merewhite: #8D9DBB
+$color-light: #ebf4ff
 $color-thumb: #98d7da
+$color-red: #F20D2B
+$ff: Lexend Zetta,sans-serif
 
 .header.nav-inline-logo--true
   top: 0
@@ -229,11 +233,18 @@ $color-thumb: #98d7da
       margin-top: 4px
     .price span:first-child:last-child,
     .price span:first-child:not(:last-child)
-      color: #ebf4ff
+      color: $color-light
       opacity: .6
     .price span:last-child:not(:first-child)
       opacity: 0.3
       font-weight: normal
+
+.section.slideshow-section[data-id="homepage_slideshow"]
+  opacity: 0
+  transition: 0.325s all ease
+  &.mutated
+    opacity: 1
+    transition-delay: 0.5s
 
 [data-id="homepage_slideshow"] .VueCarousel .VueCarousel-inner
   height: calc(100vw / 21 * 10) !important
@@ -324,9 +335,24 @@ $color-thumb: #98d7da
   .product__summary
     border-top: 1px solid rgba($color-mereblue, .2)
     margin-top: 16px
+    font-family: Lexend Zetta,sans-serif
+    text-transform: uppercase
+    letter-spacing: -0.5px
+    .label-link:nth-of-type(2)
+      display: none
+
+  .product__share .product__divider
+    margin-top: -4px
+
+  .product__divider
+    background-color: transparent
 
   .product__cart-form .btn
     color: $color-dark
+    transition: none
+    // font-weight: bold
+    height: 50px
+    font-size: 16px
 
   .product_collapse .toggle_content
     font-size: 12px
@@ -354,14 +380,283 @@ $color-thumb: #98d7da
     .product__divider
       display: none
 
+  .product__form.product__form-inline
+    margin-bottom: 24px
+
+  .product__description
+    .toggle_heading
+      color: $color-merewhite !important
+      font-weight: bold
+      font-size: 12px
+      font-family: Lexend Zetta,sans-serif
+      letter-spacing: -0.5px
+
+    .triangle
+      border-color: rgba($color-mereblue, 1) transparent transparent transparent
+
+    .product__divider
+      margin-top: 24px
+
+    .product_collapse
+      border-bottom: none
+      border-top: 1px solid rgba($color-mereblue, .2)
+      &:nth-of-type(2)
+        border: none
+
+    &-html
+      ul
+        padding-left: 16px
+        margin-bottom: 0
+
 .breadcrumb_text
   display: none
 
 .cart-drawer .cart-drawer-container,
 .inside-modal__body
-  background-color: $color-pink
+  background-color: $color-faded
+
+.app-upsell .upsell-quantity
+  animation: going_in 0.5s cubic-bezier(.76,.05,.2,1) forwards
+
+@keyframes going_in
+  0%
+    transform: translate3d(0, 0, 0) scale(1.05)
+    opacity: 0
+  100%
+    transform: translate3d(0, 0, 0) scale(1)
+    opacity: 1
+
+
+.upsell-quantity
+  & &__title
+    color: $color-mereblue
+    font-family: $ff
+    font-weight: normal
+    letter-spacing: -3.5px
+    margin-left: -3px
+
+  & &__discount
+    background-color: transparent
+    &-text
+      color: $color-merewhite
+    &-subtext
+      color: $color-mereblue
+
+  & &__discount.app-flex:hover &__discount-text
+    color: $color-pink
+
+  & &__discount.app-flex
+    border: 1px solid $color-mereblue
+    &:hover
+      background-color: rgba($color-mereblue, .2)
+    &:not(:last-child)
+      margin-bottom: -1px
+
+  & &__add-cart
+    text-transform: uppercase
+    min-width: 104px
+    border-radius: 0
+    transition: none
+    &:hover
+      background-color: $color-pink
+    &:hover span
+      color: $color-dark
+    &[disabled="disabled"]
+      font-size: 12px
+      font-family: $ff
+      height: 32px
+      letter-spacing: -1px
+      background-color: rgba($color-mereblue, .4)
+      color: $color-mereblue
+      pointer-events: none
+
+      & > *[class*="-icon-"]
+        margin-right: 4px
+      svg
+        vertical-align: top
+        margin-top: 2px
+      svg path,
+      svg polygon
+        fill: $color-mereblue
+
+.copt-countdown .copt-countdown-timer .copt-countdown-timer__block
+  color: $color-red
+  text-transform: uppercase
+
+  path
+    fill: $color-red
+
+  .copt-countdown-timer__message
+    font-weight: normal
+
+.product__share
+  .social-sharing > a
+    background-color: transparent
+    border: none
+    box-shadow: inset 0 0 0 1px rgba($color-mereblue, 0.8)
+    border-radius: 0
+    transition: none
+    margin-right: -1px
+    font-size: 12px
+    path, span
+      fill: $color-mereblue
+      color: $color-mereblue
+      text-transform: uppercase
+      font-weight: bold
+
+    svg
+      width: 12px
+      height: 12px
+
+    &:hover
+      z-index: 1
+      box-shadow: inset 0 0 0 1px rgba($color-mereblue, 0)
+      path, span
+        fill: white
+        color: white
+
+.cart-drawer
+
+  & .cart-drawar-header
+    padding: 12px 16px
+    margin: 0 -16px
+    border-bottom: 1px solid rgba($color-mereblue, .2)
+    margin-bottom: 16px
+    h5
+      font-size: 16px
+      color: $color-merewhite
+      letter-spacing: -0.5px
+
+  .cart-drawer-container .cart-drawer-wrapper
+    height: calc(100% - 61px)
+  .cart-drawer-icon-close
+    top: 5px
+    right: 5px
+    &:before,
+    &:after
+      background-color: $color-mereblue
+  & &-container
+    padding-top: 0
+
+    .product-cart__image img
+      background-color: $color-thumb
+    .product-cart__name
+      line-height: 14px
+      margin-bottom: 4px
+      height: 28px
+    .product-cart__name a
+      font-size: 11px
+      font-family: $ff
+      text-transform: uppercase
+      color: $color-merewhite
+      line-height: 14px
+    .product-cart__price
+      letter-spacing: -0.5px
+      margin-bottom: 6px
+      font-size: 14px
+      &+.mb12
+        display: none
+      &--original
+        font-size: 10px
+        color: rgba($color-mereblue,1)
+    .product-cart__action
+      label
+        font-size: 11px
+        text-transform: uppercase
+        line-height: 12px
+        margin-bottom: 4px
+        color: $color-mereblue
+      .button-quantity .button-quantity__layout-vertical
+        border-color: $color-mereblue
+      .button-quantity .button-quantity__layout-vertical > *
+        height: 20px
+        width: 20px
+        border-color: $color-mereblue
+        color: $color-merewhite
+      .button-quantity .button-quantity__layout-vertical > input
+        width: 30px
+        background-color: transparent
+        color: white
+        font-size: 11px
+        font-weight: bold
+        height: 20px
+        line-height: 20px
+
+      .product-cart__remove
+        text-transform: uppercase
+        font-size: 11px
+        display: inline-block
+        margin-bottom: 0
+        line-height: 20px
+        margin-left: 6px
+        padding: 0 6px
+        color: $color-merewhite
+
+  & &-container &-footer
+    background-color: transparent
+    border-color: rgba($color-mereblue, .2)
+    padding: 16px 0
+    padding-bottom: 0
+    animation: going_in 0.325s ease forwards
+    animation-delay: 0.325s
+    opacity: 0
+    p
+      font-size: 10px
+      color: $color-mereblue
+
+    .discount-line
+      line-height: 16px
+      svg
+        height: 12px
+        width: 12px
+        vertical-align: top
+        margin-top: 3px
+      path
+        fill: $color-mereblue
+
+    .mini-total-line .h6
+      font-size: 14px
+      color: $color-merewhite
+      line-height: 18px
+    .mini-total-line .h6.mini-total-line__price
+      color: $color-pink
+      font-size: 15px
+
+    .btn.btn-primary:not(.disabled):not([disabled])
+      background-color: $color-pink
+      color: $color-dark
+      transform: translate3d(0,0,0) scale(1)
+      transform-origin: center bottom
+      transition-duration: 0.125s
+      &:hover
+        transform: translate3d(0,-4px,0) scale(1.04)
+      svg
+        width: 20px
+        height: 20px
+        vertical-align: top
+        margin-top: 3px
+        path
+          fill: rgba($color-dark, .8)
+
+.default-layout.stickies
+  padding-bottom: 32px
+
+.upsell-product-widget
+  & &__carousel &__heading
+    color: $color-mereblue
+    text-transform: uppercase
+    font-size: 14px
+    a
+      color: $color-merewhite
 
 @media (min-width: 1024px)
+  .upsell-product-widget
+    & &__carousel &__heading
+      font-size: 24px
+
+  .default-layout.stickies
+    padding-bottom: 87px
+
   .header.nav-inline-logo--true .container-fluid
     padding-left: 40px
     padding-right: 40px
@@ -461,7 +756,7 @@ $color-thumb: #98d7da
     .slideshow-section__background .sub_wrap-2,
     .slideshow-section__background .sub_wrap-3
       transition: 0.75s width cubic-bezier(.59,.14,.18,1) !important
-      background-color: red
+      background-color: transparent
       overflow: hidden
       transform: translate3d(0,0,0)
       will-change: width
@@ -521,6 +816,67 @@ $color-thumb: #98d7da
     .media-gallery-carousel__zoom
       display: none !important
       pointer-events: none
+
+  .sticky-button#sticky-bar
+    background-color: rgba($color-faded, 1)
+    // box-shadow: 0 -1px $color-pink
+    padding: 16px 0
+    z-index: 999
+    .product-action
+      label
+        color: $color-merewhite
+      .btn.btn-primary
+        color: $color-dark
+        transition: none
+        margin-left: 8px
+        &:hover
+          background-color: #79e2f6
+      .button-quantity
+        background-color: $color-mereblue
+      .button-quantity__layout-vertical
+        height: 32px
+        border-color: $color-merewhite
+        &__decrease,
+        &__increase
+          border-color: $color-merewhite
+          height: 32px
+          margin-top: -1px
+      input[type="number"]
+        color: white
+        background-color: transparent
+    .product-detail
+      &__image
+        width: 48px
+      .aspect-ratio-img
+        width: 48px
+        padding-bottom: 48px
+      .aspect-ratio-img img
+        background-color: $color-thumb
+      &__content
+        height: 48px
+      &__name
+        font-family: $ff
+        margin-bottom: 0
+        font-size: 12px
+        line-height: 14px
+        height: 28px
+        display: block
+        // background-color: rgba(green,.5)
+
+      &__name + div
+        white-space: nowrap
+      &__price
+        font-family: $ff
+        font-weight: normal
+        color: $color-pink
+        letter-spacing: -0.75px
+        line-height: 20px
+        // background-color: rgba(red,.5)
+      &__price.price-original
+        font-size: 16px
+        color: rgba($color-light, .3)
+        display: inline-block
+        margin-left: -16px
 
 body > span[style^='border-radius: 10px !important; text-indent: 12px !important; width: auto !important; height: 20px !important; padding: 0px 8px !important; text-align: center !important; vertical-align: middle !important; font: bold 11px / 20px "Helvetica Neue", Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important;'],
 body > span[style^='border-radius: 12px; width: 24px !important; height: 24px !important; background: url("data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMjIiIGhlaWdodD0iMj']
