@@ -6,24 +6,8 @@ var header = document.querySelector('.header-section');
 
 var defer_drops = void 0;
 
-// for (let i = 0; i < drop_navs.length; i++) {
-//   drop_navs[i].addEventListener('mouseenter', () => {
-//     clearTimeout(defer_drops)
-//     if (!header.classList.contains('show_mega')) {
-//       header.classList.add('show_mega')
-//     }
-//   })
-//   drop_navs[i].addEventListener('mouseleave', () => {
-//     defer_drops = setTimeout(() => {
-//       if (header.classList.contains('show_mega')) {
-//         header.classList.remove('show_mega')
-//       }
-//     }, 100);
-//   })
-// }
-
 var init_slides = function init_slides() {
-  console.log('init slides');
+  // console.log('init slides')
 
   var vue_slides = document.querySelectorAll('.section[data-id="homepage_slideshow"] .VueCarousel-slide .slideshow-section__background img');
   var first_slide = document.querySelector('.section[data-id="homepage_slideshow"] .VueCarousel-inner .VueCarousel-slide:first-child');
@@ -38,7 +22,7 @@ var init_slides = function init_slides() {
 
     defer_slides = setInterval(function () {
       if (the_image.getAttribute('lazy') == 'loaded') {
-        console.log('trigger slide');
+        // console.log('trigger slide')
         clearInterval(defer_slides);
         var new_image_1 = the_image.cloneNode(true);
         var new_image_2 = the_image.cloneNode(true);
@@ -59,7 +43,7 @@ var init_slides = function init_slides() {
         image_wrap.appendChild(new_wrap_1);
         image_wrap.appendChild(new_wrap_2);
 
-        console.log('lazy_loaded');
+        // console.log('lazy_loaded')
       }
     }, 100);
   };
@@ -70,7 +54,7 @@ var init_slides = function init_slides() {
 };
 
 var main_content_observer = function main_content_observer(mutations) {
-  console.log('Main content changed');
+  // console.log('Main content changed')
   var home_slider = document.querySelector('.section[data-id="homepage_slideshow"]');
   var vueWrap = document.getElementById('gallery-carousel');
   if (home_slider && vueWrap) {
