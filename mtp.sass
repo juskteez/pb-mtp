@@ -675,6 +675,14 @@ button
 .product .sticky-button .btn-add-to-cart:not(.disabled):not([disabled])
   color: $color-dark !important
 
+.product__name-product.product__name[product-name*="-PD"]
+  & ~ .product__form.product__form-inline .product__cart-form button
+    span
+      font-size: 0
+      &:before
+        content: "Đặt trước"
+        font-size: 16px
+
 .app-upsell
   .app-modal__background
     background-color: rgba($color-dark, .88)

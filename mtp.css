@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header.nav-inline-logo--true {
   top: 0;
   left: 0;
@@ -682,6 +683,12 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
 
 .product .sticky-button .btn-add-to-cart:not(.disabled):not([disabled]) {
   color: #00031D !important; }
+
+.product__name-product.product__name[product-name*="-PD"] ~ .product__form.product__form-inline .product__cart-form button span {
+  font-size: 0; }
+  .product__name-product.product__name[product-name*="-PD"] ~ .product__form.product__form-inline .product__cart-form button span:before {
+    content: "Đặt trước";
+    font-size: 16px; }
 
 .app-upsell .app-modal__background {
   background-color: rgba(0, 3, 29, 0.88); }
