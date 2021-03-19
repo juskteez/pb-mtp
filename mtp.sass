@@ -595,6 +595,14 @@ $ff: Lexend Zetta,sans-serif
         margin-left: 6px
         padding: 0 6px
         color: $color-merewhite
+        font-size: 0
+        &::before
+          content: "Xóa sản phẩm"
+          font-size: 12px
+          line-height: 19px
+          height: 19px
+          display: inline-block
+          vertical-align: top
 
   & &-container &-footer
     background-color: transparent
@@ -1306,6 +1314,26 @@ button
         color: rgba($color-merewhite,.8)
       span:last-child:not(:first-child) span
         color: rgba($color-mereblue,.8)
+
+.s-input__inner
+  border-radius: 0
+  border-color: $color-mereblue
+.s-button
+.scoped.checkout-steps .s-button
+  border-radius: 0
+  &[disabled="disabled"]
+    background-color: rgba($color-mereblue,.4) !important
+    color: $color-mereblue !important
+
+.dynamic-checkout
+  & &__title
+    display: none
+
+  .alternative-separator
+    color: $color-mereblue
+    &:before,
+    &::after
+      background-color: rgba($color-mereblue,.4)
 
 @media (min-width: 1024px)
   .upsell-product-widget

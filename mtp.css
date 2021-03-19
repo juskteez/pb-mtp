@@ -594,7 +594,15 @@
     line-height: 20px;
     margin-left: 6px;
     padding: 0 6px;
-    color: #8D9DBB; }
+    color: #8D9DBB;
+    font-size: 0; }
+    .cart-drawer .cart-drawer-container .product-cart__action .product-cart__remove::before {
+      content: "Xóa sản phẩm";
+      font-size: 12px;
+      line-height: 19px;
+      height: 19px;
+      display: inline-block;
+      vertical-align: top; }
 
 .cart-drawer .cart-drawer-container .cart-drawer-footer {
   background-color: transparent;
@@ -1326,6 +1334,24 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
       color: rgba(141, 157, 187, 0.8); }
     .collection-product-wrap .collection-detail__product-details .price span:last-child:not(:first-child) span {
       color: rgba(67, 86, 121, 0.8); }
+
+.s-input__inner {
+  border-radius: 0;
+  border-color: #435679; }
+
+.scoped.checkout-steps .s-button {
+  border-radius: 0; }
+  .scoped.checkout-steps .s-button[disabled="disabled"] {
+    background-color: rgba(67, 86, 121, 0.4) !important;
+    color: #435679 !important; }
+
+.dynamic-checkout .dynamic-checkout__title {
+  display: none; }
+
+.dynamic-checkout .alternative-separator {
+  color: #435679; }
+  .dynamic-checkout .alternative-separator:before, .dynamic-checkout .alternative-separator::after {
+    background-color: rgba(67, 86, 121, 0.4); }
 
 @media (min-width: 1024px) {
   .upsell-product-widget .upsell-product-widget__carousel .upsell-product-widget__heading {
