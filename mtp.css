@@ -699,6 +699,165 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
   box-shadow: 0 0 32px black;
   border-radius: 0; }
 
+.app-upsell .bundle__offer-container {
+  -webkit-box-shadow: inset 0 1px 0 0 #0d132f;
+  box-shadow: inset 0 1px 0 0 #0d132f; }
+
+.app-upsell .bundle__offer-heading {
+  color: #435679;
+  font-family: Lexend Zetta, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.5px; }
+
+.app-upsell .bundle__offer-action {
+  border-color: #0d132f;
+  text-align: left;
+  position: relative; }
+  .app-upsell .bundle__offer-action .bundle__offer-total-price {
+    font-family: Lexend Zetta, sans-serif;
+    font-size: 14px;
+    color: #435679;
+    font-weight: normal;
+    line-height: 16px; }
+  .app-upsell .bundle__offer-action .bundle__offer-total-price span {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    line-height: 16px; }
+
+.app-upsell .bundle__offer-image {
+  border: none;
+  width: calc((100% - 40px) / 5);
+  height: unset;
+  margin-right: 10px; }
+  .app-upsell .bundle__offer-image:nth-of-type(5n+5) {
+    margin-right: 0; }
+  .app-upsell .bundle__offer-image .bundle__offer-icon-plus {
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    background-color: #435679 !important;
+    left: 100%;
+    right: auto;
+    margin-left: 5px;
+    border-radius: 0;
+    border: none;
+    width: 16px;
+    height: 16px; }
+    .app-upsell .bundle__offer-image .bundle__offer-icon-plus::before {
+      width: 2px; }
+    .app-upsell .bundle__offer-image .bundle__offer-icon-plus::after {
+      height: 2px; }
+    .app-upsell .bundle__offer-image .bundle__offer-icon-plus:before, .app-upsell .bundle__offer-image .bundle__offer-icon-plus:after {
+      background-color: #49D8F3;
+      top: 50%;
+      left: 50%;
+      border-radius: 0;
+      -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+      transform: translate3d(-50%, -50%, 0) rotate(-45deg); }
+  .app-upsell .bundle__offer-image img {
+    border-radius: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; }
+  .app-upsell .bundle__offer-image .bundle__offer-quickview {
+    border-radius: 0;
+    width: 100%;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    background-color: rgba(0, 3, 29, 0.6);
+    -webkit-box-shadow: inset 0 0 0 1px #49D8F3, 0 0 0 1px #49D8F3;
+    box-shadow: inset 0 0 0 1px #49D8F3, 0 0 0 1px #49D8F3; }
+    .app-upsell .bundle__offer-image .bundle__offer-quickview > div {
+      -webkit-transition-timing-function: ease;
+      -o-transition-timing-function: ease;
+      transition-timing-function: ease;
+      -webkit-transition-duration: 0.8s;
+      -o-transition-duration: 0.8s;
+      transition-duration: 0.8s;
+      -webkit-transform: translate3d(0, 0, 0) scale(0.8);
+      transform: translate3d(0, 0, 0) scale(0.8); }
+    .app-upsell .bundle__offer-image .bundle__offer-quickview svg path {
+      fill: #49D8F3; }
+  .app-upsell .bundle__offer-image .bundle__offer-quickview--text {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #49D8F3; }
+  .app-upsell .bundle__offer-image:hover .bundle__offer-quickview {
+    -webkit-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s; }
+    .app-upsell .bundle__offer-image:hover .bundle__offer-quickview > div {
+      -webkit-transition-duration: 0s;
+      -o-transition-duration: 0s;
+      transition-duration: 0s;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+      transform: translate3d(0, 0, 0) scale(1); }
+
+.app-upsell .bundle__offer-product .bundle__offer-tag {
+  background-color: #435679;
+  color: #49D8F3;
+  border-radius: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: unset;
+  letter-spacing: -0.5px;
+  margin-right: 4px;
+  margin-left: -4px;
+  line-height: 16px;
+  height: 16px;
+  font-size: 0;
+  margin-top: 3px; }
+  .app-upsell .bundle__offer-product .bundle__offer-tag::before {
+    content: "Sản phẩm này";
+    font-size: 11px; }
+
+.app-upsell .bundle__offer-product-name {
+  font-family: Lexend Zetta, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #8D9DBB !important;
+  letter-spacing: -0.5px; }
+
+.app-upsell .bundle__offer-product-price {
+  font-size: 11px;
+  margin-top: 0;
+  color: #435679; }
+
+.app-upsell .bundle__offer-product .bundle__offer-select.app-select:after {
+  border-color: #435679;
+  border-radius: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -5px; }
+
+.app-upsell .bundle__offer-product .bundle__offer-select select {
+  border-color: #435679;
+  border-radius: 0;
+  color: #8D9DBB;
+  font-size: 11px;
+  padding-right: 24px; }
+  .app-upsell .bundle__offer-product .bundle__offer-select select:hover {
+    border-color: #8D9DBB; }
+
+.app-upsell .bundle__offer-product .app-checkbox.bundle__offer-checkbox {
+  width: 16px;
+  -webkit-transform: translate3d(0, 4px, 0);
+  transform: translate3d(0, 4px, 0);
+  margin-right: 4px; }
+  .app-upsell .bundle__offer-product .app-checkbox.bundle__offer-checkbox span {
+    margin-left: 0 !important; }
+  .app-upsell .bundle__offer-product .app-checkbox.bundle__offer-checkbox .app-checkbox__check {
+    border-color: #435679;
+    border-radius: 0; }
+  .app-upsell .bundle__offer-product .app-checkbox.bundle__offer-checkbox input[type=checkbox]:checked + .app-checkbox__check {
+    background-color: #0d132f; }
+
 .app-upsell .upsell-quick-view__block-right .qv-product-name,
 .app-upsell .upsell-quick-view__block-right .qv-product-price {
   font-family: Lexend Zetta, sans-serif;
