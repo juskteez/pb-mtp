@@ -909,6 +909,63 @@ button
   .upsell-quick-view__container
     background-color: transparent
 
+.upsell-accessory-products
+  & &__single
+    border-radius: 0
+    background-color: transparent
+    border: 1px solid $color-mereblue
+    margin-bottom: -1px
+    padding: 11px
+    &:hover
+      background-color: $color-faded
+
+  & &__heading
+    text-transform: uppercase
+    font-family: $ff
+    color: $color-mereblue
+    margin-left: 0
+    letter-spacing: -0.5px
+
+  & &__image
+    border-radius: 0
+    width: 64px
+    height: 64px
+
+  & &__desc
+    align-self: center
+    margin-bottom: 0
+    font-family: $ff
+    text-transform: uppercase
+    a
+      font-size: 12px
+      color: $color-merewhite !important
+
+  & &__price div
+    font-size: 10px
+    line-height: 16px
+    color: $color-mereblue !important
+    margin-right: 6px
+    &:not(:first-child):last-child
+      color: rgba($color-mereblue, .6) !important
+
+  & &__action &__add-cart
+    border-radius: 0
+    height: 32px
+    line-height: 32px
+    padding-top: 0
+    padding-bottom: 0
+    transition: none
+    &:hover
+      background-color: $color-pink
+      color: $color-dark !important
+
+  & &__show-more
+    text-transform: uppercase
+    font-size: 11px
+    padding: 4px 0
+    &:hover
+      background-color: $color-mereblue
+
 
 .upsell-product-widget
   & &__carousel &__heading
