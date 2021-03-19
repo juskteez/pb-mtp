@@ -32,6 +32,13 @@ $ff: Lexend Zetta,sans-serif
   g, path
     fill: rgba(white, .8)
 
+.product-grid a[href*="/gift-box/"] ~ .btn.btn-primary
+.product-grid a[href*="/co-chac-yeu-la-day/"] ~ .btn.btn-primary
+  &::before
+    content: "Đặt trước"
+  span
+    font-size: 0
+
 .section .container .row h2.h4
   color: $color-blue
   letter-spacing: -4px
@@ -692,7 +699,8 @@ button
 .product .sticky-button .btn-add-to-cart:not(.disabled):not([disabled])
   color: $color-dark !important
 
-.product__name-product.product__name[product-name*="-PD"]
+.product__name-product.product__name[product-name*="- PD"]
+  .product__name-product.product__name[product-name*="-PD"]
   & ~ .product__form.product__form-inline .product__cart-form button
     span
       font-size: 0

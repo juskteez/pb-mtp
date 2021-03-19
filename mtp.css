@@ -17,6 +17,12 @@
 .header-section .cart-container svg g, .header-section .cart-container svg path {
   fill: rgba(255, 255, 255, 0.8); }
 
+.product-grid a[href*="/co-chac-yeu-la-day/"] ~ .btn.btn-primary::before {
+  content: "Đặt trước"; }
+
+.product-grid a[href*="/co-chac-yeu-la-day/"] ~ .btn.btn-primary span {
+  font-size: 0; }
+
 .section .container .row h2.h4 {
   color: #0035e3;
   letter-spacing: -4px;
@@ -701,9 +707,9 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
 .product .sticky-button .btn-add-to-cart:not(.disabled):not([disabled]) {
   color: #00031D !important; }
 
-.product__name-product.product__name[product-name*="-PD"] ~ .product__form.product__form-inline .product__cart-form button span {
+.product__name-product.product__name[product-name*="- PD"] ~ .product__form.product__form-inline .product__cart-form button span {
   font-size: 0; }
-  .product__name-product.product__name[product-name*="-PD"] ~ .product__form.product__form-inline .product__cart-form button span:before {
+  .product__name-product.product__name[product-name*="- PD"] ~ .product__form.product__form-inline .product__cart-form button span:before {
     content: "Đặt trước";
     font-size: 16px; }
 
