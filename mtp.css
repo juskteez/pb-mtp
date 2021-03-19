@@ -17,9 +17,11 @@
 .header-section .cart-container svg g, .header-section .cart-container svg path {
   fill: rgba(255, 255, 255, 0.8); }
 
+.product-grid a[href*="/gift-box/"] ~ .btn.btn-primary::before,
 .product-grid a[href*="/co-chac-yeu-la-day/"] ~ .btn.btn-primary::before {
   content: "Đặt trước"; }
 
+.product-grid a[href*="/gift-box/"] ~ .btn.btn-primary span,
 .product-grid a[href*="/co-chac-yeu-la-day/"] ~ .btn.btn-primary span {
   font-size: 0; }
 
