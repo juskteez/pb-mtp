@@ -998,6 +998,53 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
   .upsell-accessory-products .upsell-accessory-products__show-more:hover {
     background-color: #435679; }
 
+.inside-modal__body__content {
+  color: #8D9DBB; }
+
+.product .widgets-size-chart__img {
+  margin-bottom: 16px;
+  background-color: #98d7da; }
+
+.inside-modal__body__icon-close:before, .inside-modal__body__icon-close:after {
+  background-color: #8D9DBB; }
+
+.product__size-chart__title {
+  font-family: Lexend Zetta, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  font-size: 20px;
+  line-height: 24px; }
+
+.product__size-chart__tab .product__size-chart__tab__item {
+  border-color: #435679;
+  background-color: transparent;
+  color: #8D9DBB;
+  font-family: Lexend Zetta, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  width: 72px; }
+  .product__size-chart__tab .product__size-chart__tab__item.active {
+    background-color: #435679;
+    color: white; }
+  .product__size-chart__tab .product__size-chart__tab__item:last-child {
+    border-radius: 0; }
+  .product__size-chart__tab .product__size-chart__tab__item:first-child {
+    border-radius: 0; }
+
+.product__size-chart__table td {
+  color: #8D9DBB;
+  border-color: #435679; }
+
+.product__size-chart__table thead td {
+  background-color: rgba(67, 86, 121, 0.4);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 10px; }
+
+.product__size-chart__table tbody tr:hover td {
+  background-color: #00031D; }
+
 .upsell-product-widget .upsell-product-widget__carousel .upsell-product-widget__heading {
   color: #435679;
   text-transform: uppercase;
