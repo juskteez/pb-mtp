@@ -981,10 +981,15 @@ button[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loadin
   padding-bottom: 0;
   -webkit-transition: none;
   -o-transition: none;
-  transition: none; }
+  transition: none;
+  font-family: Lexend Zetta, sans-serif;
+  text-transform: uppercase; }
   .upsell-accessory-products .upsell-accessory-products__action .upsell-accessory-products__add-cart:hover {
     background-color: #49D8F3;
     color: #00031D !important; }
+  .upsell-accessory-products .upsell-accessory-products__action .upsell-accessory-products__add-cart--added {
+    background-color: rgba(67, 86, 121, 0.4);
+    color: #435679; }
 
 .upsell-accessory-products .upsell-accessory-products__show-more {
   text-transform: uppercase;
