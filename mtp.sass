@@ -659,6 +659,15 @@ $ff: Lexend Zetta,sans-serif
 .product-cart__image img
   background-color: $color-thumb
 
+.bundle__offer-add-to-cart span
+  font-size: 0
+  &::before
+    content: "Thêm tất cả vào giỏ"
+    font-size: 15px
+    vertical-align: top
+    display: inline-block
+    line-height: 26px
+
 a,
 button
   &[data-button="add-to-cart"]:not(.disabled):not([disabled]):not(.btn-loading)
@@ -719,6 +728,11 @@ button
       color: $color-mereblue
       font-weight: normal
       line-height: 16px
+      font-size: 0
+      &::before
+        content: "Tổng"
+        font-size: 14px
+        vertical-align: middle
     .bundle__offer-total-price span
       font-size: 14px
       position: absolute
@@ -1083,6 +1097,50 @@ button
     border: none
 
 .scoped
+  &.checkout-steps .s-button.step__complete-order
+    color: $color-dark
+    text-transform: uppercase
+    font-family: $ff
+    text-align: left
+    padding: 16px 32px
+    border: none
+    transition: 0.125s all ease
+    &:hover
+      box-shadow: 0 2px 8px 0px rgba($color-blue, 0.4), 0 4px 24px -4px rgba($color-pink,.6)
+    svg
+      width: 48px
+      height: 48px
+      margin-top: -2px
+      margin-right: 12px
+    svg path[fill="#FFF"]
+      fill: rgba($color-dark, .8)
+    .step__complete-order--emphasis
+      align-items: flex-start
+    .step__complete-order--label
+    .step__complete-order--subdued
+      color: $color-dark
+      font-family: "Roboto Mono"
+      padding-left: 60px
+      margin-top: -20px
+      font-weight: bold
+      font-size: 12px
+      color: rgba($color-dark, .6)
+
+  .s-checkbox
+    input[type='checkbox']+.s-check
+      border-radius: 0
+      background-color: transparent
+      border-color: $color-mereblue
+      background-size: 10px
+      background-position: center
+      transition: 0.125s all ease, 0s background ease
+    input[type='checkbox']:checked+.s-check
+      background-size: 10px
+      background-color: $color-faded
+    .s-control-label
+      font-size: 11px
+      color: $color-merewhite
+
   .notice
     &.notice--error
       background-color: #421c1e
