@@ -1,0 +1,59 @@
+@charset "UTF-8"
+
+/* VARIABLES */
+@import 'fonts/fonts'
+@import 'variables/colors'
+@import 'variables/styles'
+@import 'variables/typography'
+
+/* BASIC COMPONENTS */
+@import 'layout/vc_overides'
+//@import 'functions/reset'
+@import 'functions/custom_mixins'
+//@import 'layout/alignment'
+@import 'layout/grid'
+@import 'variables/animations'
+
+/* BASIC ELEMENTS */
+@import 'elements/heading'
+@import 'elements/copy'
+@import 'elements/buttons'
+@import 'elements/fields'
+@import 'elements/forms'
+@import 'elements/checks'
+
+/* REGULAR STYLE */
+@import 'layout/desktop'
+
+/* BREAKPOINTS */
+/* desktop wide resolution */
+@media screen and (min-width: 1700px)
+	@import 'layout/desktop_wide'
+
+/* desktop narrow resolution */
+@media screen and (max-width: 1365px)
+	@import 'layout/desktop_narrow'
+
+/* tablet landscape */
+@media screen and (max-width: 1279px)
+	@import 'layout/tablet_landscape'
+
+/* tablet portrait */
+@media screen and (max-width: 1023px) and (orientation: portrait)
+	@import 'layout/tablet_portrait'
+
+/* mobile portrait high resolution (iPhone 6,6+) */
+@media screen and (max-width: 767px)
+	@import 'layout/mobile_portrait_hr'
+
+/* mobile landscape high resolution (iPhone 6,6+) */
+@media screen and (max-width: 767px) and (min-width: 415px) and (orientation: landscape)
+	@import 'layout/mobile_landscape_hr'
+
+/* mobile portrait low resolution (iPhone 5) */
+@media screen and (max-width: 413px)
+	@import 'layout/mobile_portrait_lr'
+
+/* mobile landscape low resolution (iPhone 5) */
+@media screen and (max-width: 413px) and (orientation: landscape)
+	@import 'layout/mobile_landscape_lr'

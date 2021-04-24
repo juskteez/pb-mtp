@@ -1,0 +1,957 @@
+/* Desktop */
+
+body
+  background-color: $main-color
+
+body .product__add-cart
+  box-shadow: none
+  border: none !important
+
+  &:before,
+  &:after
+    display: none
+
+.__cov-progress
+  background-color: $red-color !important
+
+.btn
+  transition: 0s all ease
+
+.perment-wrap>section, .perment-wrap .section
+  @media only screen and (min-width: 720px)
+    padding: 32px 0
+
+.topstack
+  z-index: 999
+  transform: translate3d(0,0,7px)
+
+.header
+  +rest('padding','border-bottom','background-color')
+  .logo-text
+    font-family: $font-stack
+    font-size: 12px
+    line-height: 24px
+    position: fixed
+    z-index: 999
+    left: 50%
+    top: 32px
+    width: 144px
+    text-align: center
+    transform: translate3d(-50%,0,7px)
+    +rest('display')
+
+    div
+      +rest('font-size','display','align-items')
+
+  .cart-col
+    font-family: $font-stack
+    .search-icon
+      display: none
+    .search-bar
+      height: 72px
+
+    .search-bar input[type="text"]
+      font-family: $font-parag
+      font-weight: 400
+
+      &::placeholder
+        text-transform: lowercase
+        font-family: $font-stack
+
+  .cart-drawer-content
+    right: 24px
+    position: fixed
+    max-height: calc(100% - 48px)
+    top: 24px
+    padding: 0
+    margin: 0
+    background-color: rgba($black-color,1)
+    transform: translate3d(0,0,0)
+    transition: 0s
+    min-width: 360px
+    max-width: 360px
+
+  .cart-drawer-container
+    margin: 0
+    border: none
+    height: 100%
+    background-color: transparent
+    color: white
+
+    .cart-drawer-empty p
+      margin: 12px 8px
+      font-size: 10px
+      color: white
+      cursor: default
+
+    hr
+      margin: 0 -8px
+      background-color: rgba($main-color,0.1)
+      opacity: 1
+
+    .product-cart
+      padding-top: 8px
+      padding-bottom: 8px
+      cursor: default
+      border-color: rgba($main-color,0.1)
+      &:first-child
+        padding-top: 48px
+      &:before
+        content: ""
+        position: absolute
+        background-color: rgba($main-color,.025)
+        width: 100%
+        height: 40px
+        top: 0
+        left: 0
+
+      &__image
+        width: 36px
+        padding-bottom: 48px
+
+      &__details
+        position: relative
+        margin-left: 8px
+
+      &__name a,
+      &__name
+        line-height: 10px
+        margin-bottom: 4px
+
+      &__name a,
+      &__options
+        color: white
+        font-family: $font-parag
+        font-size: 10px
+        line-height: 10px
+        letter-spacing: 0
+        text-transform: uppercase
+        margin-bottom: 4px
+
+      &__name a
+        vertical-align: top
+        -webkit-line-clamp: unset
+        display: unset
+        margin-bottom: 0
+
+      &__price
+        font-family: "Arial Black"
+        font-weight: bold
+        font-size: 11px
+        letter-spacing: 0
+        line-height: 8px
+        position: absolute
+        right: 0
+        padding: 0
+        bottom: 0
+        margin-bottom: -6px
+        text-align: right
+        width: 100%
+        padding-left: 72px
+        span:first-child
+          color: white
+          display: block
+        span:first-child:last-child
+          margin-bottom: 10px
+        span:not(:first-child):last-child
+          color: white
+          display: block
+          font-size: 7px
+          margin-top: -1px
+
+      &__quantity .quantity
+        min-width: 66px
+        max-width: 66px
+        margin-top: 6px
+        button.quantity__adjust,
+        input
+          height: 16px
+          width: 16px
+          padding: 0
+          color: white
+        button .quantity__icon
+            fill: white
+        input
+          margin: 0 16px
+          width: 32px
+          font-size: 10px
+          font-weight: bold
+
+
+  .cart-drawer-summary
+    padding: 8px 0
+    cursor: default
+
+    .btn.btn-primary
+      background-color: $red-color
+      border: none
+      text-transform: lowercase
+      letter-spacing: 0.5px
+      font-size: 18px
+      font-family: $font-title
+      box-shadow: inset 0 0 0 3px $red-color
+      padding-bottom: 12px
+      height: 40px
+      &:after
+        content: ">"
+        display: inline-block
+        position: absolute
+        right: 8px
+        margin-top: 0
+      &:hover
+        border: none
+        background-color: $black-color
+        color: $red-color
+
+  .mini-total-line
+    margin-bottom: 0
+    &__name,
+    &__name.h5
+      font-size: 12px
+      text-transform: lowercase
+      letter-spacing: 0
+      font-family: $font-stack
+      font-weight: 400
+      color: white
+      margin-top: -1px
+
+    &__price,
+    &__price.h5
+      font-family: "Arial Black"
+      letter-spacing: 0
+      font-size: 20px
+      font-weight: bold
+      color: $red-color
+      padding-top: 2px
+      position: absolute
+      right: 8px
+
+    &__name,
+    &__price
+      margin-bottom: 0
+      line-height: 14px
+
+
+    & ~ .mini-total-line__text
+      font-size: 7px
+      color: white
+      line-height: 8px
+      margin-bottom: 8px
+      margin-top: -1px
+
+  .cart-area .cart-icon-bag
+    +rest('background','display','width','height')
+    font-size: 12px
+    line-height: 24px
+    position: fixed
+    top: 32px
+    right: 32px
+    @extend .topstack
+    &:before
+      content: "cart"
+
+    .cart-number,
+    &:empty:after
+      //font-family: $font-price
+      +rest('background','line-height','position','padding','font-size')
+      color: $red-color
+
+    &:empty:after
+      content: " 00"
+      color: inherit
+
+    &:hover,
+    &.hover
+      color: white
+      .cart-number
+        color: inherit
+
+  .nav-customer .login-icon
+    +rest('background','display','width','height')
+    font-size: 12px
+    line-height: 24px
+    position: fixed
+    top: 32px
+    right: 116px
+    pointer-events: none
+    &:hover
+      text-decoration: none
+      &:before
+        text-decoration: underline
+    &:before
+      content: "login"
+      pointer-events: all
+    &:after
+      content: " •"
+
+  .site-nav
+    font-family: $font-stack
+    white-space: normal
+    position: fixed
+    top: 104px
+    left: 0
+    padding-left: 32px
+    @extend .topstack
+
+    &__item
+      display: block
+      padding-right: 0
+
+    &__link
+      font-size: 12px
+      line-height: 24px
+      text-transform: lowercase
+      color: $black-color
+      @extend .easing
+      &:hover
+        color: $red-color
+
+.header .site-nav--more-section > a
+  display: none
+  &~ul.site-nav__dropdown
+    position: unset
+    transform: none
+    box-shadow: unset
+    min-width: unset
+    background-color: transparent
+    opacity: 1
+    padding: 0
+    text-align: left
+
+    .site-nav__dropdown-link
+      white-space: unset
+      overflow: unset
+      text-overflow: unset
+      display: inline
+      padding: 0
+      color: inherit
+      text-transform: lowercase
+      &:hover
+        background-color: transparent
+        color: $red-color
+
+
+.footer-section
+  .footer-copyright
+    margin-bottom: 0
+
+  .footer-copyright p
+    position: fixed
+    left: 32px
+    bottom: 32px
+    margin-bottom: 0
+    text-align: left
+    text-transform: lowercase
+    width: 176px
+    font-size: $fs8
+    line-height: 16px
+    @extend .topstack
+    &:before
+      content: "Copyright "
+
+  .site-footer
+    padding-top: 0
+    border-top: none
+    .container > .row > .col-sm-4:not(:nth-of-type(2))
+      display: none
+
+    .footer-before
+      +rest('display','border-top','padding-top')
+
+    .footer-after
+      display: none
+
+  .col-sm-3:not(:nth-of-type(2)) .footer_menu .list-style-none,
+  .footer_content
+    display: none
+
+  .footer_menu
+    margin-bottom: 0
+    .site-footer__header
+      display: none
+
+    .list-style-none
+      position: fixed
+      bottom: 32px
+      right: 32px
+      margin-bottom: 0
+      font-size: $fs8
+      line-height: 16px
+      text-align: right
+      text-transform: lowercase
+      @extend .topstack
+
+      li
+        margin-top: 0
+        margin-bottom: 0
+
+
+.perment-wrap
+  &>section.subscribe,
+  .section.subscribe
+    padding-top: 32px
+    padding-bottom: 128px
+    background-color: transparent
+
+
+.subscribe .subscribe-wrap .form-wrapper
+  max-width: 896px
+  position: relative
+  display: flex
+  width: 100%
+
+  & > input
+    height: 64px
+    background-color: transparent
+    padding: 20px 0
+    border: none
+    box-shadow: 0 2px $black-color
+    font-family: $font-parag
+    font-size: $fs4
+    line-height: 24px
+    text-transform: lowercase
+    &::placeholder
+      color: rgba($black-color,.4)
+      font-family: $font-stack
+
+  .btn
+    border: none
+    padding: 20px 0
+    font-size: $fs4
+    line-height: 24px
+    text-transform: lowercase
+    text-align: right
+    color: $black-color
+    //position: absolute
+    background-color: transparent
+    right: 0
+    height: 64px
+    padding-left: 16px
+    box-shadow: 0 2px $black-color
+
+    &:hover
+      color: $red-color
+    &:after
+      content: "+"
+
+  .validation-wrapper
+    margin-top: 0
+    color: white
+    text-transform: lowercase
+    font-size: $fs8
+    padding-top: 8px
+    position: absolute
+
+
+.product-carousel .col-wrap
+  margin-bottom: 16px
+
+.collection-product-wrap>a:hover .collection-detail__product-details .title
+  color: $black-color
+
+.collection-detail
+  &__product-image
+    margin-bottom: 0
+
+  &__product-details
+
+    .title
+      font-size: $fs8
+      line-height: 16px
+      margin-top: 2px
+      text-transform: uppercase
+      color: rgba($black-color, .48)
+
+    .price
+      margin-top: 0
+      .money
+        font-size: $fs6
+        line-height: 16px
+        font-weight: bold
+        display: inline
+        vertical-align: top
+
+      .money:not(:last-child)
+        color: $red-color
+
+      .was_price
+        opacity: .32
+        text-decoration: none
+        margin-left: 0
+
+      .was_price .money
+        font-size: $fs8
+        line-height: 18px
+        font-weight: normal
+        color: $black-color
+        text-decoration: line-through
+
+.collection-list
+  .collection-wrap
+    background-color: $main-color
+    padding-bottom: 40px
+    .img-wrap
+      position: relative
+      padding-top: 56.25%
+      overflow: hidden
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+  .collection-name
+    font-family: $font-title
+    font-size: 18px
+    line-height: 20px
+    text-transform: uppercase
+    margin-top: -10px
+    position: relative
+    mix-blend-mode: difference
+    margin-bottom: 0
+    transition: 0.2s all cubic-bezier(.6,.16,0,1)
+    will-change: transform, color
+    transform-origin: top center
+    max-height: 20px
+    text-stroke: 1px rgba($main-color,1)
+    -webkit-text-stroke: 1px rgba($main-color,1)
+    color: rgba($black-color, 0)
+
+  .collection-jacked_name
+    font-family: $font-title
+    font-size: 18px
+    line-height: 20px
+    text-transform: uppercase
+    margin-top: -10px
+    position: absolute
+    color: rgba($black-color,1)
+    //mix-blend-mode: difference
+    margin-bottom: 0
+    transition: 0.2s all cubic-bezier(.6,.16,0,1)
+    will-change: transform, color
+    transform-origin: top center
+    width: calc(100% - 16px)
+    transform: translate3d(0,-10px,0)
+    left: 8px
+    letter-spacing: 2px
+    opacity: 0
+
+    span,
+    span:after
+      position: absolute
+      width: 100%
+      display: block
+      top: 0
+      left: 0
+      will-change: transform, color
+      transform-origin: center top
+      transition: 0.2s all cubic-bezier(.6,.16,0,1)
+
+    span:after
+      content: attr(data-string)
+
+    span:first-child
+      color: lighten(rgba($red-color,0),40%)
+      position: relative
+      top: unset
+      left: unset
+
+    span:first-child:after
+      color: lighten(rgba($red-color,0),30%)
+
+    span:nth-of-type(2)
+      color: lighten(rgba($red-color,0),20%)
+
+    span:nth-of-type(2):after
+      color: lighten(rgba($red-color,0),10%)
+
+    span:nth-of-type(3)
+      color: rgba($red-color,0)
+
+    span:nth-of-type(3):after
+      text-stroke: 1px $black-color
+      -webkit-text-stroke: 1px $black-color
+      color: rgba($black-color, 0)
+
+  .collection-wrap:hover
+    z-index: 1
+    .img-wrap img
+      transform: none
+      transition: none
+
+    .collection-name
+      transform: translate3d(0,3.5px,0) scale(1.12)
+      opacity: 0
+
+    .collection-jacked_name
+      transform: translate3d(0,-14px,0)
+      opacity: 1
+
+      span:first-child
+        color: lighten(rgba($red-color,.6),40%)
+
+      span:first-child:after
+        color: lighten(rgba($red-color,1),30%)
+
+      span:nth-of-type(2)
+        color: lighten(rgba($red-color,1),20%)
+
+      span:nth-of-type(2):after
+        color: lighten(rgba($red-color,1),10%)
+
+      span:nth-of-type(3)
+        color: lighten(rgba($red-color,1),0)
+
+      span:nth-of-type(3):after
+        text-stroke: 1px rgba($black-color,0)
+        -webkit-text-stroke: 1px rgba($black-color,0)
+        color: rgba($black-color, 1)
+
+      span:after
+        transform: translate3d(0,1.5px,0) scale(1.03)
+      span:nth-of-type(2)
+        transform: translate3d(0,3px,0) scale(1.06)
+      span:nth-of-type(3)
+        transform: translate3d(0,4.5px,0) scale(1.09)
+
+.banner_holder
+  top: -16px
+  left: -12px
+  .sale_banner
+    background-image: $saleURI
+    background-position: center
+    background-size: 100%
+    width: 48px
+    height: 48px
+
+.sticky-bar-action
+  display: none
+
+.jdgm-widget.jdgm-widget[style="display: none;"] + div
+  margin-top: 16px
+
+.product
+  &__main-content
+    & > .col-12.col-md-6
+      @media (min-width: 720px)
+        +colSize(12,7)
+    & > .col-12.col-md-6.col-xl-5
+      @media (min-width: 720px)
+        +colSize(12,4)
+
+  &__main-content
+    padding-bottom: 0
+
+  &__sku,
+  &__name.h3
+    font-size: 10px
+    font-family: $font-parag
+    text-transform: uppercase
+    margin-bottom: 0
+    line-height: 14px
+    letter-spacing: 0
+
+  &__price
+    font-family: $font-price
+    font-family: $font-stack
+    letter-spacing: -2.4px
+    font-size: 22px
+    margin-bottom: 20px
+    span:not(.product__price--original)
+      color: $red-color
+    span.product__price--original
+      opacity: .32
+      color: $black-color
+      text-decoration: none
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 24px
+        background-image: linear-gradient(122deg, $main-color 8.33%, rgba($main-color,0) 8.33%, rgba($main-color,0) 50%, $main-color 50%, $main-color 58.33%, rgba($main-color,0) 58.33%, rgba($main-color,0) 100%)
+        background-size: 14.15px 22.64px
+
+  &__variant
+    &-label
+      display: none
+
+    &-label~div:not(.flex)
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+
+  &__variants-wrapper.sbl-b
+    .product__option,
+    .product__image-option,
+    .product__option--color-swatches
+      border-bottom-width: 1px
+      padding-bottom: 1px
+
+  &__variants-wrapper.sbl-a
+    .product__option,
+    .product__image-option,
+    .product__option--color-swatches
+      border-top-width: 1px
+      padding-top: 1px
+
+  &__option,
+  &__image-option,
+  &__option--color-swatches
+    font-family: $font-price
+    border: 2px solid transparent
+    background-color: white
+    font-size: 10px
+    letter-spacing: 0
+    padding: 0
+    width: 40px
+    margin-right: 0
+    margin-bottom: 0
+    height: 24px
+    object-position: center
+    object-fit: cover
+    outline: none
+    border-radius: 0
+
+    &:hover
+      border: 2px solid transparent
+      background-color: rgba(darken(white,4%),0.9)
+      outline: none
+
+    &[class*='--active']
+      //box-shadow: inset 0 0 0 2px $black-color
+      border: 2px solid $black-color
+      background-color: white
+      color: $black-color
+      outline: none
+
+  &__image-option
+    min-height: 53px
+    max-height: 53px
+
+  &__quantity
+    margin-top: 0
+    display: block
+    margin-bottom: 24px
+
+    .quantity
+      height: 24px
+      width: 120px
+      min-width: unset
+      max-width: unset
+      background-color: white
+      border: none
+
+      .quantity__icon
+        stroke: $black-color
+        stroke-width: 1px
+
+    .quantity button,
+    .quantity input
+      height: 24px
+      width: 40px
+      padding: 0
+      line-height: 24px
+      border: none
+      min-height: unset
+      transition-duration: 0s
+
+    .quantity input
+      font-family: $font-price
+      font-family: $font-title
+      font-size: 10px
+
+    .quantity button:hover
+      background-color: rgba(darken(white,4%),0.9)
+
+      .quantity__icon
+        stroke: #4d4d4d
+
+    .countdown-timer
+      margin-left: 0
+      margin-top: 8px
+
+  &__details
+    position: fixed
+    max-width: 290px
+    &.leave-detail
+      position: absolute
+      bottom: 0
+
+  &__details .btn.btn-primary
+    width: 100%
+    text-transform: lowercase
+    font-size: 18px
+    padding: 16px
+    color: white
+    background-color: $red-color
+    letter-spacing: 0
+    transition: 0.125s transform ease
+    border-radius: 0
+    &:before
+      content: "add to cart +"
+      display: inline
+      position: unset
+      background-color: transparent
+      background-image: linear-gradient(90deg, rgba(255,255,255,0.75) 0%, #FFFFFF 12%, rgba(255,255,255,0.75) 24%, rgba(255,255,255,0.75) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: rgba(white,0)
+      background-size: 150% 100%
+      animation: add_to_cart 2s linear infinite
+      background-position: 0 0
+      transition: 0.125s all ease
+
+    @keyframes add_to_cart
+      0%
+        background-position: 0 0
+      100%
+        background-position: -300% 0
+
+    &:hover
+      background-color: saturate($red-color,12%)
+      &:before
+        -webkit-text-fill-color: rgba(white,1)
+
+    &:active
+      transform: translate3d(0,1px,0)
+
+    span
+      display: none
+
+  &__share
+    display: none
+
+  &_collapse
+    border-top: none
+    padding-top: 0
+    margin-top: 0
+
+    &:first-child
+      margin-top: 24px
+
+    h6.h5
+      font-size: 10px
+      line-height: 16px
+      margin-bottom: 8px
+      position: relative
+      display: block
+
+      span:first-child
+        cursor: pointer
+
+      span:last-child
+        position: absolute
+        right: 0
+        background-color: $main-color
+        background-image: none
+        width: 100%
+        opacity: .78
+        pointer-events: none
+        transition: 0.075s all ease
+        &.is-active
+          opacity: 0
+
+      &:hover span:not(.is-active):last-child
+        opacity: .5
+
+    .toggle_content
+      font-size: 10px
+      +rest('padding-top','padding-bottom')
+      max-height: 180px
+      height: auto !important
+      overflow: hidden !important
+      transition: 0s all ease
+      cursor: default
+
+      &[style*="i"],
+      &[style^="d"]
+        color: green
+        max-height: 0px
+        overflow: hidden !important
+
+      &[style^="d"]
+        display: block !important
+
+      p
+        margin-bottom: 8px
+
+      p:empty
+        display: none
+
+      p:empty:first-child + * br:first-child
+        display: none
+
+      ul
+        padding-left: 8px
+        list-style: none
+        position: relative
+
+        li:before
+          content: ""
+          position: absolute
+          width: 3px
+          height: 3px
+          border-radius: 50%
+          background-color: rgba($black-color,.32)
+          left: 0
+          margin-top: 6px
+
+
+      &>div:last-child
+        padding-bottom: 8px
+        margin-bottom: 0
+
+
+.jdgm-widget.jdgm-all-reviews-widget
+  height: 420px
+  background-color: white
+  border: none
+  display: none
+
+.locale-currency-dropdown
+  right: 1px
+
+  .currency-dropdown
+    border-left: none
+    width: 290px
+
+  .locale-dropdown__item__code,
+  .currency-dropdown__item__code
+    background: currentColor
+    -webkit-text-fill-color: white
+    padding: 0 4px
+    font-size: 9px
+    margin-top: 1px
+
+  .currency-dropdown__item.active,
+  .locale-dropdown__title,
+  .currency-dropdown__title
+    cursor: default
+
+/* RESET BACKGROUND COLOR */
+.subscribe .subscribe-wrap,
+.footer-section
+  +rest('background')
+
+@media (min-width: 720px)
+  .media-gallery
+    & &-carousel__thumbs
+      display: none
+    .media-gallery-carousel .VueCarousel-navigation
+      display: none
+
+    .VueCarousel
+      display: block
+
+      &-inner
+        +rest('transform','transition','flex-basis','height')
+        display: block
+        cursor: default
+
+      &-slide:not(:last-child)
+        margin-bottom: 8px
+
+      .product-slide-image img
+        cursor: pointer

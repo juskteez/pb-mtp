@@ -1,0 +1,41 @@
+/* Animation Library */
+$ease-time: 0s
+
+$main-cubic: cubic-bezier(.53,.1,.2,1)
+
+$colorOutline: $main-color
+
+$colorOutlineFade: #d8d8d8
+
+$colorOutlineTextFade: #131313
+
+$widthMouse: 24px
+$heightMouse: 36px
+$borderMouse: 2px
+
+$posMouse: 5px
+$posText: 2px
+
+$sizeTrackball: 6px
+$posTrackball: 10px
+$shrinkTrackball: 0.4
+
+$animDuration: 5s
+
+
+.easing
+  transition: $ease-time all ease
+
+.kf-floating
+  animation-name: kf_floating
+  animation-duration: 2.4s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+
+@keyframes kf_floatingx
+  from
+    transform: translate3d(0, 0, 0)
+  58%
+    transform: translate3d(0, 3%, 0)
+  to
+    transform: translate3d(0, 0, 0)

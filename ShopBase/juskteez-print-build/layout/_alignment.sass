@@ -1,0 +1,69 @@
+/* Alignment */
+.clearfix:after
+	content: ""
+	display: block
+	clear: both
+
+.align-center
+	margin-left: auto
+	margin-right: auto
+
+.text-
+	&center
+		text-align: center
+
+	&right
+		text-align: right
+
+	&left
+		text-align: left
+
+.float_
+	&none
+		float: none
+		&_force
+			float: none !important
+
+	&right
+		float: right
+		&_force
+			float: right !important
+
+	&left
+		float: left
+		&_force
+			float: left !important
+
+
+.defi
+	&-body
+		max-width: 1170px
+		margin: 0 auto
+		padding: 48px 15px
+
+	&-group
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding-bottom: 48px
+
+		&:not(:last-child)
+			margin-bottom: 48px
+			border-bottom: 1px solid #ddd
+
+		&>*
+			width: 30%
+			margin-bottom: 2px
+			//background-color: rgba(0,0,0,0.1)
+
+		&>*:nth-of-type(3n+2)
+			text-align: center
+
+		&>*:nth-of-type(3n+3)
+			text-align: right
+
+	&-subtitle
+		text-transform: uppercase
+		font-size: 24px
+		color: rgba(0,0,0,0.3)
+		letter-spacing: 0.1em

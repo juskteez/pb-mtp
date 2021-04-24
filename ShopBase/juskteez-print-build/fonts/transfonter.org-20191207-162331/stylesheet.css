@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Specify PERSONAL Extraexpanded';
+    src: url('SpecifyPERSONALExtraexpanded-Bl.woff2') format('woff2'),
+        url('SpecifyPERSONALExtraexpanded-Bl.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Specify PERSONAL Extraexpanded';
+    src: url('SpecifyPERSONALExtraexpanded-Me.woff2') format('woff2'),
+        url('SpecifyPERSONALExtraexpanded-Me.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Specify PERSONAL Extraexpanded';
+    src: url('SpecifyPERSONALExtraexpanded-Bo.woff2') format('woff2'),
+        url('SpecifyPERSONALExtraexpanded-Bo.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
