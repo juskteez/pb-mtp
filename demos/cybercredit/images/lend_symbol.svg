@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>lend_symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M38.0420809,76.1638497 C38.0420809,57.1164913 52.723578,41.4696012 71.5299364,40.0772341 L71.5299364,45.2148526 C64.5646185,45.880737 57.4676561,49.1864769 52.4568064,54.1973266 L62.2486503,64.0428035 C64.7310896,61.5603642 68.0472775,59.8371445 71.5299364,59.2436994 L71.5299364,93.0846965 C68.0472775,92.4912514 64.7847225,90.7680318 62.3022832,88.2855925 L52.4024769,98.1317659 C57.4133266,103.142616 64.5646185,106.448355 71.5299364,107.11424 L71.5299364,112.250465 C52.723578,110.858098 38.0420809,95.2112081 38.0420809,76.1638497 M91.4667659,76.1645462 C91.4667659,84.1802341 86.157104,90.926841 78.4952543,92.7977254 L78.4952543,59.5313671 C86.157104,61.4015549 91.4667659,68.1488584 91.4667659,76.1645462 M109.857295,111.672344 L99.8787803,101.748159 C94.2696098,107.356633 86.8536358,111.129049 78.4952543,112.103497 L78.4952543,106.956824 C93.8189538,104.908324 105.397402,91.8845723 105.397402,76.1645462 C105.397402,60.4438237 93.8189538,47.4207688 78.4952543,45.3722688 L78.4952543,40.2235058 C86.8536358,41.1979538 94.3232428,44.9703699 99.9324133,50.5795405 L109.802965,40.654659 C101.647971,32.4996647 91.0328266,27.1412457 78.4952543,26.1159509 L78.4952543,15 L71.5299364,15 L71.5299364,25.998237 C45.0617283,27.4115 24,49.3703613 24,76.1638497 C24,102.957338 45.0617283,124.915503 71.5299364,126.328766 L71.5299364,135.5 L78.4952543,135.5 L78.4952543,126.211052 C91.0328266,125.185757 101.701604,119.828035 109.857295,111.672344" id="path-1"></path>
+        <filter x="-18.6%" y="-13.3%" width="137.3%" height="126.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.192156863   0 0 0 0 0.77254902   0 0 0 0 0.125490196  0 0 0 0.301771966 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lend_symbol">
+            <g id="Fill-1">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#20C565" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

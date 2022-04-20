@@ -1,0 +1,775 @@
+/* Mobile Portrait High Resolution */
+
+#body
+  padding-bottom: 0
+
+.cols
+  &.center-m
+    justify-content: center
+  &.left-m
+    justify-content: flex-start
+  &.right-m
+    justify-content: flex-end
+
+$col-width: 100%/6
+
+[class^="col-"]
+  position: relative
+  &.center-m
+    align-self: center
+  &.top-m
+    align-self: flex-start
+
+@for $i from 1 through 6
+  .col-m-#{$i}
+    width: $col-width*$i
+
+.main_socials_list
+  bottom: 72px
+
+  li
+    margin: 0 4px
+
+.main_socials,
+.main_pagination
+  width: 0
+  display: none
+
+.main_menu .main_menu_actions
+  padding: 20px 24px
+
+  a.btn
+    width: 100%
+    margin: 0
+    text-align: center
+    border-radius: 3px
+    border-width: 1px
+    &:not(:last-child)
+      margin-bottom: 10px
+
+.contact_mail
+  bottom: 94px
+  border-top: 1px solid #eee
+  padding-top: 8px
+  display: none
+
+.main_menu_list li
+  font-size: 14px
+  line-height: 36px
+  text-align: left
+  @media screen and (max-width: 320px)
+    line-height: 32px
+
+$mwidth_limit: 200px
+
+.mwidth_limit
+  width: 100%
+  max-width: $mwidth_limit
+  right: 0
+  transition: 0.3s transform ease
+  will-change: transform
+  transform: translate3d(100%,0,0)
+  position: fixed
+  z-index: 99
+
+.currency_watcher_wrap
+  @extend .mwidth_limit
+  bottom: 96px
+  padding: 0
+  .currency_watcher
+    margin: 0 24px
+    display: block
+    line-height: 30px
+    text-align: left
+
+  .currency_watcher_ico
+    width: 16px
+    margin-right: 4px
+    text-align: center
+
+
+.active_menu .control_center
+  .mwidth_limit
+    transform: translate3d(0,0,0)
+
+.home_sections .section.home_offering .offering_gbb
+  padding-bottom: 48px
+  .guaranteed_meter_wrap
+    transform: translate3d(0, 0, 0)
+
+.section
+  &_title
+    font-size: 32px
+    line-height: 36px
+
+  &_subtitle
+    font-size: 16px
+
+  &_actions
+    margin-top: 16px
+
+  &_info_title
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 16px
+
+  &_info_block
+    padding: 6px
+    margin-bottom: 10px
+    &_wrap
+      flex-wrap: wrap
+
+.home_countdown
+  padding-bottom: 24px
+  margin-bottom: 72px
+  &_single
+    margin: 0 10px
+    &:before
+      margin-left: 8px
+
+.home_sections .section
+  min-height: 0
+  &.home_home
+    padding: 0 16px
+    padding-top: 48px
+
+  &.home_cyber
+    padding-top: 64px
+    text-align: center
+    .dusty_sphere
+      opacity: 0.6
+      transform: translate3d(-50%, -50%, 0) scale(0.75)
+
+    .section_ico img
+      height: 86px
+
+  .home_cyber_info
+    padding: 0 16px
+    margin-top: 24px
+
+  &.home_vision
+    padding-top: 80px
+
+    .vision
+      &_single
+        &:before
+          display: none
+      &_ico
+        height: 64px
+        line-height: 64px
+        img
+          max-height: 64px
+
+      &_title
+        font-size: 12px
+        margin-top: 16px
+
+  .home_vision_info
+    padding: 0 16px
+    text-align: center
+    height: 260px
+    .vision_content
+      font-size: 12px
+      line-height: 18px
+      &:first-child
+        font-size: 14px
+        line-height: 24px
+
+
+  &.home_roadmap
+    padding-top: 80px
+
+    .roadmap_info
+      height: auto
+
+    .roadmap_chart
+      height: 50vh
+      margin-bottom: 32px
+      margin-top: 24px
+      transition: 0.3s opacity ease
+      opacity: 0
+    &.active .roadmap_chart
+      opacity: 1
+
+  .home_roadmap_info
+    text-align: center
+    padding: 0 16px
+
+  &.home_lending,
+  &.home_offering
+    padding-top: 80px
+
+    .section_title br
+      display: none
+
+  .home_lending_info,
+  .home_offering_info
+    padding: 0 16px
+    text-align: center
+
+    .section_desc
+      max-width: none
+
+  .cols.offering_ico,
+  .cols.offering_gbb
+    height: auto
+    margin-top: 32px
+    margin-bottom: 0
+    text-align: center
+
+  &.home_offering .guaranteed_desc
+    max-width: none
+    padding: 0 16px
+
+  .guaranteed_meter_wrap
+    position: relative
+    top: auto
+    left: auto
+    margin: 24px auto
+    transform: none
+
+.ico_section .ico_frags
+  font-size: 10px
+  text-align: left
+  min-width: 200px
+  width: 50%
+  li
+    margin-bottom: 6px
+
+  &+.ico_chart_wrap .ico_chart
+    max-height: 260px
+    margin-bottom: -80px !important
+
+.ico_chart
+  position: relative
+  left: 50%
+  transform: translate3d(-50%,0,0)
+  max-height: 200px
+
+.roadmap_chart
+  .roadmap_chart_points
+    position: absolute
+    bottom: 0
+    width: calc(100% + 14px)
+  .roadmap_chart_pointer
+    height: 46vh
+    margin-top: calc(-46vh + 14px)
+
+    &:nth-of-type(3n+1) .roadmap_chart_date
+      display: block
+
+  &_date
+    font-size: 10px
+    color: #ABB3E0
+    opacity: 0.6
+    width: 64px
+    left: 50%
+    line-height: 14px
+    transform: translate3d(-50%,0,0) rotate(-90deg) translate3d(-40%,-25%,0)
+    padding-top: 12px
+    text-align: right
+    span.b
+      display: initial
+
+  &_progress
+    &:before
+      font-size: 10px
+      margin-left: -2px
+      margin-bottom: 4px
+
+.lending_programs
+  margin-top: 0
+  &:before
+    display: none
+
+  .lending_circle_wrap
+    display: none
+
+  .lending_list li,
+  .lending_list li:nth-of-type(2) ~ li
+    position: relative
+    top: auto
+    left: auto
+    right: auto
+    margin-top: 32px
+    margin-left: 0
+    margin-right: 0
+    transform: none
+    width: auto
+    text-align: center
+
+    .lending_list_ico
+      left: auto
+      right: auto
+      margin: 0 auto
+      position: relative
+      top: auto
+      margin-bottom: 16px
+
+.cols#scroll_list_wrap
+  height: 100%
+
+.sections.roadmap_sections
+  position: fixed
+  top: 60px
+  width: 100%
+  height: calc(100% - 60px)
+  left: 0
+
+.roadmap_single
+  width: 100vw
+  padding: 0 16px
+  padding-top: 48px
+  &:last-child
+    padding-bottom: 200px
+  &:after
+    content: ""
+    position: relative
+    display: block
+    margin: 0 auto
+    margin-top: 48px
+    width: 25px
+    height: 3px
+    background-image: url("../images/roadmap_separator.svg")
+    background-position: center
+    background-repeat: no-repeat
+
+  &:last-child:after
+    display: none
+
+  .roadmap_col
+    padding: 0
+    &:not(:last-child)
+      margin-bottom: 24px
+    &s
+      display: block
+
+    .roadmap_single_desc
+      font-size: 12px
+
+.roadmap_timeline
+  &_content
+    height: 100%
+
+  &_wrap
+    position: fixed
+    bottom: 12px
+    left: 32px
+    width: 200%
+    height: 2px
+    min-height: 0
+    &:before
+      content: ""
+      position: absolute
+      width: 120%
+      height: 200px
+      background-image: linear-gradient(-180deg, rgba(9,18,62,0.00) 0%, #09123E 78%)
+      bottom: -12px
+      left: -24px
+      pointer-events: none
+
+  &_list
+    white-space: normal
+    top: auto
+    //transform: none !important
+
+  &_info
+    top: auto
+    bottom: 100%
+    margin-bottom: 48px
+    opacity: 0
+    transition: 0.2s opacity ease
+    pointer-events: none
+
+  &_ico.active ~ .roadmap_timeline_info
+    opacity: 1
+
+.roadmap_odd
+  &_ico
+    width: 110px
+    padding-right: 0
+    text-align: center
+    padding-left: 0
+    img
+      max-width: 80px
+  &_content
+    width: calc(100% - 110px)
+
+  &:nth-of-type(2n+2)
+    text-align: left
+    .roadmap_odd_ico
+      text-align: center
+      padding-left: 0
+      order: 1
+    .roadmap_odd_content
+      order: 2
+
+.page-content
+  .page-title.cols,
+  .page-title
+    position: relative
+    height: auto
+    text-align: center
+    width: 100%
+    padding-top: 0
+    margin-bottom: 0
+    h1
+      font-size: 32px
+      br
+        display: none
+
+    .navigation
+      display: none
+      width: auto
+      overflow: hidden
+      overflow-x: auto
+      white-space: nowrap
+      padding: 6px 0
+      li
+        display: inline-block
+
+    .sub-title
+      font-size: 18px
+      line-height: 24px
+
+  &.faq-content .page-title
+    text-align: left
+
+.faqs-page .faq-content .page-title
+  padding-top: 0
+  h1
+    line-height: 48px
+  .col-footer
+    position: static
+    margin-top: 24px
+
+.faqs-page .faq-content .col-right,
+.page-content.faq-content .col-right
+  padding-right: 0
+
+.policy-page .faq-content .col-right
+  padding-top: 24px
+
+.customer-page .section.cols
+  padding-top: 32px
+  min-height: 0
+  height: auto
+
+  .col-d-4
+    width: calc(100% - 32px)
+
+.ico_section
+  height: auto
+  padding-top: 64px
+  &:after
+    content: ""
+    position: relative
+    display: block
+    margin: 0 auto
+    margin-top: 64px
+    width: 25px
+    height: 3px
+    background-image: url("../images/roadmap_separator.svg")
+    background-position: center
+    background-repeat: no-repeat
+
+  .ico_section_title.big
+    text-align: center
+    &~.section_content_title
+      text-align: center
+
+  &:last-child:after
+    display: none
+
+  h3.ico_section_title:not(.lending_list_title),
+  h3.section_title.small
+    font-size: 24px
+    margin-top: 16px
+
+  &#ico_timing h3.ico_section_title
+    margin-bottom: 32px
+
+  .ico_offering
+    &_wrap
+      img
+        height: 50vw
+
+    &_single
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3)
+        transform: translate3d(-45vw,-50%,0) translate3d(0,-7px,0) scale(0.75)
+      &:nth-of-type(2)
+        transform: translate3d(18vw,-25vw,0) translate3d(0,-7px,0) scale(0.75)
+      &:nth-of-type(3)
+        transform: translate3d(18vw,-50%,0) translate3d(0,-7px,0) scale(0.75)
+
+  h3.ico_section_title,
+  p.ico_section_desc
+    //padding-left: 16px
+    //padding-right: 16px
+
+  &#ico,
+  &#ico_price,
+  &#ico_structure
+    h3.ico_section_title,
+    h3.section_title,
+    p.ico_section_desc
+      text-align: center
+      display: block
+
+
+  .ico_process
+    &_wrap
+      img
+        height: 160px
+
+    &_bar
+      width: 210px
+      height: 4px
+      transform: translate3d(-50%,-50%,0) translate3d(0,15px,0)
+
+    &_point
+      position: absolute
+      text-align: left
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) translate3d(-74px,44px,0)
+      &.end
+        text-align: right
+        transform: translate3d(-50%,-50%,0) translate3d(76px,44px,0)
+
+      h4
+        font-size: 10px
+      p
+        font-size: 10px
+
+
+  .ico_price_list
+    margin-left: 64px !important
+    margin-right: 64px
+
+
+  .ico_frags
+    margin: 24px auto
+
+  .ico_chart_wrap
+    position: relative
+    top: auto
+    left: 50%
+    right: auto
+    transform: translate3d(-50%,0,0)
+    margin-bottom: -48px
+
+  .ico_guaranteed
+    width: 120px
+    margin-right: 16px
+    margin-top: 0
+    margin-left: 24px
+
+.ico_section_desc.quoted
+  padding-left: 10px
+
+.page-content.sections
+  .lending_section .section_subtitle
+    margin-top: 0
+
+  .lending_section
+    padding: 0 16px
+    padding-top: 48px
+    &.lending_packages
+      text-align: center
+    .section_title br
+      display: none
+
+    &:after
+      content: ""
+      position: relative
+      display: block
+      margin: 0 auto
+      margin-top: 64px
+      width: 25px
+      height: 3px
+      background-image: url("../images/roadmap_separator.svg")
+      background-position: center
+      background-repeat: no-repeat
+
+    &:last-child:after
+      display: none
+
+  .section_title
+    text-align: center
+    display: block
+
+  .lending_packages_table
+    .stars_rate
+      transform-origin: center right
+      transform: scale(0.5)
+      margin-left: -40px
+      display: none
+
+    &:not(.irate_table)
+      margin-left: -16px
+      margin-right: -16px
+      width: calc(100% + 32px)
+      thead td:first-child
+        border-bottom: none
+        &:after
+          opacity: 0
+      td:first-child
+        width: 60px
+        position: absolute
+        left: 0
+        padding-left: 1px
+        text-align: left
+        &+td
+          padding-top: 24px
+          padding-left: 16px
+          white-space: nowrap
+          &:after
+            width: calc(100% - 16px)
+
+      span.main-color
+        white-space: nowrap
+
+
+  .lending_packages_table.irate_table
+    width: 100%
+    margin-bottom: 16px
+
+    tr:not(:last-child) td
+      border-bottom: 1px solid #1F254B
+
+    .lending_packages_label
+      text-align: left
+
+  .aff_content
+    padding-right: 0
+    text-align: center
+
+  .aff_tower
+    margin-left: -126px
+    &_model
+      height: 126px
+
+    &_wrap
+      width: 290px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 48px
+
+      &.ico_bounty_tower
+        text-align: center
+
+      &.aff_bonus_tower .aff_tower_model
+        height: 164px
+
+    &_title
+      margin-right: -126px
+
+    &_metric
+      &s
+        padding-top: 104px
+        margin-left: -54px
+        &.notitle
+          padding-top: 12px
+          margin-left: -68px
+          &:after
+            top: 13px
+            height: calc(100% - 48px)
+        &:after
+          width: 16px
+          border-radius: 0 8px 8px 0
+          height: calc(100% - 140px)
+          top: 105px
+          margin-left: 76px
+
+      &_single
+        margin-bottom: 36px
+
+      &_single:nth-of-type(2) .aff_tower_metric_value
+        width: 78px
+
+      &_single:nth-of-type(3) .aff_tower_metric_value
+        width: 60px
+
+      &_single:nth-of-type(4) .aff_tower_metric_value
+        width: 40px
+
+      &_single:nth-of-type(5) .aff_tower_metric_value
+        width: 22px
+
+      &_value
+        width: 96px
+        span
+          font-size: 10px
+
+      &_label
+        font-size: 14px
+        width: 64px
+        span
+          margin: 3px 4px
+          border-width: 3px
+          border-left-width: 5px
+
+        &:before
+          content: ""
+          position: absolute
+          width: 16px
+
+.lending_packages
+  &_desc
+
+  &_table
+
+    td
+      text-align: left
+      padding-right: 12px
+      padding-top: 10px
+      padding-bottom: 10px
+
+    td:first-child
+      text-align: right
+      padding-right: 16px
+      padding-left: 12px
+      width: 110px
+
+.contact_section
+  padding: 0 16px
+  padding-top: 48px
+  text-align: center
+  .contact_orbit
+    display: none
+
+
+.page-content
+  padding: 0 16px
+  padding-top: 48px
+
+.vision_guide
+  display: inline-block
+  line-height: 24px
+  font-size: 11px
+  background-color: rgba(255,255,255,0.1)
+  padding: 0 8px
+  border-radius: 3px
+  color: rgba(255,255,255,0.6)
+  margin-top: 16px
+  pointer-events: none
+  padding-right: 10px
+  &:after
+    animation: vision_guide_vert 1s ease infinite
+
+@keyframes vision_guide_vert
+  0%
+    transform: rotate(90deg) translate3d(-2px,0,0)
+  50%
+    transform: rotate(90deg) translate3d(2px,0,0)
+  100%
+    transform: rotate(90deg) translate3d(-2px,0,0)
+
+
+.main_header .col-m-6.logo_wrap
+  text-align: center
+  .logo
+    padding-left: 0

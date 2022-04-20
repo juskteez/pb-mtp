@@ -1,0 +1,373 @@
+/* Tablet Landscape */
+
+body
+  &.page_scroll
+    overflow: initial
+
+#body
+  padding: 60px 0
+  padding-bottom: 0
+  overflow: hidden
+
+$col-width: 100%/6
+
+.cols
+  &.center-t
+    justify-content: center
+  &.left-t
+    justify-content: flex-start
+  &.right-t
+    justify-content: flex-end
+
+[class^="col-"]
+  position: relative
+  &.center-t
+    align-self: center
+
+@for $i from 1 through 6
+  .col-t-#{$i}
+    width: $col-width*$i
+
+.main_header,
+.main_footer,
+.main_socials,
+.main_pagination
+  padding: 0
+
+  .logo
+    padding-left: 20px
+
+
+.home_sections
+  .section
+    min-height: calc(100vh - 60px)
+    height: auto
+
+.shrink_grid
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+$width_limit: 200px
+
+.width_limit
+  width: 100%
+  max-width: $width_limit
+  right: 0
+  transition: 0.3s transform ease
+  will-change: transform
+  transform: translate3d(100%,0,0)
+  position: fixed
+  z-index: 99
+
+.control_center
+  box-shadow: none
+  &:after
+    content: ""
+    top: 0
+    height: 100%
+    background-color: #FFF
+    @extend .width_limit
+    z-index: 1
+    pointer-events: all
+
+  .main_footer
+    display: none
+
+  .main_header
+    background-color: #fff
+
+.main_menu
+  &_actions
+    bottom: 0
+    text-align: center
+    padding: 24px
+    @extend .width_limit
+
+  &_list
+    top: 60px
+    @extend .width_limit
+    li
+      display: block
+      text-align: right
+      font-size: 16px
+      line-height: 40px
+      padding: 0 24px
+      &.main_menu_switch
+        background-position: 100% 17px
+        padding-right: 12px
+        &:last-child
+          margin-right: 24px
+
+.main_socials_list
+  @extend .width_limit
+  bottom: 80px
+  padding-bottom: 0
+  li
+    display: inline-block
+
+.contact_mail
+  top: auto
+  left: auto
+  bottom: 110px
+  @extend .width_limit
+.active_menu .control_center
+  &:after,
+  .width_limit
+    transform: translate3d(0,0,0)
+
+.main_menu
+  &_toggler
+    position: fixed
+    top: 0
+    right: 0
+    width: 60px
+    height: 60px
+    z-index: 99
+    span,
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 16px
+      height: 1px
+      background-color: $text-color
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      transition: 0.3s all ease
+
+    &:before
+      transform: translate3d(-50%,-50%,0) translate3d(0,-6px,0) rotate(0deg)
+
+    &:after
+      transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) rotate(0deg)
+
+    &.active:before
+      transform: translate3d(-50%,-50%,0) translate3d(0,0,0) rotate(45deg)
+
+    &.active:after
+      transform: translate3d(-50%,-50%,0) translate3d(0,0,0) rotate(-45deg)
+
+    &.active span
+      opacity: 0
+
+.section:not(.home_home) .section_director
+  display: none
+
+.section_director
+  transform: translate3d(-50%, -64px, 0)
+
+.menu_closer
+  position: fixed
+  top: 60px
+  left: 0
+  width: 100vw
+  height: 100%
+  background-color: rgba(0,0,0,0.8)
+  pointer-events: none
+  opacity: 0
+  transition: 0.2s all ease
+  z-index: 90
+
+.active_menu .menu_closer
+  opacity: 1
+  pointer-events: all
+
+.section
+  &.home_roadmap
+    .roadmap_chart
+      transition: 0.3s opacity ease
+      opacity: 0
+    &.active .roadmap_chart
+      opacity: 1
+
+.ico_section#ico_structure .ico_chart
+  max-height: 320px
+
+.ico_section
+  .ico_offering
+    &_wrap
+      img
+        height: 240px
+
+    &_single
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3)
+        transform: translate3d(-190px,-50%,0) translate3d(0,-7px,0) scale(0.75)
+      &:nth-of-type(2)
+        transform: translate3d(80px,-116px,0) translate3d(0,-7px,0) scale(0.75)
+      &:nth-of-type(3)
+        transform: translate3d(80px,-50%,0) translate3d(0,-7px,0) scale(0.75)
+
+  &#ico_structure
+    .ico_frags
+      font-size: 11px
+
+  .ico_process
+    &_wrap
+      img
+        height: 220px
+
+    &_bar
+      width: 290px
+      height: 4px
+      transform: translate3d(-50%,-50%,0) translate3d(0,20px,0)
+
+    &_point
+      position: absolute
+      text-align: left
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) translate3d(-114px,48px,0)
+      &.end
+        text-align: right
+        transform: translate3d(-50%,-50%,0) translate3d(116px,48px,0)
+
+      h4
+        font-size: 10px
+      p
+        font-size: 10px
+
+.aff_tower
+
+  &_metric
+    &s
+      &:after
+        width: 16px
+        border-radius: 0 8px 8px 0
+
+    &_label
+
+      &:before
+        width: 16px
+
+.lending_packages_table.irate_table
+  width: 75%
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+
+  .lending_section .irate_content
+    padding-right: 32px
+
+  .page-content .lending_section
+    .section_title+.section_desc:not(.centered)
+      padding-right: 40px
+
+  .aff_content
+    .section_desc.irate_point,
+    .section_content_title
+      text-align: left
+      padding-right: 16px
+
+  .page-content .lending
+    &_list
+      li
+        width: 160px
+        position: absolute
+        text-align: right
+        left: 50%
+        transform: translate3d(-50%,0,0)
+      li:nth-of-type(2)~li
+        text-align: left
+      li:nth-of-type(1)
+        margin-top: -144px
+        margin-left: -306px
+      li:nth-of-type(2)
+        margin-top: -26px
+        margin-left: -188px
+      li:nth-of-type(3)
+        margin-top: -144px
+        margin-left: 306px
+      li:nth-of-type(4)
+        margin-top: -26px
+        margin-left: 188px
+      &_title
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: normal
+        line-height: 16px
+        margin-bottom: 6px
+        color: #fff
+      &_desc
+        font-family: $font-parag
+        font-size: 11px
+        color: #ABB3E0
+        line-height: 18px
+      &_ico
+        position: absolute
+        left: 100%
+        margin: -20px 16px
+        img
+          vertical-align: top
+
+      li:nth-of-type(3),
+      li:nth-of-type(4)
+        .lending_list_ico
+          left: auto
+          right: 100%
+
+.fake_footer.mobile_only
+  display: block
+.fake_footer
+  background-color: #FFF
+  position: relative
+  z-index: 100
+  text-align: center
+  color: $text-color
+  font-family: $font-parag
+  padding: 16px 0
+  font-size: 14px
+  margin-top: 48px
+
+  &_menu_list
+    font-size: 12px
+    border-bottom: 1px solid #eee
+    padding-bottom: 14px
+    margin-bottom: 16px
+
+    li
+      display: inline-block
+    a
+      display: inline-block
+      line-height: 24px
+      margin: 0 8px
+
+  &_socials_list
+    margin-top: 8px
+    li
+      display: inline-block
+    a
+      display: inline-block
+      width: 32px
+      height: 32px
+      vertical-align: top
+      background-position: center
+      background-repeat: no-repeat
+      opacity: .5
+      &:hover
+        opacity: 1
+
+    a.telegram
+      background-image: url("../images/telegram.svg")
+    a.youtube
+      background-image: url("../images/youtube.svg")
+    a.twitter
+      background-image: url("../images/twitter.svg")
+    a.facebook
+      background-image: url("../images/facebook.svg")
+
+  &_copyright
+    font-size: 12px
+    opacity: 0.5
+    margin-top: 16px
+
+.ico_frags
+  text-align: left
+
+.faq-content
+  .page-title
+    h1
+      font-size: 32px

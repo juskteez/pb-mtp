@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="22px" viewBox="0 0 14 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>eth_ico</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="eth_ico" fill-rule="nonzero">
+            <polygon id="Shape" fill="#8D8D8D" points="0 11.4782609 7 15.3043478 7 0"></polygon>
+            <polygon id="Shape" fill="#343434" points="7 0 7 15.3043478 14 11.4782609"></polygon>
+            <polygon id="Shape" fill="#8D8D8D" points="0 12.4347826 7 22 7 16.2608696"></polygon>
+            <polygon id="Shape" fill="#343434" points="7 16.2608696 7 22 14 12.4347826"></polygon>
+            <polygon id="Shape" fill="#010101" opacity="0.600000024" points="7 8.60869565 0 11.4782609 7 15.3043478 14 11.4782609"></polygon>
+        </g>
+    </g>
+</svg>

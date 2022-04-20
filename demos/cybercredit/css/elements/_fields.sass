@@ -1,0 +1,57 @@
+/* Fields */
+
+input,
+select,
+textarea,
+button,
+select,
+.unfocus
+	&:focus
+		outline: none
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button
+  visibility: hidden
+  display: none !important
+  pointer-events: none
+  position: absolute
+  right: 0
+
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+.input,
+select,
+textarea
+  display: inline-block
+  background-color: #fff
+  border-radius: 28px
+  line-height: 18px
+  padding: 13px 20px
+  height: 44px
+  vertical-align: middle
+  color: $black-color
+  font-size: $fs6
+  appearance: none
+  @extend .easing
+  &.dark
+    background-color: #111518
+    color: #fff
+
+  &.big
+    height: 56px
+    font-size: $fs5
+    line-height: 22px
+    padding: 17px 26px
+
+textarea
+  max-width: 100%
+  min-height: 160px
+
+select
+  //background-image: url("../images/select_arrow.svg")
+  background-position: calc(100% - 16px) center
+  background-repeat: no-repeat

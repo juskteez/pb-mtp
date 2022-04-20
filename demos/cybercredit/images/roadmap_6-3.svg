@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Roadmap-content" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-311.000000, -2850.000000)">
+        <g id="Group-5" transform="translate(312.000000, 2851.000000)">
+            <circle id="Oval-10" stroke="#20C565" stroke-width="2" fill="#070E39" cx="25.5" cy="25.5" r="25.5"></circle>
+            <path d="M11,30 C13.0074522,35.817965 18.5602441,40 25.0960322,40 C31.4338905,40 36.8473891,36.0674272 39,30.5240023" id="Oval-10" stroke="#20C565" stroke-width="2" fill="#070E39" stroke-linecap="round"></path>
+            <g id="Group-4" transform="translate(15.000000, 17.000000)" fill="#20C565">
+                <ellipse id="Oval-2" cx="2.25" cy="2.5" rx="2.25" ry="2.5"></ellipse>
+                <ellipse id="Oval-2" cx="18.75" cy="2.5" rx="2.25" ry="2.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

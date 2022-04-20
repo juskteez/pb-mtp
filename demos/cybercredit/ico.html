@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="theme-color" content="#FEFEFE">
+  <link rel="shortcut icon" href="favicon.ico?v=1.0">
+
+  <title>ICO</title>
+
+  <link href="css/style.css" rel="stylesheet" media="all">
+  <link href="css/alt_style.css" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=vietnamese" rel="stylesheet">
+
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+
+</head>
+
+<body>
+  <div id="body">
+    <div class="shrink_grid" id="shrink_grid">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="control_center" id="control_center">
+      <div class="main_header" id="main_header">
+        <div class="col-d-1 col-t-2 logo_wrap">
+          <a href="index.html" class="logo"><img src="images/logo.svg" alt="Cyber Credit"/></a>
+        </div>
+        <div class="col-d-2 col-xd-3 col-t-3 currency_watcher_wrap">
+          <div class="currency_watcher watcher_level_1">
+            <div class="currency_watcher_ico"><img src="images/btc_ico.svg" alt="BTC"></div>
+            <div class="currency_watcher_value">$ 12111.66</div>
+          </div>
+          <div class="currency_watcher watcher_level_2">
+            <div class="currency_watcher_ico"><img src="images/eth_ico.svg" alt="ETH"></div>
+            <div class="currency_watcher_value">$ 529.65</div>
+          </div>
+          <div class="currency_watcher watcher_level_3">
+            <div class="currency_watcher_ico"><img src="images/cby_ico.svg" alt="ETH"></div>
+            <div class="currency_watcher_value">$ 529.65</div>
+          </div>
+        </div>
+        <div class="col-d-3 col-xd-4 main_menu_wrap">
+          <div class="main_menu" id="main_menu">
+            <ul class="main_menu_list">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="roadmap.html">Roadmap</a>
+              </li>
+              <li>
+                <a href="ico.html" class="active">ICO</a>
+              </li>
+              <li>
+                <a href="lending.html">Lending</a>
+              </li>
+              <li>
+                <a href="https://cybercredit.io/download/Cyber_Credit_white_paper.pdf">White Paper</a>
+              </li>
+              <li class="main_menu_switch">
+                <a href="#" class="on">ENG</a>
+                <a href="#">VNI</a>
+              </li>
+            </ul>
+            <div class="main_menu_actions">
+              <a href="customer.html?state=signin" class="btn outline small">Sign In</a>
+              <a href="customer.html?state=signup" class="btn outline small">Sign Up</a>
+            </div>
+          </div>
+          <a href="javascript:;" class="main_menu_toggler"><span></span></a>
+        </div>
+      </div>
+      <div class="main_footer" id="main_footer">
+        <div class="col-d-3 col-xd-4 copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+        <div class="col-d-3 col-xd-4 sub_menu_wrap text-right">
+          <ul class="sub_menu_list">
+            <!-- <li>
+              <a href="about.html">About</a>
+            </li> -->
+            <li>
+              <a href="faqs.html">FAQs</a>
+            </li>
+            <li>
+              <a href="policy.html">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="terms.html">Terms of Use</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main_socials" id="main_socials">
+        <a href="mailto:support@cybercredit.io" class="contact_mail">support@cybercredit.io</a>
+        <ul class="main_socials_list">
+          <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+          <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+          <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+        </ul>
+      </div>
+      <div class="main_pagination" id="main_pagination">
+        <!-- <div class="page_pag" id="page_pag">
+    <a href="javascript:;" class="active"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    </div> -->
+      </div>
+    </div>
+    <div class="page-content sections cols">
+      <div class="col-d-3 col-xd-4 col-m-6 cols right-d">
+        <div class="col-d-4 col-m-6">
+          <div class="page-title cols">
+            <div class="col-d-6 col-xd-8 page-title-wrap center-d">
+              <h1>Initial<br>Coin Offering</h1>
+              <div class="navigation page-scroll-nav scrollspy">
+                <ul>
+                  <li><a href="javascript:;" class="scrollto active" scrollto="#ico" scrolloffset="#ico_sections">Ico</a></li>
+                  <li><a href="javascript:;" class="scrollto" scrollto="#ico_timing" scrolloffset="#ico_sections">Ico Timing</a></li>
+                  <li><a href="javascript:;" class="scrollto" scrollto="#ico_price" scrolloffset="#ico_sections">Ico Price</a></li>
+                  <li><a href="javascript:;" class="scrollto" scrollto="#ico_structure" scrolloffset="#ico_sections">Ico Structure</a></li>
+                  <li><a href="javascript:;" class="scrollto" scrollto="#ico_bounty" scrolloffset="#ico_sections">Ico Bounty</a></li>
+                  <li><a href="javascript:;" class="scrollto" scrollto="#guaranteed" scrolloffset="#ico_sections">Guaranteed Buy Back</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-d-2 col-m-6 ico_sections" id="ico_sections">
+        <div class="ico_section cols" id="ico">
+          <div class="col-d-6 col-xd-8 center-d ico_section_content">
+            <div class="ico_section_graphics">
+              <div class="ico_offering_wrap">
+                <img src="images/ico_offering.svg" class="ico_offering_symbol">
+                <div class="ico_offering_single">
+                  <h4>ICO</h4>
+                  <p>15.000.000 CYBs</p>
+                </div>
+                <div class="ico_offering_single">
+                  <h4>Pre-ICO</h4>
+                  <p>3.000.000 CYBs</p>
+                </div>
+                <div class="ico_offering_single">
+                  <h4>Reserve</h4>
+                  <p>9.000.000 CYBs</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="ico_section_title">ICO</h3>
+            <p class="ico_section_desc">To implement Cyber Credit’s road map, we are launching an initial coin offering to issue Cyber Credit Tokens (CYB) to our investors and members. There is a total of <b class="white">27,000,000 CYBs</b>.</p>
+            <p class="ico_section_desc">Only <b class="white">18,000,000</b> tokens will be sold during the Pre- ICO and ICO period. The other <b class="white">9,000,000</b> tokens will be held by Cyber Credit to help stabilize the market during the development phase.</p>
+          </div>
+        </div>
+        <div class="ico_section cols" id="ico_timing">
+          <div class="col-d-6 col-xd-8 center-d ico_section_content">
+            <h3 class="ico_section_title text-center">Ico Timing</h3>
+            <div class="ico_section_graphics">
+              <div class="ico_process_wrap">
+                <img src="images/ico_process.svg" class="ico_process_symbol">
+                <div class="ico_process_bar"><span style="width: 68%"></span></div>
+                <div class="ico_process_point start">
+                  <h4>ICO start</h4>
+                  <p>23 Dec, 2017</p>
+                </div>
+                <div class="ico_process_point end">
+                  <h4>ICO end</h4>
+                  <p>23 Jan, 2018</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ico_section cols" id="ico_price">
+          <div class="col-d-6 col-xd-8 center-d ico_section_content">
+            <h3 class="ico_section_title">Ico Price</h3>
+            <p class="ico_section_desc">First 3,000,000 tokens will be sold at $0.4 during Pre-ICO period for early birds. After that, the rest of the 15,000,000 tokens will be divided in to 11 blocks as shown below.</p>
+            <ul class="ico_price_list">
+              <li>
+                <span class="ico_price_token">850.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:40%;"></span></div>
+                <span class="ico_price_label">Block 1</span>
+                <span class="ico_price_value">$0.70</span>
+              </li>
+              <li>
+                <span class="ico_price_token">950.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:44%;"></span></div>
+                <span class="ico_price_label">Block 2</span>
+                <span class="ico_price_value">$0.75</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.050.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:48%;"></span></div>
+                <span class="ico_price_label">Block 3</span>
+                <span class="ico_price_value">$0.80</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.150.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:52%;"></span></div>
+                <span class="ico_price_label">Block 4</span>
+                <span class="ico_price_value">$0.85</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.250.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:56%;"></span></div>
+                <span class="ico_price_label">Block 5</span>
+                <span class="ico_price_value">$0.90</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.350.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:60%;"></span></div>
+                <span class="ico_price_label">Block 6</span>
+                <span class="ico_price_value">$0.95</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.450.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:66%;"></span></div>
+                <span class="ico_price_label">Block 7</span>
+                <span class="ico_price_value">$1.00</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.550.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:72%;"></span></div>
+                <span class="ico_price_label">Block 8</span>
+                <span class="ico_price_value">$1.05</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.650.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:80%;"></span></div>
+                <span class="ico_price_label">Block 9</span>
+                <span class="ico_price_value">$1.10</span>
+              </li>
+              <li>
+                <span class="ico_price_token">1.750.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:88%;"></span></div>
+                <span class="ico_price_label">Block 10</span>
+                <span class="ico_price_value">$1.15</span>
+              </li>
+              <li>
+                <span class="ico_price_token">2.000.000 CYB</span>
+                <div class="ico_price_progress"><span style="width:100%;"></span></div>
+                <span class="ico_price_label">Block 11</span>
+                <span class="ico_price_value">$1.20</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="ico_section cols" id="ico_structure">
+          <div class="col-d-6 col-xd-8 center-d ico_section_content">
+            <h3 class="section_title small">Ico Structure</h3>
+            <ul class="ico_frags">
+              <li>
+                <span class="ico_frag_ico" style="color: #1B58E3"></span>
+                <span class="ico_frag_label">Investors</span>
+                <span class="ico_frag_value">50%</span>
+              </li>
+              <li>
+                <span class="ico_frag_ico" style="color: #002BE8"></span>
+                <span class="ico_frag_label">Community Development</span>
+                <span class="ico_frag_value">5%</span>
+              </li>
+              <li>
+                <span class="ico_frag_ico" style="color: #001B90"></span>
+                <span class="ico_frag_label">Founders</span>
+                <span class="ico_frag_value">5%</span>
+              </li>
+              <li>
+                <span class="ico_frag_ico" style="color: #4AAFF5"></span>
+                <span class="ico_frag_label">Sales &amp; Marketing</span>
+                <span class="ico_frag_value">20%</span>
+              </li>
+              <li>
+                <span class="ico_frag_ico" style="color: #0DDD9E"></span>
+                <span class="ico_frag_label">IT &amp; Maintenace</span>
+                <span class="ico_frag_value">10%</span>
+              </li>
+              <li>
+                <span class="ico_frag_ico" style="color: #20C565"></span>
+                <span class="ico_frag_label">R&amp;D, Product Development</span>
+                <span class="ico_frag_value">10%</span>
+              </li>
+            </ul>
+            <div class="ico_chart_wrap">
+              <div id="ico-chart" class="ico_chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+              <script>
+              $(function () {
+                var chart;
+                var idHolder ='ico-chart';
+                var testColor = ["#002BE8", "#001B90", "#4AAFF5", "#0DDD9E", "#20C565", "#1B58E3"];
+                var test = [
+                    ["Community Development", 5],
+                    ["Founders", 5],
+                    ["Sales & Marketing", 20],
+                    ["IT & Maintenance", 10],
+                    ["R&D, Product Development", 10],
+                    ["Investors", 50]
+                  ];
+
+                $(document).ready(function () {
+                  // Build the chart
+                  this.plot1 = new Highcharts.Chart({  //$('#'+ idHolder).highcharts({
+                    chart: {
+                      renderTo: idHolder,
+                      plotBackgroundColor: null,
+                      plotBorderWidth: null,
+                      plotShadow: false,
+                      backgroundColor:'rgba(255, 255, 255, 0.0)',
+                    },
+                    credits: { enabled: false },
+                    colors: testColor,
+                    tooltip: {
+                      formatter: function () {
+                          return '<b>' + this.point.name + '</b>:<br>' + Highcharts.numberFormat(this.y, 0) + ' <b>:</b> ' + Highcharts.numberFormat(this.percentage, 2) + ' %';
+                        }
+                    },
+                    title: {
+                        text: null
+                    },
+                    navigation: {
+                      buttonOptions: {
+                      enabled: false,
+                      }
+                    },
+                    plotOptions: {
+                      pie: {
+                        size:'60%',
+                        center:['50%','30%'],
+                        allowPointSelect: true,
+                        borderColor:'#08103E',
+                        cursor: 'pointer',
+                        dataLabels: {
+                          enabled: true,
+                          connectorWidth: 0,
+                          distance: 10,//-50,
+                          color: '#ABB3E0',
+                          style: {
+                            textOutline: '0px contrast',
+                          },
+                          formatter: function () {
+                            return this.percentage.toFixed(2) + '%';
+                          }
+                        },
+                        showInLegend: true
+                      }
+                    },
+                    legend: {
+                        enabled: false,
+                      },
+
+                    series: [{
+                      type: 'pie',
+                      name: '',
+                      innerSize: '50%',
+                      data: test,
+                    }]
+                  });
+                });
+
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="ico_section cols" id="ico_bounty">
+          <div class="col-d-6 col-xd-8 center-d ico_section_content">
+            <h3 class="ico_section_title big">ICO BOUNTY INCENTIVES</h3>
+            <div class="aff_tower_wrap aff_bonus_tower ico_bounty_tower">
+              <div class="aff_tower">
+                <img src="images/refferal_tower.svg" alt="" class="aff_tower_model">
+              </div>
+              <div class="aff_tower_metrics">
+                <div class="aff_tower_metric_single">
+                  <div class="aff_tower_metric_value"><span>7%</span></div>
+                  <div class="aff_tower_metric_label">F1</div>
+                </div>
+                <div class="aff_tower_metric_single">
+                  <div class="aff_tower_metric_value"><span>3%</span></div>
+                  <div class="aff_tower_metric_label">F2</div>
+                </div>
+                <div class="aff_tower_metric_single">
+                  <div class="aff_tower_metric_value"><span>1%</span></div>
+                  <div class="aff_tower_metric_label">F3<span></span>F5</div>
+                </div>
+                <div class="aff_tower_metric_single">
+                  <div class="aff_tower_metric_value"><span>0.2%</span></div>
+                  <div class="aff_tower_metric_label">F6<span></span>F15</div>
+                </div>
+              </div>
+            </div>
+            <h3 class="section_content_title">ICO BOUNTY INCENTIVES PAYMENT</h3>
+            <p class="section_desc irate_point">Your bounty bonuses will be paid 50% in $ and 50% in CYB tokens. Please log on to your back office page to check your wallets for updated balances.</p>
+            <p class="section_desc irate_point">You can withdraw your $ bonuses immediately once your referrals have made their tokens purchase.</p>
+          </div>
+        </div>
+        <div class="ico_section cols" id="guaranteed">
+          <div class="col-d-6 col-xd-8 center-d ico_section_content">
+            <h3 class="ico_section_title">Guaranteed Buy Back</h3>
+            <img src="images/smile_meter.png" alt="" class="ico_guaranteed">
+            <p class="ico_section_desc">At Cyber Credit, members’ satisfaction is our top priority. Therefore, we offer a buy back guarantee in case you change your mind after your token purchase.</p>
+            <p class="ico_section_desc quoted">The buyback period will be 30 days counting from the ICO end date.</p>
+            <p class="ico_section_desc quoted">Your tokens must be purchased directly from Cyber Credit back office website, not from any other member via internal transfer.</p>
+            <p class="ico_section_desc quoted">Your purchased tokens remain untouched and have not been converted or used for lending program.</p>
+            <p class="ico_section_desc">You will need to submit a support ticket to Cyber Credit via back office platform in order to get your refund. Cyber Credit will not pay for any transaction cost related to the buyback.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fake_footer mobile_only">
+      <ul class="fake_footer_menu_list">
+        <!-- <li><a href="about.html">About</a></li> -->
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="fake_footer_socials">
+        <a href="mailto:support@cybercredit.io" class="fake_footer_contact_mail">support@cybercredit.io</a>
+        <ul class="fake_footer_socials_list">
+          <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+          <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+          <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+        </ul>
+      </div>
+      <div class="fake_footer_copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+    </div>
+  </div>
+  <script type="text/javascript" async src="js/scripts.js"></script>
+  <script type="text/javascript" async src="js/alt_scripts.js"></script>
+</body>
+
+</html>

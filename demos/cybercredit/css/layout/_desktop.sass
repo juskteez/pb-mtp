@@ -1,0 +1,1988 @@
+/* Desktop */
+
+html
+  min-height: 100%
+
+body
+  background-color: $main-dark-color
+
+  &.page_scroll,
+  &.page_roadmap
+    overflow: hidden
+
+  &~div[id^="__lpform"]
+    display: none !important
+
+$cc_width: 60px
+
+$col-width: 100%/6
+
+.cols
+  display: flex
+  flex-wrap: wrap
+  &.center-d
+    justify-content: center
+  &.right-d
+    justify-content: flex-end
+
+[class^="col-"]
+  position: relative
+  &.center-d
+    align-self: center
+
+@for $i from 1 through 6
+  .col-d-#{$i}
+    width: $col-width*$i
+
+#body
+  //overflow-x: hidden
+  padding: $cc_width
+  color: #fff
+  &:beforex
+    content: ""
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: url("../images/noise.gif")
+    opacity: 0.02
+
+.shrink_grid
+  position: fixed
+  top: $cc_width
+  left: $cc_width
+  width: calc(100% - #{$cc_width * 2})
+  height: calc(100% - #{$cc_width * 2})
+  font-size: 0
+  display: flex
+
+  span
+    display: inline-block
+    width: 100%
+    height: 100%
+    position: relative
+    border-right: 1px solid #1E244F
+
+  span:nth-of-type(6) i,
+  span:nth-of-type(6)~span
+    display: none
+
+  i
+    position: absolute
+    right: -1px
+    top: 0
+    width: 1px
+    height: 0
+    background-color: $main-color
+    transition: 1s height cubic-bezier(.63,.19,.24,.95)
+    transition-delay: 0.2s
+    transform: translateZ(0)
+    will-change: height, margin-top
+    opacity: 0
+    animation: rain_drop 10s linear infinite
+
+@keyframes rain_drop
+  0%
+    margin-top: 0
+    opacity: 0
+  5%
+    opacity: 1
+  95%
+    opacity: 1
+  100%
+    margin-top: 150vh
+    opacity: 0
+
+.mobile_only
+  display: none
+  @media screen and (max-width: 767px)
+    display: block
+
+.control_center
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  box-shadow: inset 0 0 0 $cc_width #fff
+  font-family: $font-parag
+  font-size: $fs6
+  color: $text-color
+  pointer-events: none
+  z-index: 999
+
+.logo
+  position: relative
+  z-index: 100
+
+.main_header,
+.main_footer,
+.main_socials,
+.main_pagination
+  position: absolute
+  width: 100%
+  height: $cc_width
+  top: 0
+  left: 0
+  padding: 0 $cc_width
+  pointer-events: all
+
+.main_header,
+.main_footer
+  display: flex
+
+  [class^="col-"]
+    padding: 14px 0
+    line-height: 32px
+
+.main_footer
+  top: auto
+  bottom: 0
+
+.main_socials,
+.main_pagination
+  width: $cc_width
+  height: 100%
+  padding: $cc_width 0
+
+.main_pagination
+  left: auto
+  right: 0
+
+.currency_watcher
+  position: relative
+  color: $gray-color
+  display: inline-block
+  &:not(:last-child)
+    margin-right: 32px
+  &_ico,
+  &_value
+    display: inline-block
+    img
+      vertical-align: middle
+      margin-top: -1px
+
+  &_ico
+    margin-right: 6px
+
+.main_menu
+  font-family: $font-title
+  text-transform: uppercase
+  text-align: right
+
+  li,
+  &_list,
+  &_actions
+    display: inline-block
+    vertical-align: top
+    cursor: default
+
+  .btn
+    vertical-align: top
+
+  &_list li
+    padding: 0 12px
+    background-color: #fff
+    position: relative
+    &:last-child
+      margin-right: 12px
+    &.main_menu_switch
+      padding-right: 24px
+      background-image: url("../images/down_arrow.svg")
+      background-position: calc(100% - 10px) 13px
+      background-repeat: no-repeat
+      overflow: hidden
+      max-height: 32px
+      transition: 0.4s all ease
+      &:hover
+        max-height: 100vh
+      &:last-child
+        margin-right: 14px
+      a
+        display: block
+
+  a
+    display: inline-block
+    &.active
+      color: $main-color
+
+  &_actions
+    font-size: 0
+    .btn
+      border-right-width: 0
+      border-left-width: 0
+      border-radius: 0
+      margin-left: 0
+    .btn:first-child
+      border-left-width: 1px
+      border-radius: 3px 0 0 3px
+    .btn:last-child
+      border-right-width: 1px
+      border-radius: 0 3px 3px 0
+    .btn:not(:first-child):before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 0
+      width: 1px
+      height: calc(100% - 12px)
+      transform: translate3d(0,-50%,0)
+      background-color: #E3E3E3
+
+
+.sub_menu
+  &_list
+    li
+      display: inline-block
+      padding: 0 12px
+    li:last-child
+      padding-right: 0
+
+.contact_mail
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%,-50%,0) rotate(-90deg)
+  width: 160px
+  text-align: center
+  line-height: 32px
+
+
+.main_socials
+  &_list
+    position: absolute
+    width: 100%
+    text-align: center
+    bottom: 0
+    margin-bottom: -8px
+    padding-bottom: $cc_width
+    a
+      display: inline-block
+      width: 32px
+      height: 32px
+      vertical-align: top
+      background-position: center
+      background-repeat: no-repeat
+      opacity: .5
+      &:hover
+        opacity: 1
+
+    a.telegram
+      background-image: url("../images/telegram.svg")
+    a.youtube
+      background-image: url("../images/youtube.svg")
+    a.twitter
+      background-image: url("../images/twitter.svg")
+    a.facebook
+      background-image: url("../images/facebook.svg")
+
+.page_pag
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%,-50%,0)
+  width: 30px
+  a
+    display: block
+    width: 12px
+    height: 1px
+    background-color: $text-color
+    margin-bottom: 10px
+    position: relative
+    &:before
+      content: ""
+      display: block
+      position: relative
+      width: 100%
+      height: 10px
+      top: 50%
+      transform: translate3d(0,-50%,0)
+    &:last-child
+      margin-bottom: 0
+    &.active
+      width: 100%
+      background-color: $main-color
+
+img.glow
+  filter: drop-shadow(0 0 20px rgba(49,197,32,0.5))
+.sections,
+.section
+  min-height: calc(100vh - 120px)
+  position: relative
+  &.full_sections
+    min-height: 0
+    position: static
+
+.home_sections
+  .section
+    height: calc(100vh - 120px)
+
+    &_info_blocks
+      margin-top: 64px
+
+  .home_home .section_actions
+    margin-top: 0
+    .btn
+      width: 142px
+
+  .home_vision .section_desc
+    max-width: 428px
+
+  .home_roadmap .section_desc
+    max-width: 428px
+
+  .home_lending .section_desc
+    max-width: 476px
+    margin-left: auto
+    margin-right: auto
+
+  .home_offering .section_desc
+    max-width: 340px
+
+  .home_lending .section
+    &_title,
+    &_desc,
+    &_subtitle
+      z-index: 1
+      position: relative
+
+  .home_offering .guaranteed_desc
+    max-width: 284px
+
+  .vision
+    &_title
+      text-transform: uppercase
+      font-weight: normal
+      font-size: 18px
+      line-height: 26px
+      margin-top: 48px
+      color: $main-color
+      position: relative
+      z-index: 1
+
+    &_ico
+      position: relative
+      height: 140px
+      line-height: 140px
+      z-index: 1
+      img
+        vertical-align: middle
+        filter: drop-shadow(0 0 4px rgba(49,197,32,0.6))
+
+    &_single
+      position: relative
+      *
+        pointer-events: none
+      &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        width: 100%
+        height: 100vh
+        background-color: rgba(0,0,0,0)
+        transform: translate3d(0,-50%,0)
+        @extend .easing
+      &:hover:before
+        background-color: rgba(0,0,0,0.1)
+
+.section
+  &_subtitle
+    font-size: 18px
+    text-transform: uppercase
+    letter-spacing: 5px
+    font-weight: normal
+    line-height: 32px
+    margin-bottom: 0
+    color: #fff
+
+  &_title
+    font-size: 44px
+    text-transform: uppercase
+    font-weight: normal
+    line-height: 56px
+    margin-bottom: 20px
+    position: relative
+    display: inline-block
+    color: #fff
+    &.small
+      font-size: 18px
+      line-height: 26px
+
+  .glitchx
+    white-space: nowrap
+
+  @keyframes noise-anim
+    0%
+      clip: rect(83px, 9999px, 23px, 0)
+    5%
+      clip: rect(20px, 9999px, 74px, 0)
+    10%
+      clip: rect(70px, 9999px, 77px, 0)
+    15.0%
+      clip: rect(83px, 9999px, 85px, 0)
+    20%
+      clip: rect(50px, 9999px, 18px, 0)
+    25%
+      clip: rect(36px, 9999px, 59px, 0)
+    30.0%
+      clip: rect(38px, 9999px, 14px, 0)
+    35%
+      clip: rect(92px, 9999px, 41px, 0)
+    40%
+      clip: rect(20px, 9999px, 22px, 0)
+    45%
+      clip: rect(44px, 9999px, 7px, 0)
+    50%
+      clip: rect(88px, 9999px, 50px, 0)
+    55.0%
+      clip: rect(78px, 9999px, 89px, 0)
+    60.0%
+      clip: rect(42px, 9999px, 73px, 0)
+    65%
+      clip: rect(91px, 9999px, 17px, 0)
+    70%
+      clip: rect(59px, 9999px, 64px, 0)
+    75%
+      clip: rect(55px, 9999px, 61px, 0)
+    80%
+      clip: rect(85px, 9999px, 42px, 0)
+    85.0%
+      clip: rect(100px, 9999px, 24px, 0)
+    90%
+      clip: rect(56px, 9999px, 45px, 0)
+    95%
+      clip: rect(86px, 9999px, 62px, 0)
+    100%
+      clip: rect(86px, 9999px, 47px, 0)
+
+  .glitchx:after
+    content: attr(data-text)
+    position: absolute
+    left: 2px
+    text-shadow: -1px 0 red
+    top: 0
+    color: #fff
+    background: $main-dark-color
+    overflow: hidden
+    clip: rect(0, 900px, 0, 0)
+    animation: noise-anim 2s infinite linear alternate-reverse
+
+  @keyframes noise-anim-2
+    0%
+      clip: rect(50px, 9999px, 70px, 0)
+    5%
+      clip: rect(80px, 9999px, 10px, 0)
+    10%
+      clip: rect(1px, 9999px, 62px, 0)
+    15.0%
+      clip: rect(82px, 9999px, 40px, 0)
+    20%
+      clip: rect(32px, 9999px, 63px, 0)
+    25%
+      clip: rect(63px, 9999px, 31px, 0)
+    30.0%
+      clip: rect(15px, 9999px, 39px, 0)
+    35%
+      clip: rect(17px, 9999px, 52px, 0)
+    40%
+      clip: rect(66px, 9999px, 59px, 0)
+    45%
+      clip: rect(3px, 9999px, 58px, 0)
+    50%
+      clip: rect(56px, 9999px, 28px, 0)
+    55.0%
+      clip: rect(90px, 9999px, 91px, 0)
+    60.0%
+      clip: rect(94px, 9999px, 97px, 0)
+    65%
+      clip: rect(18px, 9999px, 79px, 0)
+    70%
+      clip: rect(59px, 9999px, 37px, 0)
+    75%
+      clip: rect(35px, 9999px, 83px, 0)
+    80%
+      clip: rect(51px, 9999px, 57px, 0)
+    85.0%
+      clip: rect(28px, 9999px, 63px, 0)
+    90%
+      clip: rect(98px, 9999px, 55px, 0)
+    95%
+      clip: rect(69px, 9999px, 94px, 0)
+    100%
+      clip: rect(56px, 9999px, 1px, 0)
+
+  .glitchx:before
+    content: attr(data-text)
+    position: absolute
+    left: -1px
+    text-shadow: 1px 0 $main-color
+    top: 0
+    color: #fff
+    background: $main-dark-color
+    overflow: hidden
+    clip: rect(0, 900px, 0, 0)
+    animation: noise-anim-2 3s infinite linear alternate-reverse
+
+  &_desc
+    font-family: $font-parag
+    font-size: 13px
+    color: #ABB3E0
+    line-height: 22px
+    &.centered
+      max-width: 690px
+      margin-left: auto
+      margin-right: auto
+
+    &.irate_point
+      &:before
+        content: ""
+        position: relative
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        display: inline-block
+        margin-right: 8px
+        background-color: $main-color
+
+  &_actions
+    margin-top: 32px
+
+  &_info_blocks
+    position: relative
+
+  &_info_title
+    text-transform: uppercase
+    font-size: 18px
+    line-height: 26px
+    font-weight: normal
+
+  &_info_block
+    width: 180px
+    background-color: #1E254F
+    border-radius: 3px
+    margin: 0 5px
+    padding: 8px
+
+    &_wrap
+      display: flex
+      justify-content: center
+
+    &_title,
+    &_value
+      font-size: 10px
+      text-transform: uppercase
+      color: rgba(255,255,255,0.5)
+      line-height: 16px
+      font-weight: normal
+      margin-bottom: 2px
+
+    &_value
+      font-size: 12px
+      line-height: 18px
+      margin-bottom: 0
+      span:not(.main-color)
+        color: #fff
+
+  &_director
+    position: absolute
+    top: 100%
+    width: 32px
+    height: 32px
+    left: 50%
+    transform: translate3d(-50%,-56px,0)
+    span
+      position: absolute
+      width: 20px
+      height: 10px
+      background-image: url("../images/section_direction.svg")
+      background-position: center left
+      background-repeat: no-repeat
+      left: 50%
+      top: 0
+      transform: translate3d(-50%,0,0)
+      animation: blinker 1.6s ease infinite
+      opacity: 0
+      pointer-events: none
+    span:nth-of-type(2)
+      top: 5px
+      animation-delay: 0.2s
+    span:nth-of-type(3)
+      top: 10px
+      animation-delay: 0.4s
+    span:nth-of-type(4)
+      top: 15px
+      animation-delay: 0.6s
+    span:nth-of-type(5)
+      top: 20px
+      animation-delay: 0.8s
+
+    @keyframes blinker
+      0%
+        opacity: 0
+      45%
+        opacity: 1
+      55%
+        opacity: 1
+      100%
+        opacity: 0
+
+@media screen and (min-height: 960px)
+  .section_director
+    transform: translate3d(-50%,-96px,0)
+
+@media screen and (max-height: 768px)
+  .section_director
+    transform: translate3d(-50%, 16px, 0)
+    z-index: 999
+    opacity: 0
+
+  .section.active .section_director
+    opacity: 1
+
+.home_countdown
+  margin-top: 26px
+  &_title
+    font-size: 14px
+    text-transform: uppercase
+    line-height: 22px
+    color: #ABB3E0
+    margin-bottom: 12px
+
+  &_single
+    display: inline-block
+    position: relative
+    font-size: 42px
+    line-height: 40px
+    margin: 0 20px
+    width: 42px
+    &:before
+      content: ":"
+      position: absolute
+      left: 100%
+      margin-left: 18px
+      font-size: 32px
+      line-height: 38px
+    &:last-child:before
+      display: none
+    &:after
+      content: attr(timelabel)
+      position: absolute
+      text-transform: uppercase
+      top: 100%
+      left: 0
+      font-size: 10px
+      color: rgba(171,179,224,0.5)
+      width: 100%
+
+.vision
+  &_contents
+    position: relative
+  &_content
+    position: absolute
+    top: 0
+    opacity: 0
+    transform: translate3d(0,32px,0)
+    pointer-events: none;
+    @extend .easing
+    &.active
+      opacity: 1
+      transform: translate3d(0,0,0)
+      pointer-events: all
+    &:first-child
+      position: relative
+
+  &_single
+    transform: translate3d(0,64px,0)
+    transition: 0.6s all ease
+    transition-delay: 0.4s
+    opacity: 0
+
+  &_guide
+    display: inline-block
+    line-height: 24px
+    font-size: 11px
+    background-color: rgba(255,255,255,0.1)
+    padding: 0 8px
+    border-radius: 3px
+    color: rgba(255,255,255,0.6)
+    margin-top: 16px
+    pointer-events: none
+    padding-right: 10px
+    &:after
+      content: ""
+      position: relative
+      display: inline-block
+      width: 6px
+      height: 24px
+      background-image: url("../images/v_arrow.svg")
+      background-position: center
+      background-repeat: no-repeat
+      vertical-align: top
+      margin-left: 10px
+      will-change: transform
+      animation: vision_guide 1s ease infinite
+
+  @keyframes vision_guide
+    0%
+      transform: translate3d(-2px,0,0)
+    50%
+      transform: translate3d(2px,0,0)
+    100%
+      transform: translate3d(-2px,0,0)
+
+.home_vision.active .vision_single
+  transform: translate3d(0,0,0)
+  opacity: 1
+  transition-delay: 0.8s
+  &[vision-id="2"]
+    transition-delay: 0.9s
+  &[vision-id="3"]
+    transition-delay: 1s
+
+.cols#scroll_list_wrap
+  height: calc(100vh - 120px)
+
+.roadmap
+  &_info
+    height: 84%
+  &_chart
+    height: 16%
+
+    &_points
+      display: flex
+      justify-content: space-between
+      margin-left: -7px
+      margin-right: -7px
+      position: relative
+      height: 14px
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 4px
+        background-image: linear-gradient(-90deg, #20C565 1%, #3DCBFF 50%, #2366FF 100%)
+        border-radius: 3px
+        top: 50%
+        transform: translate3d(0,-50%,0)
+        transform-origin: left center
+
+    &_pointer
+      display: inline-block
+      width: 14px
+      height: calc(74vh - 120px)
+      margin-top: calc(-74vh + 120px + 14px)
+      position: relative
+      transform: translateZ(0)
+
+    &_pointer:nth-of-type(1)
+      .rm_point
+        border-color: #2368FF
+      .rm_prg
+        background-color: #2368FF
+        height: 2.5%
+
+    &_pointer:nth-of-type(2)
+      .rm_point
+        border-color: #297EFF
+      .rm_prg
+        background-color: #297EFF
+        height: 3%
+
+    &_pointer:nth-of-type(3)
+      .rm_point
+        border-color: #2F95FF
+      .rm_prg
+        background-color: #2F95FF
+        height: 3.6%
+
+    &_pointer:nth-of-type(4)
+      .rm_point
+        border-color: #34A7FF
+      .rm_prg
+        background-color: #34A7FF
+        height: 5%
+
+    &_pointer:nth-of-type(5)
+      .rm_point
+        border-color: #3AC1FF
+      .rm_prg
+        background-color: #3AC1FF
+        height: 9%
+
+    &_pointer:nth-of-type(6)
+      .rm_point
+        border-color: #39CAEC
+      .rm_prg
+        background-color: #39CAEC
+        height: 14%
+
+    &_pointer:nth-of-type(7)
+      .rm_point
+        border-color: #33C9C9
+      .rm_prg
+        background-color: #33C9C9
+        height: 20%
+
+    &_pointer:nth-of-type(8)
+      .rm_point
+        border-color: #2DC8A7
+      .rm_prg
+        background-color: #2DC8A7
+        height: 25%
+
+    &_pointer:nth-of-type(9)
+      .rm_point
+        border-color: #25C683
+      .rm_prg
+        background-color: #25C683
+        height: 50%
+
+    &_pointer:nth-of-type(10)
+      .rm_point
+        border-color: #20C566
+      .rm_prg
+        background-color: #20C566
+        height: 100%
+
+    &_point
+      position: absolute
+      width: 14px
+      height: 14px
+      background-color: $main-dark-color
+      border: 4px solid #fff
+      bottom: 0
+      border-radius: 50%
+      z-index: 1
+
+    &_date
+      content: attr(data-date)
+      position: absolute
+      top: 100%
+      line-height: 20px
+      text-transform: uppercase
+      font-size: 12px
+      color: #ABB3E0
+      opacity: 0.6
+      width: 64px
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      padding-top: 20px
+      text-align: center
+      span.b
+        display: block
+
+
+    &_pointer:hover .roadmap_chart_progress
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.2)
+
+    &_progress
+      position: absolute
+      bottom: 2px
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      height: 10px
+      background-color: #fff
+      border-radius: 5px
+      width: 10px
+      transition: 0.2s box-shadow ease
+      &:before
+        content: attr(title)
+        position: absolute
+        width: 64px
+        bottom: 100%
+        left: 50%
+        line-height: 20px
+        text-transform: uppercase
+        color: $main-color
+        text-align: center
+        transform: translate3d(-50%,0,0)
+        margin-bottom: 8px
+        font-size: 12px
+        margin-left: -3px
+
+.lending
+  &_circles
+    vertical-align: top
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+
+  &_circle_wrap
+    position: relative
+    width: 410px
+    height: 410px
+    margin-left: auto
+    margin-right: auto
+    z-index: -2
+
+  &_circle_loop
+    position: relative
+    width: 410px
+    height: 410px
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      animation: spin_circle 40s linear infinite
+      &:nth-of-type(2)
+        animation-duration: 30s
+        animation-direction: reverse
+      &:nth-of-type(3)
+        animation-duration: 24s
+      &:nth-of-type(4)
+        animation-duration: 18s
+        animation-direction: reverse
+
+  @keyframes spin_circle
+    0%
+      transform: translate3d(-50%,-50%,0) rotate(0deg)
+    100%
+      transform: translate3d(-50%,-50%,0) rotate(-360deg)
+
+  &_programs
+    margin-top: -130px
+    margin-bottom: 80px
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      width: 130px
+      height: 130px
+      background-image: url("../images/lend_symbol.svg")
+      background-position: center
+      background-repeat: no-repeat
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      z-index: 99
+    &:after
+      content: ""
+      position: absolute
+      width: 100%
+      top: 0
+      left: 0
+      height: 240px
+      background-image: linear-gradient(-180deg, #08103E 56%, rgba(8,16,62,0.00) 100%)
+      z-index: -1
+  &_list
+    li
+      width: 260px
+      position: absolute
+      text-align: right
+      left: 50%
+      transform: translate3d(-50%,0,0)
+    li:nth-of-type(2)~li
+      text-align: left
+    li:nth-of-type(1)
+      margin-top: -144px
+      margin-left: -360px
+    li:nth-of-type(2)
+      margin-top: -26px
+      margin-left: -248px
+    li:nth-of-type(3)
+      margin-top: -144px
+      margin-left: 360px
+    li:nth-of-type(4)
+      margin-top: -26px
+      margin-left: 248px
+    &_title
+      font-size: 12px
+      text-transform: uppercase
+      font-weight: normal
+      line-height: 16px
+      margin-bottom: 6px
+      color: #fff
+    &_desc
+      font-family: $font-parag
+      font-size: 13px
+      color: #ABB3E0
+      line-height: 22px
+    &_ico
+      position: absolute
+      left: 100%
+      margin: -20px 16px
+      img
+        vertical-align: top
+
+    li:nth-of-type(3),
+    li:nth-of-type(4)
+      .lending_list_ico
+        left: auto
+        right: 100%
+
+.welcome_sphere
+  position: absolute
+  width: 720px
+  height: 720px
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%,-50%,0) translate3d(0,-10%,0)
+  background-color: transparent
+  opacity: 0.3
+
+.dusty_sphere
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%,-50%,0)
+  z-index: -1
+
+
+$page-transition: 0.6s
+$point-delay: 0.05s
+
+.home_roadmap.active
+  .roadmap_chart
+    &_pointer
+      opacity: 0
+      animation: grow_point 0.6s ease forwards
+    @keyframes grow_point
+      0%
+        transform: translate3d(0,16px,0)
+        opacity: 0
+      100%
+        transform: translate3d(0,0,0)
+        opacity: 1
+
+    &_pointer:nth-of-type(1)
+      animation-delay: #{$page-transition + ( $point-delay * 0 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(2)
+      animation-delay: #{$page-transition + ( $point-delay * 1 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(3)
+      animation-delay: #{$page-transition + ( $point-delay * 2 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(4)
+      animation-delay: #{$page-transition + ( $point-delay * 3 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(5)
+      animation-delay: #{$page-transition + ( $point-delay * 4 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(6)
+      animation-delay: #{$page-transition + ( $point-delay * 5 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(7)
+      animation-delay: #{$page-transition + ( $point-delay * 6 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(8)
+      animation-delay: #{$page-transition + ( $point-delay * 7 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(9)
+      animation-delay: #{$page-transition + ( $point-delay * 8 )}
+      .rm_prg
+        height: 10px;
+    &_pointer:nth-of-type(10)
+      animation-delay: #{$page-transition + ( $point-delay * 9 )}
+      .rm_prg
+        height: 10px;
+
+    &_points:before
+      transform: translate3d(0,-50%,0) scaleX(0)
+      animation: grow_time 1.2s ease forwards
+      animation-delay: #{$page-transition + ( $point-delay * 4 )}
+
+    @keyframes grow_time
+      0%
+        transform: translate3d(0,-50%,0) scaleX(0)
+      100%
+        transform: translate3d(0,-50%,0) scaleX(1)
+
+    @keyframes rm_prg_10
+      0%
+        height: 10px
+      100%
+        height: 100%
+
+
+.ico
+  &_frag
+    &s
+      text-transform: uppercase
+      font-size: 12px
+      color: #ABB3E0
+      line-height: 16px
+
+      li
+        margin-bottom: 14px
+        position: relative
+
+    &_ico
+      display: inline-block
+      width: 10px
+      height: 10px
+      background-color: currentColor
+      border-radius: 50%
+      vertical-align: top
+      margin: 3px 0
+      margin-right: 10px
+
+    &_value
+      position: absolute
+      right: 0
+      color: $main-color
+
+.cols.offering_ico
+  height: 260px
+  margin-bottom: 56px
+
+.cols.offering_gbb
+  height: 180px
+
+.guaranteed_meter
+  &_wrap
+    position: absolute
+    width: 220px
+    height: 220px
+    top: 50%
+    left: 100%
+    transform: translate3d(-50%,-50%,0)
+    border-radius: 50%
+    background-image: url("../images/smile_meter.png")
+    background-position: center
+    background-size: 220px
+    background-repeat: no-repeat
+    *
+      display: none
+
+  &_circle
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    top: 0
+    left: 0
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3), inset 0 0 0 24px #060C2F, inset 0 1px 0 24px rgba(255,255,255,0.05), 0 1px rgba(255,255,255,0.05)
+
+  &_face
+    position: absolute
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    border: 2px solid $main-color
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+
+  &_eyes
+    position: absolute
+    width: 20px
+    height: 4px
+    top: 32%
+    left: 50%
+    transform: translate3d(-50%,0,0)
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 4px
+      height: 4px
+      left: 0
+      border-radius: 50%
+      background-color: $main-color
+    &:after
+      left: auto
+      right: 0
+
+  &_pointer
+    position: absolute
+    height: 200px
+    width: 4px
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    &:before
+      content: ""
+      position: absolute
+      width: 4px
+      height: 34%
+      bottom: 0
+      left: 0
+      background-color: $main-color
+      border-radius: 4px
+      box-shadow: 0 0 4px $main-color
+
+
+.roadmap_timeline
+  &_content
+    height: 84%
+    min-height: 84%
+  &_wrap
+    height: 16%
+    min-height: 16%
+
+  &_marks,
+  &_bar
+    position: relative
+    width: 100%
+    height: 2px
+    border-radius: 2px
+    background-color: #505B9E
+    justify-content: space-between
+
+  &_runner
+    position: absolute
+    bottom: 100%
+    left: 0
+    transform: translate3d(-50%,0,0)
+    will-change: left
+    width: 2px
+    height: 2px
+    cursor: move
+    cursor: ew-resize
+    cursor: -webkit-grab
+    img
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      vertical-align: top
+      filter: drop-shadow(0 0 5px rgba(32,197,101,0.3))
+
+  &_bar
+    position: absolute
+    top: 0
+
+  &_progress
+    position: relative
+    display: block
+    height: 2px
+    border-radius: 2px
+    background-color: $main-color
+    box-shadow: 0 0 4px $main-color
+
+  &_mark
+    position: relative
+    width: 2px
+    height: 2px
+
+    &:last-child .roadmap_timeline_ico img
+      vertical-align: middle
+
+  &_ico
+    position: absolute
+    width: 48px
+    height: 48px
+    line-height: 48px
+    bottom: 100%
+    left: 50%
+    transform: translate3d(-50%,0,0)
+    transform-origin: center bottom
+    margin-bottom: -1px
+    text-align: center
+    transition: 0s all ease
+    img
+      position: relative
+      vertical-align: bottom
+      pointer-events: none
+      &:last-child
+        display: none
+
+    &.active img
+      display: none
+      &:last-child
+        display: inline-block
+
+  &_info
+    position: absolute
+    top: 100%
+    font-size: 12px
+    line-height: 20px
+    width: 120px
+    left: 50%
+    margin-top: 16px
+    transform: translate3d(-50%,0,0)
+    color: #ABB3E0
+    text-align: center
+    text-transform: uppercase
+    span
+      display: block
+
+  &_value
+    color: $main-color
+
+  &_list
+    position: relative
+    display: inline-block
+    white-space: nowrap
+    font-size: 0
+    top: 50%
+    transform: translate3d(0,-50%,0)
+
+.roadmap_single
+  text-align: center
+  display: inline-block
+  font-size: 16px
+  position: relative
+  width: calc((100vw - 120px) / 6 * 4)
+  white-space: normal
+  vertical-align: middle
+  p.roadmap_point
+    &:not(:last-child)
+      margin-bottom: 12px
+    &:before
+      content: ""
+      position: relative
+      width: 6px
+      height: 6px
+      display: inline-block
+      border-radius: 50%
+      background-color: $main-color
+      margin: 2px 0
+      margin-right: 6px
+  .roadmap_col
+    padding: 0 16px
+    &s
+      display: flex
+  &_date
+    text-transform: uppercase
+    color: #fff
+    font-weight: normal
+    font-size: 18px
+    line-height: 40px
+    margin-bottom: 0
+    &+.roadmap_cols,
+    &+.roadmap_single_ico
+      margin-top: 16px
+
+  &_title
+    font-size: 34px
+    line-height: 60px
+    color: $main-color
+    text-transform: uppercase
+    font-weight: normal
+    margin-bottom: 20px
+
+  &_ico
+    position: relative
+    margin-bottom: 20px
+    &.mini-ico
+      height: 40px
+      line-height: 40px
+    img
+      vertical-align: middle
+
+  &_price
+    font-size: 24px
+    text-transform: uppercase
+    color: $main-color
+    line-height: 40px
+    margin-bottom: 12px
+
+  &_subtitle
+    font-size: 14px
+    text-transform: uppercase
+    color: $main-color
+    line-height: 24px
+    margin-bottom: 12px
+
+  &_desc
+    font-size: 13px
+    color: #ABB3E0
+    font-family: $font-parag
+    line-height: 22px
+    p
+      max-width: 464px
+      margin: 0 auto
+
+.roadmap_odd
+  display: flex
+  text-align: left
+  &:not(:last-child)
+    margin-bottom: 24px
+  &:nth-of-type(2n+2)
+    text-align: right
+    .roadmap_odd_ico
+      text-align: left
+      padding-left: 38px
+      padding-right: 0
+      order: 2
+    .roadmap_odd_content
+      order: 1
+  &s_list
+    position: relative
+    max-width: 700px
+    margin: 0 auto
+    margin-top: 24px
+
+  .roadmap_single_subtitle
+    margin-bottom: 6px
+
+  &_ico,
+  &_content
+    width: 50%
+
+    p.roadmap_point:not(:last-child)
+      margin-bottom: 6px
+
+  &_ico
+    text-align: right
+    padding-right: 38px
+    align-self: center
+
+
+.ico_section
+  height: calc(100vh - 120px)
+
+  .ico_section_title.big
+    font-size: 24px
+
+  &_desc
+    .white
+      color: #fff
+
+    &.quoted
+      border-left: 2px solid $main-color
+      padding-left: 20px
+      margin-bottom: 24px
+
+  .ico_guaranteed
+    width: 220px
+    float: right
+    margin-right: -110px
+    margin-top: -80px
+    margin-left: 32px
+
+
+  .ico_offering
+    &_wrap
+      text-align: center
+      position: relative
+      img
+        vertical-align: top
+
+    &_single
+      position: absolute
+      text-align: left
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3)
+        top: 50%
+        left: 50%
+        transform: translate3d(-266px,-50%,0) translate3d(0,-10px,0)
+      &:nth-of-type(2)
+        transform: translate3d(140px,-168px,0) translate3d(0,-10px,0)
+      &:nth-of-type(3)
+        transform: translate3d(140px,-50%,0) translate3d(0,-10px,0)
+      h4
+        font-size: 12px
+        color: #fff
+        margin-bottom: 0
+      p
+        font-size: 12px
+        color: $main-color
+        margin-bottom: 0
+        font-family: $font-title
+
+  .ico_process
+    &_wrap
+      position: relative
+      text-align: center
+      img
+        vertical-align: top
+
+    &_bar
+      position: absolute
+      width: 420px
+      height: 6px
+      border-radius: 3px
+      background-color: #262C52
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) translate3d(0,29px,0)
+      span
+        height: 100%
+        position: relative
+        background-color: $main-color
+        box-shadow: 0 0 6px $main-color
+        display: block
+        border-radius: 3px
+        &:before
+          content: ""
+          position: absolute
+          width: 35px
+          height: 20px
+          background-image: url("../images/ico_process_car.svg")
+          background-position: center
+          background-repeat: no-repeat
+          bottom: 100%
+          right: 0
+
+    &_point
+      position: absolute
+      text-align: left
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) translate3d(-184px,-8px,0)
+      &.end
+        text-align: right
+        transform: translate3d(-50%,-50%,0) translate3d(184px,-8px,0)
+
+      h4
+        font-size: 12px
+        color: #fff
+        margin-bottom: 0
+      p
+        font-size: 12px
+        color: $main-color
+        margin-bottom: 0
+
+  .ico_price
+    &_list
+      margin-left: 0 !important
+      font-family: $font-title
+      li
+        position: relative
+        list-style: none !important
+        margin-bottom: 16px
+
+    &_token,
+    &_value
+      font-size: 12px
+      color: $main-color
+
+    &_value
+      position: absolute
+      top: 100%
+      left: 100%
+      transform: translate3d(0,-50%,0)
+      margin-left: 12px
+      margin-top: -4px
+
+    &_token
+      margin-bottom: 4px
+      display: block
+
+    &_progress
+      position: relative
+      width: 100%
+      height: 6px
+      background-color: #262C52
+      border-radius: 3px
+      white-space: nowrap
+      span
+        height: 100%
+        position: relative
+        background-color: $main-color
+        box-shadow: 0 0 6px $main-color
+        display: block
+        border-radius: 3px
+
+    &_label
+      color: #fff
+      position: absolute
+      font-size: 12px
+      top: 100%
+      right: 100%
+      transform: translate3d(0,-50%,0)
+      white-space: nowrap
+      margin-right: 12px
+      margin-top: -4px
+
+  .ico_chart_wrap
+    position: absolute
+    top: 24px
+    right: 0
+    transform: translate3d(50%,0,0)
+    width: 400px
+
+  .ico_frags
+    max-width: 50%
+    font-family: $font-title
+
+.lending_section
+  padding-top: 64px
+  padding-bottom: 64px
+
+.lending_packages
+  &_desc
+    max-width: 388px
+
+  &_table
+    width: 100%
+    max-width: 540px
+    border: 1px solid #1F254B
+    border-radius: 3px
+    background-color: $main-dark-color
+    font-size: 12px
+    margin-left: -1px
+
+    thead td
+      text-transform: uppercase
+      font-family: $font-title
+      font-size: 11px
+      border-bottom: 1px solid #1F254B
+
+    &.irate_table
+      width: calc(50% + 1px)
+      td:first-child
+        width: auto
+      tr:first-child td
+        padding-top: 16px
+      tr:last-child td
+        padding-bottom: 16px
+
+      td
+        padding-top: 6px
+        padding-bottom: 6px
+        &:after
+          display: none
+
+    td:first-child
+      text-align: right
+      padding-right: 32px
+      padding-left: 16px
+      width: 120px
+      &:after
+        display: none
+      .stars_rate
+        margin-bottom: -4px
+        display: block
+        margin-left: auto
+
+    tr:last-child td:after
+      display: none
+
+    td
+      padding-top: 16px
+      padding-bottom: 16px
+      position: relative
+      &:last-child
+        text-align: right
+        padding-right: 16px
+        &:after
+          width: calc(100% - 16px)
+      &:after
+        content: ""
+        display: block
+        height: 1px
+        background-color: #1F254B
+        position: absolute
+        width: 100%
+        bottom: 0
+
+
+  &_label
+    font-family: $font-title
+    color: #fff
+    font-size: 12px
+    line-height: 16px
+    margin-bottom: 2px
+    text-transform: uppercase
+    &.big
+      font-size: 16px
+
+.stars_rate
+  position: relative
+  width: 78px
+  height: 12px
+  display: inline-block
+  span
+    position: relative
+    display: inline-block
+    height: 100%
+    background-image: url('../images/ls_stars.svg')
+    background-position: right center
+    vertical-align: top
+
+.irate
+  &_content
+    max-width: 560px
+
+.aff_tower
+  display: inline-block
+  text-align: center
+
+  &_title
+    margin-bottom: 32px
+
+  &_model
+    vertical-align: top
+
+  &_wrap
+    text-align: center
+    margin-bottom: 64px
+    &.ico_bounty_tower
+      text-align: left
+
+      .aff_tower_metrics
+        padding-top: 32px
+      .aff_tower_metrics:after
+        height: calc(100% - 108px)
+        top: 32px
+
+    &.aff_bonus_tower
+      margin-top: 56px
+
+  &_metric
+    &s
+      display: inline-block
+      position: relative
+      vertical-align: top
+      padding-top: 116px
+      margin-left: -90px
+      position: absolute
+      &.notitle
+        padding-top: 24px
+        &:after
+          top: 24px
+          height: calc(100% - 99px)
+      &:after
+        content: ""
+        position: absolute
+        width: 32px
+        border: 1px dashed #4D5AA6
+        border-radius: 0 10px 10px 0
+        border-left: none
+        height: calc(100% - 191px)
+        top: 116px
+        left: 100%
+        margin-left: 102px
+    &_single
+      position: relative
+      margin-bottom: 76px
+
+    &_single:first-child,
+    &_single:last-child
+      .aff_tower_metric_label:before
+        display: none
+
+    &_single:nth-of-type(2) .aff_tower_metric_value
+      width: 120px
+
+    &_single:nth-of-type(3) .aff_tower_metric_value
+      width: 80px
+
+    &_single:nth-of-type(4) .aff_tower_metric_value
+      width: 40px
+
+    &_single:nth-of-type(5) .aff_tower_metric_value
+      width: 20px
+
+    &_value
+      border-bottom: 1px dashed #4D5AA6
+      width: 160px
+      height: 0
+      position: relative
+      margin-left: auto
+      &:after
+        content: ""
+        position: absolute
+        left: 100%
+        top: 100%
+        width: 6px
+        height: 6px
+        border: 1px solid #4D5AA6
+        border-radius: 50%
+        transform: translate3d(0,-50%,0)
+      span
+        position: absolute
+        bottom: 100%
+        right: -7px
+        font-family: $font-title
+        color: $main-color
+        text-transform: uppercase
+        font-size: 14px
+        line-height: 32px
+
+    &_label
+      position: absolute
+      left: 100%
+      width: 90px
+      text-align: center
+      transform: translate3d(0,-50%,0)
+      font-family: $font-title
+      text-transform: uppercase
+      color: #fff
+      font-size: 18px
+      margin-left: 6px
+      span
+        display: inline-block
+        border: 4px solid #fff
+        border-right: none
+        border-left-width: 6px
+        margin: 4px
+        border-color: transparent transparent transparent #fff
+
+      &:before
+        content: ""
+        position: absolute
+        width: 32px
+        left: 100%
+        margin-left: 6px
+        border-bottom: 1px dashed #4D5AA6
+        top: 50%
+
+      &:after
+        content: ""
+        position: absolute
+        left: 100%
+        top: 50%
+        width: 6px
+        height: 6px
+        border: 1px solid #4D5AA6
+        border-radius: 50%
+        transform: translate3d(0,-50%,0)
+
+.aff_content
+  padding-right: 64px
+
+  &_bonus
+    .section_desc
+      max-width: 640px
+      margin-left: auto
+      margin-right: auto
+
+.page-content time
+  color: #fff
+  margin-bottom: 24px
+  display: block
+
+.page_pag_btn
+  position: absolute
+  width: 24px
+  height: 24px
+  text-align: center
+  line-height: 24px
+  left: 8px
+  top: 50%
+  transform: translate3d(0,-50%,0)
+  svg
+    line-height: 24px
+    position: relative
+    transform: translate3d(0,-2px,0)
+    g
+      transition: 0.2s all ease
+
+  &:hover svg g
+    stroke: $main-color
+
+  &.prev
+    transform: translate3d(0,-50%,0) translate3d(0,-48px,0)
+  &.next
+    transform: translate3d(0,-50%,0) translate3d(0,48px,0)
+
+.section_video_frame
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  opacity: 0
+  pointer-events: none
+  @extend .easing
+  z-index: 10
+  &.active
+    opacity: 1
+    pointer-events: all
+
+  .section_video_content,
+  .youtube_object
+    position: relative
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+.section_video_close
+  position: absolute
+  top: 0
+  right: 0
+  width: 32px
+  height: 32px
+  background-color: #fff
+  opacity: 0.8
+  z-index: 10
+  &:hover
+    opacity: 1
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    width: 14px
+    height: 1px
+    background-color: $text-color
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0) rotate(45deg)
+  &:after
+    transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+.home_subscribe_info
+  .section_desc.subscribe_desc
+    margin-bottom: 32px
+
+.subscribe_form
+  max-width: 320px
+  margin: 24px auto
+  .form
+    &-group
+      position: relative
+      width: 100%
+      z-index: 40
+      display: flex
+      &+.btn.block
+        margin-top: 16px
+    &-control
+      background: #1E254F
+      border-radius: 3px
+      font-size: 12px
+      color: #fff
+      width: 100%
+      padding: 23px 15px 8px
+      height: auto
+      transition: .3s all
+      &[type=number]::-webkit-inner-spin-button,
+      &[type=number]::-webkit-outer-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+      &:focus
+        background-color: #fff
+
+      &:focus ~ .form-label,
+      &:valid ~ .form-label
+        top: 8px
+        transform: translateY(0)
+        color: #747D87
+
+
+    &-label
+      font-size: 10px
+      line-height: 15px
+      color: rgba(255, 255, 255, .5)
+      text-transform: uppercase
+      left: 15px
+      line-height: 15px
+      margin: 0
+      transition: .3s all
+      pointer-events: none
+
+    &-label,
+    &-hint
+      position: absolute
+      top: 24px
+      transform: translateY(-50%)
+
+  .btn.block
+    display: block
+    width: 100%
+    &+.section_desc
+      margin-top: 16px
+
+.maintain_ico
+  margin-bottom: 40px
+

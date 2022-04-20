@@ -1,0 +1,29 @@
+/* Desktop Wide Resolution */
+
+.shrink_grid
+  span,
+  span:nth-of-type(6) i,
+  span:nth-of-type(6)~span
+    display: inline-block
+
+  span:nth-of-type(8) i,
+  span:nth-of-type(8)~span
+    display: none
+
+$col-xd: 100%/8
+
+@for $i from 1 through 8
+  .col-d-#{$i},
+  .col-xd-#{$i}
+    width: $col-xd*$i
+
+.roadmap_single
+  text-align: center
+  display: inline-block
+  font-size: 16px
+  position: relative
+  width: calc((100vw - 120px) / 8 * 4)
+
+.cols .page-title
+  &.cols
+    width: calc((100vw - 120px) / 8 * 1)

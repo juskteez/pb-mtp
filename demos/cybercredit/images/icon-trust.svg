@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="172px" viewBox="0 0 178 172" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-trust</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.1%" y="-5.3%" width="110.2%" height="110.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.125490196   0 0 0 0 0.77254902   0 0 0 0 0.396078431  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Roadmap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-631.000000, -300.000000)">
+        <g id="icon-trust" filter="url(#filter-1)" transform="translate(637.000000, 306.000000)">
+            <g id="Group-3" transform="translate(47.000000, 98.000000)" stroke="#20C565" stroke-width="2">
+                <rect id="Rectangle-4" x="-1" y="-1" width="72" height="6.66666667" rx="3.33333333"></rect>
+                <path d="M35,5.83333333 L35,60.6666667" id="Line-4" stroke-linecap="round"></path>
+                <path d="M30.9166667,61.8333333 L39.0833333,61.8333333" id="Line-5" stroke-linecap="round"></path>
+            </g>
+            <g id="Group" transform="translate(95.000000, 68.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                <path d="M53.9943484,0.268393987 L53.9943484,36.7869858 C53.9943484,42.3098333 49.5171959,46.7869858 43.9943484,46.7869858 L27.298984,46.7869858 C22.7845975,46.7869858 18.8299972,49.8116042 17.6479008,54.1684761 L7.41439495,91.8862737 L0.649548505,91.8862737" id="Path-3"></path>
+                <polyline id="Path-4" points="53.5555186 7.06770833 32.4596908 18.0764109 10.9311281 18.0764109"></polyline>
+            </g>
+            <g id="Group" transform="translate(83.000000, 96.500000) scale(-1, 1) translate(-83.000000, -96.500000) translate(0.000000, 33.000000)" stroke="#FFFFFF" stroke-width="2">
+                <ellipse id="Oval" cx="148.464789" cy="17.4770642" rx="17.5352113" ry="17.4770642"></ellipse>
+                <ellipse id="Oval" cx="17.5352113" cy="17.4770642" rx="17.5352113" ry="17.4770642"></ellipse>
+                <path d="M148.629181,35.2226563 L148.629181,71.7644424 C148.629181,77.2872899 144.152029,81.7644424 138.629181,81.7644424 L121.972045,81.7644424 C117.45623,81.7644424 113.500749,84.7909398 112.319956,89.1496459 L102.096941,126.886217 L95.339024,126.886217" id="Path-3" stroke-linecap="round"></path>
+                <polyline id="Path-4" stroke-linecap="round" points="148.190801 42.0253608 127.116582 53.0395523 105.610072 53.0395523"></polyline>
+            </g>
+            <circle id="Oval-2" stroke="#20C565" stroke-width="2" cx="83" cy="34" r="34"></circle>
+            <path d="M94.2839982,25.5424519 C93.3920132,24.758484 92.0363429,24.829776 91.2513717,25.7206209 L79.5132898,38.7620521 L73.6264336,33.0964743 C72.7702015,32.2769214 71.4144088,32.3125063 70.593807,33.1677663 C69.7732053,34.0230263 69.8088357,35.3769638 70.6651903,36.1965167 L78.1574971,43.394201 C78.5499215,43.7861239 79.0851125,44 79.6559339,44 C79.6915643,44 79.6915643,44 79.7273172,44 C80.2981386,43.9644151 80.86896,43.7149541 81.2257541,43.2873241 L94.4266424,28.6067872 C95.2472441,27.6803574 95.1758608,26.3264199 94.2839982,25.5424519 Z" id="Path" fill="#20C565"></path>
+        </g>
+    </g>
+</svg>

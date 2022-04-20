@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="theme-color" content="#FEFEFE">
+  <link rel="shortcut icon" href="favicon.ico?v=1.0">
+
+  <title>Sign in/Sign Up</title>
+
+  <link href="css/style.css" rel="stylesheet" media="all">
+  <link href="css/alt_style.css" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=vietnamese" rel="stylesheet">
+
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body class="customer-page">
+<div id="body">
+  <div class="shrink_grid" id="shrink_grid">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="control_center" id="control_center">
+    <div class="main_header" id="main_header">
+      <div class="col-d-1 col-t-2 logo_wrap">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Cyber Credit" />
+        </a>
+      </div>
+      <div class="col-d-2 col-xd-3 col-t-3 currency_watcher_wrap">
+        <div class="currency_watcher watcher_level_1">
+          <div class="currency_watcher_ico"><img src="images/btc_ico.svg" alt="BTC"></div>
+          <div class="currency_watcher_value">$ 12111.66</div>
+        </div>
+        <div class="currency_watcher watcher_level_2">
+          <div class="currency_watcher_ico"><img src="images/eth_ico.svg" alt="ETH"></div>
+          <div class="currency_watcher_value">$ 529.65</div>
+        </div>
+        <div class="currency_watcher watcher_level_3">
+          <div class="currency_watcher_ico"><img src="images/cby_ico.svg" alt="ETH"></div>
+          <div class="currency_watcher_value">$ 529.65</div>
+        </div>
+      </div>
+      <div class="col-d-3 col-xd-4 col-t-1 main_menu_wrap">
+        <div class="main_menu" id="main_menu">
+          <ul class="main_menu_list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="ico.html">ICO</a></li>
+            <li><a href="lending.html">Lending</a></li>
+            <li><a href="https://cybercredit.io/download/Cyber_Credit_white_paper.pdf">White Paper</a></li>
+            <li class="main_menu_switch">
+              <a href="#" class="on">ENG</a>
+              <a href="#">VNI</a>
+            </li>
+          </ul>
+          <div class="main_menu_actions">
+            <a href="customer.html?state=signin" class="btn outline small">Sign In</a>
+            <a href="customer.html?state=signup" class="btn outline small">Sign Up</a>
+          </div>
+        </div>
+        <a href="javascript:;" class="main_menu_toggler"><span></span></a>
+      </div>
+    </div>
+    <div class="main_footer" id="main_footer">
+      <div class="col-d-3 col-xd-4 copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+      <div class="col-d-3 col-xd-4 sub_menu_wrap text-right">
+        <ul class="sub_menu_list">
+          <!-- <li><a href="about.html">About</a></li> -->
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_socials" id="main_socials">
+      <a href="mailto:support@cybercredit.io" class="contact_mail">support@cybercredit.io</a>
+      <ul class="main_socials_list">
+        <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+      </ul>
+    </div>
+    <div class="main_pagination" id="main_pagination">
+    </div>
+  </div>
+  <div class="sections">
+    <div class="section cols center-d text-center">
+      <div class="col-d-4 center-d">
+        <div id="signup" class="cyber-form form-flipping">
+          <div class="section_ico">
+            <img src="images/logo_glow.svg" class="glow">
+          </div>
+          <h3 class="section_subtitle">Create new account</h3>
+          <div class="section_info_blocks">
+            <div class="section_info_block_wrap">
+              <form>
+                <div class="form-row">
+                  <div class="form-group">
+                    <span class="form-label">First name</span>
+                    <input type="text" name="first_name" value="" autocomplete="off" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <span class="form-label">Last name</span>
+                    <input type="text" name="last_name" value="" autocomplete="off" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="form-label">Your email</span>
+                  <input type="email" name="email" value="" autocomplete="off" class="form-control">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <span class="form-label">CYB amount to buy</span>
+                    <input type="number" name="first_name" value="" autocomplete="off" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <span class="form-label">Sponsor</span>
+                    <input type="text" name="last_name" value="" autocomplete="off" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group text-center captcha-form">
+                  <img src="images/capcha.png" alt="">
+                </div>
+                <div class="form-note">
+                  <label class="checkbox_wrap"><input type="checkbox" name="agree" class="checkbox_manipulate" value="1"><span class="checkboxed"></span> I agree all <a href="terms.html">Terms and conditions</a></label>
+                </div>
+                <div class="form-group text-center form-submit">
+                  <button type="submit" class="btn">Sign Up Now</button>
+                </div>
+                <div class="form-note">
+                  Already have an account?
+                  <a href="#signin" class="open-form">Sign in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="signin" class="cyber-form form-flipping">
+          <div class="section_ico">
+            <img src="images/logo_glow.svg" class="glow">
+          </div>
+          <h3 class="section_subtitle">Sign in</h3>
+          <div class="section_info_blocks">
+            <div class="section_info_block_wrap">
+                <form>
+                  <div class="form-group">
+                    <span class="form-label">Email</span>
+                    <a class="form-hint open-form" href="#forgot_username">
+                      <svg width="20" height="20">
+                        <g fill="none" fill-rule="evenodd">
+                          <circle fill="#D8D8D8" opacity=".2" cx="10" cy="10" r="10" />
+                          <path d="M9.067 12.878h1.742v1.625H9.067v-1.625zM7 8.172c0-.477.071-.91.215-1.3a2.76 2.76 0 0 1 .623-1.001c.274-.277.603-.492.988-.644A3.508 3.508 0 0 1 10.12 5c.399 0 .77.058 1.112.176.342.117.64.285.897.506.255.222.457.497.604.826.147.33.221.702.221 1.118 0 .303-.032.565-.098.786a2.047 2.047 0 0 1-.26.572c-.108.16-.231.304-.37.43-.139.125-.277.249-.416.37-.165.139-.316.273-.455.403a2.34 2.34 0 0 0-.364.436c-.104.16-.184.348-.24.565a3.197 3.197 0 0 0-.085.793H9.262c0-.381.02-.704.058-.969.04-.264.102-.496.189-.695.087-.2.193-.375.319-.527a3.65 3.65 0 0 1 .448-.448c.139-.121.27-.234.396-.338.126-.104.239-.219.338-.345.1-.125.178-.266.235-.422a1.65 1.65 0 0 0 .084-.559c0-.26-.045-.483-.136-.67a1.39 1.39 0 0 0-.332-.448 1.29 1.29 0 0 0-.416-.247 1.193 1.193 0 0 0-.39-.078c-.537 0-.934.175-1.19.526-.255.352-.383.822-.383 1.411H7z"
+                            fill="#FFF" />
+                        </g>
+                        <span class="form-tooltip">Forgot your username</span>
+                      </svg>
+                    </a>
+                    <input type="email" name="email" value="" autocomplete="off" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <span class="form-label">Password</span>
+                    <a class="form-hint open-form" href="#forgot_pass">
+                      <svg width="20" height="20">
+                        <g fill="none" fill-rule="evenodd">
+                          <circle fill="#D8D8D8" opacity=".2" cx="10" cy="10" r="10" />
+                          <path d="M9.067 12.878h1.742v1.625H9.067v-1.625zM7 8.172c0-.477.071-.91.215-1.3a2.76 2.76 0 0 1 .623-1.001c.274-.277.603-.492.988-.644A3.508 3.508 0 0 1 10.12 5c.399 0 .77.058 1.112.176.342.117.64.285.897.506.255.222.457.497.604.826.147.33.221.702.221 1.118 0 .303-.032.565-.098.786a2.047 2.047 0 0 1-.26.572c-.108.16-.231.304-.37.43-.139.125-.277.249-.416.37-.165.139-.316.273-.455.403a2.34 2.34 0 0 0-.364.436c-.104.16-.184.348-.24.565a3.197 3.197 0 0 0-.085.793H9.262c0-.381.02-.704.058-.969.04-.264.102-.496.189-.695.087-.2.193-.375.319-.527a3.65 3.65 0 0 1 .448-.448c.139-.121.27-.234.396-.338.126-.104.239-.219.338-.345.1-.125.178-.266.235-.422a1.65 1.65 0 0 0 .084-.559c0-.26-.045-.483-.136-.67a1.39 1.39 0 0 0-.332-.448 1.29 1.29 0 0 0-.416-.247 1.193 1.193 0 0 0-.39-.078c-.537 0-.934.175-1.19.526-.255.352-.383.822-.383 1.411H7z"
+                            fill="#FFF" />
+                        </g>
+                      </svg>
+                      <span class="form-tooltip">Forgot your password</span>
+                    </a>
+                    <input type="password" name="password" value="" autocomplete="off" class="form-control">
+                  </div>
+                  <div class="form-group text-center captcha-form">
+                    <img src="images/capcha.png" alt="">
+                  </div>
+                  <div class="form-note">
+                    <label class="checkbox_wrap"><input type="checkbox" name="remember" class="checkbox_manipulate" value="1"><span class="checkboxed"></span> Remember</label>
+                  </div>
+                  <div class="form-group text-center form-submit">
+                    <button type="submit" class="btn">Sign In</button>
+                  </div>
+                  <div class="form-note">
+                    Don't have an account? <a href="#signup" class="open-form">Create a new account</a>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div id="forgot_username" class="cyber-form form-flipping form-forgot">
+          <div class="section_ico">
+            <img src="images/logo_glow.svg" class="glow">
+          </div>
+          <h3 class="section_subtitle">Fotgot Your Username</h3>
+          <p>Enter your email address below and we'll get you back on track.</p>
+          <div class="section_info_blocks">
+            <div class="section_info_block_wrap">
+              <form>
+                <div class="form-group">
+                  <span class="form-label">Your Email</span>
+                  <input type="email" name="email" value="" class="form-control">
+                </div>
+                <div class="form-group text-center form-submit">
+                  <button type="submit" class="btn">Request Reset Link</button>
+                </div>
+                <div class="form-note">
+                  <a href="#signin" class="open-form">← Back to sign in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="forgot_pass" class="cyber-form form-flipping form-forgot">
+          <div class="section_ico">
+            <img src="images/logo_glow.svg" class="glow">
+          </div>
+          <h3 class="section_subtitle">Fotgot Password</h3>
+          <p>Enter your email address below and we'll get you back on track.</p>
+          <div class="section_info_blocks">
+            <div class="section_info_block_wrap">
+              <form>
+                <div class="form-group">
+                  <span class="form-label">Your Email</span>
+                  <input type="email" name="email" value="" class="form-control">
+                </div>
+                <div class="form-group text-center form-submit">
+                  <button type="submit" class="btn">Request Reset Link</button>
+                </div>
+                <div class="form-note">
+                  <a href="#signin" class="open-form">← Back to sign in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fake_footer mobile_only">
+    <ul class="fake_footer_menu_list">
+      <!-- <li><a href="about.html">About</a></li> -->
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="fake_footer_socials">
+      <a href="mailto:support@cybercredit.io" class="fake_footer_contact_mail">support@cybercredit.io</a>
+      <ul class="fake_footer_socials_list">
+        <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+      </ul>
+    </div>
+    <div class="fake_footer_copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+  </div>
+</div>
+<script>
+
+(function($) {
+$(document).ready(function() {
+
+  var url_string    = window.location.href;
+/*    parser          = document.createElement('a');
+
+  parser.href = url_string;
+
+  var getState      = parser.search.replace('?search=','');*/
+
+  setTimeout(function() {
+    if (url_string.indexOf("signup") > -1) {
+      $('#signup').addClass('form-active');
+    } else if (url_string.indexOf("forgot_username") > -1) {
+      $('#forgot_username').addClass('form-active');
+    } else if (url_string.indexOf("forgot_pass") > -1) {
+      $('#forgot_pass').addClass('form-active');
+    } else {
+      $('#signin').addClass('form-active');
+    }
+  },200);
+
+});
+})(jQuery);
+</script>
+</script>
+<script type="text/javascript" async src="js/scripts.js"></script>
+<script type="text/javascript" async src="js/alt_scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>mark_2_active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="mark_2_active" stroke="#20C565">
+            <path d="M5,3 L5,19.0740797" id="Line-3"></path>
+            <path d="M0.628626897,4.19542401 L5,9" id="Line-4"></path>
+            <path d="M9.27666415,7.36334346 L5,12" id="Line-5"></path>
+            <polyline id="Path-2" points="7.02230131 10.5907276 9.38378202 10.5907276 10.8573655 9.08028412"></polyline>
+            <path d="M3.05771813,6.97600849 C3.05771813,6.97600849 2.21801719,7.24224188 0.5386153,7.77470867" id="Path-3"></path>
+            <polyline id="Path-6" points="5.38702275 7.16956975 7.60350741 4.840575 7.60350741 0.592876345"></polyline>
+            <polyline id="Path-7" points="4.99194923 14.0482319 2.36287748 12.0993382 2.36287748 10.1489129"></polyline>
+        </g>
+    </g>
+</svg>

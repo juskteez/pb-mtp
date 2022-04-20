@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="152px" height="131px" viewBox="0 0 152 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>community-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Slide3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-754.000000, -356.000000)" stroke-linecap="round">
+        <g id="Community" transform="translate(755.000000, 357.000000)" stroke-width="2">
+            <g id="community-icon">
+                <circle id="Oval" stroke="#FFFFFF" cx="74.3899239" cy="71.6504854" r="20.6638678"></circle>
+                <path d="M44.8701128,128.918919 L44.8701128,118.291787 C44.8701128,108.509782 52.7999946,100.5799 62.5819995,100.5799 L86.7882446,100.5799 C96.5702494,100.5799 104.500131,108.509782 104.500131,118.291787 L104.500131,128.918919" id="Rectangle" stroke="#FFFFFF"></path>
+                <circle id="Oval" stroke="#20C565" cx="21.5494621" cy="66.6321176" r="15.0551036"></circle>
+                <path d="M0,100.417032 C0,93.3335116 5.7314987,87.5911834 12.8016606,87.5911834 L30.2972635,87.5911834 C37.3674255,87.5911834 43.0989242,93.3335116 43.0989242,100.417032" id="Rectangle" stroke="#20C565"></path>
+                <circle id="Oval" stroke="#20C565" cx="127.820782" cy="66.6321176" r="15.0551036"></circle>
+                <path d="M106.27132,100.417032 C106.27132,93.3335116 112.002819,87.5911834 119.072981,87.5911834 L136.568583,87.5911834 C143.638745,87.5911834 149.370244,93.3335116 149.370244,100.417032" id="Rectangle" stroke="#20C565"></path>
+                <circle id="Oval" stroke="#FFFFFF" cx="102.366833" cy="22.8371314" r="10.2183961"></circle>
+                <path d="M87.6069273,45.5446784 C87.6069273,40.8417914 91.5326114,37.0293482 96.375188,37.0293482 L108.358478,37.0293482 C113.201054,37.0293482 117.126738,40.8417914 117.126738,45.5446784" id="Rectangle" stroke="#FFFFFF"></path>
+                <circle id="Oval" stroke="#20C565" cx="74.1695093" cy="10.2183961" r="10.2183961"></circle>
+                <path d="M59.4096038,32.9259431 C59.4096038,28.2230562 63.3352878,24.410613 68.1778645,24.410613 L80.1611541,24.410613 C85.0037308,24.410613 88.9294149,28.2230562 88.9294149,32.9259431" id="Rectangle" stroke="#20C565"></path>
+                <circle id="Oval" stroke="#FFFFFF" cx="45.8226187" cy="22.8371314" r="10.2183961"></circle>
+                <path d="M31.0627132,45.5446784 C31.0627132,40.8417914 34.9883972,37.0293482 39.8309739,37.0293482 L51.8142636,37.0293482 C56.6568402,37.0293482 60.5825243,40.8417914 60.5825243,45.5446784" id="Rectangle" stroke="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="23px" viewBox="0 0 12 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>mark_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="mark_3" transform="translate(1.000000, 0.000000)" stroke="#505B9E">
+            <path d="M5,18 C7.76142375,18 10,15.6015254 10,12.6428571 C10,10.6704116 8.33333333,6.45612589 5,0 C1.66666667,6.45612589 0,10.6704116 0,12.6428571 C0,15.6015254 2.23857625,18 5,18 Z" id="Oval-9"></path>
+            <path d="M5,6 L5,22.0740797" id="Line-3"></path>
+            <path d="M2.74693708,9.6538727 L5,12" id="Line-4"></path>
+            <path d="M7.69497586,13 L5,15" id="Line-5"></path>
+        </g>
+    </g>
+</svg>

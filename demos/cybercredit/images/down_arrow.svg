@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>down_arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1135.000000, -13.000000)">
+        <g fill="#747D87" id="down_arrow">
+            <polygon transform="translate(1138.500000, 15.500000) scale(1, -1) translate(-1138.500000, -15.500000) " points="1138.5 13 1142 18 1135 18"></polygon>
+        </g>
+    </g>
+</svg>

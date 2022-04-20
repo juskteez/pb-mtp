@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="31px" viewBox="0 0 18 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>mark_8_active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mark_8_active" transform="translate(1.000000, 1.000000)">
+            <rect id="Rectangle-9" stroke="#20C565" x="0" y="13" width="16" height="16"></rect>
+            <rect id="Rectangle-9" stroke="#20C565" transform="translate(8.000000, 11.500000) scale(1, -1) translate(-8.000000, -11.500000) " x="2" y="10" width="12" height="3"></rect>
+            <rect id="Rectangle-9" stroke="#20C565" transform="translate(8.000000, 8.500000) scale(1, -1) translate(-8.000000, -8.500000) " x="4" y="7" width="8" height="3"></rect>
+            <path d="M9.5,6.61111111 L9.5,0.388888889" id="Line-6" stroke="#20C565" stroke-linecap="round"></path>
+            <path d="M6.5,6.61111111 L6.5,0.388888889" id="Line-6" stroke="#20C565" stroke-linecap="round"></path>
+            <path d="M3,16 L5,16 L5,18 L3,18 L3,16 Z M7,16 L9,16 L9,18 L7,18 L7,16 Z M11,16 L13,16 L13,18 L11,18 L11,16 Z M3,20 L5,20 L5,22 L3,22 L3,20 Z M7,20 L9,20 L9,22 L7,22 L7,20 Z M11,20 L13,20 L13,22 L11,22 L11,20 Z M3,24 L5,24 L5,26 L3,26 L3,24 Z M7,24 L9,24 L9,26 L7,26 L7,24 Z M11,24 L13,24 L13,26 L11,26 L11,24 Z" id="Combined-Shape" fill="#20C565"></path>
+        </g>
+    </g>
+</svg>

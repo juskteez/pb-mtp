@@ -1,0 +1,78 @@
+/* Mobile Landscape High Resolution */
+
+.page-content p,
+.page-content.sections .lending_packages_table:not(.irate_table),
+.irate_content,
+.home_sections .home_vision .section_desc,
+.home_sections .home_roadmap .section_desc
+  margin-left: auto
+  margin-right: auto
+
+
+.page-content.sections .lending_packages_table:not(.irate_table)
+  max-width: 480px
+  position: relative
+
+.page-content.sections
+  .lending_packages_table
+    &:not(.irate_table)
+      max-width: 480px
+      td:first-child
+        left: 16px
+
+    &.irate_table
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+
+.ico_section
+
+  .ico_offering
+    &_wrap
+      img
+        height: 300px
+
+    &_single
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3)
+        transform: translate3d(-220px,-50%,0) translate3d(0,-7px,0) scale(0.75)
+      &:nth-of-type(2)
+        transform: translate3d(100px,-140px,0) translate3d(0,-7px,0) scale(0.75)
+      &:nth-of-type(3)
+        transform: translate3d(100px,-50%,0) translate3d(0,-7px,0) scale(0.75)
+
+.page-content.sections
+  .aff_tower
+    &_wrap
+
+      &.ico_bounty_tower
+
+        .aff_tower_metrics
+          padding-top: 16px
+        .aff_tower_metrics:after
+          height: calc(100% - 61px)
+          top: 16px
+
+        .aff_tower_metric_single
+          margin-bottom: 46px
+
+.ico_frags
+  max-width: 290px
+  margin-left: auto
+  margin-right: auto
+
+.ico_chart
+  max-height: 280px
+
+.control_center .currency_watcher_wrap,
+.active_menu .control_center .currency_watcher_wrap
+  position: static
+  transform: none
+  max-width: 380px
+  padding-left: 6px
+  padding-right: 6px
+
+  .currency_watcher
+    display: inline-block
+    margin: 0 10px

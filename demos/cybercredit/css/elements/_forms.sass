@@ -1,0 +1,39 @@
+/* Forms Elements */
+
+.input_wrap
+  position: relative
+  margin-bottom: 20px
+
+  &.third
+    width: calc(100% / 3 - 12px)
+    float: left
+    margin-right: 18px
+    &:nth-of-type(3n+3)
+      margin-right: 0
+
+  &.half
+    width: calc(100% / 2 - 8px)
+    float: left
+    margin-right: 16px
+    &:nth-of-type(2n+2)
+      margin-right: 0
+
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  input[type="password"],
+  .input,
+  select,
+  textarea
+    width: 100%
+
+
+@media screen and (max-width: 767px)
+  .input_wrap
+    margin-bottom: 12px
+
+    &.third,
+    &.half
+      width: 100%
+      float: none
+      margin-right: 0

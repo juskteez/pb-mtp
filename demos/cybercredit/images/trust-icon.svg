@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="139px" viewBox="0 0 144 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>trust-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Slide3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-977.000000, -351.000000)">
+        <g id="Trustworthiness" transform="translate(978.000000, 352.000000)">
+            <g id="trust-icon">
+                <g id="Group-3" transform="translate(40.000000, 84.000000)" stroke="#20C565" stroke-width="2">
+                    <rect id="Rectangle-4" x="-1" y="-1" width="62" height="6" rx="3"></rect>
+                    <path d="M30,5 L30,52" id="Line-4" stroke-linecap="round"></path>
+                    <path d="M26.5,53 L33.5,53" id="Line-5" stroke-linecap="round"></path>
+                </g>
+                <g id="Group" transform="translate(81.000000, 58.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                    <path d="M46.140625,0.23046875 L46.140625,30.1757812 C46.140625,35.6986287 41.6634725,40.1757812 36.140625,40.1757812 L24.4503978,40.1757812 C19.9314713,40.1757812 15.9740782,43.2063693 14.7961224,47.5690654 L6.3359375,78.9023438 L0.555068722,78.9023438" id="Path-3"></path>
+                    <polyline id="Path-4" points="45.765625 6.06901042 27.7382812 15.5221354 9.34114583 15.5221354"></polyline>
+                </g>
+                <g id="Group" transform="translate(71.000000, 82.500000) scale(-1, 1) translate(-71.000000, -82.500000) translate(0.000000, 28.000000)" stroke="#FFFFFF" stroke-width="2">
+                    <circle id="Oval" cx="127" cy="15" r="15"></circle>
+                    <circle id="Oval" cx="15" cy="15" r="15"></circle>
+                    <path d="M127.140625,30.2304688 L127.140625,60.1757812 C127.140625,65.6986287 122.663472,70.1757812 117.140625,70.1757812 L105.450398,70.1757812 C100.931471,70.1757812 96.9740782,73.2063693 95.7961224,77.5690654 L87.3359375,108.902344 L81.5550687,108.902344" id="Path-3" stroke-linecap="round"></path>
+                    <polyline id="Path-4" stroke-linecap="round" points="126.765625 36.0690104 108.738281 45.5221354 90.3411458 45.5221354"></polyline>
+                </g>
+                <circle id="Oval-2" stroke="#20C565" stroke-width="2" cx="71" cy="29" r="29"></circle>
+                <path d="M80.8157204,21.4655732 C80.05113,20.7927127 78.8890787,20.8539009 78.2162182,21.6184913 L68.1545871,32.811632 L63.1085008,27.9490054 C62.3745571,27.2456033 61.2124007,27.2761449 60.5089986,28.0101936 C59.8055965,28.7442423 59.8361381,29.9062937 60.5701868,30.6096958 L66.9924308,36.7872919 C67.3288086,37.1236697 67.7875628,37.3072343 68.2768586,37.3072343 C68.3074003,37.3072343 68.3074003,37.3072343 68.3380468,37.3072343 C68.8273427,37.2766927 69.3166385,37.0625864 69.6224746,36.695562 L80.9379918,24.095617 C81.641394,23.3004851 81.5802057,22.1384337 80.8157204,21.4655732 Z" id="Path" fill="#20C565"></path>
+            </g>
+        </g>
+    </g>
+</svg>

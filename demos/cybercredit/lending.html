@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+<meta name="theme-color" content="#FEFEFE">
+  <link rel="shortcut icon" href="favicon.ico?v=1.0">
+
+<title>Lending Programs</title>
+
+<link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/alt_style.css" rel="stylesheet" media="all">
+<link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=vietnamese" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+
+</head>
+
+<body class="">
+<div id="body">
+  <div class="shrink_grid" id="shrink_grid">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="control_center" id="control_center">
+    <div class="main_header" id="main_header">
+      <div class="col-d-1 col-t-2 logo_wrap">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Cyber Credit" />
+        </a>
+      </div>
+      <div class="col-d-2 col-xd-3 col-t-3 currency_watcher_wrap">
+        <div class="currency_watcher watcher_level_1">
+          <div class="currency_watcher_ico"><img src="images/btc_ico.svg" alt="BTC"></div>
+          <div class="currency_watcher_value">$ 12111.66</div>
+        </div>
+        <div class="currency_watcher watcher_level_2">
+          <div class="currency_watcher_ico"><img src="images/eth_ico.svg" alt="ETH"></div>
+          <div class="currency_watcher_value">$ 529.65</div>
+        </div>
+        <div class="currency_watcher watcher_level_3">
+          <div class="currency_watcher_ico"><img src="images/cby_ico.svg" alt="ETH"></div>
+          <div class="currency_watcher_value">$ 529.65</div>
+        </div>
+      </div>
+      <div class="col-d-3 col-xd-4 col-t-1 main_menu_wrap">
+        <div class="main_menu" id="main_menu">
+          <ul class="main_menu_list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="ico.html">ICO</a></li>
+            <li><a href="lending.html" class="active">Lending</a></li>
+            <li><a href="https://cybercredit.io/download/Cyber_Credit_white_paper.pdf">White Paper</a></li>
+            <li class="main_menu_switch">
+              <a href="#" class="on">ENG</a>
+              <a href="#">VNI</a>
+            </li>
+          </ul>
+          <div class="main_menu_actions">
+            <a href="customer.html?state=signin" class="btn outline small">Sign In</a>
+            <a href="customer.html?state=signup" class="btn outline small">Sign Up</a>
+          </div>
+        </div>
+        <a href="javascript:;" class="main_menu_toggler"><span></span></a>
+      </div>
+    </div>
+    <div class="main_footer" id="main_footer">
+      <div class="col-d-3 col-xd-4 copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+      <div class="col-d-3 col-xd-4 sub_menu_wrap text-right">
+        <ul class="sub_menu_list">
+          <!-- <li><a href="about.html">About</a></li> -->
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_socials" id="main_socials">
+      <a href="mailto:support@cybercredit.io" class="contact_mail">support@cybercredit.io</a>
+      <ul class="main_socials_list">
+        <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+      </ul>
+    </div>
+    <div class="main_pagination" id="main_pagination">
+    </div>
+  </div>
+  <div class="page-content sections cols">
+    <div class="col-d-6 col-xd-8 lending_section text-center">
+      <h3 class="section_subtitle">Smart</h3>
+      <h2 class="section_title glitch">Lending Program</h2>
+      <p class="section_desc centered">The purpose of our lending program is to unite investors from all over the world and create a trust worthy community to help us back our future POS coin - the Cyber Credit Coin. Investors can earn up to 45% percent per month by participating in the program one month after the ICO is finished.</p>
+      <div class="lending_programs">
+        <div class="lending_circle_wrap">
+          <img src="images/lend_circles.svg" alt="" class="lending_circles">
+          <div class="lending_circle_loop">
+            <img src="images/lend_circle_1.svg" class="lending_single_circle circle_1">
+            <img src="images/lend_circle_2.svg" class="lending_single_circle circle_2">
+            <img src="images/lend_circle_3.svg" class="lending_single_circle circle_3">
+            <img src="images/lend_circle_4.svg" class="lending_single_circle circle_4">
+          </div>
+        </div>
+        <ul class="lending_list">
+          <li>
+            <div class="lending_list_ico"><img src="images/lending_1.svg" alt=""></div>
+            <h3 class="lending_list_title">Deposit Bitcoin / Ethereum</h3>
+            <p class="lending_list_desc">Log in to your back office page to make BTC/ETH deposit</p>
+          </li>
+          <li>
+            <div class="lending_list_ico"><img src="images/lending_2.svg" alt=""></div>
+            <h3 class="lending_list_title">Buy Cyber Credit Token</h3>
+            <p class="lending_list_desc">Use BTC/ETH to buy Cyber Credit Token from exchange</p>
+          </li>
+          <li>
+            <div class="lending_list_ico"><img src="images/lending_4.svg" alt=""></div>
+            <h3 class="lending_list_title">Earn Daily &amp; Monthly Profit</h3>
+            <p class="lending_list_desc">Earn interest from Mining, Volatility Software Interest &amp; Contribution Point System</p>
+          </li>
+          <li>
+            <div class="lending_list_ico"><img src="images/lending_3.svg" alt=""></div>
+            <h3 class="lending_list_title">Select Lending Packages</h3>
+            <p class="lending_list_desc">Lend your Cyber Credit Token in USD</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-d-6 col-xd-8 cols lending_section lending_packages">
+      <div class="col-d-3 col-xd-4 col-m-6 cols right-d">
+        <div class="col-d-4 col-m-6">
+          <h2 class="section_title">Lending<br/> Packages</h2>
+          <p class="section_desc lending_packages_desc">Cyber Credit offers 6 lending packages for investors to choose from. Please note that our interest rate fluctuates, and it depends on several factors as described in the Interest section below. Cyber Credit reserves all rights to change the content of these lending packages with 15 days notice in advance.</p>
+        </div>
+      </div>
+      <div class="col-d-3 col-m-6">
+        <table class="lending_packages_table">
+          <thead>
+            <tr>
+              <td>Packages</td>
+              <td>$ Invest</td>
+              <td>Monthly Returns</td>
+              <td>Capital Back</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <h4 class="lending_packages_label">1 Star</h4>
+                <div class="stars_rate"><span style="width: calc(100% / 6);"></span></div>
+              </td>
+              <td>$100 - $2,500</td>
+              <td>Up to <span class="main-color">45%</span></td>
+              <td><span class="white-color">320</span> days</td>
+            </tr>
+            <tr>
+              <td>
+                <h4 class="lending_packages_label">2 Star</h4>
+                <div class="stars_rate"><span style="width: calc(100% / 6 * 2);"></span></div>
+              </td>
+              <td>$2,510 - $5,000</td>
+              <td>Up to <span class="main-color">45%</span></td>
+              <td><span class="white-color">270</span> days</td>
+            </tr>
+            <tr>
+              <td>
+                <h4 class="lending_packages_label">3 Star</h4>
+                <div class="stars_rate"><span style="width: 50%;"></span></div>
+              </td>
+              <td>$5,010 - $10,000</td>
+              <td>Up to <span class="main-color">45% + 0,1% daily</span></td>
+              <td><span class="white-color">270</span> days</td>
+            </tr>
+            <tr>
+              <td>
+                <h4 class="lending_packages_label">4 Star</h4>
+                <div class="stars_rate"><span style="width: calc(100% / 6 * 4);"></span></div>
+              </td>
+              <td>$10,010 - $50,000</td>
+              <td>Up to <span class="main-color">45% + 0,15% daily</span></td>
+              <td><span class="white-color">270</span> days</td>
+            </tr>
+            <tr>
+              <td>
+                <h4 class="lending_packages_label">5 Star</h4>
+                <div class="stars_rate"><span style="width: calc(100% / 6 * 5);"></span></div>
+              </td>
+              <td>$50,010 - $100,000</td>
+              <td>Up to <span class="main-color">45% + 0,20% daily</span></td>
+              <td><span class="white-color">270</span> days</td>
+            </tr>
+            <tr>
+              <td>
+                <h4 class="lending_packages_label">6 Star</h4>
+                <div class="stars_rate"><span style="width: 100%;"></span></div>
+              </td>
+              <td>$100,010 +</td>
+              <td>Up to <span class="main-color">45% + 0,25% daily</span></td>
+              <td><span class="white-color">270</span> days</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-d-6 col-xd-8 cols lending_section">
+      <div class="col-d-3 col-xd-4 col-m-6 cols right-d">
+        <div class="col-d-4 col-m-6">
+          <h2 class="section_title">Interest Rate</h2>
+          <table class="lending_packages_table irate_table nomobile">
+            <tbody>
+              <tr>
+                <td><h4 class="lending_packages_label big">F1</h4></td>
+                <td><span class="main-color">5</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F2</h4></td>
+                <td><span class="main-color">4</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F3</h4></td>
+                <td><span class="main-color">3</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F4</h4></td>
+                <td><span class="main-color">2</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F5</h4></td>
+                <td><span class="main-color">1</span> Contribution Point</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-d-3 col-m-6">
+        <div class="irate_content">
+          <p class="section_desc">The interest rate comprises of 3 main components: 1- Mining, 2- Volatility Software Interest, 3- Contribution Point System.</p>
+          <p class="section_desc">Mining – 10% guaranteed. After the ICO, a portion of the fund received will be put in to building a mining facility. This mining facility will solely focus on mining Ethereum. We need to make sure that even on rainy days when market does not go our way, our investors still be able to make at least 10% on their initial investment. Mining profits will be delivered to your wallet daily.</p>
+          <p class="section_desc">Volatility Software Interest. Our finance experts have helped us construct an investment portfolio to make sure our monthly growth target reach a minimum of 30%. In order to achieve the stated target, a trading robot software has been built to help us execute trades effortlessly. Each type of market will require a specific trading strategy, hence our trading robot will be created and altered frequently by our advisors to capture profits. Volatility Software Interest will be delivered to your wallet daily.</p>
+          <table class="lending_packages_table irate_table mobileonly">
+            <tbody>
+              <tr>
+                <td><h4 class="lending_packages_label big">F1</h4></td>
+                <td><span class="main-color">5</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F2</h4></td>
+                <td><span class="main-color">4</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F3</h4></td>
+                <td><span class="main-color">3</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F4</h4></td>
+                <td><span class="main-color">2</span> Contribution Points</td>
+              </tr>
+              <tr>
+                <td><h4 class="lending_packages_label big">F5</h4></td>
+                <td><span class="main-color">1</span> Contribution Point</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="section_desc">Contribution Point System. This system is very crucial since it serves 2 purposes: 1- quickly expand our community, 2- award those members who work hard and help us build this community. The Contribution Point System works like this:</p>
+          <p class="section_desc irate_point">At the end of each month, our system will count the total F1, F2, F3, F4 and F5 members have joined under your sponsorship within that month.</p>
+          <p class="section_desc irate_point">For every 10 contribution points, you will earn 1% of return on your lending investment.</p>
+          <p class="section_desc irate_point">This interest will be delivered to your wallet at the end of each month.</p>
+          <h3 class="section_content_title">Note</h3>
+          <p class="section_desc irate_point">Please note that our Contribution Point System will partly serve as credit rating for P2P vouching and membership activeness.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-d-6 col-xd-8 cols center-d lending_section">
+      <div class="col-d-6 col-xd-8 text-center">
+        <h2 class="section_title">AFFILIATE PROGRAM</h2>
+      </div>
+      <div class="col-d-4 col-m-6">
+        <div class="aff_tower_wrap">
+          <div class="aff_tower">
+            <h3 class="aff_tower_title">Refferal Incentives</h3>
+            <img src="images/refferal_tower.svg" alt="" class="aff_tower_model">
+          </div>
+          <div class="aff_tower_metrics">
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>7%</span></div>
+              <div class="aff_tower_metric_label">F1</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>3%</span></div>
+              <div class="aff_tower_metric_label">F2</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>1%</span></div>
+              <div class="aff_tower_metric_label">F3<span></span>F5</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>0.2%</span></div>
+              <div class="aff_tower_metric_label">F6<span></span>F15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-d-2 col-m-6 aff_content">
+        <h3 class="section_content_title">Conditions</h3>
+        <p class="section_desc irate_point">To receive referral incentives from level F1 to F5, you must have invested at least a 1 Star package.</p>
+        <p class="section_desc irate_point">To receive referral incentives from level F1 to F15, you must have invested at least a 2 Star package.</p>
+        <p class="section_desc irate_point">Your lending package must be activated before your referrals activate their lending packages.</p>
+      </div>
+      <div class="col-d-4 col-m-6 text-center aff_content_bonus">
+        <h3 class="section_content_title">SUPER STAR CLUB BONUSES</h3>
+        <p class="section_desc">If you achieve more than 100 F1 referrals, each of those F1 has an active lending package, and the sum total of those 100 F1 lending investments exceeds $100,000 you will receive Super Star Club Membership award and enjoy the following benefits.</p>
+        <p class="section_desc irate_point">Super Star Club one-time bonus: 3% * sum (100 F1 first lending amount).</p>
+        <p class="section_desc irate_point">Super Star Club Referral Incentives:</p>
+        <div class="aff_tower_wrap aff_bonus_tower">
+          <div class="aff_tower">
+            <img src="images/aff_bonus_tower.svg" alt="" class="aff_tower_model">
+          </div>
+          <div class="aff_tower_metrics notitle">
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>10%</span></div>
+              <div class="aff_tower_metric_label">F1</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>3%</span></div>
+              <div class="aff_tower_metric_label">F2</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>2%</span></div>
+              <div class="aff_tower_metric_label">F3</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>1%</span></div>
+              <div class="aff_tower_metric_label">F4, F5</div>
+            </div>
+            <div class="aff_tower_metric_single">
+              <div class="aff_tower_metric_value"><span>0.25%</span></div>
+              <div class="aff_tower_metric_label">F6<span></span>F15</div>
+            </div>
+          </div>
+        </div>
+        <p class="section_desc">The system will be run at the end of each month to sort out individuals who have achieved this Super Star Club Membership Award. Their bonuses will be awarded to them on the same date.</p>
+      </div>
+    </div>
+  </div>
+  <div class="fake_footer mobile_only">
+    <ul class="fake_footer_menu_list">
+      <!-- <li><a href="about.html">About</a></li> -->
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="policy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="fake_footer_socials">
+      <a href="mailto:support@cybercredit.io" class="fake_footer_contact_mail">support@cybercredit.io</a>
+      <ul class="fake_footer_socials_list">
+        <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+      </ul>
+    </div>
+    <div class="fake_footer_copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+  </div>
+</div>
+<script type="text/javascript" async src="js/scripts.js"></script>
+<script type="text/javascript" async src="js/alt_scripts.js"></script>
+</body>
+
+</html>

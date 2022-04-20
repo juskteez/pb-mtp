@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="theme-color" content="#FEFEFE">
+  <link rel="shortcut icon" href="favicon.ico?v=1.0">
+
+  <title>Cyber Credit</title>
+
+  <link href="css/style.css" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=vietnamese" rel="stylesheet">
+
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/highcharts.js"></script>
+
+</head>
+<body class="page_roadmap">
+<div id="body">
+  <div class="shrink_grid" id="shrink_grid">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="control_center" id="control_center">
+    <div class="main_header" id="main_header">
+      <div class="col-d-1 col-t-2 logo_wrap">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Cyber Credit" />
+        </a>
+      </div>
+      <div class="col-d-2 col-xd-3 col-t-3 currency_watcher_wrap">
+        <div class="currency_watcher watcher_level_1">
+          <div class="currency_watcher_ico"><img src="images/btc_ico.svg" alt="BTC"></div>
+          <div class="currency_watcher_value">$ 12111.66</div>
+        </div>
+        <div class="currency_watcher watcher_level_2">
+          <div class="currency_watcher_ico"><img src="images/eth_ico.svg" alt="ETH"></div>
+          <div class="currency_watcher_value">$ 529.65</div>
+        </div>
+        <div class="currency_watcher watcher_level_3">
+          <div class="currency_watcher_ico"><img src="images/cby_ico.svg" alt="ETH"></div>
+          <div class="currency_watcher_value">$ 529.65</div>
+        </div>
+      </div>
+      <div class="col-d-3 col-xd-4 col-t-1 main_menu_wrap">
+        <div class="main_menu" id="main_menu">
+          <ul class="main_menu_list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roadmap.html" class="active">Roadmap</a></li>
+            <li><a href="ico.html">ICO</a></li>
+            <li><a href="lending.html">Lending</a></li>
+            <li><a href="https://cybercredit.io/download/Cyber_Credit_white_paper.pdf">White Paper</a></li>
+            <li class="main_menu_switch">
+              <a href="#" class="on">ENG</a>
+              <a href="#">VNI</a>
+            </li>
+          </ul>
+          <div class="main_menu_actions">
+            <a href="customer.html?state=signin" class="btn outline small">Sign In</a>
+            <a href="customer.html?state=signup" class="btn outline small">Sign Up</a>
+          </div>
+        </div>
+        <a href="javascript:;" class="main_menu_toggler"><span></span></a>
+      </div>
+    </div>
+    <div class="main_footer" id="main_footer">
+      <div class="col-d-3 col-xd-4 copyright">© 2018 Cybercredit.io. All Rights Reserved</div>
+      <div class="col-d-3 col-xd-4 sub_menu_wrap text-right">
+        <ul class="sub_menu_list">
+          <!-- <li><a href="about.html">About</a></li> -->
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main_socials" id="main_socials">
+      <a href="mailto:support@cybercredit.io" class="contact_mail">support@cybercredit.io</a>
+      <ul class="main_socials_list">
+        <li><a href="https://t.me/cybercreditchannel" class="telegram" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCZuMZe83nZCpgXCXVLExXUA" class="youtube" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://twitter.com/CreditCyber" class="twitter" target="_blank" rel="nofollow"></a></li>
+        <li><a href="https://www.facebook.com/CyberCredit/" class="facebook" target="_blank" rel="nofollow"></a></li>
+      </ul>
+    </div>
+    <div class="main_pagination" id="main_pagination">
+    </div>
+  </div>
+  <div class="sections roadmap_sections cols center-d">
+    <div class="col-d-4 col-m-6 cols" id="scroll_list_wrap">
+      <div class="col-d-6 col-xd-8 center-d roadmap_timeline_content">
+        <div class="roadmap_timeline_list horizontal draggable" id="scroll_list">
+          <div class="roadmap_single roadmap_1 active" id="roadmap_1">
+            <h3 class="roadmap_single_date">23 Dec, 2017</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_1.svg" alt=""></div>
+            <div class="roadmap_single_subtitle">Pre-ICO</div>
+            <div class="roadmap_single_desc">
+              <p><span class="white-color">3,000,000 CYB</span> tokens will be sold during Pre-ICO period for early birds. Register early to reserve your spot!</p>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_2" id="roadmap_2">
+            <h3 class="roadmap_single_date">1 Jan, 2018</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_2.svg" alt=""></div>
+            <div class="roadmap_single_subtitle">Public ICO</div>
+            <div class="roadmap_single_desc">
+              <p><span class="white-color">15,000,000 CYB</span> tokens will be devided in to 11 blocks with price accending from $0.7 to $1.2 per token. The earlier you buy, the cheaper the token price is.</p>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_3" id="roadmap_3">
+            <h3 class="roadmap_single_date">25 Jan, 2018</h3>
+            <div class="roadmap_odds_list">
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_3-1.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Open Lending Platform</div>
+                  <div class="roadmap_single_desc">
+                    <p>You can purchase lending packages using your CYB tokens once our Lending Platform is opened. Your lending interest will be paid daily.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_3-2.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Open CYB exchange platform</div>
+                  <div class="roadmap_single_desc">
+                    <p>You can buy or sell Cyber Credit Tokens via this internal exchange platform once this feature is opened.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_3-3.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Centralized KYC process starts.</div>
+                  <div class="roadmap_single_desc">
+                    <p>Each member is required to complete their KYC prior to making any withdrawal. This KYC will serve as first phase of credit profile creation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_4" id="roadmap_4">
+            <h3 class="roadmap_single_date">30 Apr, 2018</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_4.svg" alt=""></div>
+            <div class="roadmap_single_subtitle"> Phase 1: Create Cyber Credit ID</div>
+            <div class="roadmap_single_desc">
+              <p>Once KYC is done, member can have access to their credit profile via their back office page.</p>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_5" id="roadmap_5">
+            <h3 class="roadmap_single_date">30 Jun, 2018</h3>
+            <div class="roadmap_odds_list">
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_5-1.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Open P2P Lending Website</div>
+                  <div class="roadmap_single_desc">
+                    <p>Via this external website, verified members will be able to use crypto currencies as collaterals to borrow cash from other verified members.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_5-2.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Open P2P Exchange Website</div>
+                  <div class="roadmap_single_desc">
+                    <p>Via this external website, verified members will be able to buy and sell crypto currencies for fiat money via P2P bank transfer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_5-3.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Credit Rating Phase 2 Integration</div>
+                  <div class="roadmap_single_desc">
+                    <p class="roadmap_point">Import Members’ CC ID to Exchange &amp; Lending Websites</p>
+                    <p class="roadmap_point">Enable members vouching &amp; transaction ratings</p>
+                    <p class="roadmap_point">Finalize Credit Scoring System</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_6" id="roadmap_6">
+            <h3 class="roadmap_single_date">30 Oct, 2018</h3>
+            <div class="roadmap_odds_list">
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_6-1.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Issue Proof of Stake – Cyber Credit Coin</div>
+                  <div class="roadmap_single_desc">
+                    <p>Cyber Credit will launch a 2nd ICO for its proof of stake coin and will list this coin on major exchanges. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_6-2.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Offer Cyber Credit Token Buy Back</div>
+                  <div class="roadmap_single_desc">
+                    <p>All Cyber Credit Token will be bought back by us. Members can choose to sell them for fiat currencies or exchange it to Cyber Credit Coin.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap_odd">
+                <div class="roadmap_odd_ico"><img src="images/roadmap_6-3.svg" alt=""></div>
+                <div class="roadmap_odd_content">
+                  <div class="roadmap_single_subtitle">Finalize credit profile for members, issue credit score.</div>
+                  <div class="roadmap_single_desc">
+                    <p>Each member will have their credit profile completed and issued with a credit score. The score derives from 2 main components: KYC and P2P vouching/rating.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_7" id="roadmap_7">
+            <h3 class="roadmap_single_date">31 Dec, 2018</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_7.svg" alt=""></div>
+            <div class="roadmap_single_subtitle">BANKING APPLICATION SUBMISSION</div>
+            <div class="roadmap_single_desc">
+              <p>Apply for banking license, ready to partner with Visa/MasterCard.</p>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_8" id="roadmap_8">
+            <h3 class="roadmap_single_date">1 May, 2019</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_8.svg" alt=""></div>
+            <div class="roadmap_single_price">MERCHANT SYSTEM DEVELOPMENT</div>
+            <div class="roadmap_single_desc">
+              <p class="roadmap_point">Create exchange platform for On-The-Grid merchants.</p>
+              <p class="roadmap_point">Start bargaining campaign with Off-The-Grid merchants.</p>
+            </div>
+          </div>
+          <div class="roadmap_single roadmap_9" id="roadmap_9">
+            <h3 class="roadmap_single_date">31 Dec, 2019</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_9.svg" alt=""></div>
+            <div class="roadmap_single_subtitle">Banking license approval. To be announced.</div>
+            <div class="roadmap_single_subtitle">Issue Credit Limit to members.</div>
+            <div class="roadmap_single_subtitle">Member Apply for Cyber Credit’s Debit and Credit Cards.</div>
+          </div>
+          <div class="roadmap_single roadmap_10" id="roadmap_10">
+            <h3 class="roadmap_single_date">31 Dec, 2019 Onwards</h3>
+            <div class="roadmap_single_ico"><img src="images/roadmap_10.svg" alt=""></div>
+            <div class="roadmap_single_subtitle">Integrate Cyber Credit Coin to merchant payment system</div>
+            <div class="roadmap_single_subtitle">Perform merger &amp; acquisition activities with other potential communities</div>
+            <div class="roadmap_single_subtitle">Sell &amp; integrate credit rating system to other communities</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-d-6 col-xd-8 center-d roadmap_timeline_wrap" id="roadmap_timeline_wrap">
+        <div class="col-d-6 col-xd-8 cols roadmap_timeline_marks">
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_1" class="roadmap_timeline_ico"><img src="images/mark_1.svg" alt="mark_1"><img src="images/mark_1.svg" alt="mark_1"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$0.4</div>
+              <div class="roadmap_timeline_date">12/23/2017</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_2" class="roadmap_timeline_ico"><img src="images/mark_2.svg" alt="mark_2"><img src="images/mark_2_active.svg" alt="mark_2"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$1.2</div>
+              <div class="roadmap_timeline_date">1/1/2018</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_3" class="roadmap_timeline_ico"><img src="images/mark_3.svg" alt="mark_3"><img src="images/mark_3_active.svg" alt="mark_3"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$10</div>
+              <div class="roadmap_timeline_date">1/25/2018</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_4" class="roadmap_timeline_ico"><img src="images/mark_4.svg" alt="mark_4"><img src="images/mark_4_active.svg" alt="mark_4"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$20</div>
+              <div class="roadmap_timeline_date">4/30/2018</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_5" class="roadmap_timeline_ico"><img src="images/mark_5.svg" alt="mark_5"><img src="images/mark_5_active.svg" alt="mark_5"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$60</div>
+              <div class="roadmap_timeline_date">6/30/2018</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_6" class="roadmap_timeline_ico"><img src="images/mark_6.svg" alt="mark_6"><img src="images/mark_6_active.svg" alt="mark_6"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$100</div>
+              <div class="roadmap_timeline_date">10/30/2018</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_7" class="roadmap_timeline_ico"><img src="images/mark_7.svg" alt="mark_7"><img src="images/mark_7_active.svg" alt="mark_7"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$120</div>
+              <div class="roadmap_timeline_date">12/31/2018</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_8" class="roadmap_timeline_ico"><img src="images/mark_8.svg" alt="mark_8"><img src="images/mark_8_active.svg" alt="mark_8"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$150</div>
+              <div class="roadmap_timeline_date">5/1/2019</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_9" class="roadmap_timeline_ico"><img src="images/mark_9.svg" alt="mark_9"><img src="images/mark_9_active.svg" alt="mark_9"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$300</div>
+              <div class="roadmap_timeline_date">12/31/2019</div>
+            </div>
+          </div>
+          <div class="roadmap_timeline_mark">
+            <a href="javascript:;" scroll_target="roadmap_10" class="roadmap_timeline_ico"><img src="images/mark_10.svg" alt="mark1_10"><img src="images/mark_10_active.svg" alt="mark1_10"></a>
+            <div class="roadmap_timeline_info">
+              <div class="roadmap_timeline_value">$1000+</div>
+              <div class="roadmap_timeline_date">2019 Onwards</div>
+            </div>
+          </div>
+        </div>
+        <div class="roadmap_timeline_bar" id="runner_bar">
+          <span class="roadmap_timeline_runner" id="runner"><img src="images/coin.svg" id="runner_coin"></span>
+          <span class="roadmap_timeline_progress" id="progress" style="width: 0.2%"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" async src="js/scripts.js"></script>
+<script type="text/javascript" async src="js/roadmap.js"></script>
+</body>
+</html>
