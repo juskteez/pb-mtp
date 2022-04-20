@@ -1,0 +1,57 @@
+/* Mixins */
+
+// Quick style for the typography
+=typo($typo-family, $typo-size, $typo-weight, $typo-transform, $typo-height, $typo-color, $typo-spacing)
+	// +typo(font-family, font-size, font-weight, text-transform, line-height, color, letter-spacing)
+	@if $typo-family != '' // Font Family
+		font-family: $typo-family
+	@if $typo-size != '' // Font Size
+		font-size: $typo-size
+		font-size: ( ($typo-size / $font-base) + 0rem )
+	@if $typo-weight != '' // Font Weight
+		font-weight: $typo-weight
+	@if $typo-transform != '' // Text Transform
+		text-transform: $typo-transform
+	@if $typo-height != '' // Line Height
+		line-height: $typo-height
+	@if $typo-color != '' // Text Color
+		color: $typo-color
+	@if $typo-spacing != '' // Letter Spacing
+		letter-spacing: $typo-spacing
+
+
+=container_align($prefix)
+	@if $prefix != '' // Font Family
+	&.center-#{$prefix}
+		justify-content: center
+	&.left-#{$prefix}
+		justify-content: flex-start
+	&.right-#{$prefix}
+		justify-content: flex-end
+	&.spread-#{$prefix}
+		justify-content: space-between
+
+
+=item_align($prefix)
+	@if $prefix != '' // Font Family
+	&.center-#{$prefix}
+		align-self: center
+	&.top-#{$prefix}
+		align-self: flex-start
+	&.bottom-#{$prefix}
+		align-self: flex-end
+
+=breakpoint($break_part)
+	@if $break_part != ''
+		@if $break_part == 't'
+			@media screen and (max-width: 1280px)
+				&
+					@content
+		@if $break_part == 'tp'
+			@media screen and (max-width: 1023px)
+				&
+					@content
+		@if $break_part == 'm'
+			@media screen and (max-width: 767px)
+				&
+					@content

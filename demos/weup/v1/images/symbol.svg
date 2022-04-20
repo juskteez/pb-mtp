@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="123px" viewBox="0 0 89 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="10.6770833%" y1="23.3333333%" x2="91.0373264%" y2="77.7430556%" id="linearGradient-1">
+            <stop stop-color="#00D9FF" offset="0%"></stop>
+            <stop stop-color="#046FFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M762.687446,372.035284 C761.57775,356.900871 754.383488,347.291605 748.544117,341.895568 C747.871339,341.274123 747.202643,340.69565 746.543281,340.153343 C746.541142,318.398863 739.608019,304.085201 733.791593,295.908216 C727.451527,286.994868 721.161823,283.300223 720.896989,283.147584 C720.555933,282.950805 720.136127,282.950805 719.79507,283.147584 C719.530626,283.300223 713.240921,286.995257 706.900855,295.908216 C701.084429,304.085201 694.151306,318.398669 694.149167,340.153343 C693.489805,340.695455 692.82111,341.273929 692.148136,341.895568 C686.308766,347.291799 679.114504,356.90126 678.004808,372.035479 C677.968447,372.529174 678.139558,373.016258 678.476725,373.378703 C678.813892,373.741537 679.286588,373.947454 679.781838,373.947454 L702.165542,373.947454 C703.440127,376.378014 704.763324,378.336461 706.051326,379.641769 C706.258215,379.85138 706.540549,379.969214 706.834938,379.969214 L707.381328,379.969214 C708.204607,391.682566 717.547289,400.658914 717.963206,401.051693 C718.631707,401.684027 719.48882,402 720.345932,402 C721.203045,402 722.060157,401.684027 722.728659,401.051693 C723.144576,400.658526 732.486869,391.682566 733.310537,379.969214 L733.857316,379.969214 C734.151705,379.969214 734.434039,379.85138 734.640928,379.641769 C735.929125,378.336656 737.252321,376.378208 738.526712,373.947454 L760.910415,373.947454 C761.405666,373.947454 761.878361,373.741148 762.215529,373.378703 C762.552696,373.016064 762.723807,372.529369 762.687446,372.035284 Z M720.346321,313.492439 C725.744691,313.492439 730.121059,317.868613 730.121059,323.267177 C730.121059,328.665741 725.744886,333.041915 720.346321,333.041915 C714.947951,333.041915 710.571583,328.665352 710.571583,323.267177 C710.571583,317.868807 714.947757,313.492439 720.346321,313.492439 Z M720.346516,393.315319 C718.060429,390.426842 714.882035,385.508167 714.33545,379.969408 L726.357192,379.969408 C725.810414,385.508751 722.631047,390.428009 720.346516,393.315319 Z" id="path-2"></path>
+        <filter x="-4.1%" y="-2.1%" width="108.3%" height="105.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.248499774 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-3.0%" y="-1.3%" width="105.9%" height="104.2%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.297210385   0 0 0 0 0.958224123   0 0 0 0 1  0 0 0 0.282269022 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="V1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-676.000000, -282.000000)" fill-rule="nonzero">
+            <g id="Intro">
+                <g id="symbol">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

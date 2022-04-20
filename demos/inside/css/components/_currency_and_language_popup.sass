@@ -1,0 +1,29 @@
+.cula-box
+  &-header
+    display: flex
+
+    dd
+      text-align: right
+      font-weight: bold
+      letter-spacing: -0.05em
+
+    dt, dd
+      flex-basis: 50%
+
+  &-content
+    border: 1px solid $n10
+    max-height: 200px
+    overflow-x: hidden
+    overflow-y: scroll
+
+    &:not(:first-child)
+      margin-top: 8px
+
+    a
+      display: block
+      padding: 4px 12px
+      line-height: 20px
+
+    a.active
+      background-color: $n10
+      color: $n1

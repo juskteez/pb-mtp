@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-menu" transform="translate(-48.000000, -516.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(48.000000, 479.000000)">
+                <path d="M7,37 C3.1,37 0,40.1 0,44 C0,45.9 0.7,47.7 2.1,49 C2.2,49.1 6.2,52.7 6.3,52.8 C6.7,53.1 7.3,53.1 7.6,52.8 C7.7,52.7 11.8,49.1 11.8,49 C13.2,47.7 13.9,45.9 13.9,44 C14,40.1 10.9,37 7,37 Z M7,46 C5.9,46 5,45.1 5,44 C5,42.9 5.9,42 7,42 C8.1,42 9,42.9 9,44 C9,45.1 8.1,46 7,46 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

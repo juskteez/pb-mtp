@@ -1,0 +1,127 @@
+/* Forms Elements */
+
+.form_flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  .input_wrap
+    width: 100%
+
+  .input_wrap.third
+    width: calc(100% / 3 - 12px)
+    &:nth-of-type(3n+3)
+      margin-right: 0
+
+  .input_wrap.half
+    width: calc(100% / 2 - 8px)
+    &:nth-of-type(2n+2)
+      margin-right: 0
+
+.input_wrap
+  position: relative
+  margin-bottom: 20px
+
+  .stick_submit
+    position: absolute
+    right: 6px
+    top: 6px
+    @media screen and (max-width: 767px)
+      font-size: 14px
+      padding-left: 16px
+      padding-right: 16px
+      height: 38px
+      line-height: 38px
+
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  input[type="password"],
+  .input,
+  select,
+  textarea
+    width: 100%
+
+  .input.social_input_selection
+    width: 240px
+
+  &.xinput_wrap
+    display: flex
+
+
+@media screen and (max-width: 767px)
+  .input_wrap
+    margin-bottom: 12px
+
+    &.third,
+    &.half
+      width: 100%
+      float: none
+      margin-right: 0
+
+
+.form
+  position: relative
+
+.form_block
+  background-color: #FFF
+  border: 1px solid #D9E4E7
+  box-shadow: 0 2px 1px rgba(217,228,231,0.35)
+  padding: 30px
+  border-radius: 10px
+  font-size: 14px
+
+  .form_note
+    margin-bottom: 24px
+
+  a:not(.btn)
+    color: $main-color
+    &:hover
+      color: $main-darker-color
+
+  .form_actions
+    .btn
+      display: block
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 20px
+
+.form_row
+  display: flex
+  position: relative
+  margin-bottom: 20px
+  .input_label
+    display: block
+    width: 160px
+    line-height: 24px
+    padding: 13px 0
+    font-size: 16px
+    font-weight: bold
+  &_content
+    width: calc(100% - 160px)
+    .input_wrap
+      margin-bottom: 0
+
+  &+.form_label
+    margin-top: 48px
+
+.form_label
+  font-size: 12px
+  text-transform: uppercase
+  opacity: 0.4
+  margin-bottom: 24px
+
+.form_adds
+  margin-top: -10px
+  margin-bottom: 24px
+  a
+    font-size: 14px
+    color: $main-color
+    display: inline-block
+    &:hover
+      color: $main-darker-color
+
+.form_input_desc
+  font-size: 14px
+  &+.form_label
+    margin-top: 48px

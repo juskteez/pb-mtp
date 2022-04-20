@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1348px" height="1348px" viewBox="0 0 1348 1348" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>player-oval-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M673.67698,1347.24413 C301.676113,1347.24413 0.1098267,1045.67785 0.1098267,673.67698 C0.1098267,301.676113 301.676113,0.1098267 673.67698,0.1098267 C1045.67785,0.1098267 1347.24413,301.676113 1347.24413,673.67698 C1347.24413,1045.67785 1045.67785,1347.24413 673.67698,1347.24413 Z M673.67698,1346.05542 C1045.02134,1346.05542 1346.05542,1045.02134 1346.05542,673.67698 C1346.05542,302.332621 1045.02134,1.29853922 673.67698,1.29853922 C302.332621,1.29853922 1.29853922,302.332621 1.29853922,673.67698 C1.29853922,1045.02134 302.332621,1346.05542 673.67698,1346.05542 Z" id="path-1"></path>
+        <filter id="pictureFilter">
+            <feGaussianBlur stdDeviation="40"/>
+        </filter> 
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use fill-opacity="0.103317482" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <path d="M398.695312,-1.16529009e-12 L674,674 L-2.46132004e-11,378.210938 L-2.46132004e-11,-1.67688086e-12 L398.695312,-1.16529009e-12 Z M1348,930.09375 L1348,1348 L939.304687,1348 L674,674 L1348,930.09375 Z" fill="#3633C0" mask="url(#mask-2)" filter="url(#pictureFilter)"></path>
+    </g>
+</svg>

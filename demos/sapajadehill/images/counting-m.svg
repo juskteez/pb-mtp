@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="318px" viewBox="0 0 18 318" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-179.000000, -185.000000)">
+        <g id="Group-2" transform="translate(179.000000, 185.000000)">
+            <path d="M9,12 L9,312" id="Line-2" stroke="#9A7554" opacity="0.300000012" stroke-dasharray="4,2"></path>
+            <g id="Group-3">
+                <rect id="Rectangle-11" fill="#D49156" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="5" y="5" width="8" height="8"></rect>
+                <rect id="Rectangle-11" stroke="#9A7554" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="3" y="3" width="12" height="12"></rect>
+            </g>
+            <g id="Group-3" transform="translate(0.000000, 100.000000)">
+                <rect id="Rectangle-11" fill="#D49156" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="5" y="5" width="8" height="8"></rect>
+                <rect id="Rectangle-11" stroke="#9A7554" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="3" y="3" width="12" height="12"></rect>
+            </g>
+            <g id="Group-3" transform="translate(0.000000, 200.000000)">
+                <rect id="Rectangle-11" fill="#D49156" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="5" y="5" width="8" height="8"></rect>
+                <rect id="Rectangle-11" stroke="#9A7554" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="3" y="3" width="12" height="12"></rect>
+            </g>
+            <g id="Group-3" transform="translate(0.000000, 300.000000)">
+                <rect id="Rectangle-11" fill="#D49156" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="5" y="5" width="8" height="8"></rect>
+                <rect id="Rectangle-11" stroke="#9A7554" transform="translate(9.000000, 9.000000) rotate(45.000000) translate(-9.000000, -9.000000) " x="3" y="3" width="12" height="12"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

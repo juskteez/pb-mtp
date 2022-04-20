@@ -1,0 +1,285 @@
+$main-color: #E70A0A
+$text-color: #151515
+
+h1,h2,h3,h4,h5
+	color: $text-color
+
+body
+	overflow: hidden
+
+body,
+input,
+button
+	font-family: "Lato", Arial, sans-serif
+	color: $text-color
+	-webkit-appreance: none
+	appreance: none
+	text-rendering: optimizeLegibility !important
+	-webkit-font-smoothing: antialiased !important
+
+.borderbox
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+.main
+	color: $main-color
+
+.transform
+	transition: 0.2s all ease
+
+body
+	//background-image: url("https://storage.googleapis.com/instapage-user-media/c1d387b9/18271356-0-white-pt.jpg")
+	//min-height: 100vh
+	//margin: 0
+	//padding: 0
+
+.page-element:not(#element-1)
+	display: none
+
+.floating-page
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	background-image: url("https://storage.googleapis.com/instapage-user-media/c1d387b9/18271356-0-white-pt.jpg")
+	text-align: left
+
+	&_right-rect
+		position: absolute
+		width: 70%
+		height: 100%
+		background-color: #151515
+		background-image: url("https://storage.googleapis.com/instapage-user-media/c1d387b9/18271346-0-black-pt.jpg")
+		top: 0
+		right: -28%
+		transform: skewX(-12deg)
+		overflow: hidden
+		&:before
+			content: ""
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: -15%
+			background-image: url("head_bg.jpg")
+			background-size: auto 110vh
+			background-repeat: no-repeat
+			background-position: center top
+			transform: skewX(12deg)
+			//mix-blend-mode: difference
+			//opacity: 0.15
+		&:after
+			content: ""
+			position: absolute
+			width: 100px
+			top: 0
+			left: -1px
+			height: 100%
+			background-color: $main-color
+			//mix-blend-mode: difference
+			z-index: 2
+
+.floating-page
+	&_wrap
+		position: absolute
+		width: 100%
+		max-width: 1200px
+		padding: 0 15px
+		left: 50%
+		top: 0
+		transform: translate3d(-50%,0,0)
+		@extend .transform
+		@extend .borderbox
+	&_header
+		padding-top: 90px
+		padding-bottom: 48px
+	&_body
+		top: 50%
+		transform: translate3d(-50%,-50%,0)
+	&_footer
+		top: auto
+		bottom: 0
+		padding-top: 48px
+		padding-bottom: 90px
+		pointer-events: none
+
+	&_video
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translate3d(0,-50%,0)
+		width: 570px
+		height: 400px
+		background-color: transparent
+		&:before
+			content: ""
+			box-shadow: 0 12px 24px 0 rgba(0,0,0,0.50), 0 16px 48px 0 rgba(0,0,0,0.50)
+			width: 90%
+			height: 76%
+			top: 20%
+			left: 5%
+			position: absolute
+			z-index: -1
+			display: none
+		&:after
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: #BD0921
+			display: none
+
+
+	&_content
+		max-width: 570px
+		position: relative
+
+	&_sub-title
+		font-size: 20px
+		letter-spacing: 1px
+		text-transform: uppercase
+		font-weight: normal
+		position: relative
+		line-height: 24px
+		margin: 0
+		margin-bottom: 8px
+		&:before
+			content: ""
+			position: absolute
+			width: 50vw
+			height: 1px
+			right: 100%
+			margin-right: 24px
+			background-color: #000
+			opacity: 0.1
+			top: 50%
+
+	&_title
+		font-size: 56px
+		line-height: 72px
+		margin: 0
+		font-weight: bold
+
+
+	&_subscribe-form
+		padding-top: 80px
+		@extend .transform
+		p
+			margin: 0
+
+	&_form-desc
+		font-size: 18px
+		line-height: 30px
+		small
+			font-size: 14px
+
+		&.lowprofile
+			color: #666
+
+	&_form-wrap
+		padding-top: 18px
+		padding-bottom: 12px
+		position: relative
+
+		form
+			position: relative
+			max-width: 370px
+			background-color: #FFF
+			box-shadow: 0 16px 24px 0 rgba(0,0,0,0.10), inset 3px 0 0 0 #E70A0A
+			padding: 0 3px
+			@extend .borderbox
+
+		input.form-input
+			border: none
+			height: 48px
+			padding: 0 20px
+			padding-right: 114px
+			margin: 0
+			display: block
+			width: 100%
+			font-size: 14px
+			background-color: transparent
+			font-family: "Lato", sans-serif
+			@extend .borderbox
+			&:focus
+				outline: none
+
+		.input-holder.field-text+.input-holder.field-text
+			border-top: 1px solid #F2F2F2
+			margin-top: 1px
+
+		button.btn.button_submit
+			position: absolute
+			line-height: 64px
+			font-size: 20px
+			text-transform: uppercase
+			background-color: $main-color
+			color: #fff
+			border: none
+			border-radius: 0
+			padding: 0 24px
+			top: 50%
+			left: 270px
+			white-space: nowrap
+			transform: translate3d(0,-50%,0)
+			transition: 0.3s all ease
+			cursor: pointer
+			&:hover
+				background-color: #D0011B
+
+	&_footer p
+		font-size: 32px
+		font-weight: bold
+		max-width: 350px
+		margin: 0
+
+.axum_bud
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate3d(-50%,-50%,0)
+	animation: axum_bud 3s ease-in-out infinite
+	&.bud-1
+		width: 342px
+		margin-top: 64px
+		margin-left: -128px
+	&.bud-2
+		width: 245px
+		margin-top: -72px
+		margin-left: 144px
+		animation-duration: 3.6s
+
+@keyframes axum_bud
+	0%
+		transform: translate3d(-50%,-50%,0) translate3d(-64px,-5%,0)
+	50%
+		transform: translate3d(-50%,-50%,0) translate3d(-64px,5%,0)
+	100%
+		transform: translate3d(-50%,-50%,0) translate3d(-64px,-5%,0)
+
+
+@media screen and (max-height: 800px)
+	.floating-page
+		&_header
+			padding-top: 56px
+		&_footer
+			padding-bottom: 56px
+
+		&_subscribe-form
+			padding-top: 56px
+
+@media screen and (max-width: 1280px)
+	@import 'tablet'
+
+
+@media screen and (max-width: 1023px)
+	@import 'tablet_p'
+
+@media screen and (max-width: 767px)
+	@import 'mobile'
+
+@media only screen and (max-width: 767px) and (orientation: landscape)
+	@import 'mobile_l'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>domain_smile</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dịch-vụ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dịch-vụ---Hosting-Kết-quả" transform="translate(-696.000000, -280.000000)" fill-rule="nonzero">
+            <g id="domain_smile" transform="translate(696.000000, 280.000000)">
+                <circle id="Oval" fill="#2D9DD5" cx="23.996557" cy="23.996557" r="23.996557"></circle>
+                <path d="M39.7486582,24.0124557 C39.7486582,32.7127089 32.6951899,39.7653671 23.995038,39.7653671 C15.2951899,39.7653671 8.24212658,32.7127089 8.24212658,24.0124557 L39.7486582,24.0124557 L39.7486582,24.0124557 Z" id="Shape" fill="#FFFFFF"></path>
+                <g id="Group" transform="translate(12.860759, 11.949367)" fill="#FFFFFF">
+                    <circle id="Oval" cx="3.84172152" cy="3.76982278" r="3.76870886"></circle>
+                    <circle id="Oval" cx="18.092557" cy="3.76982278" r="3.76870886"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

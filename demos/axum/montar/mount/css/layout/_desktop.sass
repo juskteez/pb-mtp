@@ -1,0 +1,1106 @@
+/* Desktop */
+body
+  overflow-x: hidden
+
+#body
+  overflow-x: hidden
+  width: 100%
+  padding-bottom: 56px
+
+.main_header,
+.section,
+.main_footer
+  position: relative
+
+.montar-mount-wrap
+  @extend .clearfix
+  .montar-mount
+    max-height: 640px
+    float: right
+    margin-top: -80px
+    margin-bottom: -210px
+    position: relative
+    pointer-events: none
+
+.clock
+  position: absolute
+  transform-origin: top left
+  //transform: scale(0.33)
+  margin: 0
+  top: 68px
+
+.top_shipping
+  color: $main-color
+  text-transform: uppercase
+  float: right
+  margin-bottom: 0
+  font-size: 20px
+  font-weight: 600
+  line-height: 24px
+  letter-spacing: 0
+  img
+    margin-left: 6px
+    vertical-align: middle
+
+.product_slides.slick-slider
+  height: 60vh
+  max-height: 640px
+  overflow: hidden
+  margin-top: 64px
+  margin-bottom: 0
+  .slick-list
+    height: 100%
+    .slick-track
+      height: 100%
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+  .slick-prev,
+  .slick-next
+    width: 48px
+    height: 48px
+    left: 24px
+    background-color: #fff
+    border-radius: 50%
+    z-index: 10
+    box-shadow: 0 0 0 0 rgba(0,0,0,0)
+    transition-duration: 0.3s
+    &:hover
+      transform: translate3d(0,-50%,0)
+      box-shadow: 0 0 0 6px rgba(0,0,0,0.4)
+    &:before
+      color: #000
+    &:after
+      display: none
+
+  .slick-next
+    right: 24px
+    left: auto
+
+  .slick-dots
+    position: absolute
+    bottom: 16px
+    li
+      width: 30px
+      height: 30px
+      margin: 0
+      text-align: center
+
+      button
+        display: inline-block
+
+      button:before
+        content: ""
+        background-color: rgba(0,0,0,0.3)
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%,-50%,0)
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.4)
+
+    li.slick-active button
+      &:before
+        background-color: rgba(0,0,0,0.5)
+        box-shadow: 0 0 0 4px rgba(255,255,255,1)
+
+.section.product_guarantee
+  background-color: #efefef
+  position: relative
+  z-index: 1
+  margin-bottom: 80px
+
+  li
+    display: inline-block
+    vertical-align: top
+    padding-top: 56px
+    margin: 0 64px
+
+
+.main_header
+  padding-top: 0
+  background-color: $gray-color
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: calc(200% - 128px)
+    top: -100%
+    left: 0
+    background-color: $gray-color
+    transform: skewY(-10deg)
+    display: none
+
+  .hero_benefits
+    background-color: #fff
+    //background-image: url("../images/hero_img.jpg")
+    background-size: cover
+    background-position: center top
+    color: #111
+    position: relative
+    padding: 96px 0
+    .col-6
+      z-index: 2
+      &.montar-mount-wrap
+        z-index: 1
+    &+.wrap.cols
+      //margin-top: -96px
+      padding: 56px 0
+      background-color: #F6F6F6
+      z-index: 4
+
+    h1
+      margin-bottom: 24px
+
+    p
+      font-size: 20px
+
+    .offer_cta
+      margin-top: 32px
+
+      &-price span:before
+        background-color: #111
+
+      &-action
+        white-space: nowrap
+
+        .btn.outline
+          color: #111
+          border: 2px solid rgba(218, 0, 0, 0.8)
+          background-color: rgba(255,255,255,0.3)
+          &:hover
+            border-color: rgba(218, 0, 0, 1)
+
+      &-note
+        display: block
+        line-height: 50px
+        vertical-align: middle
+        padding-top: 0
+        padding-left: 0
+
+    .guarantee_list
+      text-align: left
+      min-width: 710px
+      margin-top: 32px
+      @extend .clearfix
+
+      li
+        float: left
+        width: 50%
+      li:nth-of-type(2) h3
+        margin-top: 10px
+      .guarantee_image
+        float: left
+        width: 96px
+        img
+          vertical-align: top
+      h3
+        float: left
+        width: calc(100% - 110px)
+        font-size: 18px
+        line-height: 24px
+        margin-top: 0
+        margin-bottom: 0
+        position: relative
+        padding: 16px 0
+        font-weight: bold
+
+  .logo_wrap
+    position: relative
+    background-color: #111
+    width: 100%
+    left: 0
+    top: 0
+    padding: 24px 0
+    z-index: 3
+    img
+      max-height: 24px
+      max-width: 169px
+      vertical-align: middle
+      &+img
+        margin-left: 32px
+        transform: translate3d(0,-2px,0)
+
+  .product_main
+    &-image img
+      max-width: 430px
+
+    &-info
+      padding-top: 24px
+      z-index: 0
+
+    &-cta
+      .offer_cta-price
+        margin-top: -4px
+
+      .clock
+        top: 76px
+
+    &-title
+      position: relative
+      font-weight: 500
+      margin-bottom: 24px
+      span
+        font-size: 12px
+        font-family: $font-stack
+        font-weight: 700
+        text-transform: uppercase
+        display: inline-block
+        max-width: 76px
+        border-radius: 4px
+        background: rgba(255,199,107,0.10)
+        border: 1px solid #ED8888
+        padding: 3px 7px
+        line-height: 14px
+        color: $main-color
+        vertical-align: top
+        margin-top: 11px
+
+      &+p
+        font-size: 22px
+        line-height: 34px
+        max-width: 480px
+        margin-bottom: 24px
+        small
+          display: block
+          font-size: 14px
+          font-style: italic
+          opacity: 0.5
+          line-height: 24px
+
+.offer_cta
+  position: relative
+  font-size: 0
+  &-price
+    font-size: 22px
+    display: inline-block
+    width: 160px
+    vertical-align: top
+    position: relative
+    &:after
+      content: attr(timr)
+      position: absolute
+      top: 100%
+      font-size: 14px
+      font-weight: bold
+      color: $text-color
+      line-height: 30px
+      padding-left: 2px
+    span
+      position: relative
+      opacity: 0.75
+      line-height: $fs3
+      display: inline-block
+      margin-left: 2px
+      vertical-align: middle
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 2px
+        top: 50%
+        left: 0
+        background-color: $text-color
+        //box-shadow: 0 0 0 2px #fff
+        transform: scaleY(0.75)
+    b
+      font-size: 36px
+      color: $main-color
+      display: block
+      line-height: 40px
+
+  &-action
+    display: inline-block
+    width: calc(100% - 160px)
+    padding-top: 10px
+
+    .btn
+      min-width: 180px
+    .btn+.btn
+      margin-left: 16px
+
+  &-note
+    font-size: $fs5
+    display: block
+    padding-top: 14px
+
+
+.main_benefits
+  margin-top: 48px
+  margin-bottom: 80px
+  h2
+    margin-bottom: 22px
+  p
+    font-size: 20px
+    line-height: 32px
+    padding-right: 32px
+.product_main-features
+  font-size: 20px
+  font-weight: 700
+  margin-bottom: 32px
+
+  li
+    position: relative
+    margin-top: 6px
+    margin-bottom: 12px
+    &:before
+      content: ""
+      display: inline-block
+      width: 16px
+      height: 16px
+      background-image: url("../images/check.svg")
+      background-repeat: no-repeat
+      background-position: center
+      margin-right: 10px
+
+.section.video_intro
+  height: 45vw
+  max-height: 680px
+  background-image: url("../images/video_bg.jpg")
+  background-size: cover
+  background-position: center
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.00) 26%), linear-gradient(-180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.50) 100%)
+
+  .video_intro_trigger
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &:before
+      content: attr(title)
+      font-size: $fs0
+      font-family: $font-title
+      font-weight: 700
+      color: #fff
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      text-align: center
+      transform: translate(0,-125%)
+
+    &:after
+      content: ""
+      position: absolute
+      width: 80px
+      height: 80px
+      background-color: rgba(0,0,0,0.30)
+      border: 3px solid rgba(255,255,255,0.50)
+      border-radius: 50%
+      top: 50%
+      left: 50%
+      transform: translate(-50%,0)
+      background-image: url("../images/play.svg")
+      background-position: 55% center
+      background-repeat: no-repeat
+      transition: all 0.3s ease
+    &:hover:after
+      background-color: rgba(0,0,0,0.50)
+      border-color: rgba(255,255,255,0.9)
+
+.section.social_proof
+  margin-top: 96px
+  margin-bottom: 56px
+  &.orders-count
+    background-color: $main-color
+    color: #fff
+    margin-top: 0
+    text-align: center
+    padding: 80px 0
+
+    .orders-counter
+      padding-top: 0
+
+    .orders-number
+      color: #fff
+
+  h2
+    margin-bottom: 0
+
+  .rating
+    color: rgba(53,53,53,0.8)
+    vertical-align: top
+    margin-top: 4px
+
+  .stars
+    position: relative
+    width: 104px
+    height: 18px
+    background-image: url("../images/starsg.svg")
+    display: inline-block
+    margin-right: 10px
+    vertical-align: top
+    margin-top: 2px
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      background-image: url("../images/stars.svg")
+      background-color: #FFF
+
+  .orders-counter
+    position: relative
+    padding-top: 144px
+
+  .orders-number
+    font-size: 74px
+    font-weight: 700
+    color: $main-color
+    line-height: 80px
+
+.page_reviews
+  font-size: 14px
+  line-height: 26px
+  color: rgba(53,53,53,0.9)
+  padding-left: 15px
+  @extend .clearfix
+
+  &-logo
+    height: 32px
+    position: relative
+    margin-bottom: 20px
+
+    img
+      position: absolute
+      left: 0
+      top: 50%
+      transform-origin: left center
+      transform: translate3d(0,-50%,0) scale(0.5)
+      filter: grayscale(1)
+      will-change: filter
+      opacity: 0.5
+      transition: 0.5s all ease
+
+  li:hover .page_reviews-logo img
+    filter: grayscale(0)
+    opacity: 1
+
+.product_benefits
+  h2
+    margin-left: 15px
+
+  &-icon
+    max-height: 74px
+    margin-bottom: 16px
+    img
+      max-height: 74px
+      display: inline-block
+      position: relative
+      transform: translate3d(-8px,0,0)
+
+.product_images
+  padding-top: 128px
+  margin-bottom: -234px
+  z-index: 1
+  &-desc
+    padding: 0 15px
+    h2
+      max-width: 300px
+      line-height: 48px
+
+    .offer_cta
+      z-index: 2
+      margin-bottom: 24px
+      padding-top: 48px
+      .clock
+        left: 0
+        top: 0
+      &-price
+        width: 100%
+        &:after
+          top: 50%
+          transform: translate3d(12px,-50%,0)
+        span,
+        b
+          line-height: 40px
+          vertical-align: middle
+          display: inline-block
+        b
+          margin-left: 8px
+      &-action
+        display: block
+
+  &-list
+    position: relative
+    width: 100vw
+    max-width: 1600px
+    left: 50%
+    transform: translate3d(-50%,0,0) skewY(-10deg) translate3d(0,-300px,0)
+    @extend .clearfix
+    li
+      width: 50%
+      overflow: hidden
+      float: right
+      height: 530px
+      position: relative
+      img
+        transform: skewY(10deg)
+
+      &:not(.parallaxer):nth-of-type(2) img
+        transform: skewY(10deg) translate3d(-50%,-50%,0) translate3d(0,15%,0) scale(1.1)
+
+      &:last-child
+        transform: scale(1.1)
+        box-shadow: 0 8px $main-color, 0 24px 64px rgba(0,0,0,0.2), 0 16px 24px rgba(0,0,0,0.1)
+    li:not(.parallaxer) img
+      width: 120%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: skewY(10deg) translate3d(-50%,-50%,0) scale(1.1)
+    li:first-child
+      float: left
+      overflow: visible
+      background-color: #F1F1F1
+      transform: translate3d(0,300px,0)
+      box-shadow: 0 -8px $main-color
+
+      .pal
+        position: absolute
+        left: 50%
+        top: 50%
+
+      .big_pal
+        width: 408px
+        transform: skewY(10deg) translate3d(-65%,-15%,0)
+        z-index: 1
+      .small_pal
+        width: 163px
+        transform: skewY(10deg) translate3d(0%,-65%,0)
+
+.video_testimonials
+  margin-bottom: 128px
+  h2
+    margin-bottom: 32px
+    margin-left: 15px
+
+  p
+    max-width: 470px
+    margin-left: 15px
+
+  &_list
+    margin-top: 64px
+    @extend .clearfix
+    z-index: 1
+    li
+      height: 230px
+      position: relative
+      transition: all 0.3s ease
+      &:hover
+        transform: translate3d(0,-10px,0)
+        &:before
+          opacity: 0.4
+        &:after
+          opacity: 0.2
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        width: 80%
+        height: 80%
+        left: 10%
+        top: 20%
+        background-color: $text-color
+        filter: blur(20px)
+        opacity: 0
+        transition: all 0.3s ease
+      &:after
+        filter: blur(8px)
+
+    a
+      position: relative
+      display: inline-block
+      width: 100%
+      height: 100%
+      vertical-align: top
+      background-color: $gray-color
+      z-index: 1
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.00) 34%, rgba(0,0,0,0.8) 100%)
+        opacity: 0
+        @extend .easing
+      &:hover:before,
+      &:hover:after
+        opacity: 1
+      &:after
+        content: attr(title)
+        position: absolute
+        left: 20px
+        bottom: 10px
+        color: #fff
+        opacity: 0
+        @extend .easing
+
+/* .product_images
+  overflow: hidden */
+.testimonials
+  &-title
+    position: relative
+    margin-bottom: -96px
+    h2,h3
+      line-height: 48px
+      margin-left: 15px
+      margin-right: 15px
+    h2
+      margin-bottom: 0
+    h3
+      font-family: $font-stack
+      font-size: 22px
+      margin-bottom: 0
+
+  &_list
+    li
+      position: relative
+      @extend .clearfix
+
+      &:nth-of-type(2n+1)
+        .col-4
+          float: right
+
+    .testimonials-image
+      overflow: hidden
+      img
+        vertical-align: top
+
+    p
+      &:before
+        content: ""
+        position: absolute
+        width: 48px
+        height: 40px
+        background-image: url("../images/quote.svg")
+        background-repeat: no-repeat
+        background-position: center
+        right: 100%
+
+    li:nth-of-type(2)
+      z-index: 1
+      .testimonials-image
+        transform: skewY(-10deg) translate3d(0,53px,0)
+        margin-bottom: 18px
+        img
+          transform: skewY(10deg) translate3d(0,-34px,0)
+
+      .testimonials-info
+        float: right
+
+    li:nth-of-type(2):before
+      content: ""
+      position: absolute
+      width: 100vw
+      height: 200%
+      background: -moz-linear-gradient(10deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(10deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+      background: linear-gradient(10deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+      background-color: #F7F5F2
+      left: 50%
+      top: 0
+      transform: translate3d(-50%,0,0) skewY(-10deg)
+
+  &-info
+    h3
+      padding-top: 190px
+
+    p
+      font-size: 14px
+      line-height: 26px
+
+.package
+  background-color: #F6F6F6
+  padding-top: 80px
+  .wrap.cols
+    z-index: 1
+  h2
+    border-top: 1px solid rgba(51,51,51,0.1)
+    padding-top: 64px
+
+  p
+    padding-left: 32px
+    padding-right: 32px
+
+  &-single
+    position: relative
+  &-item_image
+    background-color: #FFF
+    box-shadow: 0 10px 24px 0 rgba(0,0,0,0.05)
+    height: 328px
+    line-height: 328px
+    margin-bottom: 16px
+    img
+      max-height: 198px
+      max-width: 165px !important
+      vertical-align: middle
+
+  &-cta.offer_cta
+    margin-top: 48px
+    .clock
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      width: auto
+      top: 48px
+    .offer_cta-price
+      width: 100%
+      line-height: 40px
+      margin-bottom: 40px
+      &:after
+        left: 50%
+        transform: translate3d(-50%,0,0)
+        padding-left: 0
+        width: 100%
+      span
+        line-height: 40px
+        vertical-align: middle
+        margin-right: 6px
+      b
+        display: inline-block
+        vertical-align: middle
+    .offer_cta-action
+      margin-top: 16px
+      display: block
+      margin-left: auto
+      margin-right: auto
+
+.faq
+  background-color: #F6F6F6
+  padding-top: 96px
+  padding-bottom: 80px
+
+  h2
+    text-align: center
+
+  &_list
+    margin-left: 26px
+    li
+      margin-bottom: 30px
+
+      .faq-content a
+        color: #000
+        font-weight: 700
+        border-bottom: 1px dotted transparent
+        &:hover
+          color: $main-color
+          border-bottom: 1px dotted $main-color
+
+  &-item_trigger
+    font-size: 20px
+    font-weight: 500
+    font-family: $font-title
+    position: relative
+    display: inline-block
+    &.active
+      color: $main-color
+      &:before
+        transform: rotate(0deg)
+      &:after
+        transform: rotate(-90deg)
+        opacity: 0
+    &.active+.faq-content
+      max-height: 72px
+      opacity: 1
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      right: 100%
+      width: 10px
+      height: 2px
+      background-color: #888
+      margin-right: 12px
+      top: 50%
+      border-radius: 2px
+      transform: rotate(90deg)
+      transition: 0.5s all ease
+    &:after
+      transform: rotate(0deg)
+
+  &-content
+    max-width: 100%
+    line-height: 24px
+    overflow: hidden
+    max-height: 0
+    transition: 0.5s all ease
+    opacity: 0
+
+.guarantee_list
+  text-align: center
+  img
+    max-height: 131px
+
+  h3
+    max-width: 290px
+    margin-left: auto
+    margin-right: auto
+    font-weight: 500
+    margin-top: 16px
+    margin-bottom: 56px
+    opacity: 0.8
+
+.freeshipping
+  padding: 56px 0
+
+  .col-6
+    margin-top: 48px
+
+  &-icon
+    float: left
+    margin-right: 32px
+
+  h2.bold
+    margin-bottom: 8px
+    font-weight: 500
+
+  &-cta.offer_cta
+    text-align: right
+    .clock
+      right: -2px
+      width: auto
+      left: auto
+      top: 48px
+    .offer_cta-price
+      line-height: 40px
+      width: 100%
+      margin-bottom: 40px
+      &:after
+        right: 0
+      span,b
+        line-height: 40px
+        vertical-align: middle
+      b
+        display: inline-block
+        margin-left: 8px
+    .offer_cta-action
+      display: block
+      width: 100%
+      margin-top: 10px
+
+.subscribe
+  background-color: $text-color
+  background-image: url("../images/subscribe_bg.jpg")
+  background-size: cover
+  background-position: center
+  color: #fff
+  padding-top: 64px
+  padding-bottom: 128px
+
+  p
+    color: rgba(255,255,255,0.6)
+
+  &-form
+    font-size: 0
+    text-align: right
+    padding-top: 80px
+    position: relative
+    &:after
+      content: attr(data-alert)
+      position: absolute
+      top: 100%
+      right: 0
+      font-size: 14px
+      color: #f37676
+      width: 100%
+      max-width: 400px
+      text-align: left
+      padding: 5px 0
+      opacity: 0
+    &.subbed:after
+      animation: subbed 4s ease
+    &.subbing
+      pointer-events: none
+
+    @keyframes subbed
+      0%
+        opacity: 1
+      90%
+        opacity: 1
+      100%
+        opacity: 0
+  &-input
+    width: calc(100% - 48px)
+    max-width: 352px
+    height: 48px
+    background-color: rgba(255,255,255,0.1)
+    line-height: 24px
+    padding: 0 24px
+    color: #fff
+    vertical-align: top
+  &-btn.btn
+    width: 48px
+    height: 48px
+    background-color: rgba(255,255,255,0.85)
+    background-image: url("../images/sub_arrow.svg")
+    background-repeat: no-repeat
+    background-position: center
+    vertical-align: top
+    &:hover
+      background-color: #fff
+
+  &-input::-webkit-input-placeholder
+    opacity: 0.4
+    color: #fff
+  &-input::-moz-placeholder
+    opacity: 0.4
+    color: #fff
+  &-input::-ms-input-placeholder
+    opacity: 0.4
+    color: #fff
+  &-input::-moz-placeholder
+    opacity: 0.4
+    color: #fff
+
+footer.main_footer
+  padding: 48px 0
+  line-height: 32px
+  color: rgba(0,0,0,0.5)
+  img
+    max-height: 32px
+
+  .col-5:nth-of-type(2)
+    text-align: right
+
+
+.video_player_wrap
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  opacity: 0
+  pointer-events: none
+  transition: opacity 0.4s ease
+  z-index: 999
+  &.active
+    opacity: 1
+    pointer-events: all
+
+  .video_player_close
+    position: absolute
+    width: 64px
+    height: 64px
+    background-color: rgba(230,230,230,0.3)
+    top: 48px
+    right: 48px
+    border-radius: 50%
+    z-index: 2
+    &:hover
+      background-color: rgba(245,245,245,0.7)
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 24px
+      height: 1px
+      background-color: #000
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    &:after
+      width: 1px
+      height: 24px
+
+  .video_player_frame
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  .youtube_object
+    width: 100%
+    height: 100%
+    margin: 0
+
+.scrolled .floating_banner
+  transform: translate3d(0,0,0)
+
+.floating_banner
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  background-color: rgba(0,0,0,0.9)
+  z-index: 8
+  text-align: center
+  padding: 8px 0
+  transform: translate3d(0,100%,0)
+  transition: 0.3s all ease
+  will-change: transform
+  transform-origin: bottom center
+
+  .floating_badge
+    float: left
+    line-height: 40px
+    color: rgba(255,255,255,0.8)
+    font-weight: bold
+    font-size: 16px
+    letter-spacing: -1px
+    img
+      display: inline-block
+      margin-right: 14px
+      max-height: 20px
+      vertical-align: middle
+      opacity: 0.8
+
+  .offer_cta
+    float: right
+    &-action
+      display: inline-block
+      width: auto
+      vertical-align: middle
+      padding-top: 0
+      .btn
+        line-height: 40px
+        &:after
+          opacity: 0
+    &-price
+      width: auto
+      line-height: 40px
+      vertical-align: middle
+      color: #fff
+      padding-right: 16px
+      b,
+      span
+        display: inline-block
+        line-height: 40px
+        vertical-align: middle
+        &:before
+          background-color: #FFF
+
+      b
+        font-size: 28px
+
+      span
+        font-size: 18px
+
+#intercom-container
+  transition: all 0.3s ease
+
+.scrolled #intercom-container
+  transform: translate3d(0,-56px,0)
+
+.video_open #intercom-container
+  opacity: 0
+  pointer-events: none

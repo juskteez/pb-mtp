@@ -1,0 +1,233 @@
+/* Animation Library */
+$ease-time: 0.2s
+
+$main-cubic: cubic-bezier(.53,.1,.2,1)
+
+$colorOutline: $main-color
+
+$colorOutlineFade: #d8d8d8
+
+$colorOutlineTextFade: #131313
+
+$widthMouse: 24px
+$heightMouse: 36px
+$borderMouse: 2px
+
+$posMouse: 5px
+$posText: 2px
+
+$sizeTrackball: 6px
+$posTrackball: 10px
+$shrinkTrackball: 0.4
+
+$animDuration: 5s
+
+
+.easing
+  transition: $ease-time all ease
+
+.kf-floating
+  animation-name: kf_floating
+  animation-duration: 2.4s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+
+@keyframes kf_floatingx
+  from
+    transform: translate3d(0, 0, 0)
+  58%
+    transform: translate3d(0, 3%, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
+@keyframes colorSlide
+  0%
+    background-position: 0% 100%
+  20%
+    background-position: 0% 0%
+  21%
+    background-color: $colorOutlineFade
+  29.99%
+    background-color: $colorOutline
+    background-position: 0% 0%
+  30%
+    background-color: $colorOutlineFade
+    background-position: 0% 100%
+  50%
+    background-position: 0% 0%
+  51%
+    background-color: $colorOutlineFade
+  59%
+    background-color: $colorOutline
+    background-position: 0% 0%
+  60%
+    background-color: $colorOutlineFade
+    background-position: 0% 100%
+  80%
+    background-position: 0% 0%
+  81%
+    background-color: $colorOutlineFade
+  90%, 100%
+    background-color: $colorOutline
+
+@keyframes trackBallSlide
+  0%
+    opacity: 1
+    transform: scale(1) translateY(-$posTrackball)
+  6%
+    opacity: 1
+    transform: scale(0.9) translateY($posTrackball/4)
+  14%
+    opacity: 0
+    transform: scale($shrinkTrackball) translateY($posTrackball*2)
+  15%, 19%
+    opacity: 0
+    transform: scale($shrinkTrackball) translateY(-$posTrackball)
+  28%, 29.99%
+    opacity: 1
+    transform: scale(1) translateY(-$posTrackball)
+  30%
+    opacity: 1
+    transform: scale(1) translateY(-$posTrackball)
+  36%
+    opacity: 1
+    transform: scale(0.9) translateY($posTrackball/4)
+  44%
+    opacity: 0
+    transform: scale($shrinkTrackball) translateY($posTrackball*2)
+  45%, 49%
+    opacity: 0
+    transform: scale($shrinkTrackball) translateY(-$posTrackball)
+  58%, 59.99%
+    opacity: 1
+    transform: scale(1) translateY(-$posTrackball)
+  60%
+    opacity: 1
+    transform: scale(1) translateY(-$posTrackball)
+  66%
+    opacity: 1
+    transform: scale(0.9) translateY($posTrackball/4)
+  74%
+    opacity: 0
+    transform: scale($shrinkTrackball) translateY($posTrackball*2)
+  75%, 79%
+    opacity: 0
+    transform: scale($shrinkTrackball) translateY(-$posTrackball)
+  88%, 100%
+    opacity: 1
+    transform: scale(1) translateY(-$posTrackball)
+
+@keyframes nudgeMouse
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY($posMouse)
+  30%
+    transform: translateY(0)
+  50%
+    transform: translateY($posMouse)
+  60%
+    transform: translateY(0)
+  80%
+    transform: translateY($posMouse)
+  90%
+    transform: translateY(0)
+
+@keyframes nudgeText
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY($posText)
+  30%
+    transform: translateY(0)
+  50%
+    transform: translateY($posText)
+  60%
+    transform: translateY(0)
+  80%
+    transform: translateY($posText)
+  90%
+    transform: translateY(0)
+
+@keyframes colorText
+  21%
+    color: $colorOutlineTextFade
+  30%
+    color: $colorOutline
+  51%
+    color: $colorOutlineTextFade
+  60%
+    color: $colorOutline
+  81%
+    color: $colorOutlineTextFade
+  90%
+    color: $colorOutline
+
+@keyframes drift
+  from
+    transform: rotate(0deg)
+  from
+    transform: rotate(360deg)
+
+$outCubic: cubic-bezier(.41,.01,.15,1)
+
+.screen-out
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: $main-color
+  transform: translate3d(0,-100%,0)
+  z-index: 9999
+
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #F0F3F7
+    transform: translate3d(0,-100%,0)
+
+  &:after
+    background-color: #FFFFFF
+
+.page-out .screen-out
+  animation: screenOut 1s $outCubic forwards
+
+  &:before,
+  &:after
+    animation: screenOut 1s $outCubic forwards
+    animation-delay: 0.25s
+
+  &:after
+    animation-delay: 0.5s
+
+.page-in .screen-out
+  transform: translate3d(0,0,0)
+  animation: screenIn 1s $outCubic forwards
+  animation-delay: 0.5s
+
+  &:before,
+  &:after
+    transform: translate3d(0,0,0)
+    animation: screenIn 1s $outCubic forwards
+    animation-delay: 0.25s
+
+  &:after
+    animation-delay: 0s
+
+@keyframes screenOut
+  0%
+    transform: translate3d(0,-100%,0)
+  100%
+    transform: translate3d(0,0,0)
+
+@keyframes screenIn
+  0%
+    transform: translate3d(0,0,0)
+  100%
+    transform: translate3d(0,100%,0)

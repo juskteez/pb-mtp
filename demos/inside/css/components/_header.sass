@@ -1,0 +1,286 @@
+$header-padding: 8px
+
+.comp-header
+  box-shadow: 0 1px $n10
+  padding: $header-padding 0
+  cursor: default
+  background-color: rgba(white,0.96)
+  //backdrop-filter: blur(12px)
+  z-index: 10
+
+  & > .wrap
+    position: static
+
+  &-content,
+  & &-content[class^="col-"]
+    display: flex
+    align-items: center
+    position: static
+
+.fixed .comp-header
+  position: sticky
+  width: 100%
+  top: 0
+
+$logo-box-width: 146px
+$action-box-width: 120px
+$header-box-spacing: 24px
+
+$menu-interact-duration: 0.2s
+
+.header
+  &-logo
+    +breakpoint('t')
+      flex-grow: 2
+      padding-left: 8px
+    a,
+    span
+      width: 146px
+      height: 40px
+      background-color: transparent
+      cursor: pointer
+      display: block
+
+    img
+      height: 100%
+
+  &-actions
+    display: flex
+
+  &-actions .icon
+    @extend .easing
+    margin-bottom: 0
+    cursor: pointer
+
+  &-actions .icon:not(:hover)
+    color: $n6
+
+  &-menu-trigger
+    margin-bottom: 0
+    margin-left: -12px
+
+  &-menu
+    margin: 0 $header-box-spacing
+    height: 100%
+    display: flex
+    align-items: center
+    width: calc(100% - #{$header-box-spacing * 2 + $logo-box-width + $action-box-width})
+    +breakpoint('t')
+      position: absolute
+      top: 100%
+      left: 0
+      height: calc(100vh - 90px)
+      display: block
+      width: 100%
+      background-color: white
+      margin: 0
+      overflow: hidden
+      overflow-y: auto
+      display: none
+
+  &-menu > ul > li > span:before,
+  &-menu a,
+  &-menu span,
+  &-menu .mega_menu ul li:first-child > a:before
+    @extend .easing
+
+  @media screen and (min-width: 1281px)
+    &-menu > ul
+      display: flex
+
+    &-menu ul li
+      display: inline-block
+
+    &-menu ul li:not(:last-child)
+      margin-right: 0
+
+    &-menu > ul > li > a,
+    &-menu > ul > li > span
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        height: calc(200% + #{$header-padding*2})
+        width: 100%
+        top: 50%
+        left: 0
+        transform: translate(0,-50%)
+        background-color: rgba(120, 120, 120, 0.14)
+        opacity: 0
+      &:hover:before
+        opacity: 1
+
+    &-menu > ul > li:hover > span:before
+      opacity: 1
+
+    &-menu > ul > li:hover
+      z-index: 1
+
+    &-menu > ul > li > a:hover ~ ul,
+    &-menu > ul > li > span:hover ~ ul,
+    &-menu > ul ul:hover
+      opacity: 1
+      transform: translate3d(0,0,0) scaleY(1)
+      pointer-events: all
+
+    &-menu ul ul
+      position: absolute
+      background-color: white
+      padding: 12px 0
+      margin-left: 0
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08)
+      transition: $menu-interact-duration all ease
+      transform: translate3d(0,0,0) scaleY(0.9)
+      border-top: 1px solid $n10
+      transform-origin: top center
+      opacity: 0
+      top: 100%
+      z-index: -1
+      pointer-events: none
+      white-space: nowrap
+
+      li,
+      li:not(:last-child)
+        display: block
+        margin-right: 0
+        position: relative
+
+      a,
+      span
+        font-size: $fs6
+        display: block
+        padding: 4px 16px
+        padding-right: 24px
+      a:hover,
+      span:hover,
+      li:hover > span
+        background-color: rgba(120, 120, 120, 0.14)
+
+      span:after
+        position: absolute
+        right: 8px
+        transform: rotate(-90deg)
+
+    &-menu ul ul ul
+      left: 100%
+      top: -12px
+      transform: translate3d(0,0,0) scaleX(0.96)
+      transform-origin: top left
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08)
+      opacity: 0
+
+    &-menu ul ul span:hover ~ ul,
+    &-menu ul ul ul:hover
+      pointer-events: all
+      transform: translate3d(0,0,0) scaleX(1)
+      opacity: 1
+
+    &-menu a,
+    &-menu span
+      color: $n6
+      cursor: pointer
+      display: inline-block
+      line-height: $fs4
+      padding: 0 16px
+
+    &-menu a:hover,
+    &-menu span:hover
+      color: $p5
+
+    &-menu span:after
+      content: ""
+      position: relative
+      display: inline-block
+      vertical-align: top
+      width: 12px
+      height: 12px
+      background-color: currentColor
+      mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cG9seWdvbiBmaWxsPSIjMDAwMDAwIiBwb2ludHM9IjIuMjUgMy43NSA2IDguMjUgOS43NSAzLjc1Ij48L3BvbHlnb24+CiAgICA8L2c+Cjwvc3ZnPg==)
+      mask-size: 12px 12px
+      mask-repeat: no-repeat
+      margin-top: 4px
+      margin-left: 2px
+
+    &-menu .mega_menu
+      position: absolute
+      width: 100%
+      top: 100%
+      //background-color: white
+      left: 0
+      padding: 16px 0
+      transition: $menu-interact-duration all ease
+      transform: translate3d(0,0,0) scaleY(0.9)
+      transform-origin: top center
+      opacity: 0
+      pointer-events: none
+      //transition-delay: 0.125s
+
+    &-menu li:hover > .mega_menu
+      opacity: 1
+      transform: translate3d(0,0,0) scaleY(1)
+      transition-delay: 0s
+      pointer-events: all
+
+    &-menu .mega_menu ul
+      position: static
+      transform: none
+      opacity: 1
+      box-shadow: unset
+      overflow: visible
+      background-color: unset
+      pointer-events: unset
+      padding-top: 0
+      border-top: none
+
+      li > a
+        padding: 4px 6px
+        margin-left: -6px
+
+      li:first-child > a:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 1px
+        background-color: rgba(120, 120, 120, 0.14)
+        top: -1px
+        right: 0
+
+      li:first-child > a:hover:before
+        width: calc(100% + 6.5px)
+
+  @media screen and (max-width: 1280px)
+    &-menu > ul#menu-list
+      width: calc(100% - 80px)
+      margin: 0 auto
+      padding: 12px
+
+    &-menu > ul#menu-list ul,
+    &-menu > ul#menu-list .mega_menu
+      display: none
+
+.mega_menu-visible .mega_menu-base
+  transform: translate3d(0,0,0) scaleY(1)
+  opacity: 1
+
+.mega_menu-base
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  background-color: white
+  transform: translate3d(0,0,0) scaleY(0.9)
+  transform-origin: top center
+  opacity: 0
+  will-change: height
+  border-top: 1px solid $n10
+  transition: $menu-interact-duration all ease, 0.1s height ease
+  pointer-events: none
+  &:after
+    content: ""
+    position: absolute
+    width: 100%
+    left: 0
+    top: 100%
+    height: 48px
+    pointer-events: none
+    background-image: linear-gradient(180deg, rgba(black,0.06) 0%, rgba(black,0) 80%)

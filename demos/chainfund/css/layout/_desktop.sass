@@ -1,0 +1,1298 @@
+/* Desktop */
+
+html
+  min-height: 100%
+
+body
+  background-color: #F7FCFF
+
+#body
+  max-width: 100vw
+  position: relative
+
+.main_header
+  padding: 64px 0
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 20
+  will-change: padding, background-color
+  background-color: transparent
+  @extend .easing
+
+  .logo_wrap
+    img,
+    .logo_svg
+      vertical-align: top
+      @extend .easing
+      path
+        @extend .easing
+      path[fill="#333333"]
+        fill: #fff
+
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 178px
+    pointer-events: none
+    box-shadow: 0 8px 16px rgba(16, 33, 53, 0.05)
+    bottom: 0
+    left: 0
+    pointer-events: none
+    opacity: 0
+    @extend .easing
+
+.overtop
+  .main_header
+    padding: 12px 0
+    background-color: #fff
+    &:before
+      opacity: 1
+
+    .logo_wrap img,
+    .logo_wrap .logo_svg
+      height: 40px
+      path[fill="#333333"]
+        fill: #333
+
+  .main_menu
+    line-height: 40px
+    a,
+    a.btn
+      line-height: 40px
+      height: 40px
+      &.outline
+        line-height: 38px
+    a.btn.outline:hover
+      border-color: $main-darker-color
+      color: $main-darker-color
+
+    a:not(.btn)
+      &:hover
+        color: $main-darker-color
+      &.active
+        color: $text-color
+
+.main_menu
+  line-height: 48px
+  text-align: right
+  li
+    display: inline-block
+    margin-left: 8px
+
+  a.btn
+    vertical-align: top
+
+  a:not(.btn)
+    margin-right: 24px
+    color: $main-color
+    font-weight: 600
+    &:hover,
+    &.active
+      color: #fff
+
+.main_footer
+  background-color: $text-lighter-color
+  color: #fff
+  text-align: center
+  padding-top: 56px
+  padding-bottom: 56px
+  position: relative
+  &.wavy_footer:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 94px
+    background-image: url('../images/wavy_footer.svg')
+    background-repeat: repeat-x
+    background-position: center bottom
+    bottom: 100%
+    margin-bottom: -1px
+    left: 0
+
+
+  .copyright
+    color: #8CA0BF
+    margin-bottom: 24px
+    font-size: 14px
+
+.content#content.home_content
+  padding-top: 178px
+  &:before
+    content: ""
+    top: 0
+    right: 0
+    width: 840px
+    height: 262px
+    background-image: url("../images/head_bg.svg")
+    background-repeat: no-repeat
+    background-position: top right
+    position: absolute
+    transform-origin: top right
+    pointer-events: none
+
+.page_header
+  padding-top: 192px
+  background-image: url('../images/about_bg.png')
+  background-size: cover
+  background-position: center bottom
+  height: 726px
+  text-align: center
+  color: #fff
+  &_desc
+    color: #7589A9
+
+.page_title
+  font-size: 36px
+  margin-bottom: 32px
+
+.team
+  &_list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    text-align: center
+    margin-top: 80px
+    &_title
+      text-align: center
+      text-transform: uppercase
+      font-size: 24px
+      margin-top: 56px
+
+    li
+      width: calc((100% - 90px) / 4 )
+      position: relative
+      margin-bottom: 70px
+
+  &_face_wrap
+    border-radius: 50%
+    margin-bottom: 24px
+    background-color: #E3F4EE
+    overflow: hidden
+    transform: translateZ(0)
+    position: relative
+    @extend .easing
+    &:hover
+      background-color: $main-color
+      img
+        transform: translate3d(0,100%,0)
+
+      .team_desc
+        transform: translate3d(0,-50%,0)
+    img
+      position: relative
+      vertical-align: top
+      transform: translate3d(0,0,0)
+      @extend .easing
+
+  &_desc
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    line-height: 20px
+    padding: 16px
+    font-size: 14px
+    color: #fff
+    transform: translate3d(0,-250%,0)
+    pointer-events: none
+    @extend .easing
+    p
+      margin-bottom: 0
+
+  &_member
+    &_name
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 4px
+    &_position
+      font-size: 14px
+      line-height: 20px
+
+
+.footer_social
+  display: inline-block
+  width: 20px
+  height: 20px
+  background-position: center
+  background-repeat: no-repeat
+  opacity: 0.5
+  &:hover
+    opacity: 1
+  &.telegram
+    background-image: url("../images/telegram.svg")
+  &.youtube
+    background-image: url("../images/youtube.svg")
+  &.twitter
+    background-image: url("../images/twitter.svg")
+  &.facebook
+    background-image: url("../images/facebook.svg")
+
+  &s
+    li
+      display: inline-block
+      margin: 0 6px
+
+.foot_subscribe
+  margin-bottom: 48px
+
+  &_title
+    font-size: 18px
+    font-weight: 500
+
+.section
+  &_title
+    font-size: 36px
+    margin-bottom: 12px
+    line-height: 44px
+
+  &_desc
+    margin-bottom: 40px
+
+
+.hero
+  padding-top: 96px
+  padding-bottom: 64px
+
+  .section_title
+    max-width: 380px
+  .section_desc
+    max-width: 370px
+
+  .section_actions
+    position: relative
+    z-index: 10
+
+  .hero_chart
+    max-width: 797px
+    margin-right: -12px
+    margin-top: -32px
+    position: relative
+    .chart
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      opacity: 0
+      z-index: 1
+      pointer-events: none
+      @extend .easing
+      &.active
+        opacity: 1
+        pointer-events: all
+      &.chart_0
+        position: relative
+        top: auto
+        left: auto
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 122px
+      height: 142px
+      background-image: url("../images/chart_gap.png")
+      background-size: 122px
+      background-repeat: no-repeat
+      top: 100%
+      left: 0
+      transform: translate3d(-38px,-79px,0)
+      pointer-events: none
+    &:after
+      left: auto
+      right: 0
+      transform: translate3d(38px,-79px,0) scaleX(-1)
+
+    &_togglers
+      position: relative
+      text-align: center
+      padding-top: 24px
+      z-index: 10
+      .chart_toggle
+        display: inline-block
+        line-height: 24px
+        font-size: 12px
+        color: #A1ADBF
+        font-weight: bold
+        padding: 0 8px
+        border-radius: 3px
+        margin: 0 1px
+        background-color: rgba(222,229,240,0.6)
+        &:hover
+          background-color: rgba(222,229,240,1)
+        &.active
+          background-color: $main-color
+          color: #fff
+
+.problem
+  position: relative
+
+  &s
+    counter-reset: problem
+    position: relative
+    padding-top: 56px
+    .left_blob
+      content: ""
+      position: absolute
+      width: 132px
+      height: 450px
+      background-image: url("../images/body_bg.svg")
+      background-position: center
+      background-repeat: no-repeat
+      transform: translate3d(0,0,0)
+      will-change: transform
+    .right_blob
+      content: ""
+      position: absolute
+      width: 132px
+      height: 450px
+      background-image: url("../images/body_bg-2.svg")
+      background-position: center
+      background-repeat: no-repeat
+      right: 0
+      top: 30%
+      transform: translate3d(0,0,0)
+      will-change: transform
+
+  &_single
+    counter-increment: problem
+
+  &_title
+    font-size: 24px
+    text-transform: uppercase
+    position: relative
+    display: inline-block
+    &:before
+      content: "0" counter(problem)
+      color: #E3F4EE
+      font-size: 100px
+      font-weight: bold
+      position: absolute
+      line-height: 100px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-4px,0)
+
+    span
+      position: relative
+
+  &_name
+    font-size: 24px
+    line-height: 30px
+    color: $main-color
+    font-weight: bold
+    max-width: 260px
+    margin-left: auto
+    margin-right: auto
+    span
+      color: $text-color
+
+.prob-1
+  position: relative
+  margin: 0 auto
+  width: 456px
+  height: 456px
+  overflow: hidden
+  transform: translate3d(-50%,0,0)
+  left: 50%
+  &-wrap
+    position: relative
+    margin-top: 48px
+    margin-bottom: 100px
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 936px
+    background-image: url("../images/prob-1-bg.jpg")
+    background-size: auto 312px
+    top: 0
+    left: 0
+    transform: translate3d(0,0%,0)
+    animation: questioning 6s linear infinite
+    will-change: transform
+
+  @keyframes questioning
+    0%
+      transform: translate3d(0,0%,0)
+    100%
+      transform: translate3d(0,-33.3333%,0)
+
+  &-mask
+    position: absolute
+    top: 0
+    left: 0
+
+  &-connector
+    position: absolute
+    top: 100%
+    left: 50%
+    transform: translate3d(-50%,-61px,0)
+
+svg .moving_dash
+  animation: path_grow 20s linear infinite
+
+@keyframes path_grow
+  0%
+    stroke-dashoffset: 0
+  100%
+    stroke-dashoffset: -1000
+
+svg .moving_dash_revert
+  animation: path_grow 20s linear infinite
+  animation-direction: reverse
+
+.first_problem_list
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  li
+    position: absolute
+    background-position: center
+    background-repeat: no-repeat
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    span
+      position: absolute
+      line-height: 18px
+      font-size: 14px
+      top: 50%
+      left: 10%
+      width: 80%
+      transform: translate3d(0,-50%,0)
+  li:nth-of-type(1)
+    width: 182px
+    height: 138px
+    background-image: url("../images/bubble-1.svg")
+    transform: translate3d(-50%,-50%,0) translate3d(-208px,-128px,0)
+    animation: first_prob_item_1 2.4s ease-in-out infinite
+    @keyframes first_prob_item_1
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(-208px,-128px,0)
+      50%
+        transform: translate3d(-50%,-50%,0) translate3d(-208px,-140px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(-208px,-128px,0)
+    span
+      font-size: 18px
+      font-weight: bold
+      line-height: 20px
+  li:nth-of-type(2)
+    width: 162px
+    height: 146px
+    background-image: url("../images/bubble-2.svg")
+    transform: translate3d(-50%,-50%,0) translate3d(208px,-128px,0)
+    animation: first_prob_item_2 2s ease-in-out infinite
+    @keyframes first_prob_item_2
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(208px,-128px,0)
+      50%
+        transform: translate3d(-50%,-50%,0) translate3d(208px,-136px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(208px,-128px,0)
+    span
+      transform: translate3d(0,-50%,0) translate3d(0,-4px,0)
+  li:nth-of-type(3)
+    width: 204px
+    height: 134px
+    background-image: url("../images/bubble-3.svg")
+    transform: translate3d(-50%,-50%,0) translate3d(-246px,96px,0)
+    animation: first_prob_item_3 1.8s ease-in-out infinite
+    @keyframes first_prob_item_3
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(-246px,96px,0)
+      50%
+        transform: translate3d(-50%,-50%,0) translate3d(-246px,90px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(-246px,96px,0)
+    span
+      width: 74%
+      left: 8%
+      transform: translate3d(0,-50%,0)
+  li:nth-of-type(4)
+    width: 176px
+    height: 122px
+    background-image: url("../images/bubble-4.svg")
+    transform: translate3d(-50%,-50%,0) translate3d(236px,88px,0)
+    animation: first_prob_item_4 2.2s ease-in-out infinite
+    @keyframes first_prob_item_4
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(236px,88px,0)
+      50%
+        transform: translate3d(-50%,-50%,0) translate3d(236px,80px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(236px,88px,0)
+    span
+      width: 74%
+      left: 19%
+      transform: translate3d(0,-50%,0) translate3d(0,2px,0)
+
+.article
+  &s
+    background-color: $text-lighter-color
+    color: #fff
+    .wrap
+      border-top: 1px solid #31465F
+      border-bottom: 1px solid #31465F
+      padding-bottom: 48px
+      padding-top: 16px
+    &_ico
+      position: relative
+      width: 40px
+      height: 40px
+      line-height: 40px
+      text-align: center
+      margin: 24px auto
+      img
+        width: 35px
+        vertical-align: bottom
+
+    .section_subtitle
+      font-size: 16px
+      margin-bottom: 32px
+
+  &_list
+    position: relative
+    display: flex
+    margin-bottom: 16px
+
+    li
+      width: 50%
+      padding: 0 24px
+      padding-right: 0
+      text-align: left
+    li:first-child
+      text-align: right
+      padding-left: 0
+      padding-right: 24px
+      box-shadow: 1px 0 #31465F
+      .article_face
+        float: right
+        margin-right: 0
+        margin-left: 12px
+
+  &_title
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 14px
+    a
+      color: #fff
+      &:hover
+        color: $main-color
+
+  &_face
+    position: relative
+    width: 34px
+    height: 34px
+    border-radius: 50%
+    overflow: hidden
+    float: left
+    margin: 2px 0
+    margin-right: 12px
+
+  &_meta
+    font-size: 12px
+    margin-bottom: 0
+    a
+      color: $main-color
+      &:hover
+        color: $main-darker-color
+
+  &_date
+    font-size: 12px
+
+  &_more
+    color: $main-color
+    display: inline-block
+
+.ready
+  background-color: $text-lighter-color
+  color: #fff
+  padding-bottom: 72px
+  margin-top: -12px
+  position: relative
+  z-index: 10
+
+  .section_title
+    margin-bottom: 32px
+
+.problem_benefits,
+.problem_cases
+  counter-reset: prob_case
+  cursor: default
+  li
+    position: relative
+  h4
+    font-size: 16px
+    line-height: 24px
+    color: $main-color
+    margin-bottom: 4px
+
+  p
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 0
+
+  .problem_list_ico
+    position: absolute
+    right: 100%
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background-color: #E3F4EE
+    line-height: 60px
+    text-align: center
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    color: $main-color
+    margin-right: 20px
+    z-index: 2
+    @extend .easing
+    img
+      vertical-align: middle
+
+    &.number:before
+      counter-increment: prob_case
+      content: counter(prob_case)
+      font-size: 24px
+      font-weight: bold
+
+.problem_cases li.active,
+.problem_cases li.preactive
+  .problem_list_ico
+    background-color: $main-color
+    color: #fff
+
+.problem_case_illus
+  position: relative
+  width: 270px
+  height: 270px
+  background-color: #E3F4EE
+  border-radius: 50%
+  overflow: hidden
+  transform: translateZ(0)
+
+  .illus_place
+    vertical-align: top
+    @extend .easing
+    opacity: 1
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &.active
+      opacity: 1
+
+  .illus_place img,
+  .illus_place svg
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+
+  .case_3-tree_strokes path
+    animation: bang 20s linear infinite
+
+  @keyframes bang
+    to
+      stroke-dashoffset: 1000
+
+$case_1_delay: 0.1s
+
+.problem_case_illus .illus_place img.case_1-
+  &pot_1
+    transform: translate3d(-50%,-50%,0) translate3d(-80px,-17px,0)
+    animation: case_1_pot1_inactive 0.4s ease forwards
+    animation-delay: #{$case_1_delay*2}
+    @keyframes case_1_pot1_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-17px,0) translate3d(0,0,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-17px,0) translate3d(0,-144px,0)
+  &pot_2
+    transform: translate3d(-50%,-50%,0) translate3d(0,-17px,0)
+    animation: case_1_pot2_inactive 0.4s ease forwards
+    animation-delay: #{$case_1_delay*3}
+    @keyframes case_1_pot2_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-17px,0) translate3d(0,0,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-17px,0) translate3d(0,-144px,0)
+  &pot_3
+    transform: translate3d(-50%,-50%,0) translate3d(80px,-17px,0)
+    animation: case_1_pot3_inactive 0.4s ease forwards
+    animation-delay: #{$case_1_delay*4}
+    @keyframes case_1_pot3_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-17px,0) translate3d(0,0,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-17px,0) translate3d(0,-144px,0)
+  &tree_1
+    transform: translate3d(-50%,-50%,0) translate3d(-80px,-62px,0)
+    transform-origin: center bottom
+    animation: case_1_tree1_inactive 0.4s ease forwards
+    @keyframes case_1_tree1_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-62px,0) scale(1)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-62px,0) scale(0)
+  &tree_2
+    transform: translate3d(-50%,-50%,0) translate3d(0,-66px,0)
+    transform-origin: center bottom
+    animation: case_1_tree2_inactive 0.4s ease forwards
+    animation-delay: #{$case_1_delay*1}
+    @keyframes case_1_tree2_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-66px,0) scale(1)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-66px,0) scale(0)
+  &tree_3
+    transform: translate3d(-50%,-50%,0) translate3d(80px,-62px,0)
+    transform-origin: center bottom
+    animation: case_1_tree3_inactive 0.4s ease forwards
+    animation-delay: #{$case_1_delay*2}
+    @keyframes case_1_tree3_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-62px,0) scale(1)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-62px,0) scale(0)
+  &hand
+    transform: translate3d(-50%,-50%,0) translate3d(0,68px,0)
+    transform-origin: 25px 96px
+    margin-top: 128px
+    transition: 0.4s margin-top ease
+    will-change: transform, margin-top
+    animation: case_1_hand_inactive 3s ease infinite
+    $total_duration: 100
+    $the_gut: 10
+    $the_col: $total_duration / 3 - $the_gut
+    @keyframes case_1_hand_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(-35deg)
+      #{$the_gut * 1%}
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(0deg)
+      #{($the_gut + $the_col) * 1%}
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(0deg)
+      #{($the_col + $the_gut*2) * 1%}
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(35deg)
+      #{($the_gut*2 + $the_col*2) * 1%}
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(35deg)
+      #{($the_col*2 + $the_gut*3) * 1%}
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(-35deg)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(-35deg)
+
+.problem_case_illus .illus_place.active.playing img.case_1-hand
+  animation: case_1_hand_inactive 3s ease infinite
+
+.problem_case_illus .illus_place.active img.case_1-
+  &pot_1
+    transform: translate3d(-50%,-50%,0) translate3d(-80px,-17px,0) translate3d(0,-144px,0)
+    animation: case_1_pot1 0.4s ease forwards
+    @keyframes case_1_pot1
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-17px,0) translate3d(0,-144px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-17px,0) translate3d(0,0,0)
+  &pot_2
+    transform: translate3d(-50%,-50%,0) translate3d(0,-17px,0) translate3d(0,-144px,0)
+    animation: case_1_pot2 0.4s ease forwards
+    animation-delay: #{$case_1_delay*1}
+    @keyframes case_1_pot2
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-17px,0) translate3d(0,-144px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-17px,0) translate3d(0,0,0)
+  &pot_3
+    transform: translate3d(-50%,-50%,0) translate3d(80px,-17px,0) translate3d(0,-144px,0)
+    animation: case_1_pot3 0.4s ease forwards
+    animation-delay: #{$case_1_delay*2}
+    @keyframes case_1_pot3
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-17px,0) translate3d(0,-144px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-17px,0) translate3d(0,0,0)
+  &tree_1
+    transform: translate3d(-50%,-50%,0) translate3d(-80px,-62px,0) scale(0)
+    animation: case_1_tree1 0.4s ease forwards
+    animation-delay: #{$case_1_delay*2}
+    @keyframes case_1_tree1
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-62px,0) scale(0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(-80px,-62px,0) scale(1)
+  &tree_2
+    transform: translate3d(-50%,-50%,0) translate3d(0,-66px,0) scale(0)
+    animation: case_1_tree2 0.4s ease forwards
+    animation-delay: #{$case_1_delay*3}
+    @keyframes case_1_tree2
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-66px,0) scale(0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,-66px,0) scale(1)
+  &tree_3
+    transform: translate3d(-50%,-50%,0) translate3d(80px,-62px,0) scale(0)
+    animation: case_1_tree3 0.4s ease forwards
+    animation-delay: #{$case_1_delay*4}
+    @keyframes case_1_tree3
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-62px,0) scale(0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(80px,-62px,0) scale(1)
+  &hand
+    transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) translate3d(0,68px,0) rotate(-135deg)
+    transform-origin: 25px 96px
+    animation: case_1_hand 0.4s ease forwards
+    animation-delay: #{$case_1_delay*5}
+    margin-top: 0
+    transition: 0.4s margin-top ease
+    @keyframes case_1_hand
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(-135deg)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,68px,0) rotate(-35deg)
+
+
+.problem_case_illus .illus_place img.case_2-
+  &pot
+    transform: translate3d(-50%,-50%,0) translate3d(0,96px,0) translate3d(0,128px,0)
+    animation: case_2_pot_inactive 0.4s ease forwards
+    @keyframes case_2_pot_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,96px,0) translate3d(0,0,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,96px,0) translate3d(0,128px,0)
+  &tree
+    transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,128px,0)
+    animation: case_2_tree_inactive 0.4s ease forwards
+    transform-origin: bottom center
+    @keyframes case_2_tree_inactive
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,0,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,128px,0)
+  &hand
+    transform: translate3d(-50%, -50%, 0) translate3d(-45px, -76px, 0) translate3d(0,-144px,0)
+    animation: case_2_hand_inactive 0.4s ease forwards
+    @keyframes case_2_hand_inactive
+      0%
+        transform: translate3d(-50%, -50%, 0) translate3d(-45px, -76px, 0) translate3d(0,0,0)
+      100%
+        transform: translate3d(-50%, -50%, 0) translate3d(-45px, -76px, 0) translate3d(0,-144px,0)
+  &coin-1
+    transform: translate3d(-50%, -50%, 0) translate3d(-16px, -29px, 0)
+    transition: 0.4s opacity ease
+    opacity: 0
+  &coin-2
+    transform: translate3d(-50%, -50%, 0) translate3d(5px, -24px, 0)
+    transition: 0.4s opacity ease
+    opacity: 0
+  &coin-3
+    transform: translate3d(-50%, -50%, 0) translate3d(-11px, 2px, 0)
+    transition: 0.4s opacity ease
+    opacity: 0
+  &coin-4
+    transform: translate3d(-50%, -50%, 0) translate3d(26px, 4px, 0)
+    transition: 0.4s opacity ease
+    opacity: 0
+  &coin-5
+    transform: translate3d(-50%, -50%, 0) translate3d(6px, 16px, 0)
+    transition: 0.4s opacity ease
+    opacity: 0
+
+.problem_case_illus .illus_place.active img.case_2-
+  &pot
+    transform: translate3d(-50%,-50%,0) translate3d(0,96px,0) translate3d(0,0,0)
+    animation: case_2_pot 0.4s ease forwards
+    @keyframes case_2_pot
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,96px,0) translate3d(0,128px,0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,96px,0) translate3d(0,0,0)
+  &tree
+    transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,128px,0) scale(0)
+    animation: case_2_tree 0.7s ease forwards
+    @keyframes case_2_tree
+      0%
+        transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,128px,0) scale(0)
+      43%
+        transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,0,0) scale(0)
+      100%
+        transform: translate3d(-50%,-50%,0) translate3d(0,47px,0) translate3d(0,0,0) scale(1)
+  &hand
+    transform: translate3d(-50%, -50%, 0) translate3d(-45px, -76px, 0) translate3d(0,-0,0)
+    animation: case_2_hand 0.4s ease forwards
+    @keyframes case_2_hand
+      0%
+        transform: translate3d(-50%, -50%, 0) translate3d(-45px, -76px, 0) translate3d(0,-144px,0)
+      100%
+        transform: translate3d(-50%, -50%, 0) translate3d(-45px, -76px, 0) translate3d(0,0,0)
+  &coin-1
+    transform: translate3d(-50%, -50%, 0) translate3d(-16px, -29px, 0) translate3d(0,0,0)
+    animation: case_2_coin1 0.4s linear infinite
+    animation-delay: 0.7s
+    @keyframes case_2_coin1
+      0%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(-16px, -29px, 0) translate3d(0,0,0)
+      20%
+        opacity: 1
+      80%
+        opacity: 1
+      100%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(-16px, -29px, 0) translate3d(0,52px,0)
+  &coin-2
+    transform: translate3d(-50%, -50%, 0) translate3d(5px, -24px, 0) translate3d(0,0,0)
+    animation: case_2_coin2 0.4s linear infinite
+    animation-delay: 0.6s
+    @keyframes case_2_coin2
+      0%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(5px, -24px, 0) translate3d(0,0,0)
+      20%
+        opacity: 1
+      80%
+        opacity: 1
+      100%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(5px, -24px, 0) translate3d(0,52px,0)
+  &coin-3
+    transform: translate3d(-50%, -50%, 0) translate3d(-11px, 2px, 0) translate3d(0,0,0)
+    animation: case_2_coin3 0.4s linear infinite
+    animation-delay: 0.5s
+    @keyframes case_2_coin3
+      0%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(-11px, 2px, 0) translate3d(0,0,0)
+      20%
+        opacity: 1
+      80%
+        opacity: 1
+      100%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(-11px, 2px, 0) translate3d(0,52px,0)
+  &coin-4
+    transform: translate3d(-50%, -50%, 0) translate3d(26px, 4px, 0) translate3d(0,0,0)
+    animation: case_2_coin4 0.4s linear infinite
+    animation-delay: 0.4s
+    @keyframes case_2_coin4
+      0%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(26px, 4px, 0) translate3d(0,0,0)
+      20%
+        opacity: 1
+      80%
+        opacity: 1
+      100%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(26px, 4px, 0) translate3d(0,52px,0)
+  &coin-5
+    transform: translate3d(-50%, -50%, 0) translate3d(6px, 16px, 0) translate3d(0,0,0)
+    animation: case_2_coin5 0.4s linear infinite
+    animation-delay: 0.3s
+    @keyframes case_2_coin5
+      0%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(6px, 16px, 0) translate3d(0,0,0)
+      20%
+        opacity: 1
+      80%
+        opacity: 1
+      100%
+        opacity: 0
+        transform: translate3d(-50%, -50%, 0) translate3d(6px, 16px, 0) translate3d(0,52px,0)
+
+.problem_case_illus .illus_place img.case_3-,
+.problem_case_illus .illus_place svg.case_3-
+  &tree
+    transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) translate3d(0,0,0)
+    animation: case_3_tree_inactive 0.4s ease forwards
+    animation-delay: 0.45s
+  @keyframes case_3_tree_inactive
+    0%
+      transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) translate3d(0,0,0)
+    100%
+      transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) translate3d(-240px,0,0)
+
+  &hand-back
+    transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(-240px,0,0)
+    animation: case_3_handb_inactive 0.7s ease
+  @keyframes case_3_handb_inactive
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(-240px,0,0)
+    40%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(0,0,0)
+    60%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(0,0,0)
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(-240px,0,0)
+
+  &hand-front
+    transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(-240px,0,0)
+    animation: case_3_handf_inactive 0.7s ease
+  @keyframes case_3_handf_inactive
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(-240px,0,0)
+    40%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(0,0,0)
+    60%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(0,0,0)
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(-240px,0,0)
+
+  &tree_strokes
+    transform: translate3d(-50%,-50%,0) translate3d(0,-32px,0) translate3d(0,0,0)
+    animation: case_3_stroke_inactive 0.4s ease forwards
+    animation-delay: 0.45s
+  @keyframes case_3_stroke_inactive
+    0%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-32px,0) translate3d(0,0,0)
+    100%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-32px,0) translate3d(-240px,0,0)
+
+
+.problem_case_illus .illus_place.active img.case_3-,
+.problem_case_illus .illus_place.active svg.case_3-
+  &tree
+    transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) translate3d(0,0,0)
+    animation: case_3_tree 0.4s ease
+    animation-delay: 0s
+  @keyframes case_3_tree
+    0%
+      transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) translate3d(-240px,0,0)
+    100%
+      transform: translate3d(-50%,-50%,0) translate3d(0,6px,0) translate3d(0,0,0)
+  &hand-back
+    transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(-240px,0,0)
+    animation: case_3_handb 1s ease
+  @keyframes case_3_handb
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(-240px,0,0)
+    40%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(0,0,0)
+    60%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(0,0,0)
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-66px, 56px, 0) translate3d(-240px,0,0)
+  &hand-front
+    transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(-240px,0,0)
+    animation: case_3_handf 1s ease
+  @keyframes case_3_handf
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(-240px,0,0)
+    40%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(0,0,0)
+    60%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(0,0,0)
+    0%
+      transform: translate3d(-50%, -50%, 0) translate3d(-56px, 91px, 0) translate3d(-240px,0,0)
+  &tree_strokes
+    transform: translate3d(-50%,-50%,0) translate3d(0,-32px,0) translate3d(0,0,0)
+    animation: case_3_stroke 0.4s ease
+    animation-delay: 0s
+  @keyframes case_3_stroke
+    0%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-32px,0) translate3d(-240px,0,0)
+    100%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-32px,0) translate3d(0,0,0)
+
+.problem_single.problem_2
+  display: flex
+  justify-content: space-between
+  padding-top: 260px
+  padding-bottom: 212px
+
+  .problem_title
+    width: 200px
+    align-self: center
+    text-align: center
+    margin-bottom: 0
+
+  .case_connector
+    position: absolute
+    top: 100%
+    left: -32px
+    margin-top: 2px
+    pointer-events: none
+
+  .problem_case_illus
+    align-self: center
+
+  .problem_cases
+    width: 660px
+    align-self: center
+    padding-left: 76px
+    li:nth-of-type(2)
+      margin-left: 48px
+
+    li:not(:last-child)
+      margin-bottom: 64px
+
+.problem_single.problem_3
+  position: relative
+  margin-bottom: 234px
+  .problem_benefits_circle
+    position: relative
+    width: 400px
+    margin: 0 auto
+    svg
+      vertical-align: top
+
+  .problem_title
+    position: absolute
+    top: 50%
+    transform: translate3d(-50%,-50%,0)
+    left: 50%
+    z-index: 1
+    width: 190px
+    line-height: 22px
+    text-align: center
+
+  .problem_benefits
+    li
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 340px
+      transform: translate3d(-50%,-50%,0)
+
+    li:nth-of-type(1),
+    li:nth-of-type(2),
+    li:nth-of-type(3)
+      text-align: right
+      .problem_list_ico
+        right: auto
+        left: 100%
+        margin-left: 20px
+
+    li:nth-of-type(1)
+      transform: translate3d(-50%,-50%,0) translate3d(-100%,0,0) translate3d(-32px,-128px,0)
+    li:nth-of-type(2)
+      transform: translate3d(-50%,-50%,0) translate3d(-100%,0,0) translate3d(-78px,0,0)
+    li:nth-of-type(3)
+      transform: translate3d(-50%,-50%,0) translate3d(-100%,0,0) translate3d(-32px,128px,0)
+
+    li:nth-of-type(4)
+      transform: translate3d(-50%,-50%,0) translate3d(100%,0,0) translate3d(32px,-128px,0)
+    li:nth-of-type(5)
+      transform: translate3d(-50%,-50%,0) translate3d(100%,0,0) translate3d(78px,0,0)
+    li:nth-of-type(6)
+      transform: translate3d(-50%,-50%,0) translate3d(100%,0,0) translate3d(32px,128px,0)
+
+
+.prob_inner_circle
+  position: absolute
+  top: 50%
+  left: 50%
+  animation: spin_in 20s linear infinite
+
+@keyframes spin_in
+  0%
+    transform: translate3d(-50%,-50%,0) rotate(0deg)
+  100%
+    transform: translate3d(-50%,-50%,0) rotate(360deg)
+
+.prob_outer_circle
+  position: absolute
+  top: 50%
+  left: 50%
+  animation: spin_out 40s linear infinite
+
+@keyframes spin_out
+  0%
+    transform: translate3d(-50%,-50%,0) rotate(0deg)
+  100%
+    transform: translate3d(-50%,-50%,0) rotate(-360deg)
+
+.prob_exit
+  position: absolute
+  top: 100%
+  left: 50%
+  transform: translate3d(-50%,-81px,0)
+  z-index: 2
+  pointer-events: none
+
+.prob-2-connector,
+.prob-2-connector-tablet
+  position: absolute
+  left: 50%
+  bottom: 100%
+  transform: translate3d(-100%,100%,0) translate3d(12px,16px,0)
+  pointer-events: none
+  &-tablet,
+  &-mobile
+    display: none
+
+.prob-3-connector,
+.prob-3-connector-tablet
+  position: absolute
+  left: 50%
+  top: 100%
+  transform: translate3d(-100%,-100%,0) translate3d(12px,80px,0)
+  z-index: 2
+  pointer-events: none
+  &-tablet,
+  &-mobile
+    display: none
+
+.cta_graphics
+  position: relative
+  height: 446px
+  overflow-x: hidden
+
+  span:after
+    content: ""
+    position: absolute
+    width: 8416px
+    height: 264px
+    background-image: url("../images/lower-wave.svg")
+    background-position: center
+    background-repeat: repeat-x
+    bottom: 32px
+    animation: waving 16s linear infinite
+
+  span:before
+    content: ""
+    position: absolute
+    width: 8416px
+    height: 264px
+    background-image: url("../images/upper-wave.svg")
+    background-position: center
+    background-repeat: repeat-x
+    bottom: 32px
+    animation: waving 10s linear infinite
+
+  @keyframes waving
+    0%
+      transform: translate3d(0,0,0)
+    100%
+      transform: translate3d(-25%,0,0)
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: url("../images/cta_graphics.svg")
+    background-position: center
+    background-repeat: repeat-x
+    z-index: 2
+
+.page_cta
+  text-align: center
+  border-top: 1px solid #E8EBEE
+  padding: 64px 0
+  padding-bottom: 128px
+  &_title
+    font-size: 36px
+    margin-bottom: 30px

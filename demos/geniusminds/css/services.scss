@@ -1,0 +1,123 @@
+@import "variables/colors";
+body {
+  overflow-x: hidden !important;
+}
+.container {
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.services {
+  &-hero {
+    height: 600px;
+    position: relative;
+    background: $main-color;
+    display: flex;
+    align-items: center;
+    &__inner {
+      padding: 0 60px;
+    }
+    &__content {
+      max-width: 600px;
+    }
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &-list {
+    padding-top: 50px;
+  }
+  &-row {
+    position: relative;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &--reverse {
+      padding-left: 60px;
+      padding-right: 0;
+      min-height: 690px;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      padding-top: 100px;
+    }
+    &__content {
+      width: 40%;
+    }
+    &__img {
+      .services-row--reverse & {
+        position: absolute;
+        right: 60px;
+        top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .services-hero {
+    height: auto;
+    padding: 110px 0 0;
+    &__inner {
+      padding: 0 20px;
+      display: flex;
+      flex-flow: column;
+    }
+    &__img {
+      width: 100%;
+      position: relative;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 230%;
+      }
+    }
+    &__content {
+      text-align: center;
+    }
+  }
+  .services-subtitle {
+    font-size: 14px;
+  }
+  .services-row {
+    flex-flow: column !important;
+    padding: 30px 0;
+    &__img {
+      width: 100%;
+      position: relative !important;
+      right: auto !important;
+      padding: 0 35px;
+      img {
+        width: 100%;
+      }
+    }
+    &__content {
+      width: 100%;
+      padding: 40px 20px 0;
+      text-align: center;
+      .title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+    }
+    &--reverse {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .about-bottom-section {
+    padding-bottom: 100px;
+    .title {
+      padding: 0 20px;
+    }
+  }
+}

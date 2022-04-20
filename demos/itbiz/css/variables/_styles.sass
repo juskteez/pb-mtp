@@ -1,0 +1,42 @@
+$global-radius: 3px
+
+.nodis
+	display: none
+	&_force
+			display: none !important
+
+.padded
+	padding: 20px 0
+
+.noflow
+	overflow: hidden
+
+.inflow
+	@extend .noflow
+	overflow-y: auto
+
+.main-color
+	color: $main-color
+
+.white-color
+	color: #fff
+
+.positive
+	color: $green-color
+
+.negative
+	color: $red-color
+
+.nicescroll-rails
+	opacity: 0
+
+@media screen and (max-width: 1023px)
+	.notablet
+		display: none !important
+
+@media screen and (min-width: 768px)
+	.mobileonly
+		display: none !important
+@media screen and (max-width: 767px)
+	.nomobile
+		display: none !important

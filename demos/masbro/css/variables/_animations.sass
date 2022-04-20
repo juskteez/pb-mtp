@@ -1,0 +1,51 @@
+/* Animation Library */
+$ease-time: 0.2s
+.easing
+	transition: $ease-time all ease
+
+@keyframes show_cgi
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes show_hand
+	0%
+		transform: translate3d(-50%,100%,0) rotate(-45deg)
+		margin-left: -108px
+	100%
+		transform: translate3d(-50%,0,0)
+
+@keyframes hide_hand
+	0%
+		transform: translate3d(-50%,0,0)
+	100%
+		transform: translate3d(-50%,100%,0) rotate(-45deg)
+		margin-left: -108px
+
+@keyframes scale_direct
+	0%
+		border-width: 40px
+		opacity: 1
+		transform: translate3d(-50%,-50%,0) scale(0)
+	25%
+		border-width: 50px
+		opacity: 1
+	100%
+		border-width: 0
+		opacity: 0
+		transform: translate3d(-50%,-50%,0) scale(1)
+
+@keyframes animate_direct
+	0%
+		transform: translate3d(-45%,-10px,0)
+	50%
+		transform: translate3d(-45%,10px,0)
+	100%
+		transform: translate3d(-45%,-10px,0)
+
+@keyframes spin_hand
+	0%
+		transform: translate3d(-50%,0,0) rotate(0)
+	100%
+		transform: translate3d(-50%,0,0) rotate(360deg)

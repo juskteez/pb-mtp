@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="537px" viewBox="0 0 256 537" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>flare</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFF801" offset="0%"></stop>
+            <stop stop-color="#FFF801" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.850144159">
+        <g transform="translate(-833.000000, -232.000000)" fill="url(#linearGradient-1)">
+            <g transform="translate(631.000000, 133.000000)">
+                <path d="M304.545042,101.568837 C312.969497,100.235503 321.100669,99.5688368 328.938561,99.5688368 C336.776452,99.5688368 344.614343,100.235503 352.452234,101.568837 L457.368,636.083984 L202.088176,636.083984 L304.545042,101.568837 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

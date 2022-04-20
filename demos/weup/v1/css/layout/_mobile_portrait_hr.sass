@@ -1,0 +1,225 @@
+/* Mobile Portrait High Resolution */
+.main_header
+  .menu_wrap
+    width: 210px
+
+  .logo_wrap
+    padding-left: 32px
+
+  .action_wrap
+    transform: translate3d(100%,0,0)
+
+  .active_indicator
+    width: 3px !important
+    height: 48px
+    left: 0
+    top: 0
+    margin-top: 0
+
+.main_header,
+body:not(.overtop) .main_header
+  .action_wrap.action_wrap
+    position: fixed
+    bottom: 0
+    top: auto
+    width: 210px
+    margin-right: 0
+    text-align: center
+    padding: 14px 32px
+    a:not(:last-child):first-child
+      margin-right: 0
+      line-height: 32px
+      margin-bottom: 16px
+      display: inline-block
+    a.btn
+      display: block
+      width: 100%
+      margin-bottom: 12px
+
+.active_menu .main_header
+
+  .action_wrap a:not(.btn)
+    color: $text-color
+
+  .action_wrap
+    transform: translate3d(0,0,0)
+
+  .hamburger
+    span:before,
+    span:after
+      color: $text-color
+      top: 50%
+    span:before
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    span:after
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+    span
+      color: transparent
+
+.about
+  padding: 48px 0
+  padding-bottom: 300px
+  z-index: 1
+  &_graphics
+    transform-origin: top right
+    transform: scale(0.5) translate3d(0, -80%, 0)
+    top: 100%
+    right: 0
+
+.feature
+  padding-bottom: 32px
+
+  &_tooltip
+    left: 0
+    bottom: 0
+    max-width: none
+    border-radius: 0
+
+  &_bubble
+    width: 130px
+    height: 130px
+
+    &s
+      height: 600px
+
+    &:nth-of-type(1)
+      width: 128px
+      height: 128px
+      margin-top: #{-128px/2-(128px*1.5)}
+      margin-left: #{-128px/2+48px}
+    &:nth-of-type(2),
+    &:nth-of-type(7)
+      width: 130px
+      height: 130px
+      margin-top: #{-130px/2-182px}
+      margin-left: #{-130px/2-104px}
+    &:nth-of-type(3)
+      margin-top: #{-130px/2+184px}
+      margin-left: #{-130px/2-126px}
+    &:nth-of-type(4)
+      width: 200px
+      height: 200px
+      margin-top: #{-200px/2-0}
+      margin-left: #{-200px/2-(200px*0.4)}
+      .feature_bubble_wrap .feature_bubble_title
+        top: 44%
+    &:nth-of-type(5)
+      margin-top: #{-130px/2-52px}
+      margin-left: #{-130px/2+102px}
+      .feature_bubble_wrap .feature_bubble_title
+        top: 22%
+      .feature_bubble_ico
+        top: 36%
+    &:nth-of-type(6)
+      width: 144px
+      height: 144px
+      margin-top: #{-144px/2+94px}
+      margin-left: #{-144px/2+112px}
+      .feature_bubble_wrap .feature_bubble_title
+        top: 28%
+      .feature_bubble_ico
+        top: 36%
+    &:nth-of-type(7)
+      margin-top: #{-130px/2+(130px*1.6)}
+      margin-left: #{-130px/2+(130px*0.14)}
+
+    &_title
+      font-size: 12px
+      padding: 0 16px
+      line-height: 16px
+      top: 34%
+
+.process
+  padding-bottom: 60vw
+
+  .col-5.right_col
+    float: none
+
+  &_list
+    h3
+      font-size: 14px
+      margin-bottom: 7px
+      white-space: nowrap
+
+  .process_fluid
+    display: none
+
+  .the_television
+    top: 39%
+    top: auto
+    bottom: 0
+    left: 50%
+    transform-origin: center bottom
+    transform: translate3d(-50vw,4%,0) scale(0.65)
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      top: -4%
+      height: 80%
+      background-image: linear-gradient(to bottom, rgba(243,248,255,1) 5%,rgba(243,248,255,0) 100%)
+      z-index: 2
+      filter: blur(5px)
+
+.overprocess .process .the_television
+  transform: translate3d(-50%,4%,0) scale(0.65)
+
+.testimonial
+
+  &_picture
+    right: -20%
+    top: 48px
+    width: 80vw
+    img
+      max-width: 100%
+
+  &_content
+    width: 100%
+    margin-top: -80px
+    padding: 0 10px
+    p
+      font-size: 16px
+
+  &_controller
+    bottom: 8%
+    margin-left: 10px
+
+.main_footer
+  .footer_content
+    .col-2.link_col
+      width: 50%
+      float: left
+      margin-bottom: 32px
+
+    .col-3:first-child
+      margin-bottom: 32px
+
+    .col-3:last-child
+      margin-top: 0
+
+.newsletter
+  padding-left: 12px
+  padding-right: 12px
+
+  h2
+    font-size: 22px
+
+  .newsletter_submit
+    font-size: 0
+    width: 45px
+    padding-left: 0
+    padding-right: 0
+    background-image: url("../images/ns_arrow.svg")
+    background-position: center
+    background-repeat: no-repeat
+
+.footer_graphics
+  img
+    width: 200vw
+    margin-left: -2vw
+
+.main_footer
+  padding-top: 100px
+  .wrap
+    .col-3:last-child
+      float: left

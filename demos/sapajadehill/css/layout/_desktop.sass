@@ -1,0 +1,2914 @@
+/* Desktop */
+
+html
+  min-height: 100%
+
+body
+  background-color: #FEFAEF
+  background-image: url("../images/bg_1x.jpg")
+  overflow-x: hidden
+
+  //background-color: #292523
+  //background-image: url('../images/white-piece.png')
+
+
+  &.dark,
+  &.page_benefit.dark
+    background-color: #2A2624
+
+  &.page_benefit
+    background-color: #FCF8EC
+    background-image: none
+    overflow: hidden
+
+.main_header
+  padding: 50px 80px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+  z-index: 99
+  background-color: rgba(255,255,255,0.0)
+  box-shadow: inset 0 -3px transparent
+  will-change: padding, background-color
+  @extend .easing
+
+  .ben_spaced
+    position: absolute
+    top: 0
+    left: 0
+    width: 2px
+    height: 100%
+    max-height: 84px
+    pointer-events: none
+
+  .logo_wrap
+    width: 160px
+    .logo
+      display: inline-block
+
+    img
+      height: 100px
+      vertical-align: top
+      @extend .easing
+
+  .menu_wrap
+    width: calc(100% - 160px)
+    text-align: right
+
+.main_menu
+  line-height: 50px
+  border-bottom: 1px solid rgba(81,81,81,0.1)
+  display: inline-block
+  @extend .easing
+
+  li
+    position: relative
+    display: inline-block
+    font-size: 16px
+    font-weight: 600
+
+  &>li
+    margin-left: 40px
+    &:first-child
+      margin-left: 0
+    &:hover
+      &>a
+        color: $main-color
+        &:before
+          opacity: 1
+      ul
+        opacity: 1
+        pointer-events: all
+        transform: translate3d(0,0,0)
+
+
+    &>a.active
+      color: $main-color
+      &:before
+        opacity: 1
+    &>a
+      text-transform: uppercase
+      position: relative
+      display: inline-block
+      color: #222
+      letter-spacing: 1px
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: $main-color
+        bottom: -1px
+        opacity: 0
+        @extend .easing
+    ul
+      position: absolute
+      top: 100%
+      margin-top: 1px
+      left: -16px
+      white-space: nowrap
+      background-color: #FFF
+      line-height: 18px
+      padding: 12px 0
+      text-align: left
+      transform: translate3d(0,16px,0)
+      opacity: 0
+      pointer-events: none
+      @extend .easing
+      a
+        display: block
+        padding: 5px 16px
+        line-height: 30px
+    li
+      display: block
+
+body:not(.overtop)
+  .main_menux
+    a
+      color: #fff
+
+html, body, input, button, select, textarea
+  //color: rgba(255,255,255,0.8)
+
+.main_header .logo_wrap .logo
+  position: relative
+
+  &:after
+    content: ""
+    position: absolute
+    width: 146px
+    height: 100px
+    background-image: url('../images/logo-w.svg')
+    background-size: auto 100%
+    background-repeat: no-repeat
+    background-position: top left
+    left: 0
+    top: 0
+    opacity: 0
+    @extend .easing
+
+.overtop .main_header .logo_wrap .logo
+  position: relative
+
+  &:after
+    width: 76px
+    height: 52px
+    opacity: 1
+
+
+.overtopx
+  .main_header
+    padding: 16px 48px
+    background-color: rgba(255,255,255,1)
+    box-shadow: inset 0 -3px $main-color
+
+    .logo_wrap img
+      height: 52px
+
+  .main_menu
+    border-bottom-color: transparent
+    &>li>a:before
+      bottom: -17px
+      height: 168%
+      left: -22px
+      width: calc(100% + 44px)
+      background-color: rgba(55,48,42,0.025)
+
+    &>li ul
+      left: -22px
+      min-width: calc(100% + 44px)
+      margin-top: 16px
+      background-color: $main-color
+      a
+        color: #fff
+        &:hover
+          background-color: rgba(55,48,42,0.2)
+
+.overtop
+  .main_header
+    padding: 16px 48px
+    background-color: #2A2624
+    background-image: url('../images/white-piece.png')
+    box-shadow: inset 0 -3px $main-color
+
+    .logo_wrap img
+      height: 52px
+
+  .main_menu
+    border-bottom-color: transparent
+    a
+      color: rgba(255,255,255,0.8)
+    &>li>a:before
+      bottom: -17px
+      height: 168%
+      left: -22px
+      width: calc(100% + 44px)
+      background-color: rgba(55,48,42,0.025)
+
+    &>li ul
+      left: -22px
+      min-width: calc(100% + 44px)
+      margin-top: 16px
+      background-color: $main-color
+      a
+        color: #fff
+        &:hover
+          background-color: rgba(55,48,42,0.2)
+
+.hero.storyline
+  position: relative
+  width: 100vw
+  height: 100vh
+  max-height: 100vh
+  transform: translateZ(0)
+  //overflow-x: auto
+  //-webkit-overflow-scrolling: touch
+  &:after
+    content: ""
+    position: absolute
+    top: 90%
+    left: 0
+    width: 100%
+    height: 20%
+    background-image: linear-gradient(-180deg, #FEF9EB 50%, rgba(254,249,235,0.00) 100%)
+    //background-image: linear-gradient(-180deg, #292524 0%, rgba(254,249,235,0.00) 100%)
+    z-index: 10
+
+.storyline
+  &_content
+    font-size: 0
+    white-space: nowrap
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    transition: 1s transform cubic-bezier(.6,.09,.3,1)
+    will-change: transform
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 184px
+      background-image: linear-gradient(-180deg, #FEF9EB 0%, rgba(254,249,235,0.00) 100%)
+      //background-image: linear-gradient(-180deg, #292524 0%, rgba(254,249,235,0.00) 100%)
+      z-index: 1
+    &:after
+      content: ""
+      position: absolute
+      bottom: 10%
+      left: 0
+      width: 100%
+      height: 500px
+      background-image: linear-gradient(0deg, #FEF9EB 0%, rgba(254,249,235,0.00) 100%)
+      //background-image: linear-gradient(0, #292524 0%, rgba(254,249,235,0.00) 100%)
+      z-index: 1
+      display: none
+  &_single
+    display: inline-block
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    white-space: normal
+    position: absolute
+    pointer-events: none
+    overflow: hidden
+    transition: 1.2s all ease
+    transition-delay: 0.4s
+    will-change: opacity
+    opacity: 0
+    &.active
+      opacity: 1
+    &:not(:last-child):not(:first-child)
+      //margin-left: 320px
+
+    &:after
+      content: ""
+      position: absolute
+      bottom: 10%
+      left: 0
+      width: 100%
+      height: 500px
+      background-image: linear-gradient(0deg, #FEF9EB 0%, rgba(254,249,235,0.00) 100%)
+      //background-image: linear-gradient(0, #292524 0%, rgba(254,249,235,0.00) 100%)
+      z-index: 1
+
+    &.story_4 .storyline_title
+      color: $black-color
+      i
+        color: $main-color
+
+    &.active .storyline_graphics
+      animation: sgraphic_wrap_in 1.2s ease forwards
+      opacity: 0
+      will-change: opacity
+      @keyframes sgraphic_wrap_in
+        0%
+          opacity: 0
+          //transform: scale(1)
+        100%
+          opacity: 1
+          //transform: scale(1)
+      &:before,
+      &:after
+        animation: sgraphics_in 1.2s ease forwards
+        transform: scale(0.5)
+        opacity: 1
+      &:after
+        animation-delay: 0.2s
+      @keyframes sgraphics_in
+        0%
+          transform: scale(0.5)
+          opacity: 1
+        50%
+          opacity: 1
+        100%
+          transform: scale(1.5)
+          opacity: 0
+
+    .storyline_graphics
+      animation: sgraphic_wrap_out 1.2s ease forwards
+      will-change: opacity
+      @keyframes sgraphic_wrap_out
+        0%
+          opacity: 1
+          //transform: scale(1)
+        100%
+          opacity: 0
+          //transform: scale(1)
+      &:before,
+      &:after
+        animation: sgraphics_out 1.2s ease forwards
+        transform: scale(1.5)
+        opacity: 0
+      &:after
+        animation-delay: 0.2s
+      @keyframes sgraphics_out
+        0%
+          transform: scale(1.5)
+          opacity: 0
+        50%
+          opacity: 1
+        100%
+          transform: scale(0.5)
+          opacity: 1
+
+
+  &_graphics
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 200%
+      height: 200%
+      background-image: url('../images/mask_big.png')
+      background-position: center
+      background-size: cover
+      z-index: 10
+      top: -60%
+      left: -50%
+    &:after
+      background-image: url('../images/mask_small.png')
+
+  .storyline_single.story_1 .storyline_graphics
+    .sl_1
+      animation: sl_1 6s ease infinite
+      @keyframes sl_1
+        0%
+          transform: translate3d(-24px,0,0)
+        50%
+          transform: translate3d(24px,0,0)
+        100%
+          transform: translate3d(-24px,0,0)
+    .sl_2
+      animation: sl_2 6s ease infinite
+      @keyframes sl_2
+        0%
+          transform: translate3d(-18px,0,0)
+        50%
+          transform: translate3d(18px,0,0)
+        100%
+          transform: translate3d(-18px,0,0)
+    .sl_3
+      animation: sl_3 6s ease infinite
+      @keyframes sl_3
+        0%
+          transform: translate3d(-12px,0,0)
+        50%
+          transform: translate3d(12px,0,0)
+        100%
+          transform: translate3d(-12px,0,0)
+    .sl_4
+      animation: sl_4 6s ease infinite
+      @keyframes sl_4
+        0%
+          transform: translate3d(-8px,0,0)
+        50%
+          transform: translate3d(8px,0,0)
+        100%
+          transform: translate3d(-8px,0,0)
+    .slide_layers_wrap
+      position: relative
+      width: 100%
+      height: 90%
+      transform-origin: top left
+    img.slider_layer
+      height: auto
+      width: auto
+      min-height: 0
+      min-width: 0
+      position: absolute
+      top: 0
+      left: 0
+      margin-left: -16px
+      will-change: transform, left, top
+      &s
+        position: absolute
+        left: 110vw
+        transform: scale(1.7)
+        transform-origin: center top
+      &.sl_3
+        margin-top: 260px
+        margin-left: -24px
+      &.sl_2
+        margin-top: 540px
+        margin-left: 760px
+      &.sl_1
+        margin-top: 320px
+        margin-left: -48px
+
+  .storyline_single.story_2 .storyline_infos
+    bottom: auto
+    right: auto
+    left: 96px
+    top: 220px
+    width: 360px
+    .storyline_desc
+      font-size: 24px
+  .storyline_single.story_3 .storyline_infos
+    right: auto
+    left: 160px
+    width: 440px
+  .storyline_single.story_4
+    .storyline_wrapper
+      //width: 100%
+      left: calc(50% - 50vw)
+    .storyline_infos
+      right: auto
+      bottom: auto
+      left: 50%
+      width: 570px
+      text-align: center
+      top: 50%
+      transform: translate3d(-50%,-50%,0)
+    .storyline_desc
+      font-size: 24px
+    .storyline_title
+      margin-bottom: 48px
+
+  .storyline_single.story_5 .storyline_infos
+    right: auto
+    left: 160px
+    width: 306px
+
+    .story_logo
+      margin-bottom: 4px
+    .story_slogan
+      font-size: 26px
+      letter-spacing: 8px
+      color: $main-dark-color
+      text-transform: uppercase
+      padding-left: 0
+      text-align: center
+      position: relative
+      transform: translate3d(4px,0,0)
+      margin-bottom: 48px
+    .storyline_desc
+      text-align: center
+      font-size: 24px
+      padding: 0 16px
+      color: #222
+
+
+  .storyline_single.story_5
+    max-width: 100vw
+
+    .storyline_graphics
+      text-align: right
+
+
+  .storyline_single.story_1
+    .storyline_graphics
+      text-align: left
+
+  &_graphics
+    position: relative
+    top: 0
+    left: 0
+    width: auto
+    height: 100%
+    text-align: center
+    img
+      height: 90vh
+
+  &_wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    max-width: 100%
+    height: 100%
+    z-index: 2
+
+  &_infos
+    position: absolute
+    bottom: 200px
+    right: 96px
+    width: 380px
+    text-align: left
+    z-index: 20
+
+  &_title
+    font-size: 72px
+    color: #A86428
+    line-height: 80px
+    margin-bottom: 24px
+    i
+      display: block
+      font-size: 48px
+      color: #222
+      line-height: 40px
+
+  &_desc
+    font-size: 20px
+    font-style: italic
+    line-height: 32px
+    margin-bottom: 0
+
+.storyline_pag,
+.benefit_slide_pag,
+.header_slide .slick-dots
+  position: absolute
+  z-index: 12
+  left: 86px
+  bottom: 98px
+
+  &.benefit_slide_pag
+    position: relative
+    left: auto
+    bottom: auto
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    margin-top: 48px
+
+  .benefit_slide_ctrls
+    margin-top: -10px
+    width: calc(100% - 16px)
+
+  &_single,
+  &.slick-dots .slick-pag_btn
+    position: relative
+    display: inline-block
+    width: 8px
+    height: 8px
+    margin-right: 44px
+    &:before
+      content: ""
+      position: absolute
+      width: 40px
+      border-bottom: 2px dotted $main-dark-color
+      left: 100%
+      top: 50%
+      margin-top: -1px
+      margin-left: 4px
+      opacity: 0.4
+    &:not(.slick-pag_btn):last-child:before,
+    &:not(.slick-pag_btn):last-of-type:before
+      display: none
+    &:not(.slick-pag_btn):last-child,
+    &:not(.slick-pag_btn):last-of-type
+      margin-right: 0
+
+    span
+      position: relative
+      width: 100%
+      height: 100%
+      display: inline-block
+      background-color: $main-dark-color
+      vertical-align: top
+      transform: rotate(45deg)
+      opacity: 0.6
+      @extend .easing
+      &:before
+        content: ""
+        position: absolute
+        width: 14px
+        height: 14px
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%,-50%,0) scale(0)
+        background-color: $main-dark-color
+        @extend .easing
+      &:after
+        content: ""
+        position: absolute
+        width: 22px
+        height: 22px
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%,-50%,0) scale(0)
+        box-shadow: inset 0 0 0 1px $main-dark-color
+        @extend .easing
+
+    &.active span
+      opacity: 1
+      &:before,
+      &:after
+        transform: translate3d(-50%,-50%,0) scale(1)
+  &.slick-dots .slick-active .slick-pag_btn span
+      opacity: 1
+      &:before,
+      &:after
+        transform: translate3d(-50%,-50%,0) scale(1)
+
+
+.header_slide .slick-dots
+  left: auto
+  right: 86px
+  li
+    display: inline-block
+    &:last-child .slick-pag_btn
+      margin-right: 0
+      &:before
+        display: none
+
+.storyline_director
+  position: absolute
+  bottom: 112px
+  left: 50%
+  transform: translate3d(-50%,0,0)
+  width: 56px
+  height: 56px
+  z-index: 12
+  &:after
+    content: attr(title)
+    position: absolute
+    width: 120px
+    top: 100%
+    font-family: $font-stack
+    font-style: italic
+    font-size: 24px
+    color: $main-color
+    left: 50%
+    transform: translate3d(-50%,0,0)
+    margin-top: 48px
+    text-align: center
+  span
+    position: absolute
+    width: 100%
+    height: 100%
+    //box-shadow: inset 0 0 0 1px $main-color
+    top: 0
+    left: 0
+    transform: rotate(45deg)
+    background-color: $main-color
+    animation: storyline_director 3s ease infinite
+    @keyframes storyline_director
+      0%
+        transform: rotate(45deg) translate3d(0,0,0)
+      50%
+        transform: rotate(45deg) translate3d(10px,10px,0)
+      100%
+        transform: rotate(45deg) translate3d(0,0,0)
+    &:after
+      content: ""
+      position: absolute
+      width: calc(100% - 12px)
+      height: calc(100% - 12px)
+      box-shadow: inset 0 0 0 1px #fff
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+    &:before
+      content: ""
+      position: absolute
+      width: 1px
+      height: 16px
+      background-color: $main-color
+      top: 0
+      left: 0
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+    i:before
+      content: ""
+      position: absolute
+      width: 1px
+      height: 40px
+      background-color: #fff
+      top: 0
+      left: 0
+      transform: translate3d(-50%,0,0) rotate(-45deg)
+      transform-origin: top left
+    i:after
+      content: ""
+      position: absolute
+      border: 4px solid #fff
+      border-color: transparent #fff #fff transparent
+      transform: translate3d(23px,23px,0)
+
+.main_footer
+  position: relative
+  padding-bottom: 80px
+  margin-top: 128px
+  &:before
+    content: ""
+    position: absolute
+    width: 42px
+    height: 12px
+    background-image: url("../images/foot_stars.svg")
+    background-position: center
+    background-repeat: no-repeat
+    top: 1px
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+  .wrap
+    padding-top: 58px
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: calc(50% - 26px)
+      height: 1px
+      top: 0
+      left: 0
+      background-color: $main-dark-color
+      opacity: 0.6
+    &:after
+      right: 0
+      left: auto
+
+
+.main_footer
+  background-color: #2A2624
+  color: rgba(255,255,255,0.6)
+  box-shadow: 0 -3px #D49156
+  background-image: url('../images/white-piece.png')
+
+  a:not(:hover)
+    color: rgba(255,255,255,0.8)
+
+  &:before
+    display: none
+
+  .wrap
+    &:before,
+    &:after
+      display: none
+
+  .footer_logo_wrap
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      width: 124px
+      height: 85px
+      background-image: url('../images/logo-w.svg')
+      background-size: auto 85px
+      top: 0
+      left: 15px
+      opacity: 0.8
+    img
+      opacity: 0
+
+#home_anchor
+  position: relative
+  width: 100%
+  height: 0
+
+
+.footer
+  &_contact
+    font-size: 14px
+    line-height: 22px
+    p
+      margin-bottom: 0
+    p.copyright
+      margin-top: 16px
+      font-size: 16px
+
+  &_logo
+    vertical-align: top
+    max-height: 85px
+    margin-bottom: 1px
+
+  &_menu
+    text-align: right
+    text-transform: uppercase
+    font-size: 12px
+    letter-spacing: 1px
+    font-weight: bold
+    li
+      display: inline-block
+      margin-left: 32px
+
+  &_social
+    position: relative
+    display: inline-block
+    width: 24px
+    height: 24px
+    line-height: 24px
+    text-align: center
+    font-family: "fontawesome"
+
+    &:hover svg path
+      fill: $main-color
+
+  &_socials
+    text-align: right
+    margin-top: 38px
+    li
+      display: inline-block
+      margin-left: 16px
+
+.social
+  position: relative
+  display: inline-block
+  width: 24px
+  height: 24px
+  line-height: 24px
+  text-align: center
+  font-family: "fontawesome"
+
+  &:hover svg path
+    fill: $main-color
+
+  &s
+    li
+      display: inline-block
+    li:not(:first-child)
+      margin-left: 16px
+
+    li:first-child .facebook
+      margin-left: -8px
+
+.share_box
+  position: fixed
+  top: 50%
+  right: 24px
+  transform: translate3d(0,-50%,0)
+  width: 50px
+  height: 50px
+  z-index: 99
+  display: none
+  &_trigger
+    position: relative
+    display: block
+    width: 50px
+    height: 50px
+    font-family: "fontawesome"
+    line-height: 50px
+    text-align: center
+    color: $main-dark-color
+    font-size: 16px
+    &:hover
+      color: $main-dark-color
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      border: 1px solid $main-dark-color
+      background-color: #F9F3E9
+      box-shadow: inset 0 0 0 5px #F9F3E9, inset 0 0 0 6px $main-dark-color
+      top: 0
+      left: 0
+      @extend .easing
+    &.active
+      color: transparent
+      font-size: 0
+      &:before
+        transform: rotate(135deg)
+        box-shadow: inset 0 0 0 5px $main-color, inset 0 0 0 6px $main-dark-color
+      span:before,
+      span:after
+        opacity: 1
+
+      span:before
+        transform: translate3d(-50%,-50%,0) rotate(45deg)
+      span:after
+        transform: translate3d(-50%,-50%,0) rotate(135deg)
+    span
+      position: relative
+      display: block
+      width: 100%
+      height: 100%
+      vertical-align: top
+      will-change: transform, opacity
+      z-index: 1
+    span:before,
+    span:after
+      content: ""
+      position: absolute
+      width: 16px
+      height: 1px
+      background-color: $main-dark-color
+      top: 50%
+      left: 50%
+      will-change: transform, opacity
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+      opacity: 0
+      @extend .easing
+    span:after
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+  &_trigger.active ~ .share_box_list .share_box_item
+    pointer-events: all
+    opacity: 1
+    &:nth-of-type(1)
+      top: -40px
+      left: -40px
+    &:nth-of-type(2)
+      top: 0
+      left: -80px
+    &:nth-of-type(3)
+      top: 40px
+      left: -40px
+  &_item
+    position: absolute
+    width: 50px
+    height: 50px
+    top: 0
+    left: 0
+    pointer-events: none
+    opacity: 0
+    will-change: opacity, top, left
+
+    &:before
+      content: attr(fa-symbol)
+      font-family: "fontawesome"
+      font-size: 18px
+      position: absolute
+      line-height: 50px
+      width: 50px
+      height: 50px
+      text-align: center
+      top: 0
+      left: 0
+      color: $main-dark-color
+      @extend .easing
+      z-index: 1
+    &:after
+      content: ""
+      position: absolute
+      width: 50px
+      height: 50px
+      top: 0
+      left: 0
+      background-color: #F9F3E9
+      box-shadow: inset 0 0 0 1px $main-dark-color, inset 0 0 0 0 #FCE5B5
+      transform: rotate(45deg)
+      @extend .easing
+
+    &:hover
+      &:before
+        color: #FCE5B5
+      &:after
+        box-shadow: inset 0 0 0 5px $main-dark-color, inset 0 0 0 6px #FCE5B5
+        background-color: $main-dark-color
+
+    span
+      position: absolute
+      color: $main-dark-color
+      font-size: 18px
+      font-weight: bold
+      width: 120px
+      text-align: center
+      line-height: 24px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-300%,0) translate3d(0,16px,0)
+      pointer-events: none
+      opacity: 0
+      @extend .easing
+    &:nth-of-type(2) span
+      transform: translate3d(0,-50%,0)
+      left: auto
+      right: 100%
+      text-align: right
+    &:nth-of-type(3) span
+      transform: translate3d(-50%,100%,0) translate3d(0,-16px,0)
+    &:hover
+      span
+        opacity: 1
+        transform: translate3d(-50%,-300%,0) translate3d(0,0,0)
+      &:nth-of-type(2) span
+        transform: translate3d(-24px,-50%,0)
+      &:nth-of-type(3) span
+        transform: translate3d(-50%,100%,0) translate3d(0,0,0)
+
+
+    &.newsletter:before
+      font-size: 16px
+
+.content.page
+  min-height: calc(100vh - 364px)
+  .page_header
+    padding-top: 210px
+    &>.page_header_bg+.wrap.cols
+      min-height: 16vw
+
+    &.header_slide
+      .section_title
+        max-width: 580px
+
+.content.page .page_header.header_slide
+  padding-top: 0
+  &:after
+    content: ""
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    height: 120px
+    background-image: linear-gradient(-180deg, #FEFAF1 20%, rgba(254,249,235,0.00) 100%)
+    z-index: 10
+  .col-d-12
+    padding-top: 210px
+    min-height: 640px
+    .page_title
+      line-height: 58px
+    .page_title.small
+      font-size: 40px
+      max-width: 520px
+      line-height: 46px
+
+  &>div,
+  .slick-slide
+    position: relative
+
+  *:focus
+    outline: none
+
+  .slick-dots
+    position: absolute
+    display: none
+
+.section
+  position: relative
+  &_title
+    font-size: 60px
+    line-height: 72px
+    margin-bottom: 96px
+    position: relative
+    z-index: 0
+    &.page_title
+      margin-top: 40px
+      margin-bottom: 48px
+      &:before
+        content: ""
+        position: absolute
+        top: 50%
+        right: 100%
+        width: 168px
+        height: 174px
+        background-image: url("../images/title_symbol.png")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 100%
+        transform: translate3d(50%,-50%,0)
+        margin-top: 5px
+        margin-right: -24px
+        z-index: -1
+
+  &_content
+    .page_header
+      margin-bottom: 192px
+      .section_title
+        font-size: 72px
+        color: $main-dark-color
+        margin-bottom: 16px
+        margin-top: 160px
+
+      .section_desc
+        max-width: 468px
+
+  &_divider
+    position: relative
+    width: 100%
+    height: 1px
+    background-color: $main-dark-color
+    margin: 96px 0
+    opacity: .1
+    width: 100%
+    &:before
+      content: ""
+      position: absolute
+      width: 50px
+      height: 22px
+      background-image: url("../images/border-point.svg")
+      background-repeat: no-repeat
+      background-position: center
+      background-repeat: no-repeat
+      top: 1px
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+
+.home_overall
+  .section_title
+    text-align: center
+
+.overall
+  &_list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    border-bottom: 1px solid rgba(154,117,84,0.1)
+    margin-bottom: 52px
+
+    &>li
+      width: 100%
+      max-width: 450px
+      position: relative
+      padding-left: 100px
+      padding-right: 40px
+      margin-bottom: 64px
+      @extend .clearfix
+
+  &_ico
+    width: 90px
+    height: 90px
+    position: absolute
+    top: 0
+    left: 0
+
+  &_title
+    font-size: 32px
+    line-height: 40px
+    margin-bottom: 8px
+    margin-top: 14px
+
+  &_desc
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 0
+
+.counting
+  &_quote
+    text-align: center
+    font-size: 32px
+    font-family: $font-parag
+    font-style: italic
+    max-width: 640px
+    margin-left: auto
+    margin-right: auto
+    padding: 64px 0
+    margin-bottom: 0
+    position: relative
+    color: #222
+    &:before
+      content: ""
+      position: absolute
+      width: 168px
+      height: 174px
+      background-image: url("../images/counting_quote.png")
+      background-repeat: no-repeat
+      background-size: 167px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+
+  &_list
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 80px
+    &:before
+      content: ""
+      position: absolute
+      width: 1176px
+      height: 188px
+      background-image: url('../images/counting-d.svg')
+      background-position: center top
+      background-repeat: no-repeat
+      left: 50%
+      margin-top: 48px
+      transform: translate3d(-50%,0,0)
+
+    li
+      border: none
+      width: 20%
+      text-align: center
+      padding: 4px 10px
+      &:nth-of-type(4) ~ li
+        width: 20%
+
+  &_number
+    font-family: $font-fly
+    font-size: 60px
+    line-height: 72px
+    margin-bottom: 16px
+    color: $main-dark-color
+
+  &_label
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 24px
+    color: $text-color
+    text-transform: capitalize
+    font-style: italic
+
+
+
+.home_keypoint
+  &s
+    position: relative
+
+  &_single
+    position: relative
+    width: 100%
+    justify-content: space-between
+    &:nth-of-type(2n+2)
+      .home_keypoint_details
+        order: 1
+      .home_keypoint_thumbwrap
+        order: 0
+        text-align: left
+
+    &:not(:last-child)
+      margin-bottom: 128px
+
+  &_details
+    align-self: center
+    padding-bottom: 16px
+    max-width: 660px
+
+  &_title
+    font-size: 60px
+    line-height: 74px
+    color: $main-dark-color
+    margin-bottom: 14px
+    &.small
+      font-size: 48px
+      line-height: 58px
+
+  &_pre
+    font-size: 16px
+    font-style: italic
+
+  &_desc
+    font-size: 18px
+    margin-bottom: 46px
+    line-height: 28px
+
+  &_thumb
+    max-width: 720px
+    position: relative
+    display: inline-block
+    &:before
+      content: ""
+      position: absolute
+      width: calc(100% + 40px)
+      height: calc(100% + 40px)
+      top: -20px
+      left: -20px
+      box-shadow: inset 0 0 0 1px $main-dark-color
+      transition: 0.4s all cubic-bezier(.58,.2,.09,.95)
+      transform: translateZ(0) scale(1)
+      background-color: transparent
+      will-change: transform,background-color,box-shadow
+    &:hover:before
+      transform: translateZ(0) scale(1.05)
+      background-color: $main-contrast-color
+      box-shadow: inset 0 0 0 1px $main-contrast-color
+    &wrap
+      position: relative
+      text-align: right
+
+    img
+      vertical-align: top
+      position: relative
+      z-index: 1
+
+.contact_map
+  position: relative
+  border: 1px solid $main-dark-color
+  padding: 15px
+  display: inline-block
+  width: 100%
+  .map_content
+    width: 658px
+    max-width: 100%
+    background-color: #fff
+    img,iframe
+      max-width: 100%
+      vertical-align: top
+
+.border-point
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    width: 50px
+    height: 22px
+    background-image: url("../images/border-point.svg")
+    background-repeat: no-repeat
+    background-position: center
+    background-repeat: no-repeat
+    top: 0
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+  &:after
+    top: 100%
+    left: 50%
+
+.info_list
+  position: relative
+  &_title
+    font-size: 20px
+    line-height: 24px
+    margin-bottom: 12px
+    color: $main-dark-color
+
+  &_desc
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 40px
+
+  &_table
+    display: flex
+    position: relative
+    flex-wrap: wrap
+    dt,dd
+      margin-bottom: 6px
+    dt
+      width: 72px
+    dd
+      width: calc(100% - 72px)
+      font-weight: bold
+
+.contact_form_wrap
+  z-index: 0
+  &:before
+    content: ""
+    position: absolute
+    width: 918px
+    height: 586px
+    top: 50%
+    left: 80%
+    background-image: url("../images/contact_bg.png")
+    background-size: 918px
+    background-position: center top
+    background-repeat: no-repeat
+    transform: translate3d(0,-50%,0)
+
+// .content.page_gallery
+.page_header
+  position: relative
+  z-index: 0
+  &_bg
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 184px
+      background-image: linear-gradient(-180deg, #FEF9EB 0%, rgba(254,249,235,0.00) 100%)
+      z-index: 1
+    &:after
+      content: ""
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      height: 160px
+      background-image: linear-gradient(-180deg, #FEFAF1 0%, rgba(254,249,235,0.00) 100%)
+      z-index: 1
+    img
+      width: 100%
+      vertical-align: top
+
+.gallery
+  &_list
+    position: relative
+    columns: 2
+    column-gap: 0
+    margin-left: -15px
+    margin-right: -15px
+    @extend .clearfix
+  &_single
+    position: relative
+    width: 100%
+    height: 530px
+    display: block
+    float: left
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+      border: 15px solid transparent
+
+    &.small
+      width: 50%
+      height: 265px
+
+    &_name
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      line-height: 28px
+      font-size: 20px
+      color: #fff
+      text-align: center
+      transform: translate3d(0,-50%,0) scale(0.8)
+      font-weight: bold
+      z-index: 1
+      opacity: 0
+      will-change: opacity
+      @extend .easing
+    &:before
+      content: ""
+      position: absolute
+      width: calc(100% - 30px)
+      height: calc(100% - 30px)
+      top: 15px
+      left: 15px
+      background-color: rgba(0,0,0,0.6)
+      opacity: 0
+      will-change: opacity
+      @extend .easing
+    &:hover
+      &:before,
+      .gallery_single_name
+        opacity: 1
+
+      .gallery_single_name
+        transform: translate3d(0,-50%,0) scale(1)
+
+.gallery_video
+  &_list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &_single
+    width: calc((100% - 60px) / 3)
+    position: relative
+    margin-bottom: 56px
+    .gallery_single_name
+      position: static
+      top: auto
+      left: auto
+      transform: none
+      opacity: 1
+      color: #515151
+      text-align: center
+      display: block
+      font-size: 24px
+      font-weight: normal
+      padding-top: 16px
+  &_thumb
+    width: 100%
+    height: 320px
+    display: block
+    position: relative
+    background-color: #000
+    overflow: hidden
+    &:hover
+      img
+        transform: scale(1.1)
+        opacity: 0.5
+      &:before
+        transform: translate3d(-50%,-50%,0) rotate(45deg) scale(1.05)
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+      vertical-align: top
+      will-change: transform
+      @extend .easing
+    &:before
+      content: ""
+      position: absolute
+      width: 64px
+      height: 64px
+      border: 1px solid #fff
+      background-color: rgba(0,0,0,0.1)
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(45deg) scale(1)
+      z-index: 1
+      @extend .easing
+    &:after
+      content: ""
+      position: absolute
+      border: 10px solid #fff
+      border-width: 8px 0px 8px 12px
+      border-color: transparent transparent transparent #fff
+      margin-left: 2px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) scale(1)
+      z-index: 1
+      @extend .easing
+
+
+.archive_filter
+  &_toggle
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 0
+    text-align: center
+    margin-bottom: 40px
+    li
+      display: inline-block
+      box-shadow: inset 0 -1px rgba(55,48,42,0.1)
+      font-size: 24px
+      letter-spacing: 2px
+      line-height: 32px
+    li:not(:last-child)
+      padding-right: 32px
+    a
+      color: rgba(55,48,42,0.40)
+      padding: 16px 0
+      display: inline-block
+
+      &:hover
+        color: rgba(55,48,42,0.60)
+
+      &.current
+        color: $main-color
+        box-shadow: inset 0 -3px $main-color
+
+  &_list
+    font-size: 0
+    text-align: center
+    margin-bottom: 56px
+    li li
+      font-size: 18px
+      display: inline-block
+      padding: 0 20px
+    a
+      color: rgba(55,48,42,0.40)
+
+      &:hover
+        color: rgba(55,48,42,0.60)
+
+      &.current
+        color: $main-color
+
+.pagination
+  text-align: center
+  margin-top: 48px
+  font-size: 18px
+  a,
+  span
+    display: inline-block
+    width: 48px
+    height: 48px
+    text-align: center
+    line-height: 46px
+    position: relative
+    vertical-align: middle
+    color: $main-dark-color
+    margin: 0 6px
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      border: 1px solid $main-dark-color
+      top: 0
+      left: 0
+      will-change: transform
+      @extend .easing
+    &:hover:before
+      transform: rotate(45deg)
+
+    &.current
+      color: rgba(55,48,42,0.40)
+      pointer-events: none
+      &:before
+        border-color: rgba(55,48,42,0.20)
+    &.prev,
+    &.next
+      background-image: url('../images/pag_arrow.svg')
+      background-position: center
+      background-repeat: no-repeat
+
+    &.prev
+      transform: scaleX(-1)
+
+.article
+  &_list
+    position: relative
+  &_item
+    position: relative
+    margin-bottom: 64px
+
+  &_title
+    margin-bottom: 16px
+
+  &_thumb
+    position: relative
+    margin-bottom: 32px
+    display: block
+    img
+      vertical-align: top
+
+  &_meta
+    line-height: 16px
+    font-size: 14px
+    margin-bottom: 16px
+
+  &_cat
+    text-transform: uppercase
+    color: $main-color
+
+  &_date
+    position: relative
+    display: inline-block
+    border-left: 1px solid rgba(0,0,0,0.1)
+    margin-left: 16px
+    padding-left: 16px
+
+  &_excerpt
+    font-size: 14px
+    margin-bottom: 32px
+
+  &_content
+    font-size: 16px
+    figure
+      margin: 0
+      text-align: center
+      figcaption
+        font-size: 14px
+        font-style: italic
+
+.widget
+  position: relative
+  margin-bottom: 48px
+  &_title
+    margin-bottom: 22px
+    color: #9A7554
+
+  &_desc
+    font-size: 14px
+
+.category_list
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: bold
+  line-height: 20px
+  letter-spacing: 2px
+  li
+    margin-bottom: 16px
+    &:before
+      content: ""
+      width: 8px
+      height: 8px
+      display: inline-block
+      border: 2px solid #D49156
+      background-color: #FCE5B5
+      vertical-align: top
+      margin-top: 6px
+      margin-right: 10px
+      transform: rotate(45deg)
+
+.popular
+  &_single
+    position: relative
+    margin-bottom: 16px
+    display: block
+    @extend .clearfix
+
+  &_thumb
+    display: inline-block
+    float: left
+    width: 130px
+    height: 80px
+    margin-right: 12px
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+  &_title
+    display: block
+    font-family: $font-title
+    margin-bottom: 6px
+
+  &_meta
+    font-size: 12px
+
+.page_title+.article_meta
+  margin-top: -24px
+  margin-bottom: 64px
+
+.related
+  &_list
+    display: flex
+    justify-content: space-between
+  &_single
+    width: calc((100% - 60px) / 3)
+
+  &_thumb
+    position: relative
+    margin-bottom: 16px
+    display: block
+    img
+      vertical-align: top
+
+  &_title
+    font-family: $font-title
+    font-size: 24px
+    margin-bottom: 12px
+
+  &_desc
+    font-size: 14px
+
+.content-border
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    width: 1px
+    height: 100%
+    top: 0
+    right: 64px
+    background-color: $main-dark-color
+    opacity: .1
+
+.section_map
+  &_wrap
+    position: relative
+    display: flex
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 140px
+
+  &_title
+    font-size: 72px
+    text-align: center
+    color: $text-color
+    &.spaced
+      margin-bottom: 198px
+
+  &_blocks
+    position: relative
+    width: 50%
+    order: 0
+
+  &_border
+    position: absolute
+    opacity: 0
+    @extend .easing
+
+  &_label
+    font-size: 24px
+    font-style: italic
+    white-space: nowrap
+    position: absolute
+    bottom: 100%
+    left: 50%
+    transform: translate3d(-50%,-16px,0)
+    width: 160px
+    text-align: center
+    pointer-events: none
+    opacity: 0
+    color: $text-color
+    @extend .easing
+    &:before
+      content: ""
+      position: absolute
+      height: 72px
+      border-left: 1px dashed $text-color
+      width: 2px
+      top: 100%
+      left: 50%
+      margin-left: -1px
+
+  &_single
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    background-repeat: no-repeat
+    background-position: top left
+    background-size: 100% auto
+    opacity: 0.4
+    will-change: filter
+    filter: drop-shadow(0 10px 30px transparent)
+    &.disable
+      cursor: default
+    @extend .easing
+    &.active
+      filter: drop-shadow(0 10px 16px #E6B284)
+    &.active,
+    &.active .section_map_border,
+    &.active .section_map_label
+      opacity: 1
+    &.sm_1
+      width: 98px
+      height: 260px
+      background-image: url("../images/the_samu_x2.png")
+      transform: translate3d(-50%, -50%, 0) translate3d(-96px, -198px, 0)
+      .section_map_border
+        margin-top: -10px
+        margin-left: -18px
+    &.sm_2
+      width: 214px
+      height: 380px
+      background-image: url("../images/the_mountainside_x2.png")
+      transform: translate3d(-50%, -50%, 0) translate3d(64px, -98px, 0)
+      z-index: 7
+      .section_map_border
+        margin-top: -10px
+        margin-left: 13px
+    &.sm_3
+      width: 112px
+      height: 196px
+      background-image: url("../images/the_kingdom_x2.png")
+      transform: translate3d(-50%, -50%, 0) translate3d(214px, -118px, 0)
+      .section_map_border
+        margin-top: -11px
+        margin-left: -12px
+    &.sm_4
+      width: 366px
+      height: 264px
+      background-image: url("../images/the_rosa_x2.png")
+      transform: translate3d(-50%, -50%, 0) translate3d(-198px, 118px, 0)
+      z-index: 6
+      .section_map_border
+        margin-top: -11px
+        margin-left: -17px
+    &.sm_5
+      width: 480px
+      height: 206px
+      background-image: url("../images/the_central_x2.png")
+      transform: translate3d(-50%, -50%, 0) translate3d(42px, 192px, 0)
+      z-index: 5
+      .section_map_border
+        margin-top: -15px
+        margin-left: -20px
+    &.sm_6
+      width: 436px
+      height: 384px
+      background-image: url("../images/the_valley_x2.png")
+      transform: translate3d(-50%, -50%, 0) translate3d(166px, 138px, 0)
+      .section_map_border
+        margin-top: -8px
+        margin-left: -13px
+
+      .section_map_label
+        left: 90%
+
+    &_info
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      pointer-events: none
+      padding-top: 80px
+      transform: translate3d(0,48px,0)
+      @extend .easing
+      &.active
+        opacity: 1
+        pointer-events: all
+        transform: translate3d(0,0,0)
+      &:first-child
+        position: relative
+
+      .section_subtitle
+        color: $main-color
+        margin-bottom: 14px
+
+      .section_desc
+        max-width: 450px
+        margin-bottom: 48px
+
+      .section_status
+        font-family: $font-fly
+        font-style: normal
+        font-size: 38px
+        position: relative
+        line-height: 50px
+        display: inline-block
+        &:before
+          content: ""
+          position: absolute
+          width: 100%
+          height: 1px
+          top: 100%
+          background-color: $text-color
+          margin-top: 6px
+          opacity: 0.4
+        &:after
+          content: ""
+          width: 8px
+          height: 8px
+          position: absolute
+          background-color: $text-color
+          top: 100%
+          left: 50%
+          transform: translate3d(-50%,25%,0) rotate(45deg)
+          box-shadow: 0 0 0 2px #FCF7ED
+
+  &_container
+    position: relative
+    width: 50%
+    order: 1
+    &:before
+      content: ""
+      width: 798px
+      height: 682px
+      background-image: url("../images/overall_border.svg")
+      background-repeat: no-repeat
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%, -50%, 0) translate3d(1px, 3px, 0)
+    &:before
+      content: ""
+      width: 798px
+      height: 682px
+      background-image: url("../images/overall_border_bg.svg")
+      background-repeat: no-repeat
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%, -50%, 0) translate3d(1px, 3px, 0)
+      z-index: -1
+      opacity: 0.5
+
+
+.section_base
+  &_info
+    position: relative
+    margin-bottom: 64px
+    @extend .clearfix
+
+    .section_desc.right_desc
+      float: right
+      max-width: 570px
+      margin-left: 32px
+      font-size: 20px
+      line-height: 30px
+      padding-top: 48px
+
+  &_title
+    font-size: 60px
+    margin-bottom: 14px
+    &.small
+      font-size: 48px
+
+  &_block
+    &s
+      position: relative
+    &_single
+      position: relative
+      display: flex
+      margin-bottom: 128px
+      &:nth-of-type(2n+2)
+        .section_base_block_thumb
+          order: 1
+        .section_base_block_info
+          order: 0
+          padding-left: 0
+          padding-right: 42px
+      &.nospace
+        margin-bottom: 30px
+
+      &.big_end
+        margin-bottom: 320px
+    &_thumb
+      width: 60%
+      position: relative
+      img
+        vertical-align: top
+      img.float_thumb
+        position: absolute
+        max-width: 450px
+        top: 100%
+        left: 0
+        margin-top: -80px
+        margin-left: -128px
+    &_info
+      &.flood
+        width: 100%
+      width: 40%
+      align-self: center
+      padding-left: 42px
+      position: relative
+
+      .section_base_title
+        font-size: 32px
+        margin-bottom: 32px
+        color: $main-dark-color
+
+      .section_base_desc
+        font-size: 20px
+        line-height: 30px
+
+.section_flytitle
+  font-style: italic
+  font-family: $font-parag
+  color: $main-color
+  font-size: 32px
+  margin-bottom: 0
+
+.cols img.section_map_border,
+.section_map_border
+  max-width: none
+
+.benefit
+  &_cols
+    display: flex
+    justify-content: space-between
+    &.wide
+      max-width: 1350px
+
+  &_slide_pag_single[data-ben="0"].active ~ .benefit_slide_ctrls
+    .benefit_slide_ctrl.prev
+      opacity: 0
+      pointer-events: none
+
+  &_slide_ctrls
+    position: absolute
+    top: 0
+    left: 50%
+    width: 100%
+    max-width: 600px
+    transform: translate3d(-50%,0,0)
+    height: 100%
+    pointer-events: none
+    &.wide
+      max-width: 1820px
+
+    a
+      position: absolute
+      pointer-events: all
+      width: 40px
+      height: 40px
+      top: 50%
+      left: 0
+      transform: translate3d(0,-50%,0)
+      background-image: url('../images/ben_c_p.svg')
+      background-position: center
+      background-repeat: no-repeat
+      opacity: 0.8
+      animation: ctrl_float_r 1s ease infinite
+      @keyframes ctrl_float
+        0%
+          transform: translate3d(0,-50%,0) translate3d(-6px,0,0)
+        50%
+          transform: translate3d(0,-50%,0) translate3d(6px,0,0)
+        100%
+          transform: translate3d(0,-50%,0) translate3d(-6px,0,0)
+      @keyframes ctrl_float_r
+        0%
+          transform: translate3d(0,-50%,0) translate3d(6px,0,0)
+        50%
+          transform: translate3d(0,-50%,0) translate3d(-6px,0,0)
+        100%
+          transform: translate3d(0,-50%,0) translate3d(6px,0,0)
+      &:hover
+        opacity: 1
+
+      &.next
+        left: auto
+        right: 0
+        background-image: url('../images/ben_c_n.svg')
+        animation: ctrl_float 1s ease infinite
+
+
+  &_col
+    width: 50%
+    position: relative
+    padding: 0 15px
+    &.center-d
+      align-self: center
+    &.spaced
+      max-width: 630px
+    &s
+      max-width: 1290px
+      margin-left: auto
+      margin-right: auto
+    img
+      max-width: 100%
+
+    &_title
+      font-size: 48px
+      margin-bottom: 0
+      margin-top: 16px
+      color: $main-dark-color
+      &.med
+        max-width: 450px
+        margin-left: auto
+        margin-right: auto
+
+      &.single_title
+        margin-bottom: 24px
+
+    &_desc
+      max-width: 450px
+      margin-left: auto
+      margin-right: auto
+      font-size: 18px
+      margin-top: 16px
+      &.left
+        margin-left: 0
+      &.single_title
+        margin-bottom: 36px
+
+      &.full
+        max-width: 100%
+
+      &.small
+        font-size: 16px
+
+      span
+        font-weight: bold
+        color: $main-dark-color
+
+  &_flytitle
+    font-size: 32px
+    font-family: $font-fly
+    margin-top: 26px
+    &.big
+      font-size: 48px
+      margin-bottom: 32px
+      margin-top: -24px
+    span
+      color: $main-dark-color
+
+    .standout
+      font-family: $font-title
+      font-size: 72px
+
+  &_subtitle
+    font-size: 48px
+    color: $main-dark-color
+    margin-bottom: 32px
+
+  &_high_list
+    position: relative
+    font-family: $font-title
+    font-size: 32px
+    color: $text-color
+    line-height: 42px
+    margin-bottom: 32px
+
+  &_block
+    display: flex
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+    justify-content: space-between
+    margin-top: 56px
+    margin-bottom: 64px
+    &_thumb
+      position: relative
+      width: 860px
+      height: 600px
+      img
+        width: 100%
+        height: 100%
+        object-position: center
+        object-fit: cover
+        vertical-align: top
+        &:not(.float_thumb)
+          box-shadow: 0 24px 64px rgba(25, 14, 5, 0.3)
+
+      .float_thumb
+        position: absolute
+        width: 480px
+        height: auto
+        top: 116%
+        left: 80%
+        transform: translate3d(0%,-100%,0)
+        z-index: -1
+        &+img:not(.float_thumb)
+          margin-bottom: 0
+
+    &_info
+      position: relative
+      width: 450px
+      .section_title
+        font-size: 48px
+        margin-bottom: 24px
+      .section_desc
+        font-size: 18px
+
+    .benefit_block_info .section_title
+      color: $main-dark-color
+
+
+  &_single
+    height: calc(100vh - 84px)
+    margin-bottom: 256px
+    display: flex
+    justify-content: center
+    &:last-child
+      margin-bottom: 0
+      padding-bottom: 64px
+    .wrap.wide
+      max-width: 1690px
+      .benefit_cols
+        max-width: 1690px
+    .benefit_slide_wrap
+      align-self: center
+      width: 100%
+      position: relative
+    .section_flytitle
+      font-size: 24px
+      margin-bottom: 16px
+      &.huge
+        font-size: 56px
+        margin-bottom: 0
+      &.flyed
+        font-family: $font-fly
+        font-style: normal
+        color: $text-color
+        font-size: 32px
+        span
+          text-transform: uppercase
+          color: $main-dark-color
+        &.huge span
+          text-transform: none
+
+        &.huge
+          font-size: 60px
+
+    .ben_coop
+      max-width: 1237px
+
+    .section_title
+      margin-bottom: 16px
+      color: $main-contrast-color
+      &.centered
+        margin-left: auto
+        margin-right: auto
+      &.med
+        max-width: 690px
+
+      &.large
+        max-width: 930px
+
+      &.small
+        font-size: 48px
+        line-height: 56px
+
+    .section_subtitle
+      color: $main-dark-color
+      &.spaced
+        margin-top: 48px
+
+    .section_desc
+      margin-bottom: 32px
+
+    &_info
+      &.spaced_info
+        margin-bottom: 64px
+
+    &_desc
+      font-size: 24px
+      margin-bottom: 16px
+      &.big
+        font-size: 32px
+        font-style: italic
+      span
+        color: $main-dark-color
+
+      &.limited
+        font-size: 18px
+        max-width: 688px
+
+      &.centered
+        margin-left: auto
+        margin-right: auto
+
+    &.right_view
+      display: flex
+      max-width: 1650px
+      margin-left: auto
+      margin-right: auto
+      justify-content: space-between
+      &:before
+        content: ""
+        position: absolute
+        width: calc(100% - 338px + ( (100vw - 1650px) / 2 ))
+        height: calc(100% - 140px)
+        top: 50%
+        transform: translate3d(0,-50%,0)
+        left: 268px
+        z-index: 1
+        box-shadow: inset 0 0 0 3px $main-contrast-color
+        pointer-events: none
+
+      .benefit_single_info
+        max-width: 540px
+        align-self: center
+        position: relative
+        background-color: #FCF8EC
+        padding: 32px 0
+        z-index: 2
+
+        .border_bot
+          border-bottom: 1px dotted $main-color
+          margin-bottom: 24px
+          padding-bottom: 24px
+
+      .benefit_single_side_thumb
+        height: calc(100vh - 84px)
+        width: calc(100% - 600px)
+        position: relative
+        text-align: right
+        img
+          vertical-align: top
+          height: calc(100vh - 84px)
+          width: calc(100% + ( (100vw - 1650px) / 2 ))
+          object-position: center
+          object-fit: cover
+
+    &.left_view
+      display: flex
+      max-width: 1650px
+      margin-left: auto
+      margin-right: auto
+      justify-content: space-between
+
+      .benefit_single_info
+        max-width: 690px
+        align-self: center
+        position: relative
+        background-color: #FCF8EC
+        padding: 32px 0
+        overflow: hidden
+        z-index: 2
+        &.flex
+          display: flex
+          flex-wrap: wrap
+
+        .benefit_slide_pag
+          align-self: flex-start
+
+        .benefit_slide
+          align-self: flex-end
+          &[data-ben="1"]
+            transform: translate3d(-690px,0,0)
+          &[data-ben="2"]
+            transform: translate3d(-1380px,0,0)
+
+          .benefit_slide_single
+            max-width: 690px
+
+        .border_bot
+          border-bottom: 1px dotted $main-color
+          margin-bottom: 24px
+          padding-bottom: 24px
+
+      .benefit_single_side_thumb
+        height: calc(100vh - 84px)
+        width: calc(100% - 796px)
+        position: relative
+        text-align: left
+
+        .section_title
+          position: absolute
+          top: 30%
+        .section_flytitle
+          position: absolute
+          top: 30%
+          padding-top: 56px
+          font-style: normal
+          font-size: 48px
+          font-family: $font-fly
+          color: $main-dark-color
+
+      .ben_side_thumb_wrap
+        vertical-align: top
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        width: calc(100% + ( (100vw - 1650px) / 2 ))
+        &:before
+          content: ""
+          position: absolute
+          width: calc(100% - 120px)
+          height: calc(100% - 120px)
+          box-shadow: inset 0 0 0 3px $main-contrast-color
+          top: 50%
+          left: 50%
+          transform: translate3d(-50%,-50%,0)
+          z-index: 1
+        img
+          object-position: center
+          object-fit: cover
+          vertical-align: top
+          width: 100%
+          height: 100%
+
+  &_feature_images
+    position: relative
+    li
+      position: relative
+      width: calc(50% - 15px)
+      float: left
+      margin-bottom: 30px
+      &.right
+        float: right
+      &.big
+        width: 100%
+      img
+        max-width: 100%
+        vertical-align: top
+
+  &_feature_list
+    &.vertical
+      li
+        border-bottom: none
+        margin-bottom: 0
+        padding-bottom: 16px
+        &:after
+          content: ""
+          height: 100%
+          border-left: 1px dashed $main-dark-color
+          opacity: 0.5
+          position: absolute
+          left: 8px
+          top: 10px
+        &:last-child:after
+          display: none
+
+    li
+      border-bottom: 1px dashed rgba(154,117,84,0.5)
+      padding-bottom: 8px
+      margin-bottom: 8px
+      font-size: 24px
+      padding-left: 32px
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        width: 16px
+        height: 16px
+        display: inline-block
+        vertical-align: middle
+        background-color: #FCE5B5
+        box-shadow: inset 0 0 0 4px $main-contrast-color
+        left: 0
+        top: 12px
+        transform: translate3d(3px,0,0) rotate(45deg)
+        z-index: 1
+      &:last-child
+        border-bottom: none
+
+  &_faces_list
+    font-size: 0
+    height: 595px
+    position: relative
+    overflow: hidden
+    .benefit_faces_line
+      white-space: nowrap
+      position: absolute
+      top: 0
+      left: 0
+      transform: translate3d(0,0,0)
+      will-change: transform
+      &:nth-of-type(1)
+        animation: face_run 60s linear infinite
+        animation-direction: reverse
+      &:nth-of-type(2)
+        animation: face_run_r 60s linear infinite
+        animation-direction: reverse
+        right: 0
+        left: auto
+        bottom: 15px
+        top: auto
+      @keyframes face_run
+        0%
+          transform: translate3d(0,0,0)
+        0%
+          transform: translate3d(-50%,0,0)
+      @keyframes face_run_r
+        0%
+          transform: translate3d(0,0,0)
+        0%
+          transform: translate3d(50%,0,0)
+    img
+      width: 400px
+      height: 260px
+      object-position: center
+      object-fit: cover
+      vertical-align: top
+      margin: 15px
+
+.benefit_slide
+  width: auto
+  font-size: 0
+  white-space: nowrap
+  align-self: center
+  transition: 0.6s transform cubic-bezier(.6,.09,.3,1)
+  &[data-ben="1"]
+    transform: translate3d(-100vw,0,0)
+  &[data-ben="2"]
+    transform: translate3d(-200vw,0,0)
+
+  &_wrap:not(.empty)
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    flex-wrap: wrap
+
+    .benefit_single_info
+      width: 100%
+      align-self: flex-end
+  &_pag.benefit_slide_pag
+    width: 100%
+    align-self: flex-start
+
+  &_single
+    display: inline-block
+    font-size: 16px
+    white-space: normal
+    width: 100vw
+    vertical-align: middle
+
+.partners
+  position: relative
+  .wrap
+    padding-top: 96px
+  .wrap:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 20px
+    top: 0
+    left: 0
+    background-image: url('../images/ss_divider.svg')
+    background-position: center
+    opacity: 0.6
+
+  &.section
+    margin-top: 144px
+
+  .section-title
+    font-size: 60px
+    margin-bottom: 64px
+
+  &_list
+    position: relative
+    display: flex
+    justify-content: center
+
+    li
+      border-right: 1px solid rgba(193,193,193,0.3)
+      padding: 0 48px
+      &:last-child
+        border-right: none
+
+    h5
+      font-family: $font-parag
+      font-size: 10px
+      text-transform: uppercase
+      letter-spacing: 2px
+      margin-bottom: 16px
+      font-weight: bold
+
+  &_logo
+    position: relative
+    line-height: 52px
+    img
+      vertical-align: middle
+      max-height: 58px
+
+
+.page_image_viewer
+  &_popup
+    position: fixed
+    top: 48px
+    left: 48px
+    width: calc(100% - 96px)
+    height: calc(100% - 96px)
+    background-color: #fff
+    z-index: 299
+    opacity: 0
+    pointer-events: none
+    @extend .easing
+    &.active,
+    &.active ~ .page_overlayer
+      opacity: 1
+      pointer-events: all
+
+  &_wrap
+    position: relative
+    width: 100%
+    height: 100%
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+  &_close
+    position: absolute
+    width: 26px
+    height: 26px
+    background-color: rgba(255,255,255,0.5)
+    border-radius: 50%
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1)
+    opacity: 0.6
+    top: 24px
+    right: 24px
+    &:hover
+      opacity: 1
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 12px
+      height: 1px
+      background-color: $text-color
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    &:after
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+.page_overlayer
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.7)
+  z-index: 290
+  opacity: 0
+  pointer-events: none
+  @extend .easing
+
+.video_box
+  position: fixed
+  top: 50%
+  left: 24px
+  width: calc(100% - 48px)
+  height: 46vw
+  z-index: 300
+  transform: translate3d(0,-50%,0)
+  opacity: 0
+  pointer-events: none
+  @extend .easing
+  &.active,
+  &.active ~ .page_overlayer
+    opacity: 1
+    pointer-events: all
+
+  .video_box_content
+    position: relative
+    width: 100%
+    height: 100%
+    background-color: #000
+    iframe
+      vertical-align: top
+      min-width: 100%
+      min-height: 100%
+      position: relative
+
+  &_closer
+    position: absolute
+    width: 26px
+    height: 26px
+    background-color: rgba(255,255,255,0.5)
+    border-radius: 50%
+    opacity: 0.6
+    top: -36px
+    right: 0
+    &:hover
+      opacity: 1
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 12px
+      height: 1px
+      background-color: $text-color
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    &:after
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+
+.home_uniquepoint
+  position: relative
+  &:not(:last-child)
+    margin-bottom: 160px
+  &s
+    position: relative
+    border-top: 1px solid rgba(154, 117, 84, 0.1)
+    padding-top: 96px
+
+  .home_keypoint_title
+    font-size: 48px
+    .fly
+      font-family: $font-fly
+      text-transform: capitalize
+      color: $text-color
+
+  &#dcsp
+    .home_uniquepoint_thumb_wrap
+      img
+        height: 520px
+        width: 100%
+        object-position: center
+        object-fit: cover
+      &x:before
+        width: calc(100% + 48px + 380px)
+        box-shadow: inset 3px 3px $main-contrast-color, inset 3px -3px $main-contrast-color
+      &x:after
+        content: ""
+        position: absolute
+        width: 3px
+        height: calc(100% + 48px)
+        top: -24px
+        left: calc(100% + 24px + 380px)
+        box-shadow: inset 0 56px $main-contrast-color, inset 0 -56px $main-contrast-color
+        pointer-events: none
+
+  &#vtdd
+    .home_uniquepoint_thumb_wrap
+      order: 1
+      img
+        width: 100%
+        height: 550px
+        object-fit: cover
+        object-position: center
+
+    .home_uniquepoint_details
+      margin-bottom: 80px
+      text-align: center
+
+    .home_keypoint_desc
+      max-width: 690px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 32px
+      p:last-child
+        margin-bottom: 0
+
+  &#dtdc
+    .home_uniquepoint_thumb_wrap
+      order: 1
+      &:before
+        width: calc(50vw + 48px + 25vw)
+        //left: calc(-24px - 340px)
+        //box-shadow: inset -3px 3px $main-contrast-color, inset -3px -3px $main-contrast-color
+      &x:after
+        content: ""
+        position: absolute
+        width: 3px
+        height: calc(100% + 48px)
+        top: -24px
+        right: calc(100% + 24px + 340px)
+        box-shadow: inset 0 calc(50vh - 220px) $main-contrast-color, inset 0 calc((50vh - 220px) * -1) $main-contrast-color
+        pointer-events: none
+      img
+        width: 50vw
+        max-width: none
+
+  &#ndndt
+    .home_uniquepoint_thumb_wrap
+      direction: rtl
+      &:before
+        width: calc(50vw + 48px + 25vw)
+        left: auto
+        //right: calc(-24px - 300px)
+        right: -24px
+        //box-shadow: inset 3px 3px $main-contrast-color, inset 3px -3px $main-contrast-color
+      &x:after
+        content: ""
+        position: absolute
+        width: 3px
+        height: calc(100% + 48px)
+        top: -24px
+        left: calc(100% + 24px + 300px)
+        box-shadow: inset 0 calc(50vh - 290px) $main-contrast-color, inset 0 calc((50vh - 290px) * -1) $main-contrast-color
+        pointer-events: none
+      img
+        width: 50vw
+        max-width: none
+
+  &_thumb
+    &_wrap
+      position: relative
+      &[class^="col-d"]
+        padding: 0
+      &:before
+        content: ""
+        position: absolute
+        width: calc(100% + 48px)
+        height: calc(100% + 48px)
+        top: -24px
+        left: -24px
+        //box-shadow: inset 0 0 0 3px $main-contrast-color
+        pointer-events: none
+        @extend .easing
+      &:hover:before
+        //box-shadow: inset 0 0 0 24px $main-contrast-color
+      img
+        vertical-align: top
+
+.thumb_border_side
+  position: absolute
+  width: calc(50% - 32px)
+  height: calc(100% + 48px)
+  top: -24px
+  left: -24px
+  border: 2px solid $main-contrast-color
+  border-right: none
+  &.right
+    left: auto
+    right: -24px
+    border: 2px solid $main-contrast-color
+    border-left: none
+
+blockquote
+  font-size: 24px
+  color: #9A7554
+  text-align: center
+  position: relative
+
+  p:last-child
+    margin-bottom: 0
+
+  &:before,
+  &:after
+    content: ""
+    position: relative
+    width: 100%
+    height: 12px
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url('../images/blockquote_sep.svg')
+    display: block
+    margin: 32px 0
+    margin-bottom: 48px
+
+  &>*:first-child:before
+    content: ""
+    position: absolute
+    width: 56px
+    height: 48px
+    background-image: url('../images/quote_mark.svg')
+    background-repeat: no-repeat
+    background-position: center
+    top: 42px
+    left: 50%
+    transform: translate3d(-50%,0,0)
+
+
+.section_map_wrap
+  z-index: 1
+  &:before
+    content: ""
+    width: 1424px
+    height: 930px
+    position: absolute
+    background-image: url('../images/phankhu_bg.png')
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: 100% auto
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    z-index: -1
+
+.page_phan-khu
+  overflow-x: hidden
+
+
+.cols .up-space[class*="col-"]
+  margin-top: 96px

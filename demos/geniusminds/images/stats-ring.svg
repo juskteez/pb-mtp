@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>stats-ring</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <circle stroke="#FFFFFF" stroke-width="3" transform="translate(25.000000, 25.000000) scale(1, -1) translate(-25.000000, -25.000000) " cx="25" cy="25" r="23.5"></circle>
+        <path d="M25,48.5 C37.9786916,48.5 48.5,37.9786916 48.5,25 C48.5,12.0213084 37.9786916,1.5 25,1.5 C12.0213084,1.5 1.5,12.0213084 1.5,25 C1.5,37.9786916 12.0213084,48.5 25,48.5 Z" stroke="#FF9401" stroke-width="3" stroke-dasharray="110.6800003051758,9999" transform="translate(25.000000, 25.000000) scale(1, -1) translate(-25.000000, -25.000000) "></path>
+    </g>
+</svg>

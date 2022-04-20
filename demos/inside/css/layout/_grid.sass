@@ -1,0 +1,189 @@
+// Editable variables
+$base-width: 1320
+$min-desktop: 984
+$max-desktop: 1536
+$max-page: 1280
+$col-count: 12
+$base-gutter: 32
+$tablet-gutter: 24
+$mobile-gutter: 16
+
+// Fixed variables
+$divided-gutter: $base-gutter/2*1px
+$divided-tgutter: $tablet-gutter/2*1px
+$divided-mgutter: $tablet-gutter/2*1px
+$col-width: (($base-width/$col-count) / $base-width) * 100%
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.wrap
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  width: calc(100% - 214px)
+  max-width: $max-desktop*1px
+  min-width: $min-desktop*1px
+  &:not(.cols)
+    @extend .clearfix
+  &.unwrap-d
+    max-width: none
+    width: 100%
+
+  &.page-wrap
+    max-width: $max-page*1px
+
+  .unwrap-d
+    width: initial
+    margin-left: #{$divided-gutter * -1}
+    margin-right: #{$divided-gutter * -1}
+
+.cols
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  &.nowrap
+    flex-wrap: nowrap
+  +container_align('d')
+
+  *[class^="col-"]
+    padding-left: $divided-gutter
+    padding-right: $divided-gutter
+    position: relative
+    //margin-bottom: $base-gutter*1px
+    +item_align('d')
+
+    &.gt:after
+      content: ""
+      position: relative
+      width: auto
+      height: 100px
+      max-height: 100%
+      display: block
+      background-color: rgba(255,0,0,0.1)
+      box-shadow: inset 0 0 0 1px  rgba(255,0,0,0.6)
+
+    &.nopad,
+    &.cols
+      padding-left: 0
+      padding-right: 0
+
+  img
+    max-width: 100%
+
+
+@for $i from 1 through 12
+  .col-d-#{$i}
+    width: $col-width*$i
+
+@media screen and (max-width: 1280px)
+
+  .wrap,
+  .wrap.unwrap-d
+    min-width: $min-desktop*1px
+    &.unwrap-t
+      max-width: none
+      width: 100%
+      //margin-left: #{$divided-tgutter * -1}
+      //margin-right: #{$divided-tgutter * -1}
+
+    .unwrap-t.unwrap-d
+      width: auto
+
+  .wrap,
+  .wrap.unwrap-d
+    max-width: 100%
+    min-width: unset
+    width: unset
+    width: calc(100% - 80px)
+    &.unwrap-tp
+      max-width: none
+
+  .cols
+    +container_align('t')
+
+    *[class^="col-"]
+      padding-left: $divided-tgutter
+      padding-right: $divided-tgutter
+      +item_align('t')
+
+  @for $i from 0 through 12
+    .col-t-#{$i}
+      width: $col-width*$i
+
+
+@media screen and (max-width: 1023px)
+
+  // .wrap,
+  // .wrap.unwrap-d,
+  // .wrap.unwrap-t
+  //   max-width: 760px
+  //   &.unwrap-tp
+  //     max-width: none
+
+  .cols
+    +container_align('tp')
+
+    *[class^="col-"]
+      padding-left: $divided-tgutter
+      padding-right: $divided-tgutter
+      +item_align('tp')
+
+  @for $i from 0 through 12
+    .col-tp-#{$i}
+      width: $col-width*$i
+
+
+@media screen and (max-width: 767px)
+
+  .wrap,
+  .wrap.unwrap-d,
+  .wrap.unwrap-t,
+  .wrap.unwrap-tp
+    max-width: 400px
+    width: 100%
+    &.unwrap-m
+      max-width: none
+
+  .cols
+    +container_align('m')
+
+    *[class^="col-"]
+      padding-left: $divided-mgutter
+      padding-right: $divided-mgutter
+      +item_align('m')
+
+  @for $i from 1 through 12
+    .col-m-#{$i}
+      width: $col-width*$i
+
+@media screen and (max-width: 767px) and (min-width: 415px) and (orientation: landscape)
+
+  .wrap,
+  .wrap.unwrap-d,
+  .wrap.unwrap-t,
+  .wrap.unwrap-tp,
+  .wrap.unwrap-m
+    max-width: 480px
+    width: 100%
+    &.unwrap-ml
+      max-width: none
+
+  .cols
+    +container_align('ml')
+
+    *[class^="col-"]
+      padding-left: $divided-mgutter
+      padding-right: $divided-mgutter
+      +item_align('ml')
+
+  @for $i from 1 through 12
+    .col-m-#{$i}
+      width: $col-width*$i

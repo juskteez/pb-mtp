@@ -1,0 +1,557 @@
+body
+	-webkit-overflow-scrolling: touch
+
+h1
+	font-weight: 300
+
+h1,.h1
+	font-size: 48px
+	margin-bottom: 0
+
+h2,.h2
+	font-size: 32px
+	margin-bottom: 32px
+
+h3,.h3
+	font-size: 24px
+	margin-bottom: 16px
+
+h4,.h4
+	font-size: 16px
+	margin-bottom: 16px
+
+h5,.h5
+	font-size: 14px
+	margin-bottom: 14px
+
+.fpage
+
+	&_wrap
+		max-width: 720px
+		-webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+	&_hero_title
+		top: 15%
+
+		h1
+			font-size: 32px
+			max-width: 320px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 8px
+
+		h3
+			font-size: 16px
+			letter-spacing: 0.5px
+			transform: translate3d(1px,0,0)
+
+	&_hero_cta
+		top: 72%
+		font-size: 0
+		max-width: 90%
+		left: 5%
+
+		.btn
+			width: calc(50% - 8px)
+			font-size: 14px
+			padding: 0
+			line-height: 48px
+			&.preorder_now span
+				font-size: 11px
+				line-height: 32px
+
+	&_hero_action p,
+	&_header_video
+		display: none
+
+	&_header
+		-webkit-backface-visibility: hidden
+		backface-visibility: hidden
+		background-position: center 68%
+
+	&_headerx:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 50vw
+		//background-image: url("https://axumgear.com/wp-content/uploads/2016/09/ezgif.com-video-to-gif.gif")
+		//background-image: url("images/earbuds.gif")
+		background-size: cover
+		background-position: center
+		top: 65%
+		left: 0
+		-webkit-backface-visibility: hidden
+		backface-visibility: hidden
+
+	&_header_gif
+		//background-image: url("images/earbuds.jpg")
+		background-position: -500vw center
+		background-size: 5100vw 56.25vw
+
+	&_header:after
+		content: ""
+		position: absolute
+		top: 30px
+		left: 0
+		width: 100%
+		height: 32px
+		background-image: url("images/logo.png")
+		background-size: auto 100%
+		background-position: center
+		background-repeat: no-repeat
+
+	&_side
+		height: 320px
+
+	&_info_box
+		max-width: 360px
+		padding: 0 48px
+		padding-right: 15px
+
+		p
+			font-size: 16px
+			line-height: 26px
+
+		h2
+			font-size: 32px
+
+	&_side.right_side:first-child .fpage_info_box
+		padding-right: 56px
+		padding-left: 15px
+
+	&_section.section-features
+		background-position: 111% bottom
+		background-size: auto 30%
+		height: auto
+		height: 480px
+
+	.section-meet
+		.fpage-meet_side
+			height: auto
+			min-height: 60vw
+			float: none
+			&.meet-image
+				width: 100%
+
+			&.meet-info
+				width: 100%
+
+			.meet-info-wrap
+				padding: 30px 20px
+				padding-bottom: 48px
+				position: relative
+				transform: none
+				p
+					font-size: 14px
+					line-height: 24px
+
+	.section-video
+		.vid_gradient_title
+			font-size: 48px
+
+	.section-insta
+		padding: 48px 0
+		padding-bottom: 0
+
+	.section-tribe
+		min-height: 59.9vw
+		.fluid-img
+			width: 200%
+		.tribe-number
+			font-size: 64px
+
+	&_section .fpage_wrap
+		padding: 32px 10px
+
+	.section-logos p
+		line-height: 24px
+		padding: 0 15px
+
+	.logos-list
+		margin-top: 24px
+		li
+			display: inline-block
+			width: 30%
+			height: 48px
+			line-height: 48px
+			font-size: 0
+			&.narrow
+				width: 15%
+		img
+			vertical-align: middle
+			max-width: 90%
+			max-height: 100%
+
+	&_side
+		width: 100%
+		position: relative
+		float: none
+		height: 60vw
+		&.img_side
+			background-color: #111
+
+		&.info_side
+			height: auto
+
+	&_info_box,
+	&_side.left_side .fpage_info_box
+		position: relative
+		top: auto
+		left: auto
+		transform: none
+		width: 100%
+		max-width: none
+		padding: 24px
+		text-align: center
+		padding-bottom: 48px
+
+		p
+			font-size: 14px
+			line-height: 24px
+			color: #999
+
+		h2
+			font-size: 24px
+			font-weight: bold
+
+	.section-features .fpage_wrap
+		padding: 48px 20px
+		position: relative
+		z-index: 1
+
+		h2
+			font-weight: bold
+			font-size: 28px
+
+	&_section.section-video
+		height: 100vw
+
+		.vid_gradient_title
+			font-size: 32px
+
+	.insta-photos
+		position: relative
+		margin-top: 48px
+		li
+			width: calc(100% / 2)
+			height: calc(100vw / 2)
+		li:nth-of-type(2)~li
+			width: calc(100% / 3)
+			height: calc(100vw / 3)
+
+	.section-submit p
+		padding: 0 10px
+		line-height: 30px
+		font-size: 18px
+
+	.section-submit_form
+		margin-top: 24px
+		margin-bottom: 0
+		.fpage_input,
+		.btn
+			width: 90%
+
+	&_footer
+		.footer_socials
+			margin-left: 0
+			float: none
+			font-size: 0
+			width: 100%
+			text-align: center
+			margin-bottom: 24px
+		.footer_social
+			display: inline-block
+			font-size: 0
+			padding: 10px
+			opacity: 0.5
+			&:hover
+				opacity: 0.8
+			img
+				width: 24px
+
+		.footer_credit
+			position: relative
+			left: auto
+			top: auto
+			transform: none
+			text-align: center
+			width: 100%
+
+		.footer_copyright
+			float: none
+			line-height: 44px
+			font-size: 12px
+			text-align: center
+
+	&_ribbon
+		p
+			display: inline-block
+			padding-right: 10px
+			line-height: 64px
+			font-size: 14px
+		.btn.small
+			font-size: 13px
+			padding: 0 14px
+			line-height: 36px
+
+	.insta-hastag
+		font-size: 16px
+		padding: 0 30px
+
+	.section-cons
+		.cons-list
+			margin-bottom: 0
+			margin-top: -48px
+			li
+				width: 100%
+				float: none
+				background-color: #FFF
+				padding: 30px 20px
+				margin-right: 0
+				height: 252px
+				&:not(:first-child)
+					border-top: 10px solid #EFEFEF
+
+	.section-see-in-actions
+		.fpage_img_section img
+			height: 80vw
+			width: auto
+			position: relative
+			left: 50%
+			transform: translate3d(-50%,0,0)
+
+	.section-side_info
+		.fpage_wrap
+			margin-top: -96px
+
+	.section-3d-shows
+		height: 100vw
+		background-image: none
+		&:before
+			background-size: 100vw auto
+
+		.flying-obj
+			&.obj-1
+				width: 180px
+				margin-top: 20px
+			&.obj-2
+				width: 100px
+				margin-left: -160px
+				margin-top: 60px
+			&.obj-3
+				width: 110px
+				margin-left: 140px
+				margin-top: 80px
+			&.obj-4
+				width: 56px
+				margin-top: 140px
+				margin-left: -40px
+
+	.section-features
+		height: auto
+		.fpage_wrap
+			&:before
+				width: 100vw
+				height: 56vw
+				margin-left: 0
+				margin-top: 20px
+
+	.features_wrap
+		margin-top: 48vw
+		.feature_wrap
+			float: none
+			width: 100%
+			&:not(:last-child)
+				margin-bottom: 32px
+
+	.section_tech
+		.fpage_wrap
+			padding: 0
+
+	.section_tech_title_wrap
+		.section_tech_title
+			font-size: 24px
+			max-width: 250px
+			margin-bottom: 16px
+
+		.section_tech_desc
+			font-size: 16px
+
+	.section_tech_compares
+		background-size: 98vw auto
+		margin-bottom: 64px
+		.section_tech_option
+			height: 40vw
+			.tech_spec
+				display: none
+			&:after
+				font-size: 11px
+
+	.section_tech_list
+		margin-bottom: 0
+		padding-bottom: 32px
+		li
+			.tech_image
+				width: 100%
+			.tech_desc
+				position: relative
+				top: auto
+				left: auto
+				right: auto
+				transform: none
+				margin-top: -80px
+				text-align: center
+				margin-left: auto
+				margin-right: auto
+				h3
+					font-size: 20px
+					margin-bottom: 8px
+				p
+					font-size: 14px
+		li:not(:first-child)
+			margin-top: 24px
+			.tech_image
+				float: none
+
+	.section_charger
+		background-image: url("images/mobile_charging.jpg")
+		background-position: center top
+
+		.fpage_wrap
+			padding-top: 32px
+			padding-bottom: 0
+		.charger_title
+			h2
+				font-size: 24px
+				margin-bottom: 6px
+			p
+				font-size: 16px
+				line-height: 24px
+
+		.charger_tech
+			margin-top: 40vw
+			margin-bottom: -5px
+			li
+				display: block
+				width: 100%
+				margin: 0
+				margin-top: 10px
+				height: auto
+				padding: 12px 16px
+				position: relative
+				z-index: 2
+
+	.section_fit
+		.fpage_wrap
+			height: 70vw
+			max-height: 720px
+		.fit_title
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate3d(-50%,-50%,0)
+			margin-top: 0
+			white-space: nowrap
+			p
+				font-size: 16px
+				line-height: 22px
+				display: inline-block
+			h2
+				font-size: 32px
+				line-height: 32px
+				span:nth-of-type(2n+2)
+					margin-left: 120px
+					display: inline-block
+
+	.open_video_actions
+		&:before
+			width: 80px
+			height: 80px
+		&:after
+			border-width: 12px 0 12px 24px
+
+		span
+			margin-top: 12px
+			font-size: 18px
+
+	.section_package
+		.fpage_wrap
+			padding: 48px 24px
+			height: auto
+			padding-bottom: 16px
+			&:after
+				position: relative
+				display: block
+				width: 100vw
+				right: auto
+				transform: none
+				margin-left: -24px
+				top: auto
+				background-position: center
+				background-size: 120vw
+				height: 62vw
+			h2
+				font-size: 24px
+			.package_list
+				font-size: 16px
+				line-height: 20px
+
+	.section-faq
+		.warranty .single_warranty
+			float: none
+			width: 100%
+			h3
+				font-size: 20px
+
+			&+.single_warranty
+				margin-top: 48px
+
+		h2
+			font-size: 24px
+			margin-bottom: 0
+
+		.shipping_stat
+			padding: 32px 0
+
+	.section-insta
+		h2
+			font-size: 24px
+			margin-bottom: 12px
+
+		p
+			font-size: 16px
+			margin-bottom: 56px
+
+	.section_specs
+		.fpage_wrap
+			height: auto
+		.spec_object
+			display: none
+		.specs_obj
+			&:before
+				content: ""
+				position: relative
+				display: block
+				width: 100%
+				height: 178px
+				background-image: url("images/spec_mobile.svg")
+				background-position: center
+				background-repeat: no-repeat
+
+			&:after
+				content: ""
+				position: relative
+				display: block
+				width: 222px
+				height: 290px
+				background-image: url("images/spec_texts.svg")
+				background-position: center
+				background-repeat: no-repeat
+				margin-left: auto
+				margin-right: auto
+				margin-top: 32px
+				margin-bottom: 32px
+
+		.specs_list
+			display: none

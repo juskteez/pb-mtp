@@ -1,0 +1,114 @@
+/* Fields */
+
+input,
+select,
+textarea,
+button,
+select,
+.unfocus
+	&:focus
+		outline: none
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button
+	visibility: hidden
+	display: none !important
+	pointer-events: none
+	position: absolute
+	right: 0
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+.text-center
+	input[type="text"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="password"],
+	input[type="email"],
+	.input,
+	select,
+	textarea
+		text-align: center
+
+.text-right
+	input[type="text"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="password"],
+	input[type="email"],
+	.input,
+	select,
+	textarea
+		text-align: right
+
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+.input,
+select,
+textarea
+	display: inline-block
+	background-color: transparent
+	border-radius: 0
+	line-height: 20px
+	padding: 10px 12px
+	height: 40px
+	vertical-align: middle
+	border: none
+	color: $n1
+	font-size: $fs5
+	appearance: none
+	position: relative
+	box-shadow: inset 0 0 0 1px $n10
+	cursor: text
+	@extend .easing
+
+	&.subtle
+		height: 32px
+		padding: 6px 8px
+		font-size: $fs7
+
+	&:hover
+		box-shadow: inset 0 0 0 1px $n9
+
+	&:focus
+		box-shadow: inset 0 0 0 1px $n2
+
+	&[required]:not(:placeholder-shown):invalid
+		box-shadow: inset 0 0 0 1px $red-color
+
+	&[required]:nth-last-child(3):valid
+		box-shadow: inset 0 0 0 1px $green-color
+
+input[type="search"]
+	background-image: url('../images/f-search.svg')
+	background-repeat: no-repeat
+	padding-left: 40px
+
+.overlay + [class*="-content"]
+	input[type="text"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="password"],
+	input[type="email"],
+	.input,
+	select,
+	textarea
+		box-shadow: inset 0 0 0 1px rgba(white, .6)
+		color: white
+
+		&::-webkit-input-placeholder
+			color: rgba(white, .4)
+
+		&:not(:placeholder-shown)
+			background-color: rgba(black,.12)

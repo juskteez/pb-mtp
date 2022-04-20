@@ -1,0 +1,134 @@
+/* Tablet Portrait */
+
+.nav_contact-wrap
+  position: fixed
+  width: 100%
+  z-index: 10
+  transform: none
+  top: auto
+  bottom: 48px
+
+.copyright
+  display: none
+
+.main_menu
+  white-space: nowrap
+
+.main_navigation
+  &-col
+    width: 30%
+    &:nth-of-type(2n+2)
+      width: 70%
+
+
+.home_slider
+
+  &-content
+    top: auto
+    bottom: 96px
+    transform: translate3d(0,0,0)
+
+  &-name
+    line-height: $fs1
+    font-size: $fs1
+    i
+      &.red,
+      &.green,
+      &.yellow
+        color: #fff
+
+  &-graphics
+    width: 100%
+
+  &-control
+    top: auto
+    bottom: 48px
+    transform: translate3d(0,0,0)
+    &_pag
+      &.active.red,
+      &.red:hover,
+      &.active.green,
+      &.green:hover,
+      &.active.yellow,
+      &.yellow:hover
+        color: #fff
+
+  &-side_graph
+    height: calc(100% - 320px)
+
+
+.page
+  &_title
+    font-size: $fs1
+    line-height: $fs1
+
+  &_desc
+    line-height: 26px
+    font-size: 14px
+
+.partners_list
+  img
+    height: 74px
+    margin: 0 32px
+    margin-bottom: 56px
+    align-self: center
+
+.team_slider
+  &-section .page_title
+    max-width: 480px
+
+  &-bubble
+    width: 128px
+
+  &-single
+    height: 360px
+    .team_slider-image img
+      height: 280px
+
+.about_nav
+  a
+    padding: 48px 0
+    font-size: 18px
+    svg
+      height: 32px
+
+.content > .section:not(:first-child)
+  margin-top: 96px
+
+.service
+  &_page
+    width: 100vw
+    overflow-x: hidden
+
+  &_sidebar
+    display: none
+
+  &_content
+    width: calc(100% + 24px)
+    padding-right: 24px
+
+  &_section
+    justify-content: center
+
+  &_section-content
+    max-width: 630px
+    padding-right: 0
+    padding: 0 20px
+    width: 100vw
+
+.contact_content
+  width: 100%
+  max-width: 640px
+  left: 50%
+  transform: translate3d(-50%, -50%, 0)
+  padding: 0 20px
+
+.contact_info_list
+  display: flex
+  flex-wrap: wrap
+  li
+    width: 100%
+
+  li:nth-of-type(2n+2)
+    width: 100%
+    order: 1

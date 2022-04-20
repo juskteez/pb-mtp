@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="16px" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>play_ico</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="New-AxumGear" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-453.000000, -511.000000)">
+        <g id="Group-32" transform="translate(248.000000, 292.000000)" fill="#FFFFFF">
+            <path d="M217.553125,226.041667 C217.851043,226.291667 218,226.611109 218,227 C218,227.388891 217.851043,227.708333 217.553125,227.958333 L206.259375,234.875 C206.096874,234.958334 205.947917,235 205.8125,235 C205.595832,235 205.406251,234.916667 205.24375,234.75 C205.081249,234.583333 205,234.38889 205,234.166667 L205,219.833333 C205,219.611109 205.081249,219.416667 205.24375,219.25 C205.406251,219.083333 205.595832,219 205.8125,219 C205.975001,219 206.123958,219.041667 206.259375,219.125 L217.553125,226.041667 Z" id="play_ico"></path>
+        </g>
+    </g>
+</svg>

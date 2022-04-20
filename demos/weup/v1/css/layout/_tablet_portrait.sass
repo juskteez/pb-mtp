@@ -1,0 +1,217 @@
+/* Tablet Portrait */
+
+.main_header
+  .menu_wrap
+    position: absolute
+    height: 100vh
+    width: 310px
+    padding: 32px
+    padding-top: 120px
+    right: 0
+    text-align: left
+    background-color: #FFF
+    transform: translate3d(100%,0,0)
+    pointer-events: none
+    li
+      padding: 0 0
+      display: block
+
+    a
+      padding: 0 0
+      color: $text-color
+      &.active
+        color: $main-color
+
+    .menu_closer
+      position: absolute
+      width: 100vw
+      height: 100%
+      background-color: rgba(0,0,0,0.6)
+      right: 100%
+      top: 0
+      opacity: 0
+
+
+  .action_wrap
+    margin-right: 52px
+
+body:not(.overtop) .main_header
+  .action_wrap.action_wrap
+    padding-right: 32px
+    a:not(:last-child)
+      margin-right: 24px
+
+.overtop .main_header
+  .menu_wrap
+    padding: 32px
+    padding-top: 100px
+
+  .hamburger
+    top: 0
+    span,
+    span:before,
+    span:after
+      color: $text-color
+
+.active_menu .main_header
+  .menu_wrap
+    transform: translate3d(0,0,0)
+    pointer-events: all
+
+  .menu_closer
+    opacity: 1
+
+  .logo
+    img
+      opacity: 1
+    &:after
+      opacity: 0
+
+  .action_wrap a:not(.btn)
+    color: $text-color
+
+  .hamburger
+    span:before,
+    span:after
+      color: $text-color
+      top: 50%
+    span:before
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    span:after
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+    span
+      color: transparent
+
+.hamburger
+  position: absolute
+  width: 80px
+  height: 80px
+  right: 0
+  top: 20px
+  span,
+  span:before,
+  span:after
+    content: ""
+    position: absolute
+    width: 24px
+    height: 2px
+    top: 50%
+    left: 40%
+    transform: translate3d(-50%,-50%,0)
+    color: #fff
+    background-color: currentColor
+    transition: 0.3s all ease
+  span:before,
+  span:after
+    left: 50%
+  span:before
+    top: -300%
+  span:after
+    top: 400%
+
+
+.feature
+  padding-bottom: 0
+
+  &_bubble
+    width: 144px
+    height: 144px
+
+    &s
+      height: 460px
+
+    &:nth-of-type(1)
+      width: 128px
+      height: 128px
+      margin-top: #{-128px/2+12px}
+      margin-left: #{-128px/2-284px}
+    &:nth-of-type(2),
+    &:nth-of-type(7)
+      width: 160px
+      height: 160px
+      margin-top: #{-160px/2-132px}
+      margin-left: #{-160px/2-194px}
+    &:nth-of-type(3)
+      margin-top: #{-144px/2+144px}
+      margin-left: #{-144px/2-176px}
+    &:nth-of-type(4)
+      width: 230px
+      height: 230px
+      margin-top: #{-230px/2+0}
+      margin-left: #{-230px/2-32px}
+      .feature_bubble_wrap .feature_bubble_title
+        top: 44%
+    &:nth-of-type(5)
+      margin-top: #{-144px/2-142px}
+      margin-left: #{-144px/2+132px}
+    &:nth-of-type(6)
+      width: 160px
+      height: 160px
+      margin-top: #{-160px/2+144px}
+      margin-left: #{-160px/2+132px}
+    &:nth-of-type(7)
+      margin-top: #{-160px/2-12px}
+      margin-left: #{-160px/2+246px}
+
+    &_title
+      font-size: 12px
+      padding: 0 16px
+      line-height: 16px
+      top: 34%
+
+  .fovals
+    transform: translate3d(-50%,-50%,0) translate3d(0,32px,0) scale(0.75)
+
+.overfeature .feature
+  .fovals
+    transform: translate3d(-50%,-50%,0) translate3d(0,0,0) scale(0.75)
+
+.process
+  padding: 0
+  padding-top: 96px
+
+  .cols *[class^="col"].right_col.col-5
+    width: 50%
+    margin-right: 0
+
+  &_list
+    h3
+      font-size: 14px
+      margin-bottom: 7px
+      white-space: nowrap
+
+  .the_television
+    top: 39%
+    transform: translate3d(-50vw,-46%,0) scale(0.8)
+
+.overprocess .process .the_television
+  transform: translate3d(0,-46%,0) scale(0.8)
+
+.testimonial
+  padding-top: 96px
+
+  &_wrap
+    height: 420px
+
+  &_picture
+    right: -34%
+
+  &_content
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate3d(64px,-50%,0)
+    width: 400px
+    font-family: $font-title
+    font-weight: 500
+    opacity: 0
+
+    p
+      font-size: 18px
+      line-height: 26px
+      margin-bottom: 16px
+
+    p:first-letter
+      font-size: 52px
+      line-height: 52px
+      margin-right: 8px

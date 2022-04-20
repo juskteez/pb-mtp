@@ -1,0 +1,50 @@
+/* Tablet Portrait */
+
+
+.main_slider
+
+  &_image
+    position: absolute
+    right: 50%
+    top: 50%
+    transform: translate3d(50%,-120%,0)
+    img
+      max-width: 360px !important
+      vertical-align: top
+
+  &_info
+    transform: translate3d(-50%,16px,0)
+    left: 50%
+    text-align: center
+    width: 560px
+
+    h2
+      font-size: 32px
+      line-height: 38px
+      margin-bottom: 16px
+
+
+.login
+
+  &_form_wrap
+    float: left
+    width: calc(100% - 340px)
+
+  &_toreg_wrap
+    float: right
+    width: 340px
+    padding: 30px
+    background-color: $main-color
+    background-image: url("../images/prereg_bg.jpg")
+    background-position: center
+    background-size: cover
+    color: #fff
+    .prereg_title
+      line-height: 32px
+      font-size: 24px
+
+.cmc
+
+  &_main_footer
+    p.float_right
+      display: none

@@ -1,0 +1,44 @@
+/* Checkboxes & Radio boxes */
+
+.checkbox
+  position: relative
+  line-height: 22px
+  display: inline-block
+  vertical-align: top
+  cursor: pointer
+
+  input
+    display: none
+    &:checked ~ .checkbox_input:before
+      opacity: 1
+
+  &:hover .checkbox_input
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1)
+
+  &_input
+    position: relative
+    width: 12px
+    height: 12px
+    background-color: #FFF
+    border-radius: 2px
+    display: inline-block
+    float: left
+    margin: 5px 0
+    margin-right: 6px
+    @extend .easing
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      //background-image: url('../images/check.svg')
+      background-position: center
+      background-repeat: no-repeat
+      opacity: 0
+      @extend .easing
+
+  &_label
+    font-size: $fs6
+    line-height: 22px
+    //display: inline-block
+

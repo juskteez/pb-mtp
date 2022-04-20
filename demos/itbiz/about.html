@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
+  <title>ITBIZ</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link href="css/style.css" rel="stylesheet" media="all">
+
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="js/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/jmooth.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+
+</head>
+<body class="first_load">
+
+<div id="body">
+  <div id="main_header" class="main_header">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo" title="ITBIZ">
+        <!-- <img src="images/logo.svg" alt="ITBIZ"/> -->
+        <svg width="116px" height="40px" viewBox="0 0 116 40">
+          <g stroke="none" stroke-width="0" fill-rule="evenodd" fill="#2B2B2B">
+            <path d="M88.2730275,4.03155963 L84.3669725,4.03155963 L84.3669725,0.000366972477 L88.2730275,0.000366972477 L92.3042202,0 L96.2106422,0.000366972477 L96.2106422,4.03155963 L92.3042202,4.03155963 L92.3042202,15.8179817 L88.2730275,15.8179817 L88.2730275,4.03155963 Z M76.4572477,15.8179817 L76.4572477,0 L80.4884404,0 L80.4884404,15.8179817 L76.4572477,15.8179817 Z M93.5177982,39.5445872 L93.5177982,23.7266055 L97.5489908,23.7266055 L97.5489908,39.5445872 L93.5177982,39.5445872 Z M114.35545,23.726789 L114.35545,27.2699083 L106.784073,35.8750459 L114.35545,35.8750459 L114.35545,39.5444037 L101.427009,39.5444037 L101.427009,35.980367 L108.89233,27.3965138 L101.91178,27.3965138 L101.91178,23.726789 L114.35545,23.726789 Z M0,26.5630092 L5.47266055,21.0903486 L21.0917431,21.0892477 L21.0917431,39.5446606 L0,39.5446606 L0,26.5630092 Z M54.3576514,0.000183486239 C59.282422,0.000183486239 63.2747156,3.99247706 63.2747156,8.91724771 C63.2747156,14.1851376 59.0046239,18.4552294 53.7371009,18.4552294 L23.7282936,18.4552294 L23.7282936,0.000183486239 L54.3576514,0.000183486239 Z M54.3576514,21.0905321 C59.282422,21.0905321 63.2747156,25.0828257 63.2747156,30.0075963 C63.2747156,35.2754862 59.0046239,39.545578 53.7371009,39.545578 L23.7282936,39.545578 L23.7282936,21.0905321 L54.3576514,21.0905321 Z M87.3195229,31.5936514 C88.4050275,31.6644771 89.1609908,32.0226422 89.5841101,32.6692477 C89.9088807,33.1896147 90.0707156,34.011633 90.0707156,35.1367706 C90.0707156,36.9503486 89.6270459,38.1668624 88.7378716,38.784844 C88.0314495,39.2912661 86.7470459,39.5444771 84.8839266,39.5444771 L76.4571376,39.5444771 L76.4571376,23.7268624 L84.7995229,23.7268624 C86.5353028,23.7268624 87.7631927,23.9661284 88.4835596,24.4442936 C89.3727339,25.0483303 89.8171376,26.1595229 89.8171376,27.7760367 C89.8171376,28.8868624 89.6615413,29.7033761 89.3518165,30.2226422 C88.9841101,30.8696147 88.305945,31.2703486 87.3195229,31.424844 L87.3195229,31.5936514 Z M85.1973211,35.7481468 C85.4864954,35.5235596 85.6314495,35.1019083 85.6314495,34.4831927 C85.6314495,33.8215413 85.4688807,33.3936514 85.1441101,33.1969541 C84.9037431,33.0560367 84.4450275,32.985945 83.7675963,32.985945 L80.4857615,32.985945 L80.4857615,36.0853945 L83.6831927,36.0853945 C84.4035596,36.0853945 84.9074128,35.9734679 85.1973211,35.7481468 Z M80.4857615,27.185945 L80.4857615,30.0538349 L83.5345688,30.0538349 C84.2824587,30.0538349 84.7764037,29.958789 85.0175046,29.7694312 C85.2571376,29.5793394 85.3771376,29.1683303 85.3771376,28.5353028 C85.3771376,28.0292477 85.305945,27.6846606 85.1653945,27.5019083 C84.9819083,27.2912661 84.6072294,27.185945 84.0435596,27.185945 L80.4857615,27.185945 Z M0,0 L21.0917431,0 L21.0917431,18.4554128 L4.38275229,18.4554128 L0,22.8381651 L0,0 Z M2.63633028,15.8190826 L18.4550459,15.8190826 L18.4550459,2.63669725 L2.63633028,2.63669725 L2.63633028,15.8190826 Z" id="itbiz"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="main_sub-wrap">
+      <ul class="main_sub">
+        <li><a href="mailto:hello@itbiz.asia">hello@itbiz.asia</a></li>
+        <li class="lang_togglers"><a href="#" class="lang_toggler active">en</a> / <a href="#" class="lang_toggler">vn</a></li>
+        <li>
+          <a href="javascript:;" class="main_navigation-toggler" id="main_navigation-toggler">
+            <span>
+              <i></i>
+              <i class="dashi"></i>
+              <i></i>
+              <i class="dashi"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="main_navigation" class="main_navigation">
+    <div class="main_navigation-wrap">
+      <div class="main_navigation-col">
+        <div class="nav_contact-wrap">
+          <h3 class="h3 spaced notablet">To contact us</h3>
+          <ul class="contact-list">
+            <li class="notablet">Email: <a href="mailto:hello@itbiz.asia">hello@itbiz.asia</a></li>
+            <li class="notablet">Phone: <a href="tel:+84936289999">0084 936 289 999</a></li>
+            <li class="notablet">Fax: <a href="tel:+8499889999">0084 998 89999</a></li>
+            <li class="notablet"></li>
+            <li class="notablet">Visit us at 3rd Fl., Golden Palace, Le Van Luong Str, Hanoi, Vietnam</li>
+            <li>
+              <ul class="social-list">
+                <li><a href="" target="_blank" rel="nofollow">Facebook</a></li>
+                <li><a href="" target="_blank" rel="nofollow">YouTube</a></li>
+                <li><a href="" target="_blank" rel="nofollow">Twitter</a></li>
+                <li><a href="" target="_blank" rel="nofollow">LinkedIn</a></li>
+              </ul>
+            </li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main_navigation-col cyan">
+        <div class="section-graphics">
+          <div class="main_navigation-sticks">
+            <div class="nav-stick blue">
+              <svg width="322px" height="88px" viewBox="0 0 322 88">
+                <g stroke="none" fill="none" fill-rule="evenodd">
+                  <rect fill="#2D2C7A" x="0" y="0" width="322" height="88"></rect>
+                </g>
+              </svg>
+            </div>
+            <div class="nav-stick red">
+              <svg width="322px" height="88px" viewBox="0 0 322 88">
+                <g stroke="none" fill="none" fill-rule="evenodd">
+                  <rect fill="#F04E45" x="0" y="0" width="322" height="88"></rect>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="main_navigation-dust">
+            <canvas class="nav_dust" id="nav_dust"></canvas>
+          </div>
+        </div>
+        <ul class="main_menu" id="main_menu">
+          <li><a href="index" data-title="Home" class="current active">Home</a></li>
+          <li><a href="about" data-title="About">About</a></li>
+          <li><a href="services" data-title="Services">Services</a></li>
+          <li><a href="projects" data-title="Projects">Projects</a></li>
+          <li><a href="articles" data-title="Articles">Articles</a></li>
+          <li><a href="contact" data-title="Let’s talk">Let’s talk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright 2018 ® ITBIZ.asia. All rights reserved</p>
+      <p>Designed by <a href="http://k3nnyart.com">k3nnyart.com</a></p>
+    </div>
+  </div>
+  <div id="main_content">
+    <div class="content">
+      <div class="section">
+        <div class="wrap cols">
+          <div class="col-d-6 col-m-12">
+            <h2 class="h1 page_title text_reveal">
+              <span class="o1">Let’s talk</span>
+              <span class="o2">About us</span>
+            </h2>
+          </div>
+          <div class="col-d-6 col-m-12">
+            <div class="parag_reveal">
+              <p class="page_desc">To live BOLD is in our blood. We work hard, we play hard. And we Play all the time with crazy ideas, then make them happen. You are always welcome to come to visit us and make sure that we belong together.</p>
+              <p class="page_desc"><big><b>Are you willing to dive right in?</b></big></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="wrap cols">
+          <div class="col-d-12 text-center">
+            <h2 class="h1 page_title text-center text_reveal"><span class="o4">Our Partners</span></h2>
+            <div class="partners_list">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+              <img src="images/partners/getresponse.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section team_slider-section">
+        <h2 class="h1 page_title text_reveal">
+          <span class="o5">Meet our</span>
+          <span class="o6">awesome team</span>
+        </h2>
+        <div class="team_slider-wrap">
+          <div class="team_slider">
+            <div class="team_slider-content" id="team_slider">
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 1</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 2</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 3</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 4</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 5</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 6</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 7</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+              <div class="team_slider-single">
+                <img src="images/team-bubble-1.svg" class="team_slider-bubble">
+                <div class="team_slider-image"><img src="images/sample-man.png" alt=""></div>
+                <div class="team_slider-context">
+                  <h4>Mr. Tuan Thanh 8</h4>
+                  <p>Ceo, Founder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team_slider-controllers" id="team_slider-controllers">
+            <div class="team_slider-pags" id="team_slider-pags"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section about_nav-section">
+        <div class="about_nav">
+          <a href="" class="green">
+            <span class="about_nav-icon">
+          <svg width="55px" height="64px" viewBox="0 0 55 64">
+            <g id="Mainsite-Update" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="v2-About" transform="translate(-333.000000, -2153.000000)" fill="#2B2B2B" fill-rule="nonzero">
+                <g id="Group-7" transform="translate(0.000000, 2056.000000)">
+                   <g id="Credentials" transform="translate(333.000000, 97.000000)">
+                    <path d="M54.4548571,54.2381887 C54.4548571,54.2381887 47.3698329,42.061283 46.0989757,39.8773477 C47.5449272,39.436248 49.0852399,39.0467278 49.7252399,37.9416496 C50.7918491,36.1003127 48.8932399,33.0797197 49.3917844,31.1060701 C49.9053369,29.0748032 52.9369704,27.3171321 52.9369704,25.2523989 C52.9369704,23.2407978 49.8026954,20.8907385 49.2887978,18.8713747 C48.7868032,16.8980701 50.6797197,13.8741995 49.6096604,12.0351051 C48.5396011,10.1958383 44.9754394,10.3469542 43.5082695,8.93515903 C41.9986631,7.48230728 42.0033208,3.92763342 40.1825121,2.95400539 C38.3542857,1.97675472 35.3830296,3.95178437 33.3531429,3.48394609 C31.346372,3.02145553 29.5535094,0 27.4573801,0 C25.3301995,0 21.9468248,3.42736388 21.4161941,3.5507062 C19.3873423,4.02233962 16.4122911,2.05214016 14.5859623,3.033531 C12.7668787,4.01043666 12.7780916,7.56545553 11.2712453,9.02072237 C9.80649057,10.4351051 6.24215633,10.2905445 5.17537466,12.1318814 C4.1087655,13.9728733 6.00737466,16.9927763 5.5090027,18.9674609 C5.00925067,20.9471482 1.87204313,22.9530566 1.87204313,25.242566 C1.87204313,27.3074717 4.91126685,29.0596226 5.42792453,31.0898544 C5.93009164,33.063159 4.0371752,36.0866846 5.1072345,37.926469 C5.68978976,38.9278706 7.01153639,39.3389542 8.33155795,39.7341671 C8.48560647,39.7802264 8.77697035,39.9525606 8.57962264,40.2401294 C7.67654987,41.7989003 0.407978437,54.3434178 0.407978437,54.3434178 C-0.170264151,55.3411968 0.299299191,56.1964852 1.45112668,56.2449596 L7.08916442,56.4800863 C8.24099191,56.5285606 9.68590836,57.3655633 10.3007224,58.3407439 L13.3092399,63.1146954 C13.9240539,64.089876 14.8995795,64.0715903 15.4776496,63.0739838 C15.4776496,63.0739838 23.8954609,48.5409811 23.8989111,48.536841 C24.0677951,48.3394933 24.2375418,48.3800323 24.3187925,48.449035 C25.2398059,49.2332507 26.5237736,50.0155687 27.5953854,50.0155687 C28.6462965,50.0155687 29.619407,49.2791375 30.5819946,48.4578329 C30.6603127,48.3910728 30.8509326,48.2542749 30.9903181,48.538221 C30.9925606,48.5427062 39.4010566,62.9961833 39.4010566,62.9961833 C39.9806792,63.9925822 40.9563774,64.0094879 41.5692938,63.0330997 L44.5693585,58.2534555 C45.1824474,57.2775849 46.6258113,56.4373046 47.7776388,56.3871051 L53.415159,56.1414555 C54.566469,56.0909111 55.0344798,55.2344151 54.4548571,54.2381887 Z M36.7749865,41.1654555 C30.541283,44.7920647 23.0588032,44.403407 17.343655,40.7985337 C8.96931536,35.4344367 6.21386523,24.3381132 11.2481294,15.6491213 C16.3398383,6.85990296 27.532593,3.75857682 36.4009919,8.58859299 C36.4475687,8.61395148 36.493628,8.64017251 36.5398598,8.66604852 C36.6055849,8.70244744 36.6711375,8.73936388 36.7365175,8.77662534 C39.4724744,10.354027 41.8449596,12.6433639 43.5438059,15.5633854 C48.7359137,24.4881941 45.6996226,35.9733477 36.7749865,41.1654555 Z M35.3493908,11.4032129 C35.3235148,11.3882049 35.2972938,11.3742318 35.2714178,11.3593962 C30.5340377,8.61757412 24.4959569,8.41712129 19.4354717,11.3612938 C11.9259084,15.7301995 9.37056604,25.3938544 13.7394717,32.9032453 C15.0726038,35.1948248 16.8994501,37.0240863 19.0071375,38.3368625 C19.186372,38.450372 19.3676765,38.5619838 19.5529488,38.669283 C27.0706199,43.0245606 36.7290997,40.4517951 41.0842049,32.934469 C45.4391375,25.4167978 42.867062,15.7584906 35.3493908,11.4032129 Z M37.2300593,23.6927655 L34.597779,26.2584582 C33.7825121,27.0530243 33.2729272,28.6214555 33.4656173,29.7436119 L34.0869865,33.3664259 C34.279504,34.4885822 33.612593,34.9731536 32.6048086,34.4433854 L29.351159,32.7328086 C28.3433747,32.2030404 26.6943827,32.2030404 25.6865984,32.7328086 L22.4331213,34.4433854 C21.4253369,34.9731536 20.7582534,34.4885822 20.9507709,33.3664259 L21.5721402,29.7436119 C21.7646577,28.6214555 21.2550728,27.0530243 20.4398059,26.2584582 L17.8076981,23.6927655 C16.9922588,22.8981995 17.2472237,22.1139838 18.3738652,21.9501024 L22.0113423,21.4215418 C23.1379838,21.2578329 24.4721509,20.2885175 24.9760431,19.2676226 L26.6027817,15.9715364 C27.1066739,14.9506415 27.9312561,14.9506415 28.4349757,15.9715364 L30.0618868,19.2676226 C30.565779,20.2885175 31.8997736,21.2578329 33.0265876,21.4215418 L36.6640647,21.9501024 C37.7905337,22.1139838 38.0453261,22.8981995 37.2300593,23.6927655 Z" id="credentials"></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg></span>
+            <span class="about_nav-label">Download credentials</span>
+          </a>
+          <a href="" class="red">
+            <span class="about_nav-icon">
+            <svg width="64px" height="64px" viewBox="0 0 64 64">
+              <g id="Mainsite-Update" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="v2-About" transform="translate(-1048.000000, -2153.000000)" fill="#2B2B2B" fill-rule="nonzero">
+                  <g id="Group-6" transform="translate(720.000000, 2056.000000)">
+                    <g id="Contact" transform="translate(328.000000, 97.000000)">
+                      <path d="M39.278875,43.224 L55.178875,59.086375 C47.510625,65.8345 35.300875,65.758125 27.6165,58.07375 L5.941625,36.398875 C-1.596,28.861375 -1.971125,16.78625 4.929,8.83625 L20.7915,24.73625 C19.479125,26.38625 19.5915,28.823875 21.129125,30.36125 L33.654,42.886375 C35.191625,44.42375 37.591375,44.536375 39.278875,43.224 Z M24.729,12.774 C25.816625,13.823875 26.379,15.248875 26.379,16.749 C26.379,18.248875 25.816625,19.636375 24.729,20.724 L23.416625,22.0365 L7.516625,6.1365 L8.829,4.7865 C10.9665,2.6865 14.679,2.6865 16.779,4.7865 L24.729,12.774 Z M59.229125,47.23625 C60.27925,48.286375 60.841625,49.711375 60.841625,51.2115 C60.841625,52.711375 60.27925,54.136375 59.229125,55.1865 L57.879125,56.498875 L41.979125,40.598875 L43.2915,39.28625 C45.429,37.149 49.1415,37.149 51.2415,39.28625 L59.229125,47.23625 Z M32.11625,1.59872116e-13 C49.692625,1.59872116e-13 63.99125,14.29875 63.99125,31.875 C63.99125,34.35675 60.26625,34.346625 60.26625,31.875 C60.26625,16.366 47.62525,3.725 32.11625,3.725 C29.6345,3.725 29.644625,1.59872116e-13 32.11625,1.59872116e-13 Z M32.11625,7.5 C45.55625,7.5 56.49125,18.435 56.49125,31.875 C56.49125,34.35675 52.76625,34.346625 52.76625,31.875 C52.76625,20.502375 43.488875,11.225 32.11625,11.225 C29.6345,11.225 29.644625,7.5 32.11625,7.5 Z M32.11625,15 C41.421625,15 48.99125,22.569625 48.99125,31.875 C48.99125,34.35675 45.26625,34.346625 45.26625,31.875 C45.26625,24.638625 39.352625,18.725 32.11625,18.725 C29.6345,18.725 29.644625,15 32.11625,15 Z M32.11625,22.5 C37.285375,22.5 41.49125,26.705875 41.49125,31.875 C41.49125,34.35675 37.74125,34.346625 37.74125,31.875 C37.74125,28.77325 35.218,26.25 32.11625,26.25 C29.6345,26.25 29.644625,22.5 32.11625,22.5 Z" id="phone"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg></span>
+            <span class="about_nav-label">Touch with us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var $slickTarget = $('#team_slider'),
+          slickChild = $slickTarget.children(),
+          slickShow = 4,
+          slickScroll = 4,
+          slickPages = slickChild.length / slickScroll,
+          slickPag = $('#team_slider-pags'),
+          slickResetScroll = slickScroll,
+          slickResetPages = slickPages;
+
+        function resetSegments() {
+
+          (window.innerWidth < 600 ) ? slickResetScroll = 2 : slickResetScroll = slickScroll;
+          slickResetPages = slickChild.length / slickResetScroll;
+          slickPag.text('1 / '+slickResetPages);
+        } resetSegments();
+
+        $(window).resize(function() {
+
+          resetSegments();
+
+        });
+
+
+        $slickTarget.slick({
+          //setting-name: setting-value
+          infinite: false,
+          slidesToShow: slickShow,
+          slidesToScroll: slickScroll,
+          appendArrows: $('#team_slider-controllers'),
+          nextArrow: '<a href="javascript:;" class="team_slider-control next"></a>',
+          prevArrow: '<a href="javascript:;" class="team_slider-control prev"></a>',
+          responsive: [{
+            breakpoint: 600,
+            settings: {
+              slidesToShow: slickResetScroll,
+              slidesToScroll: slickResetScroll,
+            }
+
+          }]
+        });
+
+        $slickTarget.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+          nextSlide = nextSlide+1;
+          var the_pag = Math.ceil(nextSlide / slickResetScroll) + ' / ' + slickResetPages;
+          slickPag.text(the_pag);
+        });
+      });
+    </script>
+  </div>
+  <div id="main_footer" class="main_footer">
+    <ul class="footer_social-list">
+      <li><a href="" target="_blank" rel="nofollow">Facebook</a></li>
+      <li><a href="" target="_blank" rel="nofollow">YouTube</a></li>
+      <li><a href="" target="_blank" rel="nofollow">Twitter</a></li>
+      <li><a href="" target="_blank" rel="nofollow">LinkedIn</a></li>
+    </ul>
+  </div>
+</div>
+<div class="page_loader" id="page_loader"></div>
+<div class="manipulated_lines">
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+</div>
+
+<script src="js/dusts.js"></script>
+<script src="js/scripts.js"></script>
+  
+</body>
+</html>

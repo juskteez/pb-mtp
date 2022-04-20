@@ -1,0 +1,160 @@
+/* Tablet Portrait */
+
+.main_header
+  top: 20px
+  left: 20px
+  width: calc(100% - 40px)
+
+  &-menu
+    right: 0
+    top: 10px
+
+  &-contact
+    left: 92px
+    padding: 21px 0
+
+  .logo img
+    width: 64px
+    height: 64px
+
+  &-social
+    top: 50vh
+    left: 20px
+
+  &-guide
+    left: 31px
+
+.copyright
+  left: calc(100% - 20px)
+  top: calc(100vh - 10px)
+
+.main_content
+
+  &-pager
+    right: 20px
+
+.section
+  &:last-child
+    padding-bottom: 64px
+  &#section-welcome .center-tp
+    text-align: center
+    p.section-desc
+      margin-left: auto
+      margin-right: auto
+
+  &#section-pricing
+
+    .program-title,
+    .program-desc,
+    .section-title
+      text-align: center
+
+    .program-title img
+      display: block
+      margin-right: 0
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 12px
+
+  &#section-quality
+    .program-title
+      text-align: center
+
+    .col-d-6:first-child
+      order: 1
+
+  &#section-contact
+    .contact-info
+      order: 1
+    .contact-form
+      margin-bottom: 24px
+      border-bottom: 1px solid rgba(255,255,255,0.2)
+    .section-title,
+    .section-desc
+      text-align: left
+      margin-left: 0
+
+    .program-title
+      margin-bottom: 6px
+
+    .program-desc
+      margin-bottom: 12px
+
+    .contact-info
+      display: flex
+      flex-wrap: wrap
+      .contact
+        order: 1
+        width: 100%
+        margin-bottom: 24px
+      .contact:first-child,
+      .contact:last-child
+        order: 0
+        width: 50%
+
+      .subscribe-form
+        max-width: 100%
+        .input_wrap
+          margin-bottom: 0
+
+  &-title,
+  &-desc
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+
+.partners
+  max-width: 480px
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  img:nth-of-type(4n+4),
+  img:last-child
+    margin-right: 0
+
+  br
+    display: none
+
+.player_wrapper
+  position: relative
+  transform: scale(0.85)
+
+.player
+  .song
+    transform: translate3d(0,-90px,0)
+  .soundControl
+    transform: translate3d(-50%,48px,0)
+  .time
+    transform: translate3d(0,90px,0)
+
+.soundtrack
+  &:not(:last-child)
+    margin-right: 12px
+
+  &s
+    justify-content: center
+    margin-bottom: 48px
+  
+  &-cover img
+    width: 96px
+    height: 120px
+
+  &-cover
+    width: 112px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 12px
+
+.album
+  margin: 0 6px
+
+.program
+
+  &.contact:not(:last-child)
+    margin-bottom: 24px
+
+  &.contact
+    .program-desc,
+    ul
+      font-size: 12px
+      line-height: 20px

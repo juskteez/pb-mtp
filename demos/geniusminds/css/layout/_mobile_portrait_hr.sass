@@ -1,0 +1,503 @@
+/* Mobile Portrait High Resolution */
+
+body
+  overflow: auto
+  position: relative
+  max-width: 100vw
+
+#body
+  overflow-x: unset
+
+.main-content,
+.page-content,
+body
+  overflow-x: hidden
+
+.topbar
+  .topbar-socials
+    display: none
+  &-toggle
+    width: auto
+  .topbar-sound
+    flex: 1
+    text-align: right
+    padding-right: 20px
+
+.about-bottom-section
+  margin: 0 -20px
+.copyright
+  white-space: nowrap
+.raiser-text:not(.raised)
+  opacity: 1 !important
+
+.main-content
+  padding-left: 20px
+  padding-right: 20px
+
+.main-content.sections-content
+  padding-top: 100px
+  &:before
+    content: ""
+    position: fixed
+    width: 100%
+    height: 100px
+    background-image: linear-gradient(0deg, rgba(249,249,249,0.00) 0%, #F9F9F9 32%, #F9F9F9 100%)
+    top: 0
+    left: 0
+    z-index: 1
+
+.section-content--list li:not(:first-child)
+  margin-left: 0
+
+  &:before
+    font-size: 12px
+
+.about-bottom-section.terms-cta
+  margin: 0 -20px
+  padding-bottom: 100px
+  margin-bottom: 60px
+  position: relative
+  z-index: 100
+
+  &:before
+    display: none
+
+  &:after
+    content: "© 2019 Geniusminds, Inc."
+    top: 100%
+    left: 0
+    padding: 20px
+    line-height: 20px
+    text-align: center
+    color: #878787
+    position: absolute
+    width: 100%
+    font-size: 12px
+
+.chatbot_trigger
+  display: none
+
+.botbar
+  text-align: center
+  opacity: 0
+
+  p
+    line-height: 20px
+    color: #878787
+
+.menu-side
+  padding: 80px
+  padding-top: 112px
+
+.menu
+  .main_menu
+    margin-top: 0
+
+    a
+      font-size: 32px
+      line-height: 46px
+
+    a:nth-of-type(1):hover ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-256px,0) !important
+
+    a:nth-of-type(2):hover ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-192px,0) !important
+
+    a:nth-of-type(3):hover ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-132px,0) !important
+
+    a:nth-of-type(4):hover ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-70px,0) !important
+
+
+    a:nth-of-type(5):hover ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-8px,0) !important
+
+    a:nth-of-type(1).active ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-256px,0)
+
+    a:nth-of-type(2).active ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-192px,0)
+
+    a:nth-of-type(3).active ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-132px,0)
+
+    a:nth-of-type(4).active ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-70px,0)
+
+    a:nth-of-type(5).active ~ span:last-child
+      transform: translate(-50%,0) scale(1) translate3d(0,-8px,0)
+
+    span:last-child
+      transform: translate(-50%,0) scale(1)
+      width: 48px
+      height: 48px
+
+  .quick_contact
+    margin-top: 16px
+
+.menu-ilinks
+  bottom: 70px
+  margin-left: -10px
+
+.menu-on
+  .brand svg circle:first-child
+    fill: $main-color
+
+.progress_box-wrapper
+  visibility: hidden
+  pointer-events: none
+
+.content
+  position: relative
+  width: 100vw
+  height: auto
+  transform: unset
+  display: block
+
+.bgs
+  display: none
+
+.screen.cols
+  position: relative
+  height: auto
+  min-height: 0
+  top: auto
+  left: auto
+  pointer-events: all
+  transform: unset !important
+  padding: 40px 16px
+  text-align: center
+  //overflow: visible
+
+  &#screen-1
+    padding-top: 110px
+    background-color: $main-color
+    text-align: left
+
+    .col-3:first-child
+      transform: unset
+
+    .screen-graphics
+      position: relative
+      width: calc(100vw - 32px)
+      left: 0
+      top: 0
+      height: 90vw
+      transform: translate3d(0,0,0) scale(0.5) translate3d(8%,0,0)
+      pointer-events: none
+
+  &#screen-2,
+  &#screen-4
+    background-color: white
+
+  &#screen-4:after
+    content: "© 2019 Geniusminds, Inc."
+    font-size: 12px
+    text-align: center
+    color: #878787
+    width: 100%
+    margin-top: 32px
+
+
+.mini_screens[mini-pos="1"],
+.mini_screens[mini-pos="2"]
+  height: 426px
+.mini_screens[mini-pos="3"]
+  height: 508px
+
+.mini_screens[mini-pos="1"] .mini_screen#mscreen-1,
+.mini_screens[mini-pos="2"] .mini_screen#mscreen-2,
+.mini_screens[mini-pos="3"] .mini_screen#mscreen-3
+  transform: translate3d(0,0,0)
+  opacity: 1
+
+  & ~ .mini_screen
+    transform: translate3d(50%,0,0)
+
+.inner_screen-pag
+  position: unset
+  height: 8px
+  flex-direction: row
+  padding-right: 0
+  margin-top: 24px
+
+  a
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    padding: 0
+    font-size: 0
+    background-color: #d8d8d8
+    margin: 0 3px
+    &.active
+      background-color: $main-color
+
+.mini_screen
+  top: 0
+  left: 0
+  transform: translate3d(-50%,0,0)
+  padding-left: 0
+  transition: 0.3s all ease
+
+  &s-pag-wrap
+    order: 2
+    width: 100%
+
+  &,
+  &.active
+    opacity: 0
+
+  &s
+    transition: 0.3s all ease
+
+  &.active~.mini_screen .mini_screen-graphics
+    transform: translate3d(0,0,0)
+
+  &-content
+    opacity: 1
+
+  &-graphics
+    position: relative
+    transform: none
+    top: auto
+    left: auto
+    right: auto
+    bottom: auto
+    background-color: transparent //$main-color
+    width: 100%
+    height: calc((100vw - 32px) * .766081871)
+    margin-bottom: 16px
+    img
+      max-width: 94vw
+      //max-height: calc((100vw - 32px) * .766081871)
+
+  &#mscreen-1 .mini_screen-graphics img
+    transform: translate3d(-50%,-50%,0) translate3d(-2%,8%,0)
+
+  &#mscreen-2 .mini_screen-graphics img
+    max-width: 96vw
+    transform: translate3d(-50%,-50%,0) translate3d(4vw,-2vw,0)
+
+  &#mscreen-3 .mini_screen-graphics img
+    max-height: calc((100vw - 32px) * .766081871 - 48px)
+    transform: translate3d(-50%,-50%,0)
+
+
+.flow_line
+  visibility: hidden
+  pointer-events: none
+  opacity: 0
+
+.flow_screen
+  padding: 0
+  text-align: left
+
+  &s
+    padding-bottom: 0
+    pointer-events: none
+    padding-left: 26px
+
+  &:nth-of-type(2),
+  &:nth-of-type(4)
+    .section-col:first-child
+      order: 1
+
+  &:not(:first-child)
+    padding-bottom: 80px
+
+    &:last-child
+      padding-bottom: 40px
+
+  &-graphic
+    width: 200px
+    height: 200px
+
+    &[class*="fsg-"]
+      margin: 0 auto
+      margin-bottom: 24px
+      margin-left: 0
+
+      img
+        width: 270px
+        height: auto
+
+    & ~ .text-center
+      text-align: left
+
+    &.fsg-4:before
+      width: 200px
+      height: 200px
+
+    &.fsg-4 img
+      width: 200px
+
+.flow_screen.active:not(:nth-of-type(4)) .flow_screen-graphic.fsg-1
+  background-color: white
+
+.section-cols
+  flex-wrap: wrap
+  .section-col
+    flex-basis: 100%
+
+.section-list
+  margin-top: 16px
+  &-icon
+    width: 22px
+    height: 22px
+    line-height: 22px
+    display: inline-block
+    &:before
+      font-size: 12px
+      font-weight: normal
+
+  li
+    display: block
+
+  p
+    display: inline
+    width: auto
+    padding-left: 6px
+
+
+.ai-contents
+  opacity: 1
+  order: 1
+
+#ai-mobile
+  &[ai-pos="1"] .ai-contents,
+  &[ai-pos="2"] .ai-contents
+    height: 200px
+
+  &[ai-pos="3"] .ai-contents
+    height: 300px
+
+  .ai-content,
+  .ai-content.active
+    opacity: 0
+    pointer-events: none
+    transition: 0.3s all ease
+    transition-delay: 0s
+    transform: translate3d(-50%,0,0)
+
+  &[ai-pos="1"] .ai-content#ai-content-1,
+  &[ai-pos="2"] .ai-content#ai-content-2,
+  &[ai-pos="3"] .ai-content#ai-content-3
+    opacity: 1
+    pointer-events: all
+    transform: translate3d(0,0,0)
+
+    & ~ .ai-content
+      transform: translate3d(50%,0,0)
+
+  &[ai-pos="1"] .section-col .ai-handles .ai-handle.hdl-1,
+  &[ai-pos="2"] .section-col .ai-handles .ai-handle.hdl-2,
+  &[ai-pos="3"] .section-col .ai-handles .ai-handle.hdl-3
+    .ai-circle
+      transform: translate3d(-50%,0,0) translate3d(0,0,0) scale(1)
+    & ~ .ai-handle .ai-circle
+      transform: translate3d(-50%,0,0) translate3d(52%,0,0) scale(0)
+
+
+.ai-content
+  width: 100%
+
+  .ai-parag.section-paragraph
+    max-width: 100%
+    margin-bottom: 28px
+
+.section-col .ai-handles
+  transform: translate3d(0,0,0)
+  height: 200px
+  margin-bottom: 26px
+
+  .ai-handle
+    transform: unset
+    top: 0
+    pointer-events: none
+
+    &[class*="hdl-"] .ai-circle
+      left: 50%
+      transform: translate3d(-50%,0,0) translate3d(-52%,0,0) scale(0)
+      animation: none
+      width: 200px
+      height: 200px
+      transition: 0.3s all ease
+
+      span
+        transform: unset
+
+      &.ai-circle-3 span
+        background-color: #1d2a38
+
+.ai-pag
+  text-align: center
+  width: 100%
+  font-size: 0
+  order: 2
+  margin-top: 24px
+  a
+    display: inline-block
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background-color: #d8d8d8
+    transition: 0.3s all ease
+    margin: 0 3px
+
+    &.active
+      background-color: $main-color
+
+.popup-closer
+  right: 16px
+  margin-bottom: 24px
+
+
+
+.flowscreen-progress_bar
+  position: absolute
+  top: 264px
+  left: 20px
+  width: 4px
+  height: calc(100% - 688px)
+  border-radius: 2.5px
+  background-color: white
+  overflow: hidden
+  z-index: -1
+
+  span
+    position: relative
+    display: block
+    height: 100%
+    background-color: $main-color
+    border-radius: 2.5px
+    will-change: height, transform
+    transform-origin: center top
+    transition: 0.05s all ease
+
+  & ~ .col-4 .flow_screen-graphic.fsg-1:after,
+  &.active-1 ~ .col-4 .flow_screen-graphic.fsg-2:after,
+  &.active-2 ~ .col-4 .flow_screen-graphic.fsg-3:after,
+  &.active-3 ~ .col-4 .flow_screen-graphic.fsg-4:after,
+  &.active-4 ~ .col-4 .flow_screen-graphic.fsg-5:after,
+  &.active-5 ~ .col-4 .flow_screen-graphic.fsg-6:after,
+  & ~ .col-4 .flow_screen .section-col .flow_screen-graphic.fsg-1,
+  &.active-1 ~ .col-4 .flow_screen .section-col .flow_screen-graphic.fsg-2,
+  &.active-2 ~ .col-4 .flow_screen .section-col .flow_screen-graphic.fsg-3,
+  &.active-3 ~ .col-4 .flow_screen .section-col .flow_screen-graphic.fsg-4:before,
+  &.active-4 ~ .col-4 .flow_screen .section-col .flow_screen-graphic.fsg-5,
+  &.active-5 ~ .col-4 .flow_screen .section-col .flow_screen-graphic.fsg-6
+    background-color: $main-color
+
+.flow_screen-graphic
+  &:after
+    content: ""
+    position: absolute
+    width: 16px
+    height: 16px
+    border-radius: 50%
+    background-color: white
+    right: calc(100% + 12px)
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    transition: 0.3s all ease

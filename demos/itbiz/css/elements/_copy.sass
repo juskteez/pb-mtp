@@ -1,0 +1,53 @@
+/* Buttons */
+
+@font-face
+    font-family: 'SFUE'
+    src: url('../css/fonts/SFUEurostile.woff2') format('woff2'), url('../css/fonts/SFUEurostile.woff') format('woff')
+    font-weight: 400
+    font-style: normal
+
+@font-face
+    font-family: 'SFUE'
+    src: url('../css/fonts/SFUEurostileBold.woff2') format('woff2'), url('../css/fonts/SFUEurostileBold.woff') format('woff')
+    font-weight: 700
+    font-style: normal
+
+@font-face
+    font-family: 'SFUE'
+    src: url('../css/fonts/SFUEurostileDemi.woff2') format('woff2'), url('../css/fonts/SFUEurostileDemi.woff') format('woff')
+    font-weight: 500
+    font-style: normal
+
+
+html,
+body,
+input,
+button,
+select,
+textarea
+	+typo($font-stack,$font-base,normal,'',1.625,$text-color,'')
+
+.lighter
+	font-weight: 400
+
+.bolder,
+.bold
+	font-weight: bold
+
+.uppercase
+	text-transform: uppercase
+
+.lowercase
+	text-transform: lowercase
+
+a
+	@extend .easing
+	color: $text-color
+	&:hover
+		color: $red-color
+
+p
+	margin-bottom: 1.2em
+
+.text-lighter-color
+	color: $text-lighter-color

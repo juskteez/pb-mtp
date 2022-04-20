@@ -1,0 +1,1090 @@
+/* Mobile Portrait High Resolution */
+
+
+.main_header,
+.overtop .main_header
+  padding: 8px 12px
+
+  .logo_wrap
+    img
+      height: 40px
+    .logo:after
+      height: 40px
+
+.active_menu,
+.active_menu.overtop
+  .main_menu
+    transform: translate3d(0,0,0)
+
+  .menu_closer,
+  .share_box
+    opacity: 1
+    pointer-events: all
+
+.share_box
+  opacity: 0
+  pointer-events: none
+  transition: 0.3s all ease
+
+.main_menu,
+.overtop .main_menu
+  position: fixed
+  top: 0
+  right: 0
+  width: 50vw
+  height: 120vh
+  background-color: #fff
+  padding-top: 64px
+  z-index: 100
+  transition: 0.3s all ease
+  will-change: transform, opacity
+  transform: translate3d(100%,0,0)
+
+  &>li:not(.allow_parent)>a:not(:last-child)
+    pointer-events: none
+
+  li
+    display: block
+    margin-left: 0
+    a
+      color: $text-color
+      display: block
+      padding: 0 16px
+      &:before
+        display: none
+      &.active
+        color: $main-dark-color
+        box-shadow: inset 3px 0 $main-color
+
+  &>li:hover
+    background-color: rgba(0,0,0,0.06)
+
+  &>li ul,
+  &>li:hover ul
+      background-color: $main-color
+      white-space: nowrap
+      right: 100%
+      left: auto
+      min-width: 0
+      top: 50%
+      margin-top: 0
+      transform: translate3d(32px,-50%,0)
+      li
+        padding: 0
+      a
+        color: #fff
+        line-height: 34px
+        padding-top: 0
+        padding-bottom: 0
+
+  &>li:hover ul
+    transform: translate3d(16px,-50%,0)
+
+.storyline_graphics:after
+  display: none
+
+.menu_closer
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 120vh
+  background-color: rgba(0,0,0,0.8)
+  z-index: 90
+  transition: 0.3s all ease
+  will-change: transform, opacity
+  opacity: 0
+  pointer-events: none
+
+.overtop .menu_toggler
+  &:not(.active) span,
+  &:not(.active) span:before,
+  &:not(.active) span:after
+    background-color: #fff
+
+.menu_toggler
+  position: absolute
+  width: 56px
+  height: 56px
+  top: 0
+  right: 0
+  z-index: 110
+
+  span,
+  span:before,
+  span:after
+    content: ""
+    position: absolute
+    width: 16px
+    height: 2px
+    background-color: #37302B
+    top: 50%
+    left: 50%
+    transition: 0.3s all ease
+    will-change: transform, background-color
+    transform: translate3d(-50%,-50%,0) rotate(0deg)
+  span:before
+    transform: translate3d(-50%,-50%,0) translate3d(0,-300%,0) rotate(0deg)
+  span:after
+    transform: translate3d(-50%,-50%,0) translate3d(0,300%,0) rotate(0deg)
+
+  &.active
+    span
+      background-color: transparent
+    span:before
+      transform: translate3d(-50%,-50%,0) translate3d(0,0,0) rotate(45deg)
+    span:after
+      transform: translate3d(-50%,-50%,0) translate3d(0,0,0) rotate(-45deg)
+
+.share_box
+  top: auto
+  bottom: 32px
+
+.home
+  .main
+    display: flex
+    flex-wrap: wrap
+
+  .home_counting
+    order: 1
+  .home_overall
+    order: 2
+
+.overall_list
+  border-bottom: none
+  margin-bottom: 0
+  padding-bottom: 0
+
+.counting
+  &_quote
+    font-size: 28px
+    padding: 16px 0
+    margin-top: 48px
+
+  &_list
+    &:before
+      width: 26px
+      height: 100%
+      background-image: url('../images/counting-m.svg')
+      margin-top: 40px
+
+    li,
+    li:nth-of-type(4) ~ li
+      width: 50%
+
+  &_number
+    font-size: 48px
+    margin-bottom: 0
+
+  &_label
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 0
+
+.home_uniquepoint
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 34px
+    background-image: url('../images/keypoint-m.svg')
+    background-position: center
+    background-repeat: no-repeat
+    top: 100%
+    left: 0
+    margin-top: 72px
+
+  &:last-child
+    margin-bottom: 120px
+  &s
+    position: relative
+    border-top: none
+    padding-top: 16px
+
+  .home_keypoint_title:not(.small)
+    font-size: 32px
+    line-height: 38px
+  .home_keypoint_title.small
+    font-size: 24px
+
+  .home_uniquepoint_details
+    text-align: center
+    margin-bottom: 56px
+
+  &#dtdc,
+  &#ndndt,
+  &#dcsp
+    .home_uniquepoint_thumb_wrap
+      order: 1
+      &:before
+        width: calc(100% + 24px)
+        height: calc(100% + 24px)
+        top: -12px
+        left: -12px
+        right: auto
+
+      img
+        width: 100%
+        height: auto
+
+  &#vtdd
+    .home_uniquepoint_thumb_wrap
+      text-align: center
+
+      img
+        width: 100%
+        height: 46vw
+
+    .home_uniquepoint_details
+      margin-bottom: 56px
+
+  &_thumb
+    &_wrap
+      max-width: calc(100% - 48px)
+      &:before
+        width: calc(100% + 24px)
+        height: calc(100% + 24px)
+        top: -12px
+        left: -12px
+        box-shadow: inset 0 0 0 2px $main-contrast-color
+        transition: none
+      &:hover:before
+        box-shadow: inset 0 0 0 2px $main-contrast-color
+
+.main_footer
+  .footer_menu
+    display: none
+  .col-d-5.col-t-4.cols,
+  .col-d-5.col-t-8
+    width: 100%
+    text-align: center
+
+  .footer_logo_wrap
+    position: relative
+    &:after
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      background-position: center
+
+  .footer_social,
+  .footer_socials
+    text-align: center
+    li:first-child
+      margin-left: 0
+
+
+.content.page .page_header
+  padding-top: 96px
+
+
+.content.page.page_contact,
+.page_contact .content.page
+  .page_header
+    padding-top: 72px
+
+  .section_title.page_title
+    text-align: center
+    &:before
+      right: 50%
+      margin-right: 0
+      transform: translate3d(50%, -50%, 0) scale(0.7)
+
+  .info_list
+    text-align: center
+
+.info_list_desc:last-child
+  margin-bottom: 0
+
+.info_list_table
+  dt,
+  dd
+    width: 100%
+
+  dt
+    text-transform: uppercase
+    font-size: 12px
+    letter-spacing: 2px
+    margin-bottom: 0
+    padding: 0
+    margin: 0
+    line-height: 14px
+
+  dd:not(:last-child)
+    margin-bottom: 16px
+
+.section_divider
+  margin: 48px 0
+
+.section_subtitle
+  font-size: 24px
+
+.contact_form_wrap
+  text-align: center
+  &:before
+    display: none
+
+  .input_wrap.half
+    width: 100%
+
+  .form_actions
+    text-align: center
+    margin-top: 16px
+
+.contact_map
+  margin-bottom: 48px
+  .map_content
+    height: 54vw
+
+.article_item
+  .article_excerpt+.btn
+    display: none
+
+.article_list
+  .section_divider
+    display: none
+
+.sidebar
+  order: 1
+
+.content-border:after
+  display: none
+
+.widgets
+  position: relative
+  padding-top: 64px
+  margin-top: 48px
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 20px
+    top: 0
+    left: 0
+    background-image: url(../images/ss_divider.svg)
+    background-position: center
+    opacity: 0.6
+
+  .widget:last-child
+    margin-bottom: 0
+
+.related_list
+  display: block
+  white-space: nowrap
+  overflow: hidden
+  overflow-x: auto
+  margin-left: -12px
+  margin-right: -12px
+  padding: 0 12px
+  -webkit-overflow-scrolling: touch
+  .related_single
+    width: 60vw
+    display: inline-block
+    white-space: normal
+    vertical-align: top
+    &:not(:last-child)
+      margin-right: 8px
+
+  .article_meta
+    margin-bottom: 8px
+
+  .related_title
+    font-size: 18px
+
+  .related_desc
+    display: none
+
+.related_thumb
+  margin-bottom: 8px
+
+.section_map_wrap
+  flex-wrap: wrap
+
+.section_map_container
+  width: 100%
+  height: 80vw
+  transform: scale(0.45)
+  margin-top: 20vw
+  margin-bottom: -30vw
+.section_map_blocks
+  width: 100%
+  order: 1
+  text-align: center
+  padding: 0
+
+.section_map_single_info
+  padding-left: 16px
+  padding-right: 16px
+  .section_desc
+    margin-bottom: 24px
+
+.section.page_section
+  margin-bottom: 120px
+
+.partners
+  .wrap
+    padding-top: 64px
+
+  &.section
+    margin-top: 24px
+
+  .section-title
+    font-size: 32px
+    margin-bottom: 56px
+
+  &_list
+    flex-wrap: wrap
+    li
+      width: 50%
+      border-right: none
+      padding-bottom: 32px
+      order: 0
+      &:nth-of-type(4)
+        order: 1
+      &:not(:nth-of-type(4)):not(:first-child)
+        order: 2
+      &:last-child
+        width: 60%
+        padding-bottom: 0
+
+    h5
+      font-size: 10px
+
+
+body.page_benefit
+  overflow: unset
+  .page_headerx
+    background-image: url('../images/ben_head_1-m.png')
+    background-position: center top
+    background-size: 100% auto
+    background-repeat: repeat
+    height: 177.8666vw
+
+    &_bg
+      display: none
+
+    .wrap.cols
+      position: absolute
+      left: 0
+      bottom: 72px
+      .col-d-12
+        padding: 0 32px
+
+      .section_title
+        font-size: 48px
+        line-height: 56px
+
+      .section_desc
+        font-size: 16px
+
+.benefit
+  &_single
+    height: auto
+
+    .benefit_slide_wrap:not(.empty)
+      position: relative
+      width: 100%
+      height: auto
+      top: auto
+      left: auto
+
+    .section_flytitle.huge
+      font-size: 48px
+
+    .section_title.small
+      font-size: 20px
+
+    .section_desc,
+    .section_title
+      padding-left: 16px
+      padding-right: 16px
+
+    .ben_coop
+      max-width: 90vw
+
+    .section_subtitle.spaced
+      padding-left: 24px
+      padding-right: 24px
+
+    .benefit_flytitle
+      max-width: 270px
+      margin-left: auto
+      margin-right: auto
+      margin-top: 16px
+
+  &_cols
+    flex-wrap: wrap
+  &_col
+    width: 100%
+    &:not(:last-child)
+      margin-bottom: 32px
+
+    .benefit_col_desc.full.small
+      padding-left: 6px
+      padding-right: 6px
+      line-height: 28px
+
+  &_block
+    flex-wrap: wrap
+
+    .benefit_block_thumb
+      width: 70vw
+      height: 50vw
+      margin-left: 16px
+      .float_thumb
+        width: 36vw
+        height: 26vw
+        z-index: 1
+
+    .benefit_block_info
+      width: 100%
+      padding: 0 24px
+      .section_desc
+        padding: 0
+
+.benefit_single_desc.big
+  font-size: 18px
+
+.benefit_slide_pag .benefit_slide_ctrls
+  width: calc(100% - 32px)
+
+.benefit_single.right_view, .benefit_single.left_view
+  min-height: 80vh
+  display: block
+  &:before
+    display: none
+
+  &.benefit_single .section_title.small
+    font-size: 32px
+    padding-left: 0
+    padding-right: 0
+
+  .benefit_single_side_thumb
+    position: relative
+    width: 100%
+    height: 70vw
+    top: auto
+    left: auto
+    &:before
+      display: none
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+    &.info_inside
+      width: auto
+      margin-left: 16px
+      margin-right: 16px
+      .ben_side_thumb_wrap
+        width: 100%
+        height: 100%
+        &:after
+          content: ""
+          position: absolute
+          width: calc(100% - 32px)
+          height: calc(100% - 32px)
+          top: 16px
+          left: 16px
+          box-shadow: inset 0 0 0 2px $main-contrast-color
+      &:after
+        display: none
+
+      .section_title.small
+        font-size: 28px
+        top: 32px
+      .section_flytitle
+        font-size: 20px
+        padding-top: 40px
+      .section_title,
+      .section_flytitle
+        margin-left: 32px
+        top: 32px
+
+  .benefit_single_info
+    position: relative
+    width: 100%
+    height: auto
+    top: auto
+    left: auto
+    text-align: center
+
+.benefit_single.left_view .benefit_single_info.flex
+  margin-left: 8vw
+  width: 84vw
+  text-align: left
+
+  .benefit_slide .benefit_slide_single
+    width: 84vw
+    vertical-align: top
+    .benefit_subtitle
+      font-size: 22px
+
+.benefit_single.left_view .benefit_single_info .benefit_slide[data-ben="1"]
+  transform: translate3d(-84vw, 0, 0)
+.benefit_single.left_view .benefit_single_info .benefit_slide[data-ben="2"]
+  transform: translate3d(-168vw, 0, 0)
+
+.benefit_single .section_flytitle.flyed
+  font-size: 24px
+  padding-left: 16px
+  padding-right: 16px
+  max-width: 360px
+  margin-left: auto
+  margin-right: auto
+  margin-top: -16px
+
+
+
+#vi-tri-dac-dia
+  .benefit_slide_single:last-child
+
+    .col-d-6.col-m-11
+      order: 1
+      z-index: 1
+      position: relative
+    .col-d-4.col-m-11
+      text-align: right
+
+#dam-chat-sapa
+  .section_title.small
+    font-size: 32px
+    padding-left: 24px
+    padding-right: 24px
+    margin-bottom: 24px
+
+#dau-tu-dot-pha
+  .benefit_slide_single
+    .benefit_col:first-child
+      order: 1
+  .benefit_slide_single:last-child
+
+#dau-tu-dot-pha .benefit_slide_single:nth-of-type(2) .benefit_cols .benefit_col:first-child
+  width: 100%
+
+.benefit_col img.big_ben
+  width: 90vw
+
+#giai-phap-dau-tu
+  &.benefit_single .section_title.small
+    font-size: 32px
+  img
+    max-width: 100%
+
+  .benefit_flytitle
+    max-width: 100%
+    text-align: center
+
+    .standout
+      font-size: 48px
+
+  .benefit_high_list
+    text-align: center
+
+.cols
+  img
+    &[src*="ben_1-4"]
+      height: 110vw
+      width: 70vw
+      margin-bottom: -20vw
+    &[src*="ben_1-3"]
+      height: 40vw
+      width: 60vw
+
+.benefit_faces_list
+  height: 67vw
+  margin-bottom: 64px
+  img
+    width: 40vw
+    height: 28vw
+
+.benefit_single .section_flytitle.flyed.huge
+  margin-bottom: 16px
+
+.benefit_single_desc.limited.centered
+  padding-left: 16px
+  padding-right: 16px
+
+.page_gallery
+  .page_header
+    .section_title
+      text-align: center
+      &:before
+        right: 50%
+        margin-right: 0
+
+.archive_filter_toggle
+  margin-bottom: 10px
+  li
+    font-size: 16px
+    line-height: 22px
+    letter-spacing: 1px
+
+    a
+      padding: 10px 0
+
+.archive_filter_list
+  margin-left: -12px
+  margin-right: -12px
+  white-space: nowrap
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+  line-height: 48px
+  padding-left: 16px
+  padding-right: 32px
+  margin-bottom: 16px
+  ul li
+    padding: 0 14px
+
+.gallery_list,
+.gallery_video_list
+  margin: 0 -4px
+  columns: unset
+  .gallery_single,
+  .gallery_single.small,
+    height: calc(40vw - 8px)
+    float: left
+    width: calc(50vw - 8px)
+
+  .gallery_video_thumb
+    width: 100%
+    height: 100%
+
+  .gallery_video_single,
+  .gallery_video_single.small
+    height: calc(40vw - 16px)
+    float: left
+    width: calc(50vw - 16px)
+
+  .gallery_single_name
+    font-size: 14px
+    padding-top: 8px
+
+.page_image_viewer
+  &_popup
+    position: fixed
+    top: 50%
+    left: 0
+    width: 100%
+    height: calc(100% - 48px)
+    max-height: 70vw
+    transform: translate3d(0,-50%,0)
+
+.page_overlayer
+  background-color: #000
+
+
+.storyline
+
+  &_infos,
+  .storyline_single[class*="story_"] .storyline_infos
+    width: calc(100% - 64px)
+    left: 32px
+    transform: none
+    top: auto
+    bottom: 128px
+    right: auto
+
+  .storyline_single.story_4 .storyline_title
+    margin-bottom: 24px
+
+  &_desc,
+  .storyline_single[class*="story_"] .storyline_desc
+    font-size: 16px
+    line-height: 26px
+    br+br
+      display: none
+  .storyline_single.story_2 .storyline_infos .storyline_desc
+    font-size: 18px
+    text-align: center
+
+  &_title
+    font-size: 42px
+    line-height: 52px
+    i
+      font-size: 36px
+      line-height: 36px
+
+  &_pag_wrap
+    display: none
+
+  &_director
+    width: 38px
+    height: 38px
+    span i
+      &:before
+        height: 30px
+      &:after
+        transform: translate3d(16px, 16px, 0)
+
+  .storyline_single.story_1
+    .slide_layers_wrap
+      transform: scale(0.6) translate3d(-240%,0,0)
+    .storyline_infos
+      text-align: right
+
+  .storyline_single.story_2
+    .storyline_graphics img
+      position: relative
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      opacity: 0.8
+
+    .storyline_desc
+      text-shadow: 0 0 4px rgba(255,255,255,0.6)
+
+  .storyline_single.story_3
+    .storyline_graphics img
+      position: relative
+      left: 50%
+      transform: translate3d(-20%,0,0)
+
+  .storyline_single.story_4
+    .storyline_graphics img
+      position: relative
+      left: 50%
+      transform: translate3d(-50%,0,0)
+
+  .storyline_single.story_5
+    .storyline_graphics img
+      position: relative
+      left: 0
+      transform: translate3d(-50%,0,0)
+
+    .storyline_infos
+      margin-bottom: 12px
+      .storyline_desc
+        font-size: 20px
+        text-align: center
+
+      .story_slogan
+        text-align: center
+        font-size: 24px
+        color: #fff
+        text-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 4px rgba(0,0,0,0.4)
+
+      .story_logo
+        display: none
+
+  &_controll
+    position: absolute
+    width: 38px
+    height: 38px
+    bottom: 9.5%
+    background-image: url('../images/ben_c_n.svg')
+    background-repeat: no-repeat
+    background-position: center
+    z-index: 20
+    &.prev
+      left: 32px
+      background-image: url('../images/ben_c_p.svg')
+    &.next
+      right: 32px
+
+
+.section_map_wrap:before
+  transform: translate3d(-50%, -60%, 0) scale(0.5)
+
+blockquote
+  font-size: 18px
+  line-height: 28px
+
+.phan-khu-main
+  &#section-phan-khu-central:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-image: url('../images/the_central_header.png')
+    background-position: center top
+    background-repeat: no-repeat
+    background-size: 100% auto
+
+  .page_header_bg
+    display: none
+
+  .section.page_header
+    padding-top: 80vw
+    padding-left: 16px
+    padding-right: 16px
+
+.section_base
+  &_info
+    padding: 0 16px
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 24px
+
+    .section_flytitle
+      font-size: 16px
+      width: 100%
+
+    .section_desc.right_desc
+      order: 1
+      margin-left: 0
+      font-size: 16px
+      padding-top: 0
+      line-height: 26px
+      margin-bottom: 0
+
+  &_title
+    font-size: 32px
+    max-width: 166px
+
+  &_block_single
+    margin-bottom: 64px
+    flex-wrap: wrap
+
+  &_block_thumb,
+  &_block_info
+    width: 100%
+    &.has_float_thumb + .section_base_block_info
+      padding-top: 48px
+
+  &_block_info
+    padding-left: 16px
+    padding-right: 16px
+    padding-top: 24px
+    .section_base_title
+      font-size: 20px
+      max-width: 100%
+      margin-bottom: 8px
+    .section_base_desc
+      font-size: 16px
+      line-height: 26px
+
+.section_base_block_single:nth-of-type(2n+2) .section_base_block_info
+    order: 1
+    padding-left: 16px
+    padding-right: 16px
+
+.section_base_block_thumb img.float_thumb
+  max-width: 50%
+  margin-left: 16px
+
+.section_base_block_single.big_end
+  margin-bottom: 64px
+
+.section_base_views.cols.col-d-12
+  margin-bottom: 24vw
+  .col-d-4
+    position: absolute
+    z-index: 1
+    top: 24vw
+    left: 24px
+
+.section_map_title.spaced
+  font-size: 32px
+  line-height: 42px
+  margin-bottom: 32px
+
+  &~.section_map_wrap.detail_map_wrap
+    margin-bottom: 16px
+
+.home_uniquepoint
+
+  &#dcsp
+    .home_uniquepoint_thumb_wrap
+      &:before
+        box-shadow: inset 0 0 0 3px $main-contrast-color
+      &:after
+        display: none
+
+  &#dtdc
+    .home_uniquepoint_thumb_wrap
+      &:before
+        box-shadow: inset 0 0 0 3px $main-contrast-color
+      &:after
+        display: none
+
+  &#ndndt
+    .home_uniquepoint_thumb_wrap
+      &:before
+        box-shadow: inset 0 0 0 3px $main-contrast-color
+      &:after
+        display: none
+
+.hero.storyline
+  position: relative
+  width: 100vw
+  height: 100vh
+  max-height: 100vh
+  transform: translateZ(0)
+  //overflow-x: auto
+  //-webkit-overflow-scrolling: touch
+  &:after
+    content: ""
+    position: absolute
+    top: 90%
+    left: 0
+    width: 100%
+    height: 20%
+    background-image: linear-gradient(-180deg, #FEF9EB 50%, rgba(254,249,235,0.00) 100%)
+    //background-image: linear-gradient(-180deg, #292524 0%, rgba(254,249,235,0.00) 100%)
+    z-index: 10
+
+.storyline
+  .storyline_single.story_1 .storyline_graphics
+    .sl_1,.sl_2,.sl_3,.sl_4,.sl_5
+      animation: none !important
+      visibility: hidden
+
+.storyline .storyline_single.story_1 .storyline_graphics .slide_layers_wrap
+  transform: none
+
+.storyline .storyline_single.story_1 .storyline_graphics img.slider_layers
+  transform: none
+  height: 90vh
+  left: -45vh
+
+.storyline_director span
+  animation: none
+
+.page_header.header_slide
+  .page_header_bg img
+    display: none
+    opacity: 0
+    visibility: hidden
+  .page_header_bg
+    height: 100%
+    background-size: cover
+    background-position: center bottom
+    background-repeat: no-repeat
+  .page_header_bg_ben-1
+    background-image: url('../images/benefits/ben_slide-m-1.jpg')
+  .page_header_bg_ben-2
+    background-image: url('../images/benefits/ben_slide-m-2.jpg')
+  .page_header_bg_ben-3
+    background-image: url('../images/benefits/ben_slide-m-3.jpg')
+  .page_header_bg_ben-4
+    background-image: url('../images/benefits/ben_slide-m-4.jpg')
+
+.content.page .page_header.header_slide .col-d-12 .page_title
+  font-size: 38px
+  line-height: 46px
+.content.page .page_header.header_slide .col-d-12 .page_title.small
+  font-size: 32px
+  line-height: 36px
+
+.content.page .page_header.header_slide .slick-dots
+  left: 50%
+  right: auto
+  transform: translate3d(-50%,0,0)
+  bottom: 16px
+
+.content.page .page_header.header_slide .wrap.center-d
+  height: 100vh
+  display: block
+
+.content.page .page_header.header_slide .col-d-12
+  padding-top: 0
+  align-self: flex-end
+  position: absolute
+  bottom: 46px
+  height: auto
+  min-height: 0
+  left: 8.3%
+

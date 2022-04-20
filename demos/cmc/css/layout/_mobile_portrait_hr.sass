@@ -1,0 +1,759 @@
+/* Mobile Portrait High Resolution */
+.cmc
+  &_main_menu_list
+    box-shadow: inset 0 1px rgba(71,76,78,0.01), inset 0 2px rgba(71,76,78,0.01), inset 0 3px rgba(71,76,78,0.01)
+    line-height: 36px
+    width: 100vw
+    padding-bottom: 136px
+
+    li
+      width: auto
+      margin-left: 24px
+      margin-right: 24px
+      li
+        margin-left: 0
+        margin-right: 0
+
+
+  &_sub_header
+    padding-left: 0
+    width: 100vw
+    padding-top: 16px
+    padding-right: 0
+
+  &_sub_contact_list
+    line-height: 24px
+
+  &_sub_menu_list
+    border-top: none
+    margin-top: 0
+    padding-top: 0
+    li:not(:last-child)
+      display: none
+    li:last-child
+      a.btn
+        margin-top: 16px
+        margin-bottom: 16px
+        background-color: #fff
+        color: $main-color
+
+  &_main_footer
+    padding-top: 32px
+    &_menu_col
+      width: 100%
+      padding-left: 0
+      border-top: 1px solid #D6E7F0
+      margin-top: 24px
+      padding-top: 24px
+      margin-bottom: 0
+      li
+        display: inline-block
+        width: 48%
+
+  &_main_footer_copyright
+    text-align: center
+    padding: 24px 0
+    p.float_right,
+    ul.float_left
+      display: block
+      float: none
+      padding: 0
+      li:last-child
+      margin-right: 0
+    p.float_right
+      margin-top: 14px
+
+.main_slider
+
+  &_image
+    position: absolute
+    right: 50%
+    top: auto
+    bottom: 50%
+    transform: translate3d(50%,-64px,0)
+    img
+      max-width: 220px !important
+
+  &_info
+    width: 100vw
+    padding: 0 16px
+    top: auto
+    left: 0
+    bottom: 52px
+    transform: translate3d(0,0,0)
+
+    h2
+      font-size: 24px
+      line-height: 28px
+      margin-bottom: 10px
+
+    p
+      font-size: 14px
+      line-height: 22px
+
+    .mark_list
+      line-height: 16px
+      margin: 0 auto
+      margin-bottom: 16px
+      font-size: 12px
+      width: 282px
+      text-align: left
+      li:not(:last-child)
+        margin-bottom: 4px
+
+      li:before
+        transform: scale(0.75)
+        width: 18px
+        margin-left: -2px
+
+.slick-slider.slick-dotted .slick-dots
+  bottom: 16px
+
+.section_header
+  text-align: center
+  &.left_header
+    text-align: center
+  &_title
+    font-size: 24px
+    line-height: 28px
+    margin-bottom: 12px
+    &.small
+      font-size: 20px
+      line-height: 24px
+  &_desc
+    font-size: 14px
+    line-height: 24px
+    margin-bottom: 24px
+
+.si_list.intro_list
+  li
+    margin-bottom: 14px
+  .si_list
+    &_title
+      font-size: 16px
+      line-height: 32px
+      margin-bottom: 0
+      big
+        font-size: 24px
+    &_desc
+      font-size: 12px
+      line-height: 18px
+      border-bottom: 1px solid #D6E7F0
+      padding-bottom: 14px
+
+.dc_map
+  position: relative
+  right: auto
+  top: auto
+
+  &_title
+    font-size: 18px
+    margin-top: 48px
+
+  &_spec
+    position: relative
+    bottom: auto
+    right: auto
+    width: 230px
+    margin: 0 auto
+    margin-top: 24px
+
+.si_list.potential_list
+  .si_list_desc
+    height: auto
+
+  li
+    margin-bottom: 0
+    &:before,
+    &:after
+      display: none
+
+.si_list.provided_list
+  li
+    width: 50%
+
+    & > a
+      padding-top: 16px
+      height: 152px
+      padding-left: 12px
+      padding-right: 12px
+
+  .si_list
+    &_title
+      margin-top: 12px
+      font-size: 14px
+      line-height: 18px
+
+.home_videos,
+.home_videos.slick-slider.slick-dotted
+  height: 280px
+
+  &_thumb
+    &:before
+      transform: translate3d(0,-100px,0)
+      font-size: 16px
+      line-height: 22px
+
+    &:after
+      transform: translate3d(-50%,-50%,0) scale(0.5)
+
+.page_support.col-d-12.cols.center-d
+  display: block
+  text-align: center
+
+  .col-d-3.col-t-4
+    width: 240px
+    position: relative
+    display: inline-block
+    text-align: left
+    .page_support_ico
+      float: left
+      margin-right: 10px
+      img
+        width: 64px
+
+    h5
+      font-size: 12px
+      line-height: 16px
+      margin-bottom: 0
+      padding-top: 12px
+    p
+      font-size: 20px
+
+.page_header
+  padding: 32px 15px
+  &_title
+    font-size: 24px
+    line-height: 30px
+    margin-bottom: 10px
+  &_desc
+    font-size: 14px
+    line-height: 24px
+  &_title,
+  &_desc
+    text-align: center
+
+  &.spaced
+    padding-top: 32px
+    padding-bottom: 64px
+
+  &_features
+    margin-top: 24px
+
+.page_section:not(.home_vids_wrap):not(.no_space)
+  padding-top: 24px
+  padding-bottom: 24px
+
+.pricing
+  &_wrap.pricing_floating_email,
+  &_wrap.pricing_floating_dc
+    bottom: auto
+    position: relative
+    right: auto
+    margin-top: -32px
+
+  &_benefits
+
+    &_list
+      li[class^="col"]
+        margin-bottom: 24px
+        p
+          margin-bottom: 0
+
+  &_opts
+    margin-bottom: 15px
+    a
+      display: inline-block
+      line-height: 32px
+      padding: 10px 15px
+      background: rgba(214,231,240,0.50)
+      font-size: $fs5
+      font-weight: bold
+      position: relative
+
+    a:first-child
+      padding-left: 20px
+    a:last-child
+      padding-right: 20px
+
+  &_table
+    &_single_wrap
+      padding: 12px
+      margin-bottom: 15px
+
+    &_value
+      margin: 0 -11px
+      margin-bottom: 24px
+
+    &_props
+      li
+        margin-bottom: 6px
+        font-size: 12px
+
+      li:last-child
+        margin-bottom: 16px
+
+    &_name
+      font-size: $fs3
+      line-height: 26px
+      margin-bottom: 12px
+
+    &_id
+      font-size: $fs6
+      line-height: 16px
+
+    &_value
+      height: 96px
+      &_price
+        font-size: 26px
+        &.old_price
+          font-size: 14px
+
+      &_currency
+        font-size: 12px
+
+  &_note
+    margin-bottom: 32px
+    font-size: 14px
+    padding: 0 12px
+    &:after
+      margin-top: 16px
+
+  &_extras
+    li
+      width: 100%
+      border-width: 4px
+      padding: 4px 10px
+      padding-right: 110px
+    &_title
+      padding: 4px 0
+
+.section_cta
+  &_title
+    margin-bottom: 0
+    font-size: 24px
+  &_desc
+    font-family: $font-parag
+    font-size: 14px
+
+  .col-m-12
+    text-align: center
+
+    a.btn
+      font-size: 12px
+      padding: 8px 20px
+      height: 40px
+      line-height: 24px
+      margin-top: 16px
+
+.domain_search_form
+
+  .input_wrap .input.domain_search_input
+    line-height: 26px
+    height: 56px
+    padding: 15px 24px
+    font-size: 14px
+
+  .btn.submit_domain
+    font-size: 0
+    width: 40px
+    height: 40px
+    min-width: 0
+    padding: 0
+    background-image: url("../images/search.svg")
+    background-position: center
+    background-repeat: no-repeat
+    &.outline
+      background-color: $main-color
+      border-color: transparent
+      box-shadow: none
+
+  &_note
+    line-height: 16px
+    display: none
+    padding-left: 0
+    text-align: center
+    padding-bottom: 0
+
+  .input_wrap.field_invalid ~ .domain_search_form_note
+    display: block
+
+  &_support
+    position: static
+    display: block
+    text-align: center
+    padding: 0
+    padding-top: 10px
+    line-height: 20px
+    margin-top: 10px
+
+.domain_result
+  &_header
+
+    &_title
+      font-size: 16px
+
+  &_ico
+    margin-top: 16px
+
+  &_single
+    padding: 16px 16px
+    text-align: left
+    &_main
+      margin-top: -12px
+
+    &_title
+      position: relative
+      left: auto
+      top: auto
+      transform: none
+      font-size: 18px
+      line-height: 20px
+      margin-bottom: 8px
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+      padding-bottom: 8px
+
+    .btn.domain_result_single_action
+      position: relative
+      top: auto
+      right: auto
+      transform: none
+      width: 100%
+      height: 40px
+      line-height: 20px
+      padding: 10px 0
+      margin-top: 10px
+
+.login
+  .cmc_content
+    padding-top: 0
+
+  .cmc_main_footer
+    margin-top: -72px
+    padding: 0 12px
+    p
+      display: none
+
+    a
+      color: #fff
+
+    .cmc_main_footer_copyright
+      padding: 0
+      padding-bottom: 24px
+    .cmc_main_footer_ext_links
+      line-height: 24px
+
+  a.btn.google
+    padding-right: 24px
+
+  &_page_wrap
+
+  &_page_wrap,
+  &_form_wrap,
+  &_toreg_wrap
+    height: auto
+
+  &_form_wrap
+    float: none
+    width: auto
+
+  &_toreg_wrap
+    float: none
+    width: 100%
+    padding: 20px
+
+  .cmc_main_footer
+    background-color: transparent
+    position: relative
+    left: auto
+    bottom: auto
+
+  .page_director
+    display: none
+
+.page_form.login_form,
+.page_form.prereg_form
+  position: static
+  top: auto
+  left: auto
+  transform: none
+  margin-top: 0
+  padding-top: 24px
+
+.page_form.prereg_form
+  padding-bottom: 80px
+
+.form_title.signup_title
+  font-size: 24px
+
+label.check-label
+  line-height: 24px
+
+.page_info
+  &_list li,
+  &_item:first-child,
+  &_item:first-child.half + .half
+    float: none
+    width: 100%
+    margin-top: 16px
+
+  &_label
+    font-size: 10px
+  &_value
+    font-size: 14px
+
+.page
+  &_title
+    font-size: 24px
+  &_note
+    font-size: 12px
+    line-height: 18px
+
+  &_breadcrumbs
+    display: none
+
+  &_content_body
+    padding-top: 32px
+
+  &_filter
+    display: block
+    line-height: 30px
+    font-size: $fs6
+    margin-right: 0
+    margin-top: 5px
+    &_label
+      padding-right: 6px
+      min-width: 64px
+      display: inline-block
+
+    &s
+      margin-bottom: 16px
+
+    select.select
+      font-size: 12px
+
+  &_pagination
+    text-align: center
+    a
+      font-size: 12px
+      line-height: 32px
+      height: 30px
+      min-width: 30px
+      text-align: center
+      background-color: #fff
+      display: inline-block
+      color: $text-lighter-color
+      font-weight: 600
+      padding: 0 8px
+      box-shadow: inset 0 0 0 1px transparent
+      &.current
+        box-shadow: inset 0 0 0 1px $main-color
+      &:not(:last-child)
+        margin-right: 2px
+      &:hover
+        box-shadow: inset 0 0 0 1px $main-border-color
+
+    a.first,
+    a.last
+      display: none
+
+    a.next
+      margin-left: 0
+
+.table.wide.services_table,
+.table.product_table.cart_table
+  display: block
+  thead
+    display: none
+
+  tbody
+    display: block
+
+  tbody
+    tr,td
+      width: 100%
+      border-bottom: none
+    tr
+      display: block
+      background-color: #FFF
+      margin-bottom: 15px
+      position: relative
+      padding: 12px 15px
+    td
+      display: block
+      padding-left: 0
+      padding-right: 0
+      text-align: left
+      line-height: 18px
+      padding-top: 4px
+      padding-bottom: 2px
+      &:first-child
+        border-bottom: 1px solid $main-border-color
+        padding-bottom: 6px
+        margin-bottom: 6px
+
+      &.top_note
+        position: absolute
+        right: 15px
+        top: 10px
+        width: auto
+        text-align: right
+        poin
+        span.product_status
+          font-size: 12px
+
+      &[title]:before
+        content: attr(title) ":"
+        display: inline-block
+        padding-right: 4px
+        opacity: 0.7
+        font-family: $font-parag
+        font-size: 14px
+
+      .btn.tiny
+        display: block
+        text-align: center
+
+      .product_status
+        display: inline-block
+
+.shop_process
+  &_step
+    height: 80px
+    padding-top: 10px
+    a
+      display: block
+      position: relative
+      width: 100%
+      height: 100%
+      line-height: 32px
+      padding-left: 14px
+
+  &_label
+    display: block
+    line-height: 16px
+    font-size: 12px
+
+.table.product_table.cart_table
+  tbody
+    tr
+      background-color: #F4F9FB
+
+    td:nth-of-type(4)
+      position: static
+    td:nth-of-type(4)
+      margin-top: 0
+      left: auto
+      padding-left: 0
+      padding-top: 0
+    td:nth-of-type(1)
+      width: 100%
+      max-width: 100%
+      min-width: 0
+
+    .btn.plus.product_addon.small
+      height: 28px
+      padding: 0 14px
+      line-height: 30px
+
+    td.top_note
+      padding-top: 2px
+      span.product_code
+        padding-top: 0
+
+    .table_addons
+      margin-top: 6px
+
+    .select.small
+      margin-top: 4px
+      margin-bottom: 10px
+
+    td.sum_card_price
+      border-top: 1px solid $main-border-color
+      padding-bottom: 0
+      margin-top: 10px
+      &:before
+        content: attr(title) ":"
+        display: inline-block
+        padding-right: 4px
+        opacity: 0.7
+        font-family: $font-parag
+        font-size: 14px
+
+  .table_product_mini
+    padding-top: 0
+    padding-bottom: 4px
+
+.total_sum_list
+  margin-bottom: 0
+  dt
+    font-size: 14px
+    span
+      font-size: 16px
+
+  dd .price
+    font-size: 16px
+    &.total_sum_price
+      font-size: 18px
+
+.col-d-6.total_sum
+  margin-bottom: 0
+
+.coupon_sum .input-wrap
+  input.input
+    max-width: calc(100% - 107px)
+    height: 38px
+
+  .btn
+    height: 38px
+
+.product_total_actions.cart_actions
+  display: flex
+  flex-wrap: wrap
+
+  .proceed_shop
+    order: 1
+  .back_shop
+    order: 2
+
+  *[class^="col-"].col-t-break
+    width: 100%
+    margin-top: 10px
+    a.btn,
+    a.button
+      width: 100%
+      text-align: center
+
+.payment
+  &_method
+    &.active
+      .payment_content
+        max-height: 500px
+
+  &_bank
+    width: calc(100% / 3 - 3px)
+    margin-bottom: 5px
+
+  &_banks
+    margin-bottom: 16px
+
+.checkout_actions
+  flex-wrap: wrap
+  button.btn.submit
+    order: 1
+    width: 100%
+    text-align: center
+    height: 56px
+
+  .back
+    order: 2
+
+.bill_list dt
+  padding-right: 10px
+
+.order_title h1, .order_title .page_title,
+.center_title h1, .center_title .page_title
+  font-size: 24px
+
+.page_pcode
+  margin-bottom: 6px

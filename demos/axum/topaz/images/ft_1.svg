@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>ft_1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="48" cy="48" r="48"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Topaz" transform="translate(-338.000000, -2469.000000)">
+            <g id="Group-18" transform="translate(251.000000, 2469.000000)">
+                <g id="ft_1" transform="translate(87.000000, 0.000000)">
+                    <g id="Path-4-+-Path-4-Mask">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <circle stroke="#4A4A4A" stroke-width="2" cx="48" cy="48" r="47"></circle>
+                        </g>
+                        <rect id="Rectangle-9" stroke="#4A4A4A" stroke-width="2" mask="url(#mask-2)" x="-51" y="19" width="124" height="206" rx="18"></rect>
+                        <rect id="Rectangle-9" stroke="#4A4A4A" stroke-width="2" opacity="0.400000006" mask="url(#mask-2)" x="-58" y="26" width="124" height="206" rx="14"></rect>
+                        <path d="M-44,26 C-14.3209635,26 15.3580729,26 45.0371094,26 C48.3398703,26 51.6914603,28.2544633 55.0918794,32.7633898 L55.0918787,32.7633903 C56.6310628,34.8043352 59.0529105,35.9868316 61.6088497,35.9453802 C64.3962928,35.9001743 65.8600096,37.5866752 66,41.0048828 C66,100.003255 66,159.001628 66,218 L66,218 C66,225.731986 59.7319865,232 52,232 L-44,232 L-44,232 C-51.7319865,232 -58,225.731986 -58,218 L-58,40 L-58,40 C-58,32.2680135 -51.7319865,26 -44,26 Z" id="Rectangle-9" stroke="#4A4A4A" stroke-width="2" mask="url(#mask-2)"></path>
+                        <rect id="Rectangle-10" stroke="#4A4A4A" stroke-width="2" opacity="0.200000003" mask="url(#mask-2)" x="-2" y="56" width="59" height="53"></rect>
+                        <path d="M-1.5,39.5 L13.5,39.5" id="Line-2" stroke="#4A4A4A" stroke-width="3" opacity="0.5" stroke-linecap="round" mask="url(#mask-2)"></path>
+                        <circle id="Oval-3" stroke="#4A4A4A" stroke-width="2" opacity="0.5" mask="url(#mask-2)" cx="39.5" cy="38.5" r="3.5"></circle>
+                        <circle id="Oval-3" stroke="#4A4A4A" stroke-width="2" opacity="0.5" mask="url(#mask-2)" cx="45.5" cy="49.5" r="2.5"></circle>
+                        <circle id="Oval-3" stroke="#4A4A4A" stroke-width="2" opacity="0.5" mask="url(#mask-2)" cx="54.5" cy="44.5" r="4.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

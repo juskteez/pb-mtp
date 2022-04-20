@@ -1,0 +1,485 @@
+/* Mobile Portrait High Resolution */
+
+.main_header
+  padding: 16px 0
+
+.content#content.home_content
+  padding-top: 64px
+  &:before
+    transform: scale(0.45)
+    right: auto
+    left: 50%
+    top: 0
+    transform-origin: top left
+
+.main_menu_closer
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(255,255,255,0.6)
+  pointer-events: none
+  opacity: 0
+  transition: 0.3s all ease
+  z-index: 30
+
+.active_menu .main_menu_closer
+  opacity: 1
+  pointer-events: all
+
+.main_menu_toggler
+  position: absolute
+  width: 50px
+  height: 40px
+  top: 0
+  right: 0
+  z-index: 40
+  will-change: transform
+  span,
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    width: 16px
+    height: 2px
+    background-color: $main-color
+    transition: 0.3s all ease
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+  &:before
+    transform: translate3d(-50%,-50%,0) translate3d(0,-300%,0)
+  &:after
+    transform: translate3d(-50%,-50%,0) translate3d(0,300%,0)
+
+  &.active
+    right: 25vw
+    transform: translate3d(50%,0,0)
+    &:before
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+    &:after
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    span
+      opacity: 0
+    span
+    &:before,
+    &:after
+      background-color: #404D5D
+
+.active_menu .main_menu
+  transform: translate3d(0,0,0)
+
+.main_menu
+  position: fixed
+  background-color: #102135
+  top: 0
+  right: 0
+  height: 100%
+  width: 50%
+  padding-top: 80px
+  text-align: center
+  z-index: 40
+  transition: 0.3s all ease
+  transform: translate3d(100%,0,0)
+  li
+    display: block
+    margin-left: 0
+    padding: 0 16px
+    padding-bottom: 16px
+
+  a:not(.btn)
+    margin-right: 0
+
+  a.btn
+    display: block
+
+.overtop
+  .main_menu
+    a:not(.btn)
+      &.active
+        color: #fff
+
+.section
+  &_title
+    font-size: 24px
+    margin-bottom: 12px
+    line-height: 28px
+
+.hero
+  padding-top: 16px
+  padding-bottom: 64px
+
+  .section_title
+    font-size: 28px
+    line-height: 34px
+    br
+      display: none
+
+  .section_desc
+    margin-bottom: 16px
+
+  .hero_chart
+    margin-top: 0
+    margin-right: 0
+
+.problem
+  position: relative
+
+  &s
+    counter-reset: problem
+    position: relative
+    padding-top: 56px
+    .left_blob,
+    .right_blob
+      display: none
+
+.prob-1
+  width: 100vw
+  height: 100vw
+  &-mask
+    width: 100vw
+    height: 100vw
+  &-wrap
+    position: relative
+    margin-top: 0
+    margin-bottom: 100px
+
+  &-connector
+    transform: translate3d(-50%,-52px,0)
+
+.first_problem_list
+  $duration: 14.4
+  $animation_duration: $duration * 1s // 3.6
+  $single_point: 10 / $duration
+  $begin_point: $single_point*3
+  $middle_point: $single_point*30
+  $single_talk: $begin_point * 2 +  $middle_point
+
+  li:nth-of-type(1)
+    background-image: url("../images/bubble-1b.svg")
+    transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(-32vw,-20vw,0)
+    animation: first_mprob_1 $animation_duration ease infinite
+  @keyframes first_mprob_1
+    0%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-32vw,-20vw,0)
+      opacity: 0
+    #{$begin_point * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(-32vw,-20vw,0)
+      opacity: 1
+    #{($begin_point + $middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(-32vw,-20vw,0)
+      opacity: 1
+    #{$single_talk * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-32vw,-20vw,0)
+      opacity: 0
+    100%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-32vw,-20vw,0)
+      opacity: 0
+  li:nth-of-type(2)
+    background-image: url("../images/bubble-2b.svg")
+    transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(32vw,-20vw,0)
+    animation: first_mprob_2 $animation_duration ease infinite
+  @keyframes first_mprob_2
+    0%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(32vw,-20vw,0)
+      opacity: 0
+    #{$single_talk * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(32vw,-20vw,0)
+      opacity: 0
+    #{($single_talk+$begin_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(32vw,-20vw,0)
+      opacity: 1
+    #{($single_talk+$begin_point+$middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(32vw,-20vw,0)
+      opacity: 1
+    #{($single_talk+$begin_point*2+$middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(32vw,-20vw,0)
+      opacity: 0
+    100%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(32vw,-20vw,0)
+      opacity: 0
+  li:nth-of-type(3)
+    background-image: url("../images/bubble-3b.svg")
+    transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(-34vw,6vw,0)
+    animation: first_mprob_3 $animation_duration ease infinite
+  @keyframes first_mprob_3
+    0%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-34vw,6vw,0)
+      opacity: 0
+    #{$single_talk*2 * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-34vw,6vw,0)
+      opacity: 0
+    #{($single_talk*2+$begin_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(-34vw,6vw,0)
+      opacity: 1
+    #{($single_talk*2+$begin_point+$middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(-34vw,6vw,0)
+      opacity: 1
+    #{($single_talk*2+$begin_point*2+$middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-34vw,6vw,0)
+      opacity: 0
+    100%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(-34vw,6vw,0)
+      opacity: 0
+  li:nth-of-type(4)
+    background-image: url("../images/bubble-4b.svg")
+    transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(34vw,4vw,0)
+    animation: first_mprob_4 $animation_duration ease infinite
+  @keyframes first_mprob_4
+    0%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(34vw,4vw,0)
+      opacity: 0
+    #{$single_talk*3 * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(34vw,4vw,0)
+      opacity: 0
+    #{($single_talk*3+$begin_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(34vw,4vw,0)
+      opacity: 1
+    #{($single_talk*3+$begin_point+$middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0.75) translate3d(34vw,4vw,0)
+      opacity: 1
+    #{($single_talk*3+$begin_point*2+$middle_point) * 1%}
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(34vw,4vw,0)
+      opacity: 0
+    100%
+      transform: translate3d(-50%,-50%,0) scale(0) translate3d(34vw,4vw,0)
+      opacity: 0
+
+
+.problem_single.problem_2
+  flex-wrap: wrap
+  justify-content: center
+  padding-top: 0
+  padding-bottom: 48px
+
+  .problem_title
+    width: 100%
+    margin-bottom: 64px
+
+  .problem_cases
+    width: 100%
+    padding-left: 0
+    text-align: center
+    position: relative
+    li
+      margin-top: 24px
+      position: absolute
+      top: 0
+      width: 100%
+      left: 0
+      pointer-events: none
+      &:first-child
+        position: relative
+        top: auto
+        left: auto
+
+        .problem_list_ico
+          transform: translate3d(-120%,0,0)
+          &:after
+            content: ""
+            position: absolute
+            width: 200%
+            height: 2px
+            top: 50%
+            left: 100%
+            background-color: #E3F4EE
+            margin-top: -1px
+      &:nth-of-type(3)
+        .problem_list_ico
+          transform: translate3d(120%,0,0)
+
+      h4,p
+        opacity: 0
+        transform: translate3d(64px,0,0)
+        will-change: opacity, transform
+        transition: 0.3s all ease
+        //animation: slide_out_case 0.3s ease forwards
+      @keyframes slide_out_case
+        0%
+          transform: translate3d(0,0,0)
+          opacity: 1
+        100%
+          transform: translate3d(-64px,0,0)
+          opacity: 0
+
+    li:first-child,
+    li:not(.preactive) + li:not(.preactive)
+      h4,p
+        transform: translate3d(-64px,0,0)
+    li.active:first-child ~ li:not(.preactive)
+      h4,p
+        transform: translate3d(64px,0,0)
+    li.preactive
+      h4,p
+        opacity: 1
+        transform: translate3d(0,0,0)
+        //animation: slide_in_case 0.3s ease forwards
+      @keyframes slide_in_case
+        0%
+          transform: translate3d(64px,0,0)
+          opacity: 0
+        100%
+          transform: translate3d(0,0,0)
+          opacity: 1
+
+    li:nth-of-type(2)
+      margin-left: 0
+
+    li:not(:last-child)
+      margin-bottom: 0
+
+    .problem_list_ico
+      pointer-events: all
+      width: 48px
+      height: 48px
+      line-height: 48px
+      top: auto
+      right: auto
+      transform: none
+      margin: 0 auto
+      position: relative
+      margin-bottom: 14px
+
+  .case_connector
+    display: none
+
+.problem_single.problem_3
+  margin-bottom: -40px
+  .problem_benefits_circle
+    display: none
+
+  .problem_title
+    position: relative
+    top: auto
+    left: auto
+    transform: none
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+
+  .problem_benefits
+    &>li,
+    li:nth-of-type(1),
+    li:nth-of-type(2),
+    li:nth-of-type(3)
+      position: relative
+      top: auto
+      left: auto
+      width: 100%
+      transform: none !important
+      text-align: center
+      margin-top: 32px
+      .problem_list_ico
+        position: relative
+        top: auto
+        right: auto
+        left: auto
+        margin: 0 auto
+        margin-bottom: 12px
+        transform: none
+
+.prob-2-connector,
+.prob-3-connector
+  display: none
+  &-tablet
+    display: none
+  &-mobile
+    display: block
+
+.prob-2-connector
+  &-mobile
+    margin-bottom: 48px
+
+.prob-3-connector
+  &-mobile
+    margin-top: 32px
+
+.prob_exit_mobile
+  display: block
+  margin: 0 auto
+  margin-top: 24px
+  position: relative
+  z-index: 10
+
+.ready
+  padding-bottom: 48px
+
+  .section_title
+    margin-bottom: 24px
+
+.article
+  &s
+    .wrap
+      padding-bottom: 32px
+      padding-top: 16px
+    &_ico
+      margin-top: 16px
+
+    .section_subtitle
+      margin-bottom: 32px
+
+  &_list
+    position: relative
+    display: block
+    margin-bottom: 16px
+    li,
+    li:first-child
+      width: 100%
+      padding: 0 0
+      padding-right: 0
+      text-align: left
+      box-shadow: none
+      background-color: rgba(49, 70, 95, 0.5)
+      padding: 16px
+      border-radius: 4px
+      .article_face
+        float: left
+        margin-right: 12px
+        margin-left: 0
+
+    li:not(:first-child)
+      margin-top: 12px
+
+  &_date
+    margin-bottom: 0
+
+.main_footer
+  padding-top: 32px
+.foot_subscribe
+  margin-bottom: 32px
+
+
+.page_header
+  padding-top: 104px
+  height: 480px
+  &_desc
+    font-size: 14px
+
+.page_title
+  font-size: 32px
+  margin-bottom: 24px
+
+.team
+  &_list
+    margin-top: 24px
+    &_title
+      margin-top: 32px
+      &:first-child
+        margin-top: 0
+
+    li,
+    &.x2_tablet li
+      width: calc((100% - 16px) / 2 )
+      position: relative
+      margin-bottom: 32px
+
+  &_face_wrap
+    pointer-events: none
+    img
+      transform: none
+
+.page_cta
+  &_title
+    font-size: 32px
+    margin-bottom: 24px

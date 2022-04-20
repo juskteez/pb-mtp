@@ -1,0 +1,598 @@
+/* Mobile Portrait High Resolution */
+/* Tablet Landscape */
+
+.main_header
+  .logo_wrap
+    padding-left: 0
+    left: 0
+    width: 100%
+    text-align: left
+    padding-top: 8px
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    padding-bottom: 14px
+    text-align: center
+    img
+      max-height: 24px
+      max-width: 128px
+      &+img
+        margin-left: 18px
+        margin-top: -2px
+
+    .top_shipping
+      text-align: center
+      float: none
+      padding-bottom: 6px
+      font-size: 14px
+      border-bottom: 1px solid rgba(255,255,255,0.05)
+      margin-bottom: 14px
+
+  .hero_benefits
+    padding: 24px 0
+    padding-top: 32px
+    background-position: center
+    //background-image: url("../images/hero_img_mb.jpg")
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: rgba(255,255,255,0.7)
+
+    .col-6:not(.montar-mount-wrap)
+      padding-top: 0
+      h1,p
+        text-align: center
+        margin-right: 0
+      h1
+        font-size: 26px
+        margin-bottom: 8px
+      p
+        font-size: 16px
+
+    .montar-mount-wrap .montar-mount
+      position: absolute
+      max-width: 280px
+      left: 50%
+      transform: translate3d(-50%,-100%,0)
+      margin-top: -126px
+
+    .col-10 .col-5,
+    .col-10 .col-6
+      width: auto
+
+      h1
+        font-size: 30px
+        margin-bottom: 8px
+        text-align: center
+        margin-right: 0
+
+      p
+        font-size: 16px
+        text-align: center
+
+      .product_main-features
+        font-size: 14px
+        li
+          margin-bottom: 8px
+        li:before
+          transform: translate3d(0,2px,0)
+
+    .offer_cta
+      .clock
+        left: 50%
+        transform: translate3d(-50%,0,0)
+        width: auto
+        top: auto
+        bottom: 128px
+      &-price
+        margin-bottom: 56px
+        &:after
+          width: 100%
+          left: 0
+          margin-top: -6px
+      &-action
+
+        .btn
+          font-size: 14px
+          width: calc(50% - 6px)
+          min-width: 120px
+          &+.btn
+            margin-left: 10px
+
+    .guarantee_list
+      width: 100%
+      max-width: 290px
+      margin-left: auto
+      margin-right: auto
+      min-width: 0
+      margin-bottom: 16px
+      h3
+        display: none
+      li
+        text-align: center
+      .guarantee_image
+        float: none
+        margin-left: auto
+        margin-right: auto
+
+    &+.wrap.cols
+      margin-top: 48px
+      padding-bottom: 48px
+      padding-top: 0
+
+  .product_main
+    &-image
+      text-align: center
+      position: absolute
+      padding-top: 286px
+      width: 100% !important
+      img
+        max-width: 190px
+        width: 100%
+        margin-left: 0
+
+    &-info
+      padding-top: 0
+
+    &-title
+      font-size: 30px
+      margin-right: -12px
+      margin-left: -2px
+      margin-bottom: 16px
+      text-align: center
+      span
+        display: block
+        max-width: none
+        background-color: transparent
+        border: none
+        padding: 2px 1px
+
+      &+p
+        font-size: 16px
+        line-height: 26px
+        margin-bottom: 24px
+        text-align: center
+        small
+          font-size: 12px
+
+  .product_main-info .offer_cta
+    padding-top: 220px
+
+    .clock
+      width: auto
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      top: auto
+      bottom: 176px
+
+    &-price
+      margin-bottom: 60px
+      &:after
+        left: 0
+        width: 100%
+        margin-top: -4px
+
+  .offer_cta
+    margin-left: 0
+    padding-top: 280px
+    &-price
+      width: 100%
+      text-align: center
+      span,
+      b
+        line-height: 40px
+        display: inline-block
+        vertical-align: middle
+        margin-left: 4px
+        margin-right: 4px
+
+    &-action
+      display: block
+      width: 100%
+
+    .btn.play
+      img
+        transform: rotateX(180deg) rotate(92deg) translate3d(44%,100%,0)
+
+.main_benefits
+  margin-bottom: 48px
+  h2
+    margin-bottom: 16px
+    text-align: center
+
+  p
+    font-size: 16px
+    line-height: 30px
+    padding-right: 0
+    text-align: center
+
+.product_slides.slick-slider
+  height: 70vh
+
+  .slick-prev,
+  .slick-next
+    display: none !important
+
+.section.video_intro
+  height: 68vw
+  max-height: none
+  background-position: left center
+  a.video_intro_trigger
+    &:before
+      font-size: 24px
+
+    &:after
+      width: 56px
+      height: 56px
+      background-size: 16px auto
+
+.section.product_guarantee
+
+  li
+
+    h3
+      font-size: 12px
+      margin-bottom: 32px
+
+.section.social_proof
+  margin-top: 32px
+  margin-bottom: 48px
+  .wrap.cols
+    .col-5
+      width: 100%
+      text-align: center
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+      margin-bottom: 24px
+    .col-7
+      width: 100%
+
+    .rating .stars
+      display: block
+      margin-top: 12px
+      margin-bottom: 4px
+      margin-left: auto
+      margin-right: auto
+      text-align: left
+
+    .orders-counter
+      padding-top: 14px
+      .orders-number
+        font-size: 64px
+        margin-left: -3px
+
+    .page_reviews
+      padding-left: 0
+      max-width: 320px
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+      li
+        width: 100%
+        max-width: none
+        float: none
+        margin-bottom: 36px
+        &:last-child
+          margin-bottom: 56px
+
+        p
+          line-height: 24px
+
+        .page_reviews-logo
+          margin-bottom: 12px
+          img
+            left: 50%
+            transform: translate3d(-50%, -50%, 0) scale(0.5)
+            transform-origin: center
+
+.product_benefits
+  text-align: center
+
+  h2
+    margin-left: 0
+    padding-left: 0
+
+  .wrap.cols .product_benefits-list
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto
+    &:after
+      content: ""
+      display: block
+      clear: both
+
+    .product_benefits-icon
+      display: inline-block
+      max-height: 48px
+      margin-bottom: 0
+      vertical-align: top
+      img
+        max-height: 48px
+        margin-right: 6px
+    li.col-3
+      width: 100%
+      float: left
+      text-align: left
+
+      h4
+        font-size: 14px
+        display: inline-block
+        padding: 16px 0
+
+  &-icon img
+    transform: none
+    max-height: 48px
+    vertical-align: top
+
+.product_images
+  padding-top: 96px
+  margin-bottom: 80px
+  &-desc
+    width: 100%
+    text-align: center
+    h2
+      margin-bottom: 16px
+      margin-left: auto
+      margin-right: auto
+    p
+      max-width: 340px
+      margin-left: auto
+      margin-right: auto
+    .offer_cta
+      padding-top: 0
+      .clock
+        left: 50%
+        width: auto
+        transform: translate3d(-50%,0,0)
+        top: auto
+        bottom: 128px
+      &-action
+        width: 100%
+        text-align: center
+        .btn
+          width: 100%
+
+      &-price
+        margin-bottom: 60px
+        &:after
+          left: 0
+          top: 100%
+          transform: none
+          width: 100%
+          margin-top: -4px
+
+  &-list
+    transform: translate3d(-50%, 0, 0) skewY(-10deg) translate3d(0, 0, 0)
+    margin-top: 64px
+    li,
+    li:first-child
+      transform: none
+      height: 68vw
+      width: 100%
+      float: none
+
+    li:first-child
+
+      .big_pal
+        max-width: 50vw
+        transform: skewY(10deg) translate3d(-60%, -33%, 0)
+      .small_pal
+        max-width: 24vw
+        transform: skewY(10deg) translate3d(25%, -100%, 0)
+
+
+.video_testimonials
+  margin-bottom: 56px
+  text-align: center
+  .wrap.cols
+    h2,
+    p
+      max-width: 340px
+      margin-left: auto
+      margin-right: auto
+  .wrap.cols .video_testimonials_list
+    margin-top: 48px
+    li.col-4
+      width: 100%
+      height: 50vw
+      margin-bottom: 16px
+
+.testimonials
+  .wrap.cols > .col-10
+    width: auto
+
+  &-title.col-10
+    margin-bottom: 12px
+    h2,
+    h3
+      margin-left: auto
+      margin-right: auto
+      max-width: 340px
+      line-height: 40px
+      text-align: center
+
+    h2
+      font-size: 24px
+
+    h3
+      font-size: 14px
+      line-height: 20px
+      margin-top: 6px
+
+  &_list.col-10
+    margin-top: 32px
+
+  &_list.col-10 li
+    .testimonials-image.col-4
+      width: 100%
+      float: none
+      margin: 0
+      text-align: center
+      img
+        width: 64px
+        height: 64px
+        object-fit: cover
+        object-position: top center
+        border-radius: 50%
+
+    .testimonials-info.col-5
+      padding: 0
+      width: 100%
+      float: none
+      text-align: center
+      padding: 0
+      margin: 0 auto
+      max-width: 340px
+      h3
+        padding-top: 8px
+        margin-bottom: 16px
+        font-size: 20px
+      p
+        line-height: 24px
+        position: relative
+        padding-top: 16px
+        &:before
+          right: 50%
+          margin-right: -16px
+          width: 32px
+          background-size: 100% auto
+          margin-top: -36px
+
+    &:nth-of-type(2)
+      margin-top: 32px
+      padding-top: 32px
+
+    &:nth-of-type(2) .testimonials-image
+      transform: none
+      img
+        transform: none
+
+
+.package
+  padding-top: 48px
+  .wrap.cols .col-6.centered-col
+    width: 100%
+    h2
+      margin-bottom: 16px
+    p
+      padding-left: 0
+      padding-right: 0
+      font-size: 14px
+      margin-bottom: 24px
+
+    .package_items
+      max-width: 280px
+      margin-left: auto
+      margin-right: auto
+      li
+        margin-bottom: 32px
+        .package-item_image
+          line-height: 300px
+          height: 300px
+    .offer_cta .btn
+      width: 100%
+      padding: 0
+
+    .offer_cta
+      &-action
+        width: 100%
+
+.faq
+  padding-bottom: 64px
+  .wrap.cols .col-10.centered-col
+    width: 100%
+    .col-6
+      width: auto
+      .faq-item_trigger
+        font-size: 18px
+    .col-4
+      width: auto
+
+    .guarantee_list
+      margin-top: 40px
+      border-top: 1px solid rgba(0,0,0,0.05)
+      padding-top: 40px
+      li:last-child h3
+        margin-bottom: 0
+      h3
+        font-size: 16px
+
+.freeshipping
+  .wrap.cols .col-10.centered-col
+    width: 100%
+
+    .col-6
+      margin-top: 0
+      width: auto
+      text-align: center
+      h2
+        font-size: 24px
+      p.h4
+        font-size: 16px
+    .col-4
+      width: auto
+      text-align: center
+
+  &-icon
+    margin-left: 0
+    width: 100%
+    img
+      max-height: 42px
+
+  &-cta.offer_cta
+    .clock
+      left: 50%
+      transform: translate3d(-50%,0,0)
+      width: auto
+      right: auto
+    .offer_cta-price
+      text-align: center
+      &:after
+        left: 0
+        width: 100%
+
+.subscribe
+  padding-top: 48px
+  padding-bottom: 40px
+  .wrap.cols .col-10.centered-col
+    width: 100%
+    .col-5
+      float: none
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      &:first-child
+        width: 100%
+        max-width: 340px
+
+      .subscribe-form
+        padding-top: 16px
+
+    h2
+      margin-bottom: 24px
+      font-size: 24px
+
+    p
+      font-size: 14px
+
+footer.main_footer
+  padding: 24px 0
+  .wrap.cols .col-10.centered-col
+    width: 100%
+    .col-5
+      text-align: center
+    p
+      margin-bottom: 24px
+      font-size: 14px
+
+    img
+      vertical-align: top
+      margin-bottom: 16px
+
+.floating_banner
+  .floating_badge
+    display: none
+
+  .offer_cta
+    float: none

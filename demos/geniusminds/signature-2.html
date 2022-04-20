@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title>Email Signature Generator</title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Beatrice';
+            font-weight: bold;
+            src: url('https://geniusminds.com/email-signature/fonts/Beatrice-Bold.otf');
+        }
+
+        @font-face {
+            font-family: 'Beatrice';
+            src: url('https://geniusminds.com/email-signature/fonts/Beatrice-Regular.otf');
+            font-weight: 400;
+        }
+
+        body {
+            background: #eee;
+            font-size: 14px;
+            width: 100%;
+            font-family: 'Beatrice', 'helvetica neue', helvetica, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            padding: 0;
+            margin: 0;
+            color: #222;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .email-logo {
+            display: flex;
+        }
+
+        .circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .email-header {
+            background: #FFD701;
+            padding: 25px 0;
+            position: relative;
+        }
+
+        .primary {
+            background: #fff;
+        }
+
+        .secondary {
+            background: #131313;
+            opacity: .4;
+            mix-blend-mode: multiply;
+            margin-left: -70px;
+        }
+
+        .avatar {
+            margin-left: -70px;
+            position: relative;
+        }
+
+        .avatar img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .flex > div {
+            flex: 1;
+            width: 50%;
+        }
+
+        .col-left {
+            padding-left: 45px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            margin-bottom: 7px;
+            margin-top: 0;
+        }
+        .pos {
+            margin: 20px 0;
+        }
+        .email-footer {
+            padding: 30px 45px;
+            display: flex;
+            align-items: center;
+        }
+        .address {
+            text-align: right;
+            flex: 1;
+        }
+        .col-right {
+
+        }
+        .qrcode {
+            position: absolute;
+            right: 45px;
+            bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper template-1">
+    <div class="email-header">
+        <div class="flex">
+            <div class="col-left">
+                <div class="email-logo">
+                    <div class="circle primary"></div>
+                    <div class="circle secondary"></div>
+                    <div class="circle avatar">
+                        <img src="https://geniusminds.com/email-signature/images/Frank.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <h3>Frank Grootenboer</h3>
+                <p class="pos">CEO GeniusMinds</p>
+                <p class="email"><a href="mailto:f.grootenboer@geniusminds.com">f.grootenboer@geniusminds.com</a></p>
+                <p>+31 6 40743924</p>
+                <p><a href="https://geniusminds.com">geniusminds.com</a></p>
+                <div class="qrcode">
+                    <img src="https://geniusminds.com/email-signature/images/qrw.png" alt="" width="60">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="email-footer">
+        <div class="email-footer-logo">
+            <img src="https://geniusminds.com/email-signature/images/logo.png" alt="" width="100">
+        </div>
+        <div class="address">
+            <p>De Vrijstaat, Spijkerkade 3, 1021JS Amsterdam―Noord, Netherlands</p>
+            <p>geniusminds.com / hello@geniusminds.com</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

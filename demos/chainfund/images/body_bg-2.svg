@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="132px" height="450px" viewBox="0 0 132 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing-02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1308.000000, -1476.000000)">
+        <g id="Group-8" transform="translate(1374.000000, 1701.000000) scale(-1, -1) translate(-1374.000000, -1701.000000) translate(1308.000000, 1476.000000)">
+            <path d="M0,0 C124.945414,94.4842345 161.189939,187.210058 108.733575,278.177471 C55.6808181,360.367782 29.9736607,344.517717 0,437 C0.126706193,385.923622 0.126706193,240.256955 0,0 Z" id="Path-7" fill="#2BA942"></path>
+            <path d="M0,60 C100.378295,134.981209 134.468418,205.415013 102.27037,271.301412 C53.9732975,370.131012 12.3585709,355.433327 0,446 C0.118087173,402.499669 0.118087173,273.833002 0,60 Z" id="Path-7" fill="#40B856"></path>
+            <path d="M0,123 C78.3179086,160.746729 110.168432,207.924099 95.5515711,264.53211 C73.6262793,349.444126 23.5052266,346.765191 0,450 C0.106865746,417.976938 0.106865746,308.976938 0,123 Z" id="Path-7" fill="#162B45"></path>
+        </g>
+    </g>
+</svg>

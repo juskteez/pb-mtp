@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="43px" viewBox="0 0 53 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>icon-chatbot</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Products" transform="translate(-172.000000, -733.000000)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(153.000000, 215.000000)">
+                <g id="Group-2" transform="translate(0.000000, 483.000000)">
+                    <g id="icon-chatbot" transform="translate(20.000000, 35.000000)">
+                        <rect id="Rectangle" stroke="#1D2A38" stroke-width="2" fill="#F0F3F7" x="0" y="8.003" width="42" height="33.997" rx="3"></rect>
+                        <path d="M10.583136,29.9569999 C14.7633402,28.6774098 19.2313336,28.6815901 23.409136,29.9689999 C25.5441332,30.5869721 27.010021,32.5463877 27.0001857,34.7689999 L27.0001857,34.7689999 L27.0001857,35.9999999 L7.00006762,35.9999999 L7.00006762,34.7539999 C6.98854338,32.5340592 8.4511698,30.5758625 10.583136,29.9569999 Z M17.000136,14 C20.3138445,14 23.000136,16.6862914 23.000136,20 C23.000136,23.2369999 20.379136,27 17.000136,27 C13.621136,27 11.000136,23.2369999 11.000136,20 C11.000136,16.6862914 13.6864276,14 17.000136,14 Z" id="Combined-Shape" fill="#1D2A38"></path>
+                        <path d="M36,22 C35.4477153,22 35,21.5522847 35,21 L35,18 L33,18 C31.3431458,18 30,16.6568542 30,15 L30,3 C30,1.34314575 31.3431458,0 33,0 L49,0 C50.6568542,0 52,1.34314575 52,3 L52,15 C52,16.6568542 50.6568542,18 49,18 L42.3,18 L36.552,21.832 C36.3885037,21.9410206 36.1965101,21.9994534 36,22 Z" id="Path" fill="#FFD701"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

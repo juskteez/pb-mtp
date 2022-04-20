@@ -1,0 +1,363 @@
+.page_loaded .fpage_header:before
+	opacity: 1
+
+.gif_played .fpage:before
+	opacity: 0
+	pointer-events: none
+
+.fpage
+	&_xz:before
+		content: ""
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #000
+		background-image: url("images/spinner.svg")
+		background-size: 64px
+		background-repeat: no-repeat
+		background-position: center
+		transition: 0.5s opacity ease
+		z-index: 999
+
+	&_wrap
+		max-width: 720px
+
+	&_hero_title
+		top: 15%
+		h1
+			font-size: 48px
+			font-weight: 300
+		h3
+			font-size: 24px
+			letter-spacing: 10.3px
+			margin-left: -6px
+
+	&_header_video
+		display: none
+
+	&_header_gif
+		//background-image: url("images/earbuds.jpg")
+		background-position: center
+		background-size: 5100vw auto
+		top: 40%
+		transition: 0s all ease
+		left: 0
+		position: absolute
+		width: 100%
+		height: 50%
+		background-repeat: no-repeat
+
+	&_header
+		// background-image: url("images/earbuds.gif")
+		// background-size: 100% auto
+		// background-position: center
+		// background-repeat: no-repeat
+
+		.fpage_wrap
+			height: 100%
+
+	&_headerx:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 50vw
+		//background-image: url("images/earbuds.gif")
+		background-size: cover
+		background-position: center
+		top: 50%
+		left: 0
+		transform: translate3d(0,-50%,0)
+		opacity: 0
+
+	&_hero_cta
+		top: 65%
+
+	&_side
+		height: 320px
+
+	&_info_box
+		max-width: 360px
+		padding: 0 48px
+		padding-right: 0
+
+		p
+			font-size: 14px
+			line-height: 22px
+
+		h3
+			font-size: 24px
+
+	&_side.left_side .fpage_info_box
+		padding-right: 56px
+		padding-left: 0
+
+	&_section.section-features
+		background-position: 120% bottom
+		background-size: auto 60%
+
+	.section-video
+		.vid_gradient_title
+			font-size: 48px
+
+	.section-insta
+		padding: 48px 0
+		padding-bottom: 0
+
+	.section-meet
+		.fpage-meet_side
+			height: 50vw
+			max-height: 580px
+			&.meet-image
+				width: 38%
+				background-position: center left
+
+			&.meet-info
+				width: 62%
+
+			.meet-info-wrap
+				max-width: none
+				transform: translate3d(0,-50%,0)
+				padding: 0 48px
+				h2
+					margin-bottom: 16px
+				p
+					margin-bottom: 12px
+					&:last-of-type
+						margin-bottom: 24px
+
+	.section-cons
+		.cons-list
+			margin-bottom: 0
+			li
+				width: calc(100% / 3 - 4px)
+				float: left
+				background-color: #FFF
+				padding: 30px 20px
+				margin-right: 6px
+				height: 252px
+				&:nth-of-type(3n+3)
+					margin-right: 0
+					h3
+						line-height: 48px
+
+				p
+					color: #4A4A4A
+					font-size: 14px
+
+			h3
+				font-size: 20px
+				font-weight: bold
+				line-height: 24px
+				text-transform: none
+				height: 48px
+				margin-top: 16px
+				margin-bottom: 10px
+
+	.section-side_info
+		.fpage_wrap
+			max-width: 768px
+
+	&_side
+		height: 280px
+
+	.section-3d-shows
+		height: 540px
+		background-size: 60px auto
+		margin-bottom: -32px
+		&:before
+			background-size: auto 397.5px
+
+		.flying-obj
+			&.obj-1
+				width: 279.75px
+				margin-top: 20px
+			&.obj-2
+				width: 165.375px
+				margin-left: -60px
+				margin-top: 60px
+			&.obj-3
+				width: 185.625px
+				margin-left: 40px
+				margin-top: 40px
+			&.obj-4
+				width: 89.625px
+				margin-top: 100px
+
+	.section-features
+		.fpage_wrap
+			padding: 64px 10px
+
+	.section_specs
+		background-size: auto 100%
+		.fpage_wrap
+			height: 560px
+
+		.spec_object
+			width: 560px
+
+		.specs_list
+			li:nth-of-type(1)
+				top: 100px
+				left: 100px
+				b
+					margin: 14px 8px
+					font-size: 11px
+			li:nth-of-type(2)
+				top: 256px
+				left: 642px
+			li:nth-of-type(3)
+				top: 420px
+				left: 108px
+			li:nth-of-type(4)
+				top: 420px
+				left: 258px
+			li:nth-of-type(5)
+				top: 208px
+				left: -16px
+				width: 100px
+			li:nth-of-type(6)
+				top: 318px
+				left: 8px
+			li:nth-of-type(7)
+				top: 144px
+				left: 644px
+			li:nth-of-type(8)
+				top: 420px
+				left: 492px
+
+	.section_tech_compares
+		background-size: 700px auto
+		.section_tech_option
+			height: 320px
+			.tech_spec
+				transform-origin: top right
+				transform: scale(0.75)
+				top: -12px
+				left: 123%
+
+	.section_tech_list
+		margin-bottom: -64px
+
+		.tech_image
+			width: 50%
+			img
+				width: 100%
+				vertical-align: top
+
+		li:not(:first-child)
+			margin-top: -106px
+
+		li:nth-of-type(2n+2)
+			.tech_image
+				float: right
+			.tech_desc
+				left: 0
+				right: auto
+
+		.tech_desc
+			max-width: 370px
+			position: absolute
+			top: 50%
+			right: 0
+			padding: 20px 30px
+			transform: translate3d(0,-50%,0)
+			margin-top: -32px
+			h3
+				text-transform: none
+				font-weight: bold
+				font-size: 24px
+				line-height: 32px
+				margin-bottom: 16px
+			p
+				font-size: 14px
+				line-height: 22px
+				margin-top: 0
+
+	.section_charger
+		.fpage_wrap
+			padding: 94px 10px
+			max-width: 640px
+
+		h2,h3
+			text-transform: none
+			font-weight: bold
+
+		.charger_title
+			max-width: 400px
+			text-align: center
+			margin-left: auto
+			margin-right: auto
+			h2
+				font-size: 32px
+				line-height: 42px
+				margin-bottom: 16px
+			p
+				font-size: 18px
+				line-height: 30px
+
+		.charger_tech
+			position: relative
+			text-align: right
+			margin-top: 280px
+			li
+				display: inline-block
+				width: calc(50% - 12px)
+				color: $text-color
+				background-color: #FFF
+				height: 160px
+				vertical-align: top
+				margin-left: 0
+				margin: 0 4px
+				padding: 20px
+				border-bottom: 5px solid $main-color
+				text-align: left
+				h3
+					font-size: 18px
+					line-height: 24px
+					margin-bottom: 8px
+					color: $main-color
+
+				p
+					font-size: 14px
+					line-height: 18px
+
+	.section_fit
+		.fit_title
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate3d(0%,-50%,0)
+			margin-top: 0
+			p
+				font-size: 16px
+				line-height: 22px
+			h2
+				font-size: 32px
+				line-height: 32px
+				span:nth-of-type(2n+2)
+					margin-left: 120px
+
+	.section_package
+		.fpage_wrap
+			max-width: 700px
+			&:after
+				width: 100vw
+				background-position: 22vw center
+				background-repeat: no-repeat
+				right: 50%
+				transform: translate3d(50%,0,0)
+
+	.section-faq
+		.fpage_wrap
+			max-width: 640px
+
+		.faq-list
+			.faq-q
+				font-size: 20px
+			.faq-a
+				font-size: 14px
+
+	.section-insta
+		padding-top: 24px

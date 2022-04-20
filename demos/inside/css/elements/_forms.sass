@@ -1,0 +1,94 @@
+/* Forms Elements */
+
+.form
+  &-input
+    input,
+    textarea
+      width: 100%
+
+  &.form-inline
+    display: flex
+    align-items: center
+
+  &.form-inline &-input
+    width: 100%
+
+  &-btn-link
+    margin-left: 16px
+
+  &.quantity-input
+    width: 116px
+
+  &.quantity-input &-input:not(:first-child) input
+    width: calc(100% + 1px)
+    margin-left: -1px
+
+  &.quantity-input &-input:not(:last-child) input
+    width: calc(100% + 1px)
+    margin-right: -1px
+
+  &.quantity-input &-input:not(:first-child):not(:last-child)
+    position: relative
+    z-index: 1
+    input
+      width: calc(100% + 2px)
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 1px
+      height: 100%
+      background-color: rgba(white,.48)
+      top: 0
+      left: -1px
+      z-index: -1
+    &:after
+      left: auto
+      right: -1px
+
+  &-input-msg
+    font-size: $fs7
+    line-height: $fs5
+    padding-top: 2px
+    margin-bottom: 0 //$fs7
+    color: $n5
+    height: #{$fs5 * 1}
+    @extend .easing
+    //transition: 0.125s all linear
+
+    &.msg-valid,
+    &.msg-invalid
+      height: 0
+      margin-bottom: 0
+      padding-top: 0
+      opacity: 0
+
+    &.msg-valid
+      color: $green-color
+
+    &.msg-invalid
+      color: $red-color
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+.input,
+select,
+textarea
+  &:not(:placeholder-shown)[required]:invalid ~ .form-input-msg.msg-invalid,
+  &:not(:placeholder-shown)[required]:valid ~ .form-input-msg.msg-valid
+    opacity: 1
+    margin-bottom: 0 //$fs7
+    padding-top: 2px
+    max-height: #{$fs5 * 2} // max 3 lines
+
+
+label
+  font-size: $fs7
+  line-height: $fs5
+  margin-bottom: 4px
+  display: block

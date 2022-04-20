@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="26px" viewBox="0 0 32 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>credit-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Bahasa" transform="translate(-1108.000000, -3897.000000)" fill="#56DFE6">
+            <g id="credit-3" transform="translate(1108.000000, 3897.000000)">
+                <g id="Group">
+                    <path d="M25,15 L24,15 L24,19.0001925 C24,19.5523709 23.5446944,20 23.0081969,20 L4.99180311,20 C4.44404538,20 4,19.544239 4,18.9975267 L4,9.00247329 C4,8.44882258 4.44483697,8 4.9955775,8 L15,8 L15,7 L5.0085302,7 C3.8992496,7 3,7.89706013 3,9.00585866 L3,21 L0,24 C0,25.3092917 0.696194226,26 2,26 L26,26 C27.3038058,26 28,25.3092917 28,24 L25,21 L25,20 L25,15 Z M11,26 L11,25 L17,25 L17,26 L11,26 Z M9,24 L10,23 L18,23 L19,24 C19,24 9,24 9,24 Z" id="Shape"></path>
+                    <rect id="Rectangle-path" x="13" y="13" width="2" height="2"></rect>
+                    <polygon id="Rectangle-path" points="15 10 17 10 17 12 15 12"></polygon>
+                    <rect id="Rectangle-path" x="16" y="13" width="2" height="2"></rect>
+                    <polygon id="Rectangle-path" points="19 10 22 10 22 13 19 13"></polygon>
+                    <polygon id="Rectangle-path" points="22 1 25 1 25 4 22 4"></polygon>
+                    <rect id="Rectangle-path" x="16" y="6" width="3" height="3"></rect>
+                    <rect id="Rectangle-path" x="20" y="5" width="4" height="4"></rect>
+                    <rect id="Rectangle-path" x="24" y="10" width="4" height="4"></rect>
+                    <rect id="Rectangle-path" x="26" y="0" width="6" height="6"></rect>
+                    <polygon id="Rectangle-path" points="20 14 23 14 23 17 20 17"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

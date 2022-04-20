@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="232px" viewBox="0 0 64 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 35</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing-02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-68.000000, -2629.000000)">
+        <g id="Group-35" transform="translate(68.000000, 2633.000000)">
+            <path d="M32,6.03467778 C32,6.03467778 32,67.3564519 32,190" id="Path-5" stroke="#E3F4EE" stroke-width="20" stroke-linecap="round" stroke-dasharray="1,5"></path>
+            <path d="M32,228 C49.673112,228 64,213.673112 64,196 C64,184.217925 53.3333333,163.551259 32,134 C10.6666667,163.551259 0,184.217925 0,196 C0,213.673112 14.326888,228 32,228 Z" id="Oval-2" fill="#E3F4EE"></path>
+            <path d="M32,6.03467778 L32,193" id="Path-5" stroke="#40B856" stroke-width="2" opacity="0.5" stroke-linecap="round" stroke-dasharray="5,5"></path>
+            <path d="M32.5,11 C35.5375661,11 38,8.53756612 38,5.5 C38,2.46243388 35.5375661,0 32.5,0 C29.4624339,0 27,2.46243388 27,5.5 C27,8.53756612 29.4624339,11 32.5,11 Z" id="Oval-2" stroke="#40B856" stroke-width="2" fill="#FFFFFF"></path>
+            <circle id="Oval-2" stroke="#40B856" stroke-width="2" fill="#FFFFFF" cx="32" cy="192" r="5"></circle>
+        </g>
+    </g>
+</svg>

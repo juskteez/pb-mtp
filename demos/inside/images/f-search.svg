@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Button/Icon">
+            <g id="Background/Sharp" fill="#FFFFFF" fill-opacity="0">
+                <rect id="Background" x="0" y="0" width="40" height="40"></rect>
+            </g>
+            <g id="Icon/Search" transform="translate(12.000000, 12.000000)" fill="#000000" fill-opacity="0.2">
+                <path d="M13.314,11.9 L15.707,14.293 C16.098,14.684 16.098,15.316 15.707,15.707 C15.512,15.902 15.256,16 15,16 C14.744,16 14.488,15.902 14.293,15.707 L14.293,15.707 L11.9,13.314 C12.429,12.903 12.903,12.429 13.314,11.9 L13.314,11.9 Z M7,0 C10.86,0 14,3.14 14,7 C14,10.86 10.86,14 7,14 C3.14,14 0,10.86 0,7 C0,3.14 3.14,0 7,0 Z M7,2 C4.243,2 2,4.243 2,7 C2,9.757 4.243,12 7,12 C9.757,12 12,9.757 12,7 C12,4.243 9.757,2 7,2 Z" id="Icon-color"></path>
+            </g>
+        </g>
+    </g>
+</svg>

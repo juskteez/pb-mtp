@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1444px" height="104px" viewBox="0 0 1444 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>footer_graph</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="V1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer_graph">
+            <g id="rect" transform="translate(1.000000, 3.000000)">
+                <polygon id="path-1" fill="#FFFFFF" points="1 1 1 75 132.109375 75 258.367188 55 398.484375 75 550.476562 25 686.875 95 834.953125 35 1041.89844 75 1192.46875 45 1393.96094 75 1441 75 1441 1"></polygon>
+                <polygon id="Shape" stroke="#DDE5F0" stroke-width="2" points="1192.49355 46.014715 1041.90136 76.019074 835.054153 36.038036 686.82597 96.098838 550.391922 26.080563 398.574651 76.023021 258.374934 56.011241 132.26583 75.987685 0 76 0 0 1442 0 1442 76 1393.96094 76"></polygon>
+            </g>
+            <g id="oval-1" transform="translate(127.000000, 72.000000)">
+                <g id="path-2-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-2" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-2" transform="translate(253.000000, 54.000000)">
+                <g id="path-3-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-3" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-3" transform="translate(393.000000, 72.000000)">
+                <g id="path-4-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-4" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-4" transform="translate(545.000000, 24.000000)">
+                <g id="path-5-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-5" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-5" transform="translate(681.000000, 91.000000)">
+                <g id="path-6-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-6" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-6" transform="translate(831.000000, 34.000000)">
+                <g id="path-7-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-7" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-7" transform="translate(1037.000000, 72.000000)">
+                <g id="path-8-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-8" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-8" transform="translate(1188.000000, 43.000000)">
+                <g id="path-9-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-9" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <g id="oval-9" transform="translate(1389.000000, 72.000000)">
+                <g id="path-10-link" transform="translate(1.000000, 1.000000)" fill="#FFFFFF">
+                    <circle id="path-10" cx="5" cy="5" r="5"></circle>
+                </g>
+                <circle id="Oval" stroke="#DDE5F0" stroke-width="2" cx="6" cy="6" r="6"></circle>
+            </g>
+            <rect id="Rectangle-12" fill="#FFFFFF" x="1441" y="0" width="3" height="78"></rect>
+            <rect id="Rectangle-13" fill="#FFFFFF" x="0" y="0" width="1444" height="6"></rect>
+            <rect id="Rectangle-14" fill="#FFFFFF" x="0" y="2" width="4" height="76"></rect>
+        </g>
+    </g>
+</svg>

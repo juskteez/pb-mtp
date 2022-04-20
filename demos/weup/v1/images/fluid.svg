@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="944px" height="793px" viewBox="0 0 944 793" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>fluid</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="V1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M303.750212,793 C533.447724,793 479.085641,674.492359 655.808391,686.822275 C832.53114,699.152191 937.44179,627.824691 943.765052,468.412949 C948.407977,351.363119 883.949626,252.999373 775.964965,232.117333 C667.980304,211.235293 736.674583,82.7201673 627.799116,26.6066417 C518.92365,-29.5068839 452.656901,45.9969045 291.933764,7.62967179 C70.4724129,-45.2367625 0,185.864036 0,415.552892 C0,645.241747 74.0527001,793 303.750212,793 Z" id="fluid" fill="#484A7A"></path>
+    </g>
+</svg>

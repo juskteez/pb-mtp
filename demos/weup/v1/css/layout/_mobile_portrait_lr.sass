@@ -1,0 +1,33 @@
+/* Mobile Portrait Low Resolution */
+.process
+
+  &_list
+    h3
+      white-space: normal
+
+  li:first-child .process_ico svg
+      transform: translate3d(-50%,-50%,0)
+
+  &_ico:before
+    content: ""
+    position: absolute
+    width: 67px
+    height: 67px
+    border-radius: 50%
+    background-color: #E8EDF5
+    top: 50%
+    left: 0
+    transform: translate3d(0,-50%,0)
+    transition: 0.4s all ease
+
+  li.active .process_ico:before
+    background-color: #13C095
+
+  &_bar
+    display: none
+
+  .the_television
+    transform: translate3d(-50vw,4%,0) scale(0.55)
+
+.overprocess .process .the_television
+  transform: translate3d(-50%,4%,0) scale(0.55)

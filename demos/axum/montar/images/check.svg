@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Montar-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Montar-Design" transform="translate(-735.000000, -618.000000)" fill="#6FC612">
+            <g id="Group-42" transform="translate(235.000000, 611.000000)">
+                <g id="Group-37" transform="translate(500.000000, 2.000000)">
+                    <g id="Group-35">
+                        <path d="M5.71980676,17.013587 C5.51368595,17.2197071 5.28180684,17.3227657 5.02415459,17.3227657 C4.76650432,17.3227657 4.53462273,17.2197071 4.32850242,17.013587 L0,12.6850845 L1.39130435,11.2937802 L5.02415459,14.9266304 L14.6859903,5.1875 L16,6.57880435 L5.71980676,17.013587 Z" id="check"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

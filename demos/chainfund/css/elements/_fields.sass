@@ -1,0 +1,211 @@
+/* Fields */
+
+input,
+select,
+textarea,
+button,
+select,
+.unfocus
+	&:focus
+		outline: none
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button
+  visibility: hidden
+  display: none !important
+  pointer-events: none
+  position: absolute
+  right: 0
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+.input,
+select,
+textarea
+  display: inline-block
+  background-color: transparent
+  border-radius: 4px
+  line-height: 24px
+  padding: 12px 24px
+  height: 50px
+  vertical-align: middle
+  border: 1px solid rgba(76,97,128,0.5)
+  color: $text-color
+  font-size: $fs5
+  appearance: none
+  position: relative
+  @extend .easing
+  &:focus
+    border-color: rgba(76,97,128,0.8)
+  &.dark
+    background-color: #111518
+    color: #fff
+
+  &.xinput
+    border-radius: 0
+    &:not(:first-child)
+      border-left: none
+    &:first-child
+      border-radius: 30px 0 0 30px
+    &:last-child
+      border-radius: 0 30px 30px 0
+
+  &.tag_input
+    line-height: 30px
+    padding: 9px
+    padding-bottom: 3px
+    height: auto
+    cursor: text
+
+    .input_tag
+      display: inline-block
+      background-color: $main-color
+      color: #fff
+      padding: 0 16px
+      padding-right: 0
+      border-radius: 15px
+      vertical-align: top
+      font-size: 12px
+      font-weight: 600
+      cursor: default
+      margin-right: 6px
+      margin-bottom: 6px
+      @extend .easing
+      &:hover
+        background-color: $main-darker-color
+      a
+        display: inline-block
+        width: 30px
+        height: 30px
+        position: relative
+        color: currentColor
+        vertical-align: top
+        &:before,
+        &:after
+          content: ""
+          position: absolute
+          width: 12px
+          height: 1px
+          background-color: currentColor
+          top: 50%
+          left: 50%
+          transform: translate3d(-50%,-50%,0) rotate(45deg)
+        &:after
+          transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+      &_list
+        display: inline
+
+      &_typer
+        display: inline-block
+        outline: none
+        height: 30px
+        max-height: 30px
+        width: 120px
+
+  &.social_input_selection
+    line-height: 30px
+    padding: 10px
+    .social_input_list
+      position: absolute
+      background-color: #fff
+      border: 1px solid rgba(182,205,210,0.5)
+      padding: 8px 10px
+      left: 8px
+      width: calc(100% - 16px)
+      z-index: 1
+      border-radius: 6px
+      box-shadow: 0 2px 1px rgba(217,228,231,0.35)
+      @extend .easing
+      opacity: 0
+      transform: translate3d(0,10px,0)
+      pointer-events: none
+    .social_input_selected.active ~ .social_input_list
+      opacity: 1
+      transform: translate3d(0,0,0)
+      pointer-events: all
+    .social_input_selector:not(:last-child)
+      margin-bottom: 4px
+    .social_input_selected:hover
+      color: $text-color
+    .social_input_selector,
+    .social_input_selected
+      display: block
+      line-height: 30px
+      span
+        display: inline-block
+        pointer-events: none
+      span:before
+        content: ""
+        position: relative
+        display: inline-block
+        width: 30px
+        height: 30px
+        margin-right: 10px
+        background-color: rgba(0,0,0,0.1)
+        border-radius: 50%
+        vertical-align: middle
+        transform: translate3d(0,-2px,0)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 100%
+      .facebook:before
+        background-image: url("../images/ss_facebook.svg")
+        background-color: transparent
+      .twitter:before
+        background-image: url("../images/ss_twitter.svg")
+        background-color: transparent
+
+  &.big
+    height: 60px
+    font-size: $fs5
+    padding: 17px 32px
+    @media screen and (max-width: 767px)
+      height: 50px
+      padding: 13px 20px
+
+  &.foot_subscribe_input
+    background-image: url("../images/envelope.svg")
+    background-position: 18px center
+    background-repeat: no-repeat
+    padding-left: 48px
+    color: #fff
+    &.big
+      padding-left: 64px
+      padding-top: 16px
+      padding-bottom: 18px
+      @media screen and (max-width: 767px)
+        background-size: 24px auto
+        padding-left: 44px
+        background-position: 12px center
+        padding-top: 12px
+        padding-bottom: 14px
+
+    &::-webkit-input-placeholder
+      color: rgba(255,255,255,0.4)
+    &::-moz-placeholder
+      color: rgba(255,255,255,0.4)
+    &::-ms-input-placeholder
+      color: rgba(255,255,255,0.4)
+    &::-moz-placeholder
+      color: rgba(255,255,255,0.4)
+
+textarea
+  max-width: 100%
+  min-height: 160px
+
+select,
+.social_input_selection
+  background-image: url("../images/select_arrow.svg")
+  background-position: calc(100% - 20px) center
+  background-repeat: no-repeat

@@ -1,0 +1,41 @@
+.newsletter
+  background-color: $n10
+
+  &-background
+    position: relative
+    width: 100%
+    padding-top: 33.33%
+    background-color: $n10
+    overflow: hidden
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+      top: 0
+      left: 0
+
+  &-content:not(:first-child)
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+.kinect-comp
+  .newsletter-title,
+  .newsletter-desc,
+  .newsletter-form
+    transition: $kinect-transition
+    transform: translate3d(0,32px,0)
+    opacity: 0
+
+.kinected,
+.kinect-comp.kinected
+  .newsletter-title,
+  .newsletter-desc,
+  .newsletter-form
+    transform: translate3d(0,0,0)
+    opacity: 1

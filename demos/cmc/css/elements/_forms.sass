@@ -1,0 +1,144 @@
+/* Forms Elements */
+.page_form
+  position: relative
+  &.split_form
+    margin: 0 -15px
+    .form_actions
+      padding: 0 15px
+      margin-top: 24px
+
+  &.login_form
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    max-width: 400px
+    width: 100%
+    padding: 48px 15px
+    margin-top: -48px
+
+  &.prereg_form
+    position: relative
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    margin-top: -48px
+    .form
+      &_desc
+        font-family: $font-parag
+        font-size: $fs5
+        margin-bottom: 48px
+
+      &_external .ext-title
+        margin-top: 20px
+        margin-bottom: 18px
+        color: rgba(255,255,255,0.6)
+        &:before,
+        &:after
+          background-color: rgba(255,255,255,0.4)
+
+  &.signup_form .form_desc
+    font-family: $font-parag
+    font-size: $fs5
+    margin-bottom: 48px
+    text-align: center
+    color: $text-lighter-color
+
+
+
+.form
+  &_logo
+    text-align: center
+    margin-bottom: 24px
+    .logo img
+      width: 225px
+  &_title
+    margin-bottom: 24px
+    font-size: 24px
+    &.login_title
+      text-align: center
+    &.prereg_title,
+    &.signup_title
+      font-size: 36px
+    &.signup_title
+      text-align: center
+  &_subactions
+    text-align: center
+    font-size: $fs5
+    padding: 16px 0
+
+  &_actions
+    .check-label
+      margin-bottom: 24px
+
+  &_external
+    position: relative
+    .ext-title
+      //border-top: 1px solid $main-border-color
+      display: block
+      text-align: center
+      color: #B4C1C8
+      font-size: $fs5
+      margin-bottom: 10px
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        width: calc(50% - 24px)
+        right: 50%
+        height: 1px
+        color: $main-border-color
+        background-color: currentColor
+        top: 10px
+        transform: translate3d(-24px,0,0)
+      &:after
+        right: auto
+        left: 50%
+        transform: translate3d(24px,0,0)
+
+  &.contact_form
+    max-width: 470px
+    margin-right: auto
+    margin-left: auto
+
+.signup_lane
+  display: flex
+  background: rgba(214,231,240,0.50)
+  margin-bottom: 32px
+  a
+    display: block
+    width: 100%
+    text-align: center
+    padding: 16px 0
+    padding-bottom: 12px
+    text-transform: uppercase
+    font-size: $fs5
+    font-weight: 600
+    color: $text-lighter-color
+    &:hover
+      box-shadow: inset 0 0 0 2px $main-border-color
+    &.active
+      box-shadow: inset 0 0 0 2px $main-color
+      background-color: #fff
+      color: $main-color
+    span
+      display: block
+      height: 24px
+      margin-bottom: 8px
+    img, svg
+      vertical-align: middle
+
+.coupon_sum
+  .input-wrap
+    max-width: 370px
+    label
+      color: $main-color
+      text-transform: none
+      letter-spacing: 0
+
+    input.input
+      max-width: calc(100% - 132px)
+
+    .btn
+      position: absolute
+      right: 0
+      bottom: 0

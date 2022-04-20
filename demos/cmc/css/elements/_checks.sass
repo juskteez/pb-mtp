@@ -1,0 +1,45 @@
+/* Checkboxes & Radio boxes */
+
+label.check-label
+  cursor: pointer
+  line-height: 48px
+  display: inline-block
+
+  &+&
+    margin-left: 20px
+  input[type="radio"],
+  input[type="checkbox"]
+    display: none
+
+  span.checkbox
+    display: inline-block
+    position: relative
+    width: 16px
+    height: 16px
+    margin: 2px 0
+    margin-right: 6px
+    border-radius: 50%
+    background-color: #fff
+    vertical-align: middle
+    border: 1px solid $main-border-color
+    background-position: center
+    background-repeat: no-repeat
+    @extend .easing
+
+  input[type="checkbox"] ~ span.checkbox
+    border-radius: 0
+    background-image: url("../images/checkbox_check.svg")
+  &:hover span.checkbox
+    border-color: $main-light-color
+
+  input:checked ~ span.checkbox
+    border-width: 5px
+    border-color: $main-color
+
+  input[type="checkbox"]:checked ~ span.checkbox
+    background-color: $main-color
+    border-width: 1px
+
+  .checkbox-label
+    font-size: 14px
+    color: $text-lighter-color

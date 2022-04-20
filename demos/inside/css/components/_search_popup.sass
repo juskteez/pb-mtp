@@ -1,0 +1,102 @@
+.search-popup
+
+  &-wrap
+    background: white
+    padding: 25px 0
+    transition: 0.325s all $carousel-cubic
+    transform: translate3d(0,-100%,0)
+
+  [data-state="processing"] ~ &-processing
+    max-height: 40px
+    padding-top: 16px
+    opacity: 1
+
+  &-processing
+    max-height: 0
+    padding-top: 0
+    transition: 0.325s all $carousel-cubic
+    opacity: 0
+    pointer-events: none
+
+    img
+      vertical-align: top
+      display: block
+      margin: 0 auto
+      margin-bottom: -8px
+
+  [data-state="unavailable"] ~ &-fallback
+    padding-top: 16px
+    max-height: 32px
+    opacity: 1
+
+  &-fallback
+    font-size: 12px
+    color: $n5
+    line-height: 16px
+    overflow: hidden
+    padding-top: 0
+    max-height: 0
+    transition: 0.325s all $carousel-cubic
+    opacity: 0
+
+    p:last-child
+      margin-bottom: 0
+
+  [data-state="available"] ~ &-results
+    max-height: 460px
+
+    .page-link
+      transition-delay: 0.4s
+      transition-duration: 0.2s
+      opacity: 1
+
+  [data-state="available"] ~ &-results &-results-list li
+    opacity: 1
+    transform: translate3d(0,0,0)
+
+  @for $i from 1 through 12
+    [data-state="available"] ~ &-results &-results-list li:nth-of-type(#{$i})
+      transition-delay: #{$i * 0.05s}
+
+  &-results
+    overflow: hidden
+    max-height: 0
+    transition: 0.325s all $carousel-cubic
+
+    .page-link
+      opacity: 0
+
+  &-results p:last-child
+    margin-bottom: 0
+
+  &-results-list ~ p
+    margin-top: 24px
+
+  &-results-list li
+    display: flex
+    padding: 16px 0
+    border-bottom: 1px solid $n10
+    transition: 0.3s all ease
+    opacity: 0
+    transform: translate3d(0,24px,0)
+
+    &:first-child
+      padding-top: 24px
+
+  &-result-thumb
+    display: block
+    width: 48px
+    height: 48px
+    background-color: $n10
+
+  &-result-meta
+    padding-left: 12px
+    font-size: 16px
+    line-height: 20px
+    p
+      margin-bottom: 4px
+    p:last-child
+      margin-bottom: 0
+
+input[name="popups"]:checked + .search-popup .search-popup-wrap
+  transform: translate3d(0,0,0)

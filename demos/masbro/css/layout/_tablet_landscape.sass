@@ -1,0 +1,264 @@
+/* Tablet Landscape */
+#body:before
+	height: 92px
+
+.flying_objects .flying-circle
+	position: absolute
+	top: 50%
+	left: 50%
+	&.flying-circle-5
+		left: calc( (100vw - 720px) / 2 + 86% )
+
+.back-page
+	display: block
+
+.overtop
+	.flying_objects.flying_objects span
+		height: 76px
+	#main_nav
+		padding: 16px 30px
+		height: 76px
+		.logo_wrap,
+		.actions_wrap
+			transform: translate3d(0,-24px,0)
+		.logo_wrap,
+		&.page_nav .logo_wrap
+			transform: translate3d(-50%,-24px,0)
+		.nav_toggler
+			top: 6px
+
+	#body:before
+		height: 76px
+#main_nav
+	padding: 24px 30px
+	height: 92px
+	z-index: 14
+	.logo_wrap,
+	.actions_wrap
+		transform: translate3d(0,-16px,0)
+	.logo_wrap,
+	&.page_nav .logo_wrap
+		left: 50%
+		transform: translate3d(-50%,-16px,0)
+		z-index: 13
+	.nav_menu_list
+		position: fixed
+		top: 0
+		left: 0
+		padding-top: 128px
+		width: calc(50% + 96px)
+		height: 100vh
+		background-color: #FFF
+		text-align: left
+		transform: translate3d(-100%,0,0)
+		transition: 0.3s all ease
+		z-index: 12
+		&:after
+			content: ""
+			position: absolute
+			width: 100vw
+			height: 100%
+			background-color: rgba(30,30,30,0.8)
+			top: 0
+			left: 100%
+			transition: 0.3s all ease
+			opacity: 0
+			pointer-events: none
+		li
+			display: block
+			padding: 0 16px
+		a
+			font-size: $fs3
+			line-height: 1.5
+			font-weight: lighter
+
+.nav_toggler
+	position: absolute
+	width: 64px
+	height: 64px
+	top: 14px
+	left: 14px
+	z-index: 13
+	transition: 0.5s all ease
+	span,
+	span:before,
+	span:after
+		content: ""
+		width: 24px
+		height: 2px
+		border-radius: 2px
+		background-color: $main-color
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate3d(-50%,-50%,0)
+		transition: 0.2s all ease
+	span:before
+		margin-top: -8px
+	span:after
+		margin-top: 8px
+
+.section.page-section .col-8
+	width: auto
+
+.toggle_nav
+	#main_nav
+		.nav_menu_list
+			transform: translate3d(0,0,0)
+			&:after
+				opacity: 1
+	.nav_toggler
+		span
+			background-color: transparent
+		span:before,
+		span:after
+			margin-top: 0
+			transform: translate3d(-50%,-50%,0) rotate(45deg)
+		span:before
+			transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+.section#home-hero
+	padding-top: 130px
+.section#home-hero .wrap.cols
+	.col-6,
+		width: 100%
+		float: none
+	.col-5
+		width: 84%
+		float: none
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+
+	.section-subtitle:after
+		margin-left: auto
+		margin-right: auto
+		height: 2px
+
+	.section-desc
+		margin-left: auto
+		margin-right: auto
+
+	.home_orbit
+		margin-left: auto
+		margin-right: auto
+		position: relative
+		height: 330px
+		margin-bottom: 30px
+		img
+			left: 12px
+			width: 415.5px
+			max-width: 415.5px !important
+			display: block
+
+		video
+			display: none
+
+	.direct_down
+		margin-right: -20px
+		margin-top: 32px
+
+.section#home-keuntungan
+	padding-top: 128px
+
+.keun-features
+	margin-bottom: 64px
+	margin-top: -100px
+	& > .col-3
+		margin-top: 0px
+		height: 200px
+		margin-bottom: 48px
+		&:nth-of-type(2n+2)
+			float: right
+
+.section#home-engagements
+	.section-header-wrap .col-6
+		width: 100%
+
+	.fake_anchor#home-engagements-anchor
+		transform: translate3d(0,64px,0)
+
+	.engage-element-wrap
+		position: relative
+		transform: scale(0.9)
+		z-index: 12
+
+.engage-list
+	margin-left: 0
+	margin-right: 0
+
+	.col-3.prl_obj
+		transform: translate3d(0,0,0) !important
+		pointer-events: none
+	.col-3.prl_obj:nth-of-type(2)~.col-3.prl_obj
+		margin-top: 24px
+
+	.engage-icon
+		height: 54px
+		width: 54px
+		//margin-left: auto
+		//margin-right: auto
+		overflow: visible
+		border: none
+		float: right
+		margin-left: 2px
+		margin-bottom: 0
+		margin-right: -10px
+		img,svg.svg-icon
+			transform: translate3d(-50%, -50%, 0) scale(0.75)
+			transform-origin: center left
+		&:before
+			display: none
+		.engage-sum
+			display: none
+
+	.engage-block
+		border: 2px solid rgba(97, 230, 255, 0.5)
+		padding: 24px
+		border-radius: 20px
+
+	.engage-title
+		text-align: left
+
+		.engage-out-sum
+			display: block
+			padding-left: 0
+			line-height: 1.5
+			height: 90px
+			&:before
+				content: ""
+				width: 40px
+				height: 2px
+				background-color: rgba(255,255,255,0.5)
+				display: block
+				margin-bottom: 16px
+				margin-left: 1px
+
+.credit-graph
+	height: 600px
+	padding-top: 100px
+	.credit-graph-chart
+		position: absolute
+		left: 50%
+		transform: translate3d(calc(-50% - 1px ),0,0) scale(0.7)
+		transform-origin: center top
+
+.credit-hand-phone
+	width: 450px
+	margin-left: 84px
+	bottom: -320px
+
+#home-credit .wrap.cols
+	padding-bottom: 230px
+
+#footer-cta
+	padding: 64px 0
+	.wrap.cols .section-header-wrap .col-8
+		width: 100%
+
+#main_footer
+	padding-top: 64px
+
+.social-list .social-ico
+	width: 48px
+	height: 48px

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>send-button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Chatbot-type" transform="translate(-1360.000000, -775.000000)">
+            <g id="Group-12" transform="translate(940.000000, 750.000000)">
+                <g id="send-button" transform="translate(420.000000, 25.000000)">
+                    <rect id="Rectangle" fill="#FFD701" x="0" y="0" width="50" height="50" rx="25"></rect>
+                    <g id="send-message" transform="translate(13.000000, 16.000000)" fill="#4C4C4C" fill-rule="nonzero">
+                        <path d="M20.4713333,0.195333333 C20.2946295,0.0186139834 20.0339313,-0.0444374004 19.796,0.032 L1.12933333,6.032 C0.878560302,6.11214296 0.698437265,6.33236024 0.669617252,6.59404595 C0.64079724,6.85573167 0.768678456,7.10987012 0.996,7.24266667 L7.6,11.0953333 L14,6.66666667 L9.57133333,13.0666667 L13.424,19.6666667 C13.542847,19.8725169 13.7623055,19.9995183 14,20 C14.0240555,19.9999973 14.0480923,19.9986619 14.072,19.996 C14.3336499,19.9675802 14.5540907,19.7878845 14.6346667,19.5373333 L20.6346667,0.870666667 C20.7111041,0.632735362 20.6480527,0.372037191 20.4713333,0.195333333 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

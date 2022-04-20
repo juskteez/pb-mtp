@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="22px" viewBox="0 0 50 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="16.2426407" y="1.65685425" width="8" height="8"></rect>
+        <rect id="path-2" x="33.2426407" y="2.24264069" width="6" height="6"></rect>
+        <rect id="path-3" x="1.24264069" y="2.24264069" width="6" height="6"></rect>
+    </defs>
+    <g id="11.-Liên-hệ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-575.000000, -202.000000)">
+        <g id="Group-5" transform="translate(580.000000, 207.000000)">
+            <g id="Rectangle-19" transform="translate(20.242641, 5.656854) rotate(45.000000) translate(-20.242641, -5.656854) ">
+                <use fill="#9A7554" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#FBF6EC" stroke-width="3" x="14.7426407" y="0.156854249" width="11" height="11"></rect>
+            </g>
+            <g id="Rectangle-19" transform="translate(36.242641, 5.242641) rotate(45.000000) translate(-36.242641, -5.242641) ">
+                <use fill="#9A7554" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <rect stroke="#FBF6EC" stroke-width="3" x="31.7426407" y="0.742640687" width="9" height="9"></rect>
+            </g>
+            <g id="Rectangle-19" transform="translate(4.242641, 5.242641) rotate(45.000000) translate(-4.242641, -5.242641) ">
+                <use fill="#9A7554" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <rect stroke="#FBF6EC" stroke-width="3" x="-0.257359313" y="0.742640687" width="9" height="9"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

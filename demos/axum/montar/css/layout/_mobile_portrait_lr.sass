@@ -1,0 +1,33 @@
+/* Mobile Portrait Low Resolution */
+.main_header
+  .logo_wrap
+    padding-left: 0
+
+  .hero_benefits
+    .col-10 .col-5,
+    .col-10 .col-6
+
+      h1
+        font-size: 25px
+
+  .product_main
+    &-image
+      padding-top: 300px
+      img
+        max-width: 172px
+        //margin-left: -45px
+
+    &-title + p small
+      white-space: nowrap
+      font-size: 11px
+
+  .offer_cta
+    //margin-left: 106px
+
+.floating_banner
+  transform: scale(0.75) translate3d(0,100%,0)
+  white-space: nowrap
+  box-shadow: 100vw 0 rgba(0,0,0,0.9), -100vw 0 rgba(0,0,0,0.9)
+
+.scrolled .floating_banner
+  transform: scale(0.75) translate3d(0,0,0)

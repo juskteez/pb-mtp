@@ -1,0 +1,1153 @@
+/* Desktop */
+
+body
+  background-color: #0F0F0F
+  color: rgba(255,255,255,0.6)
+
+img
+  vertical-align: top
+
+#body
+  overflow-x: hidden
+
+.section
+  position: relative
+  &_graphics
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    .header_bg
+      object-position: center top
+      object-fit: cover
+      width: 100%
+      height: 100%
+
+    &_title
+      font-style: italic
+      color: #fff
+      text-shadow: 0 6px 14px rgba(0,0,0,0.2)
+      font-size: 64px
+      span
+        font-size: 80px
+        display: block
+      .r
+        color: $main-color
+
+  &-title
+    color: #fff
+    font-size: 40px
+    line-height: 58px
+    font-weight: 500
+    margin-bottom: 32px
+    &.big
+      font-size: 48px
+      line-height: 70px
+    b
+      font-weight: bold
+    &.page-title
+      font-weight: lighter
+      font-size: 48px
+
+    span
+      color: $main-color
+
+  &-subtitle
+    font-size: 32px
+    color: rgba(255,255,255,0.4)
+    font-weight: normal
+
+  &-caption
+    font-size: 18px
+    color: #fff
+
+  &-desc
+    position: relative
+    font-size: 16px
+    line-height: 30px
+    &:last-child
+      margin-bottom: 0
+    &.quoted
+      padding-left: 56px
+      .quoted-icon
+        position: absolute
+        width: 32px
+        height: 32px
+        top: -14px
+        left: 0
+        &.big
+          width: 64px
+          left: -14px
+          top: 5px
+
+
+  .axum-face
+    width: 383px
+    max-width: 96%
+    vertical-align: top
+
+.start
+  height: 1008px
+  overflow: hidden
+  .section_graphics
+    &:after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-image: url('../images/head_mask.png')
+      background-position: center bottom
+      background-size: 100% 398px
+      background-repeat: no-repeat
+
+    &:before
+      content: ""
+      position: absolute
+      width: 544px
+      height: 274px
+      background-image: url('../images/header_buds.png')
+      background-size: 544px auto
+      background-repeat: no-repeat
+      bottom: 96px
+      left: 50%
+      transform: translate3d(-92%,0,0)
+      z-index: 1
+
+
+  .page-title
+    margin-bottom: 60px
+
+  .section-info
+    margin-top: 160px
+
+  .shopify-btn
+    display: inline-block
+    vertical-align: middle
+    margin-top: -20px
+
+.logo_wrap
+  padding-top: 80px
+  img
+    vertical-align: top
+
+.main_feature
+  padding-top: 56px
+  &-single
+    text-align: center
+  &-icon
+    height: 60px
+    line-height: 60px
+    margin-bottom: 24px
+    img
+      vertical-align: middle
+
+  &-title
+    font-size: 24px
+    line-height: 36px
+    font-style: italic
+    margin-bottom: 16px
+    span
+      color: $main-color
+      text-transform: uppercase
+      display: block
+
+.axum
+  padding-top: 80px
+  padding-bottom: 128px
+
+.guarantee
+  padding-top: 130px
+  padding-bottom: 180px
+  z-index: 2
+  &_figure
+    position: absolute
+    width: 952px
+    height: 628px
+    top: 0
+    left: 50%
+    transform: translate3d(-232px,0,0)
+
+  &_comp
+    position: absolute
+    top: 34%
+    right: 50%
+    transform: translate3d(-150px,0,0)
+    opacity: 0.8
+
+  &_badge
+    position: absolute
+    top: 96px
+    left: 50%
+    transform: translate3d(342px,0,0)
+
+  .section-title
+    margin-bottom: 24px
+
+  &_quote
+    font-size: 20px
+    color: #fff
+
+.featured
+  background-image: url('../images/brands_bg.png')
+  background-position: center top
+  background-size: auto 100%
+  height: 532px
+  padding-top: 208px
+  z-index: 1
+
+  .section-subtitle
+    margin-bottom: 56px
+
+  &-logos
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    img
+      margin: 0 24px
+      margin-bottom: 32px
+      vertical-align: middle
+
+.deepbass
+  height: 758px
+  background-image: url('../images/deep_bass_bg.jpg')
+  background-position: center top
+  background-size: cover
+  margin-top: -72px
+  &:before
+    content: ""
+    position: absolute
+    display: none
+    width: 100%
+    height: 310px
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.70) 100%)
+
+  .section_graphics_title
+    position: absolute
+    top: 60%
+    left: 14%
+    span
+      margin-left: 140px
+      margin-top: -16px
+
+  .section_graphic_quote
+    position: absolute
+    font-size: 32px
+    color: #fff
+    top: 64%
+    left: 14%
+    font-weight: bold
+    font-style: italic
+    text-transform: capitalize
+    span
+      display: block
+      font-size: 36px
+      margin-left: 56px
+      margin-top: -16px
+
+.improvement
+  padding: 96px 0
+  background-color: #1B1B1B
+  z-index: 1
+
+  .axum_runner
+    position: absolute
+    left: 26%
+    top: 20%
+
+  &-thumb
+    position: relative
+    overflow: hidden
+    border-radius: 5px
+    box-shadow: 0 12px 56px #1B1B1B
+
+  .thumb_spec
+    font-size: 40px
+    color: $main-color
+    font-weight: 500
+    text-transform: uppercase
+    display: block
+    width: auto
+    text-align: right
+    padding-right: 30px
+    position: relative
+    margin-top: -16px
+    z-index: 1
+
+    span
+      font-weight: bold
+
+    &:before
+      content: ""
+      position: absolute
+      width: 9px
+      height: 9px
+      border-radius: 50%
+      background-color: #fff
+      top: 50%
+      right: 10px
+      margin-top: -9px
+    &:after
+      content: ""
+      position: absolute
+      width: 230px
+      height: 1px
+      top: 50%
+      margin-top: -5px
+      background-color: #fff
+      margin-left: -10px
+      left: 100%
+
+.builtin
+  height: 640px
+  background-image: url('../images/builtin.jpg')
+  background-position: center
+  background-size: cover
+
+  .section_graphics-info
+    position: absolute
+    top: 20%
+    left: 10vw
+    max-width: 480px
+    .section_graphics_title
+      text-shadow: none
+      margin-bottom: 24px
+      span
+        margin-left: 66px
+        margin-top: -20px
+
+    .section_graphics-desc
+      padding-left: 64px
+      color: #fff
+      margin-bottom: 0
+
+  &-mark
+    position: absolute
+    width: 9px
+    height: 9px
+    background-color: #fff
+    border-radius: 50%
+    top: 50%
+    left: 92%
+    &:before
+      content: ""
+      position: absolute
+      width: 56px
+      height: 1px
+      top: 50%
+      left: 50%
+      background-color: #fff
+      transform-origin: top left
+      transform: rotate(45deg)
+    &:after
+      content: ""
+      position: absolute
+      width: calc(20vw + 9vh)
+      height: 1px
+      background-color: #fff
+      top: 43px
+      left: 44px
+
+.feature
+  &s
+    background-color: #201F1F
+    padding: 134px 0
+
+  &_single
+    position: relative
+    z-index: 2
+    &:not(:last-child)
+      margin-bottom: 100px
+
+    &:nth-of-type(2n+2)
+      .col-d-6
+        order: 2
+
+    &-thumb
+      overflow: hidden
+      border-radius: 5px
+
+    &-title
+      color: #fff
+      font-size: 40px
+      margin-bottom: 24px
+      max-width: 320px
+      span
+        color: $main-color
+
+    &-desc
+      margin-bottom: 0
+
+.powered
+  padding-bottom: 160px
+  padding-top: 128px
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 1340px
+    background-image: url('../images/qualcomm-bg.jpg')
+    background-position: center bottom
+    background-size: auto 100%
+    bottom: 0
+    left: 0
+
+  .section-title
+    font-style: italic
+    font-weight: bold
+    margin-bottom: 24px
+
+.biker
+  height: 60vw
+  max-height: 76vh
+  background-image: url('../images/biker.jpg')
+  background-position: center
+  background-size: cover
+
+.axum_bud
+  background-repeat: no-repeat
+  background-size: auto 100%
+  background-position: top left
+  position: absolute
+  top: 100%
+  left: 50%
+  transform: translate3d(-50%,-50%,0)
+  will-change: transform
+  animation: bud_flies 3s ease-in-out infinite
+  z-index: 2
+
+  &s
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    transform-origin: center bottom
+    z-index: 2
+
+  @keyframes bud_flies
+    0%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-4%,0)
+    50%
+      transform: translate3d(-50%,-50%,0) translate3d(0,4%,0)
+    100%
+      transform: translate3d(-50%,-50%,0) translate3d(0,-4%,0)
+
+  &.one
+    background-image: url('../images/axum_bud-1.png')
+    width: 342px
+    height: 290px
+    margin-left: -160px
+    animation-delay: 0s
+
+  &.two
+    background-image: url('../images/axum_bud-2.png')
+    width: 246px
+    height: 218px
+    margin-left: 220px
+    margin-top: -72px
+    animation-delay: 0.5s
+
+  &.three
+    background-image: url('../images/axum_bud-3.png')
+    width: 184px
+    height: 166px
+    margin-left: 80px
+    margin-top: -260px
+    animation-delay: 1s
+
+  &.four
+    background-image: url('../images/axum_bud-4.png')
+    width: 126px
+    height: 148px
+    margin-left: -128px
+    margin-top: -380px
+    animation-delay: 1.5s
+
+.team
+  padding-top: 160px
+  padding-bottom: 24px
+  background-color: #1F1E1E
+  .section-subtitle
+    margin-bottom: 0
+    color: #fff
+
+  &_list
+    text-align: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 1200px
+    margin: 56px auto
+
+  &_single
+    position: relative
+    margin: 0 26px
+    margin-bottom: 64px
+    &:nth-of-type(6)
+      margin-left: 64px
+    &:nth-of-type(10)
+      margin-right: 64px
+
+    &-face
+      img
+        width: 186px
+        opacity: 0.7
+        @extend .easing
+      &:hover img
+        opacity: 1
+
+    &-name
+      margin-top: 20px
+      color: #fff
+      margin-bottom: 4px
+    &-position
+      font-size: 14px
+      font-style: italic
+      margin-bottom: 0
+
+.compact
+  background-image: url('../images/compact.jpg')
+  background-size: cover
+  background-position: center
+  height: 790px
+  .section_graphics_title
+    position: absolute
+    width: 100%
+    text-align: center
+    bottom: 80px
+    margin-bottom: 0
+    color: $main-color
+    font-size: 48px
+    font-style: normal
+
+.hook
+  background-image: url('../images/always_fit.jpg')
+  background-size: cover
+  background-position: center
+  height: 880px
+
+  .section_graphics-info
+    position: absolute
+    left: 50%
+    top: 26%
+    padding-left: 72px
+
+  .section_graphics_title
+    font-size: 56px
+    margin-bottom: 24px
+    span[before]
+      margin-left: 76px
+      margin-top: -16px
+      position: relative
+
+      &:before
+        content: attr(before)
+        position: absolute
+        font-size: 18px
+        text-align: right
+        width: 76px
+        color: rgba(255,255,255,0.8)
+        font-weight: normal
+        right: 100%
+        bottom: 20px
+        margin-right: 0
+
+  .section_graphics-desc
+    margin-left: 76px
+    max-width: 384px
+    b
+      color: #fff
+
+.video
+  &s
+    padding-top: 2px
+    z-index: 1
+
+  &_wrap
+    position: relative
+    width: 944px
+    height: 560px
+    margin-top: 0
+    margin-bottom: 48px
+    border-radius: 10px
+    margin-left: auto
+    margin-right: auto
+    z-index: 1
+    &:before
+      content: ""
+      position: absolute
+      width: 962px
+      height: 323px
+      background-image: url('../images/video_shadow.png')
+      background-repeat: no-repeat
+      top: 54%
+      left: 50%
+      transform: translate3d(-50%,0,0)
+
+  &_thumb
+    position: absolute
+    width: 100%
+    height: 100%
+    overflow: hidden
+    border-radius: 10px
+    box-shadow: 0 32px 64px rgba(0,0,0,0.4)
+    transform: translateZ(0)
+    &>img
+      object-position: center
+      object-fit: cover
+      width: 100%
+      height: 100%
+      border-radius: 10px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 10
+      pointer-events: none
+
+    &:after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.4)
+      top: 0
+      left: 0
+      border-radius: 10px
+
+  &_play
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-image: url('../images/play_btn.svg')
+    background-repeat: no-repeat
+    background-position: center
+    z-index: 11
+    pointer-events: none
+
+
+.hood
+  padding-top: 100px
+  background-color: #070707
+  padding-bottom: 100px
+
+  &_list-title
+    font-size: 20px
+    color: #fff
+    font-weight: normal
+    text-transform: uppercase
+    padding-left: 30px
+    position: relative
+    margin-bottom: 14px
+    img
+      position: absolute
+      left: 11px
+      transform: translate3d(-50%,0,0)
+
+  &_list
+    font-size: 14px
+    color: rgba(255,255,255,0.8)
+    li
+      position: relative
+      padding-left: 30px
+      margin-bottom: 4px
+      &:before
+        content: ""
+        position: absolute
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: red
+        left: 8px
+        top: 5px
+
+.fits
+  padding: 100px 0
+  background-color: #020202
+  text-align: center
+  .section-title.styled
+    font-style: italic
+    display: inline-block
+    font-size: 32px
+    text-align: left
+    margin-bottom: 0
+
+    span
+      display: block
+      font-weight: bold
+      text-transform: uppercase
+      position: relative
+      margin-left: 120px
+      font-size: 48px
+      margin-top: -10px
+      &:before
+        content: attr(before)
+        font-size: 24px
+        position: absolute
+        right: 100%
+        color: rgba(255,255,255,0.8)
+        font-weight: normal
+        text-transform: none
+        margin-top: -4px
+        margin-right: 6px
+
+  .section-subtitle
+    font-size: 24px
+    color: rgba(255,255,255,0.8)
+
+.compare_image
+  position: relative
+  margin-top: 64px
+
+  .section_image_point
+    position: absolute
+    font-size: 14px
+    text-transform: uppercase
+    color: #fff
+    z-index: 1
+    margin-top: -32px
+    left: 50%
+    margin-left: 260px
+    &:before
+      content: ""
+      position: absolute
+      width: 254px
+      height: 230px
+      background-image: url('../images/aj_hook.svg')
+      background-repeat: no-repeat
+      right: 100%
+      margin-top: 6px
+      margin-right: 6px
+
+
+.compare_line
+  position: relative
+  padding-top: 460px
+  width: 32%
+  max-width: 300px
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: auto 430px
+  font-size: 14px
+  text-align: center
+  &s
+    display: flex
+    justify-content: space-between
+  span
+    color: $main-color
+    font-weight: bold
+
+  &:nth-of-type(1)
+    background-image: url('../images/fit-1.jpg')
+
+  &:nth-of-type(2)
+    background-image: url('../images/fit-2.jpg')
+
+  &:nth-of-type(3)
+    background-image: url('../images/fit-3.jpg')
+
+.fact
+  background-image: url('../images/fact-bg-d.jpg')
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: 1200px auto
+  background-color: #020202
+  padding-top: 72px
+  padding-bottom: 96px
+
+  &_single
+    max-width: 384px
+    color: rgba(255,255,255,0.8)
+    &:nth-of-type(1)
+      margin-left: auto
+      margin-bottom: 500px
+
+.sweatproof
+  background-image: url('../images/sweat.jpg')
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: cover
+  height: 672px
+
+  .section_graphics-info
+    position: absolute
+    text-shadow: none
+    top: 24%
+    left: 10%
+
+    p
+      padding-left: 48px
+      max-width: 480px
+      color: #fff
+      text-shadow: 0 4px 8px rgba(0,0,0,0.2)
+
+  .section_graphics_title
+    font-size: 48px
+    text-shadow: none
+    margin-bottom: 24px
+    span
+      font-size: 64px
+      margin-top: -12px
+      margin-left: 48px
+
+.holy
+  height: 586px
+  background-image: url('../images/holy_bg.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  padding-top: 96px
+
+  &_thumb
+    img
+      position: relative
+      width: 372px
+      margin-left: -24px
+      opacity: 0
+
+  .section-title
+    font-style: italic
+    font-weight: bold
+    margin-bottom: 14px
+
+  &_pointer
+    font-size: 20px
+    position: relative
+    margin-bottom: 24px
+    &:before
+      content: ""
+      position: absolute
+      width: 224px
+      height: 90px
+      background-image: url('../images/holy_point.svg')
+      background-repeat: no-repeat
+      right: 100%
+      top: 11px
+      margin-right: 10px
+
+.components
+  position: relative
+  height: 780px
+  background-image: url('../images/components.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  .wrap
+    height: 100%
+
+  &-info
+    position: absolute
+    width: 564px
+    background-color: rgba(0,0,0,0.5)
+    padding: 24px
+    bottom: 80px
+    display: flex
+
+  &-title
+    width: 160px
+  .section-title
+    width: calc(100% - 160px)
+    font-size: 24px
+    text-transform: uppercase
+    line-height: 30px
+    color: $main-color
+
+  &-list
+    color: #fff
+    font-size: 15px
+    line-height: 30px
+    li
+      &:before
+        content: ""
+        position: relative
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: $main-color
+        display: inline-block
+        margin: 11px 0
+        vertical-align: middle
+        margin-right: 12px
+
+.commit
+  height: 720px
+  background-image: url('../images/commit_bg.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: auto 100%
+  .wrap
+    height: 100%
+    padding-top: 320px
+
+  &-product
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    pointer-events: none
+
+  &-single
+    p,
+    .commit-title
+      max-width: 260px
+      margin-left: auto
+      margin-right: auto
+
+    &.left
+      text-align: right
+
+  &-title
+    font-size: 32px
+    color: $main-color
+    line-height: 46px
+    margin-bottom: 16px
+
+  p
+    color: rgba(255,255,255,0.8)
+
+.faq
+  padding: 100px 0
+  background-color: #201F1F
+  &-list
+    li
+      border-bottom: 1px solid rgba(255,255,255,0.1)
+      line-height: 24px
+      padding: 24px 0
+      margin-left: 32px
+      position: relative
+      &:last-child
+        border-bottom: none
+  &-q:before,
+  &-a:before
+    content: ""
+    position: absolute
+    right: 100%
+    width: 24px
+    height: 24px
+    display: block
+    margin-right: 8px
+    background-position: center left
+    background-repeat: no-repeat
+    margin-top: -2px
+  &-q
+    font-size: 22px
+    font-weight: bold
+    margin-bottom: 10px
+    color: #fff
+    &:before
+      background-image: url("../images/q.svg")
+
+  &-a:before
+    background-image: url("../images/a.svg")
+
+  &-a
+    margin-bottom: 0
+
+.shipping
+  background-color: #181818
+  padding-top: 64px
+  text-align: center
+  padding-bottom: 100px
+  color: rgba(255,255,255,0.8)
+  z-index: 1
+
+  &_label
+    &-title
+      font-size: 24px
+      font-weight: bold
+      max-width: 290px
+      margin-left: auto
+      margin-right: auto
+      line-height: 32px
+      margin-top: 24px
+
+  &_tag
+    position: absolute
+    width: 770px
+    background-color: #232323
+    padding: 56px 0
+    left: 50%
+    top: 100%
+    transform: translate3d(-50%,-48px,0)
+    box-shadow: 0 16px 56px rgba(0,0,0,0.4)
+
+    &-title
+      font-size: 32px
+      margin-bottom: 0
+      font-weight: 500
+      margin-top: 16px
+      span
+        color: $main-color
+
+    &-caption
+      margin-bottom: 0
+
+.social
+  padding-top: 244px
+  .section_graphics
+    height: 720px
+    background-image: url('../images/tribe_bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: auto 100%
+    z-index: -1
+
+  &-join
+    padding: 120px 0
+    text-align: center
+
+    .btn.huge
+      line-height: 96px
+      height: 92px
+      font-size: 32px
+      text-transform: uppercase
+      font-weight: normal
+
+  &-info
+    text-align: center
+    color: rgba(255,255,255,0.8)
+
+    span
+      color: $main-color
+
+  &-title
+    font-size: 32px
+    margin-bottom: 6px
+
+  &-desc
+    font-size: 20px
+    margin-bottom: 64px
+
+.insta-photos
+  position: relative
+  display: flex
+  li
+    position: relative
+    width: 20vw
+    img
+      width: 100%
+      height: 20vw
+      object-position: center
+      object-fit: cover
+
+    a
+      display: block
+      position: relative
+      height: 100%
+      width: 100%
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        background-image: url('../images/insta-ico.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 40px auto
+        z-index: 1
+        @extend .easing
+      &:hover:before
+        background-color: rgba(0,0,0,0.4)
+
+.contact
+  background-color: #201F1F
+  padding: 96px 0
+
+  .section-title
+    font-size: 48px
+    font-weight: bold
+    margin-bottom: 0
+    &.small
+      font-size: 24px
+      font-weight: normal
+  &-form
+    position: relative
+    margin-top: -120px
+    margin-bottom: -104px
+    z-index: 2
+
+    .form_actions
+      .checkbox
+        float: left
+        text-align: left
+        width: 270px
+
+.copyright
+  font-size: 14px
+  color: rgba(255,255,255,0.3)
+  &_credits
+    width: 221px
+    margin-bottom: 16px
+
+.overhead .fpage_ribbon
+  transform: translate3d(0,0,0)
+
+.fpage_ribbon
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  text-align: center
+  color: #fff
+  line-height: 56px
+  padding: 10px 0
+  background-color: rgba(0,0,0,0.8)
+  transform: translate3d(0,100%,0)
+  -webkit-overflow-scrolling: touch
+  z-index: 100
+  @extend .easing
+  &_btn.shopify-buy-frame--product
+    display: inline-block
+    vertical-align: middle
+    margin-top: -20px
+  p
+    display: inline-block
+    padding-right: 15px
+    line-height: 56px
+    margin-bottom: 0
+
+  span
+    text-decoration: line-through
+
+
+
+.top_ribbon
+  background-color: $main-color
+  color: #fff
+  text-align: center
+  padding: 12px 48px
+  font-size: 14px
+  line-height: 20px
+  font-weight: bold
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25)
+  position: relative
+  z-index: 10
+  .close_ribbon
+    position: absolute
+    width: 48px
+    height: 100%
+    background-color: rgba(255,255,255,0)
+    top: 0
+    right: 0
+    opacity: 0.5
+    &:hover
+      opacity: 1
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 16px
+      height: 1px
+      background-color: #fff
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+    &:after
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)

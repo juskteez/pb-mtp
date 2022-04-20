@@ -1,0 +1,252 @@
+/* Fields */
+$wph-depth: 0.5
+$wph-color: #fff
+
+input,
+select,
+textarea,
+button,
+select,
+.unfocus
+  &:focus
+    outline: none
+
+.input-combo
+  display: flex
+  .input-wrap.adult
+    width: 60%
+  .input-wrap.teen
+    width: 40%
+  .input-wrap.aged
+    width: 70%
+  .input-wrap.kid
+    width: 30%
+  .input-wrap.average
+    width: 50%
+
+  .input-wrap+.input-wrap
+    margin-left: 24px
+
+.input-help
+  position: absolute
+  width: 14px
+  height: 14px
+  background-repeat: no-repeat
+  background-image: url("../images/input_help.svg")
+  right: 12px
+  top: 17px
+  &:before
+    content: ""
+    position: absolute
+    width: 200%
+    height: 200%
+    top: -50%
+    left: -50%
+
+  .tooltip
+    left: auto
+    right: 0
+    transform: translate3d(8px,8px,0)
+    &:after
+      left: 100%
+      margin-left: -15px
+
+  &:hover .tooltip
+    transform: translate3d(8px,0,0)
+
+label~.input-help
+  top: 42px
+
+.input-wrap
+  display: block
+  position: relative
+  margin-bottom: 24px
+  &:not(.half-input),
+  &:not(.fourth-input)
+  &:before
+    content: ""
+    display: block
+    clear: both
+  &.half-input,
+  &.fourth-input
+    float: left
+    padding: 0 15px
+  &.half-input
+    width: 50%
+  &.fourth-input
+    width: 25%
+    float: left
+  label:not(.check-label)
+    display: block
+    text-transform: uppercase
+    color: $text-lighter-color
+    font-size: 12px
+    letter-spacing: 1px
+    font-weight: bold
+    line-height: 16px
+    margin-bottom: 10px
+
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  input[type="password"],
+  .input,
+  select,
+  textarea
+    display: block
+    width: 100%
+
+input[type="number"],
+input[type="date"]
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator
+    appearance: none
+    margin: 0
+    opacity: 0
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+.input,
+select,
+textarea
+  display: inline-block
+  background-color: #fff
+  border-radius: 0
+  line-height: 24px
+  padding: 11px 20px
+  height: 48px
+  vertical-align: middle
+  //box-shadow: inset 0 0 0 1px #B7B7B7
+  border: 1px solid $main-border-color
+  color: $black-color
+  font-size: $fs5
+  appearance: none
+  @extend .easing
+
+  &:hover
+    border-color: $text-lighter-color
+
+  &:focus
+    border-color: $main-light-color
+  &:focus,
+  &:valid
+    &~.hint
+      opacity: 1
+
+  &.white
+    background-color: transparent
+    border-color: rgba(255,255,255,0.7)
+    color: #fff
+    &:hover
+      border-color: rgba(255,255,255,0.85)
+    &:focus
+      border-color: #fff
+    &::-webkit-input-placeholder
+      opacity: $wph-depth
+      color: $wph-color
+    &::-moz-placeholder
+      opacity: $wph-depth
+      color: $wph-color
+    &::-ms-input-placeholder
+      opacity: $wph-depth
+      color: $wph-color
+    &::-moz-placeholder
+      opacity: $wph-depth
+      color: $wph-color
+
+  &[type="date"],
+  &.date
+    background-image: url("../images/input_cal.svg")
+    background-position: calc(100% - 16px) center
+    background-repeat: no-repeat
+
+  &.small
+    height: 40px
+    padding: 8px 16px
+
+  &.big
+    height: 64px
+    padding: 16px 24px
+    line-height: 32px
+    font-size: 16px
+
+.select
+  background-image: url("../images/input_select.svg")
+  background-position: calc(100% - 20px) center
+  background-repeat: no-repeat
+  padding-right: 40px
+  &.small
+    padding-right: 38px
+
+textarea,
+textarea.input
+  min-height: 140px
+  min-width: 100%
+  max-width: 100%
+  transition: 0.2s all ease, 0s height ease
+
+@media screen and (max-width: 767px)
+  .input-wrap
+    margin-bottom: 16px
+    &.half-input,
+    &.fourth-input
+      float: none
+      padding: 0 15px
+    &.half-input,
+    &.fourth-input
+      width: 100%
+      float: none
+    label:not(.check-label)
+      font-size: 10px
+      line-height: 16px
+      margin-bottom: 4px
+
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  input[type="password"],
+  .input,
+  select,
+  textarea
+    display: inline-block
+    background-color: #fff
+    border-radius: 0
+    line-height: 24px
+    padding: 11px 14px
+
+  .select
+    background-image: url("../images/input_select.svg")
+    background-position: calc(100% - 12px) center
+    background-repeat: no-repeat
+    padding-right: 34px
+    &.small
+      padding-right: 30px
+
+
+  .input-combo
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .input-wrap,
+    .input-wrap.kid:last-child
+      margin-bottom: 16px
+    .input-wrap.kid
+      width: 50%
+    .input-wrap.average
+      width: 45%
+
+    .input-wrap+.input-wrap
+      margin-left: 16px
+
+    .input-wrap.adult+.input-wrap.kid,
+    .input-wrap.aged+.input-wrap.kid,
+    .input-wrap.adult+.input-wrap.teen
+      margin-left: 0
+
+    .input-wrap.adult,
+    .input-wrap.aged,
+    .input-wrap.teen
+      width: 100%

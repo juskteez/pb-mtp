@@ -1,0 +1,1830 @@
+/* Desktop */
+
+body
+  background-color: #F6F6F6
+
+img
+  vertical-align: top
+
+#body
+  overflow-x: hidden
+
+$min-line: 6px
+$max-line: 12px
+
+$iconic_cubic: cubic-bezier(0.39,0.11,0.15,1)
+
+
+@keyframes main_menu_item_out
+  0%
+    transform: translate3d(0,0,0) scaleY(1)
+  100%
+    transform: translate3d(0,-128px,0) scaleY(0.8)
+
+@keyframes main_menu_item_in
+  0%
+    transform: translate3d(0,128px,0) scaleY(1.5)
+  100%
+    transform: translate3d(0,0,0) scaleY(1)
+
+.onnav .main_menu
+  li
+    //transform: translate3d(0,0,0) scaleY(1)
+    opacity: 1
+    animation: main_menu_item_in 0.6s $iconic_cubic forwards
+
+@for $i from 1 through 12
+  .main_menu li:nth-of-type(#{$i})
+    animation-delay: #{$i*0.06s+0.2s}
+    transition-delay: #{$i*0.06s+0.2s}
+
+
+.main_menu
+  position: absolute
+  top: 50%
+  left: -154px
+  transform: translate3d(0,-50%,0)
+  will-change: transform
+  font-size: $fs0
+  line-height: 90px
+  font-weight: 700
+  text-transform: uppercase
+  text-stroke: 1.5px $text-color
+  -webkit-text-stroke: 1.5px $text-color
+  color: transparent
+  background-clip: text
+  -webkit-background-clip: text
+  text-fill-color: transparent
+  -webkit-text-fill-color: transparent
+  transition: 0.06s transform linear
+  z-index: 999
+
+  li
+    position: relative
+    //transform: translate3d(0,128px,0) scaleY(1.5)
+    transform-origin: center top
+    transition: 0.6s all $iconic_cubic
+    opacity: 0
+    animation: main_menu_item_out 0.6s $iconic_cubic forwards
+
+  a
+    display: inline-block
+    position: relative
+    padding: 0 24px
+    transform: translate3d(0,0,0)
+    transition: 0.6s all $iconic_cubic
+
+  a[data-title]:after
+    content: attr(data-title)
+    position: absolute
+    color: $text-color
+    background-clip: initial
+    -webkit-background-clip: initial
+    text-fill-color: initial
+    -webkit-text-fill-color: initial
+    left: auto
+    right: 0
+    background: rgba(0,142,68,0.9)
+    white-space: nowrap
+    overflow: hidden
+    text-indent: 24px
+    text-align: right
+    width: 0
+    height: calc(100% + 12px)
+    transition: 0.4s width $iconic_cubic
+    direction: rtl
+
+  a[data-title]:hover
+    color: $text-color
+    transform: translate3d(-32px,0,0)
+    &:after
+      width: 100%
+      right: auto
+      left: 0
+      text-align: left
+      direction: ltr
+
+
+@keyframes nav_stick_in_a
+  0%
+    transform: translate3d(-75%,-100vh,0) rotate(-20deg)
+  100%
+    transform: translate3d(-75%,0,0) rotate(20deg)
+
+@keyframes nav_stick_out_a
+  0%
+    transform: translate3d(-75%,0,0) rotate(20deg)
+  100%
+    transform: translate3d(-75%,100vh,0) rotate(40deg)
+
+@keyframes nav_stick_in_b
+  0%
+    transform: translate3d(-25%,-100vh,0) rotate(20deg)
+  100%
+    transform: translate3d(-25%,0,0) rotate(-20deg)
+
+@keyframes nav_stick_out_b
+  0%
+    transform: translate3d(-25%,0,0) rotate(-20deg)
+  100%
+    transform: translate3d(-25%,100vh,0) rotate(-40deg)
+
+.onnav .nav-stick
+  //transform: translate3d(-75%,0,0) rotate(20deg)
+  animation: nav_stick_in_a 1.4s $iconic_cubic forwards
+  &.red
+    //transform: translate3d(-25%,0,0) rotate(-20deg)
+    animation: nav_stick_in_b 1.4s $iconic_cubic forwards
+
+.nav-stick
+  position: absolute
+  top: 54%
+  left: 100%
+  transform: translate3d(-75%,100vh,0) rotate(40deg)
+  //transition: 1.4s all $iconic_cubic
+  animation: nav_stick_out_a 1.4s $iconic_cubic forwards
+  z-index: 100
+  &.red
+    top: calc(54% + 154px )
+    transform: translate3d(-25%,100vh,0) rotate(-40deg)
+    animation: nav_stick_out_b 1.4s $iconic_cubic forwards
+    animation-delay: 0.06s
+    svg
+      animation: nav_stick_swing 2.2s linear infinite
+
+  svg
+    vertical-align: top
+    position: relative
+    animation: nav_stick_swing 2.8s linear infinite
+
+@keyframes nav_stick_swing
+  0%
+    transform: translate3d(0,-12px,0) rotate(-6deg)
+  16.6667%
+    transform: translate3d(0,0,0) rotate(-4deg)
+  50%
+    transform: translate3d(0,12px,0) rotate(6deg)
+  66.6667%
+    transform: translate3d(0,0,0) rotate(2deg)
+  100%
+    transform: translate3d(0,-12px,0) rotate(-6deg)
+
+.nav_dust
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  transition: 0.4s opacity cubic-bezier(.66,.06,.22,1)
+  transform: translateZ(-900px)
+  will-change: opacity
+  opacity: 0
+
+.onnav .nav_dust
+  transition: 0.6s opacity cubic-bezier(.66,.06,.22,1)
+  transition-delay: 0.2s
+  opacity: 1
+
+.onnav .main_navigation
+  pointer-events: all
+  transition-delay: 0s
+  opacity: 1
+
+  &-col
+    &:before
+      transform-origin: center top
+      transform: translate3d(0,0,0) scaleY(1) translateZ(-1000px)
+      transition-delay: 0s
+
+    &:nth-of-type(2n+2):before
+      transform-origin: center bottom
+
+
+.main_navigation
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 900
+  pointer-events: none
+  opacity: 0
+  transition-delay: 1.6s
+  touch-action: none
+
+  &-wrap
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+
+  &-col
+    width: 50%
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: #fff
+      transition: 0.5s transform cubic-bezier(.66,.06,.22,1)
+      transform-origin: center bottom
+      transform: translate3d(0,0,0) scaleY(0) translateZ(-1000px)
+      transition-delay: 0.8s
+    &.cyan:before
+      background-color: #3EC2CF
+
+    &:nth-of-type(2n+2):before
+      transform-origin: center top
+    
+
+  &-toggler
+    position: relative
+    width: 20px
+    height: 20px
+    display: inline-block
+    vertical-align: middle
+    touch-action: none
+    pointer-events: all
+
+    i
+      position: absolute
+      top: 3px
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: $text-color
+      transform: translate3d(0,0,0) rotate(0)
+      will-change: transform, opacity
+      @extend .easing
+      &:nth-of-type(2)
+        top: 7px
+      &:nth-of-type(3)
+        top: 11px
+      &:nth-of-type(4)
+        top: 15px
+
+      &:nth-of-type(2n+2)
+        background-color: transparent
+        &:before,
+        &:after
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          width: $max-line
+          height: 100%
+          background-color: $text-color
+          will-change: width
+          @extend .easing
+        &:after
+          left: auto
+          right: 0
+          width: $min-line
+
+      &:nth-of-type(4)
+        &:before
+          width: $min-line
+        &:after
+          width: $max-line
+
+    &:hover i:nth-of-type(2)
+      &:before
+        width: $min-line
+      &:after
+        width: $max-line
+
+    &:hover i:nth-of-type(4)
+      &:before
+        width: $max-line
+      &:after
+        width: $min-line
+
+    &.active
+      i
+        top: 50%
+
+      i:nth-of-type(2n+2)
+        opacity: 0
+        &:before,
+        &:after
+          width: 0
+
+      i:nth-of-type(1)
+        transform: translate3d(0,-50%,0) rotate(45deg)
+
+      i:nth-of-type(3)
+        transform: translate3d(0,-50%,0) rotate(-45deg)
+
+
+@keyframes nav_contact_out
+  0%
+    transform: translate3d(0,0,0)
+  100%
+    transform: translate3d(0,-32px,0)
+
+@keyframes nav_contact_in
+  0%
+    transform: translate3d(0,32px,0)
+  100%
+    transform: translate3d(0,0,0)
+
+.nav_contact
+  &-wrap
+    position: absolute
+    top: 50%
+    left: 0
+    padding: 0 40px
+    transform: translate3d(0,-50%,0)
+    font-size: 14px
+    line-height: 30px
+    max-width: 380px
+
+    .h3.spaced
+      position: relative
+      //transform: translate3d(0,32px,0)
+      opacity: 0
+      transition: 0.4s all $iconic_cubic
+      animation: nav_contact_out 0.6s $iconic_cubic forwards
+
+.contact,
+.social
+  &-list:not(:last-child)
+    cursor: default
+
+.contact
+  &-list > li
+    position: relative
+    //transform: translate3d(0,32px,0)
+    transition: 0.4s all $iconic_cubic
+    animation: nav_contact_out 0.6s $iconic_cubic forwards
+    opacity: 0
+    
+
+.social
+  &-list
+    font-weight: 700
+    padding: 26px 0
+    li
+      display: inline-block
+
+    li:not(:last-child):after
+      content: " - "
+      font-weight: 500
+      padding: 0 2px
+      pointer-events: none
+
+.copyright
+  position: fixed
+  left: 40px
+  bottom: 40px
+  font-size: 12px
+  p
+    margin-bottom: 0
+    position: relative
+    //transform: translate3d(0,32px,0)
+    opacity: 0
+    transition: 0.4s all $iconic_cubic
+    animation: nav_contact_out 0.6s $iconic_cubic forwards
+
+    a
+      font-weight: 500
+
+.onnav
+  .nav_contact-wrap,
+  .copyright,
+  .contact-list
+    .h3.spaced,
+    p,
+    & > li
+      //transform: translate3d(0,0,0)
+      opacity: 1
+      animation: nav_contact_in 0.6s $iconic_cubic forwards
+
+.nav_contact-wrap
+  .h3.spaced
+    @for $i from 1 through 12
+      &:nth-of-type(#{$i})
+        animation-delay: #{$i*0.06s}
+        transition-delay: #{$i*0.06s}
+
+.contact-list
+  & > li
+    @for $i from 1 through 12
+      &:nth-of-type(#{$i})
+        animation-delay: #{$i*0.06s+0.06s}
+        transition-delay: #{$i*0.06s+0.06s}
+
+.copyright
+  p
+    @for $i from 1 through 12
+      &:nth-of-type(#{$i})
+        animation-delay: #{$i*0.06s+0.54s}
+        transition-delay: #{$i*0.06s+0.54s}
+    
+
+.loaded
+  .main_header
+    transform: translate3d(0,0,0)
+
+  .main_footer
+    transition-delay: 0.2s
+    opacity: 1
+
+.manipulated_lines
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  pointer-events: none
+  display: flex
+  z-index: 9999
+  transform: translateZ(0) scaleX(0)
+  transform-origin: center top
+  will-change: transform
+  animation: manipulated_lines 1.2s $iconic_cubic forwards
+  i
+    display: block
+    flex-basis: 100%
+    border-right: 1px solid rgba(0,0,0,0.1)
+
+@keyframes manipulated_lines
+  0%
+    transform: translateZ(0) scaleY(0)
+  100%
+    transform: translateZ(0) scaleY(1)
+
+.main_header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 40px
+  z-index: 910
+  pointer-events: none
+  display: flex
+  font-size: $fs5
+  line-height: 20px
+  transition: 0.6s transform $iconic_cubic
+  transform: translate3d(0,-100%,0)
+  will-change: transform
+  touch-action: none
+
+.logo
+  display: inline-block
+  &-wrap
+    width: 144px
+    pointer-events: all
+
+  svg
+    vertical-align: top
+
+
+.main_sub
+  padding: 10px 0
+  padding-top: 0
+
+  li
+    display: inline-block
+    padding-left: 30px
+    pointer-events: all
+
+  .lang_toggler
+    &.active
+      color: rgba(0,0,0,0.3)
+      pointer-events: none
+    &s
+      color: rgba(0,0,0,0.3)
+
+  &-wrap
+    width: calc(100% - 144px)
+    text-align: right
+  
+.main_footer
+  position: fixed
+  right: 48px
+  bottom: 40px
+  transform-origin: center right
+  transform: rotate(90deg) translateZ(0)
+  transition: 0.6s opacity $iconic_cubic
+  pointer-events: none
+  opacity: 0
+
+.footer
+  &_social-list
+    position: relative
+    text-transform: uppercase
+    font-size: 10px
+    font-weight: 500
+    
+    li
+      display: inline-block
+      margin-left: 24px
+
+.circle-lines,
+.circle-inner
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%,-50%,0) rotate(0)
+  //animation: spin_r 120s linear infinite
+  will-change: transform, animation
+  &:nth-of-type(2n+2)
+    //animation: spin_l 100s linear infinite
+.circle-inner
+    //animation: spin_l 20s linear infinite
+
+
+@keyframes spin_r
+  0%
+    transform: translate3d(-50%,-50%,0) rotate(0)
+  0%
+    transform: translate3d(-50%,-50%,0) rotate(360deg)
+
+@keyframes spin_l
+  0%
+    transform: translate3d(-50%,-50%,0) rotate(0)
+  0%
+    transform: translate3d(-50%,-50%,0) rotate(-360deg)
+
+.loaded .home_slider-wrap
+  display: block
+
+.first_load
+  .home_slider-single:first-child .home_slider-side
+    height: 0
+    animation: slide_graphic_side_in 0.6s $iconic_cubic forwards
+    animation-delay: 0.4s
+
+  .home_slider-single
+    &.active
+      &~.home_slider-single
+        .home_slider-content,
+        .home_slider-graphics
+          opacity: 0
+@keyframes slide_graphic_side_in
+  0%
+    height: 0
+  100%
+    height: 100vh
+
+@keyframes slide_graphic_side_out
+  0%
+    height: 100vh
+  100%
+    height: 0
+
+.home_slider
+  &-wrap
+    display: none
+
+  &-content
+    position: absolute
+    left: 0
+    width: 100%
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    padding: 0 50px
+
+  &-name
+    text-transform: uppercase
+    line-height: $fs0
+    margin-bottom: 0
+    i
+      display: block
+      font-style: normal
+      &.red
+        color: $red-color
+      &.green
+        color: $green-color
+      &.yellow
+        color: $yellow-color
+      &.inline
+        display: inline
+
+  &-desc
+    font-size: $fs3
+    font-weight: 700
+    line-height: 40px
+    padding-left: 0
+    margin-bottom: 0
+    &:not(:last-child)
+      margin-bottom: -6px
+    span
+      padding-left: 4px
+
+  &-graphics
+    position: absolute
+    width: calc(100% / 3 * 2)
+    height: 100%
+    right: 0
+    top: 0
+    transform-origin: center bottom
+    //background-color: #2A2A2A
+    //opacity: 0
+  
+  &-side
+    content: ""
+    background-size: cover
+    background-position: center
+    position: absolute
+    overflow: hidden
+    top: 0
+    left: 0
+    width: 100%
+    height: 0
+    transform-origin: center top
+    transition: 0.6s height $iconic_cubic
+    will-change: height
+    animation: none
+    animation: slide_graphic_side_out 0.6s $iconic_cubic forwards
+    
+    &.red
+      background-color: $red-color
+    &.green
+      background-color: $green-color
+    &.yellow
+      background-color: $yellow-color
+
+    &_img
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      height: 100vh
+      object-fit: cover
+      object-position: center
+      transform: translate3d(0,-50%,0)
+
+  &-side_graph
+    position: absolute
+    width: 100%
+    height: 100%
+    right: 0
+    top: 0
+    display: flex
+    justify-content: center
+
+    .side_graph-col
+      position: relative
+      width: 9%
+      margin: 0 3%
+      background-color: $text-color
+      align-self: flex-end
+      &.sg_col-1
+        height: 8%
+      &.sg_col-2
+        height: 20%
+      &.sg_col-3
+        height: 30%
+      &.sg_col-4
+        height: 40%
+      &.sg_col-5
+        height: 60%
+
+  &-single
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    transform: translate3d(0,0,0)
+    pointer-events: none
+    &:first-child .home_slider-graphics
+      background-color: #2A2A2A
+      transform: translate3d(0,0,0) scaleX(0)
+      animation: slide_graphic 0.6s $iconic_cubic forwards
+      animation-delay: 0.1s
+      @keyframes slide_graphic
+        0%
+          transform: translate3d(0,0,0) scaleY(0)
+        100%
+          transform: translate3d(0,0,0) scaleY(1)
+    &.active
+      pointer-events: all
+      .home_slider-graphics
+        opacity: 1
+
+      .home_slider-side
+        //height: 100vh
+        top: auto
+        bottom: 0
+        transform-origin: center bottom
+        animation: slide_graphic_side_in 0.6s $iconic_cubic forwards
+        animation-delay: 0.4s
+
+
+  &-control
+    counter-reset: controlpag
+    position: absolute
+    top: 50%
+    left: 0
+    padding: 0 50px
+    transform: translate3d(0,186px,0)
+    z-index: 10
+    cursor: default
+    &_pag
+      display: inline-block
+      counter-increment: controlpag
+      font-size: 20px
+      font-weight: 700
+      margin-right: 16px
+      animation: control_pag 0.4s $iconic_cubic forwards
+      opacity: 0
+      transform: translate3d(0,16px,0)
+      will-change: opacity, transform
+      @extend .easing
+      &.active.red,
+      &.red:hover
+        color: $red-color
+      &.active.green,
+      &.green:hover
+        color: $green-color
+      &.active.yellow,
+      &.yellow:hover
+        color: $yellow-color
+      &:before
+        content: '0' counter(controlpag)
+
+      @for $i from 1 through 12
+        &:nth-of-type(#{$i})
+          animation-delay: #{$i*0.06s}
+
+      @keyframes control_pag
+        0%
+          opacity: 0
+          transform: translate3d(0,16px,0)
+        100%
+          opacity: 1
+          transform: translate3d(0,0,0)
+
+      .pg_progress
+        position: relative
+        display: inline-block
+        width: 0
+        height: 2px
+        background-color: $text-color
+        margin-left: -4px
+        transition: 0.2s width ease
+        i
+          position: absolute
+          top: 0
+          left: 0
+          display: inline-block
+          width: 0
+          height: 100%
+          background-color: currentColor
+
+      &.active .pg_progress
+        width: 64px
+        i
+          animation: pg_progress 6s linear forwards
+
+@keyframes pg_progress
+  0%
+    width: 0
+  100%
+    width: 100%
+
+.page_title.text_reveal.text-center
+  display: inline-block
+
+
+.text_revealer,
+.text_reveal
+  span
+    display: inline-block
+    position: relative
+    overflow: hidden
+    b
+      text-fill-color: transparent
+      -webkit-text-fill-color: transparent
+      position: relative
+      display: inline-block
+      transform: translate3d(0,110%,0)
+      animation: text_revealer_text_out 0.6s $iconic_cubic forwards
+    @keyframes text_revealer_text_out
+      0%
+        transform: translate3d(0,0,0)
+        text-fill-color: currentColor
+        -webkit-text-fill-color: currentColor
+      100%
+        transform: translate3d(0,110%,0)
+        text-fill-color: currentColor
+        -webkit-text-fill-color: currentColor
+    &:after
+      content: ""
+      position: absolute
+      width: calc(100% + 32px)
+      height: 100%
+      top: 0
+      left: -16px
+      background-color: $green-color
+      transform: translateZ(0) scaleX(0)
+
+  &.text_reveal span b
+    animation: none
+
+.active .text_revealer,
+.loaded .text_reveal.pass
+  span
+    b
+      transform: translate3d(0,0,0)
+      animation: text_revealer_text_in 0.6s $iconic_cubic forwards
+      animation-delay: 0.2s
+    &:after
+      animation: text_revealer 0.6s $iconic_cubic forwards
+      transform-origin: center left
+      animation-delay: 0.2s
+
+    @for $i from 2 through 24
+      &.o#{$i} b,
+      &.o#{$i}:after
+        animation-delay: #{$i*0.1s+0.1s}
+
+    @keyframes text_revealer
+      0%
+        transform: translate3d(0,0,0) scaleX(0)
+      40%
+        transform: translate3d(0,0,0) scaleX(1)
+      49%
+        transform-origin: center left
+      51%
+        transform-origin: center right
+      60%
+        transform: translate3d(0,0,0) scaleX(1)
+      100%
+        transform: translate3d(0,0,0) scaleX(0)
+        transform-origin: center right
+
+    @keyframes text_revealer_text_in
+      0%
+        text-fill-color: transparent
+        -webkit-text-fill-color: transparent
+      41%
+        text-fill-color: transparent
+        -webkit-text-fill-color: transparent
+      60%
+        text-fill-color: currentColor
+        -webkit-text-fill-color: currentColor
+      100%
+        text-fill-color: currentColor
+        -webkit-text-fill-color: currentColor
+
+.wrap
+  width: calc(100vw - 70px)
+  max-width: 1370px
+
+.content > .section
+  margin-top: 160px
+
+.section_title
+  &.outline
+    text-stroke: 1px $text-color
+    -webkit-text-stroke: 1px $text-color
+    color: transparent
+    background-clip: text
+    -webkit-background-clip: text
+    text-fill-color: transparent
+    -webkit-text-fill-color: transparent
+
+.page_title
+  text-transform: uppercase
+  line-height: 80px
+  margin-bottom: 64px
+
+.page_desc
+  max-width: 560px
+  line-height: 32px
+  margin-bottom: 32px
+  &:first-child
+    margin-top: 6px
+
+.partners_list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  padding-top: 32px
+  img
+    height: 74px
+    margin: 0 48px
+    margin-bottom: 56px
+    align-self: center
+
+.team_slider
+  position: relative
+  padding-top: 32px
+  &-section
+    .page_title
+      max-width: 760px
+      margin-left: auto
+      margin-right: auto
+
+    *
+      outline: none
+
+  &-badge
+    position: absolute
+    width: 64px
+    height: 64px
+    background-color: $red-color
+    text-align: center
+    font-size: 10px
+    line-height: 64px
+    text-transform: uppercase
+    font-weight: 500
+    color: #2b2b2b
+    border-radius: 50%
+    pointer-events: none
+    top: 56px
+    left: 25%
+    transform: translate3d(-50%,0,0)
+
+  &-single
+    height: 430px
+    position: relative
+
+    .team_slider-image
+      position: relative
+      text-align: center
+      width: 100%
+      img
+        height: 340px
+        display: inline-block
+
+  &-bubble
+    position: absolute
+    left: 0
+    bottom: 60px
+    opacity: 0.9
+    z-index: 1
+
+  &-context
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 2
+    h4
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 2px
+    p
+      font-size: 14px
+      line-height: 24px
+      margin-bottom: 0
+
+  &-controllers
+    line-height: 24px
+    text-align: center
+    padding-top: 48px
+    
+  &-pags
+    display: inline-block
+    vertical-align: middle
+    width: 72px
+    font-size: 14px
+
+  &-control
+    display: inline-block
+    position: relative
+    width: 24px
+    height: 24px
+    background-position: center
+    background-repeat: no-repeat
+    vertical-align: middle
+    opacity: 0.4
+    &.prev
+      background-image: url('../images/prev-team.svg')
+    &.next
+      background-image: url('../images/next-team.svg')
+    &:hover
+      opacity: 1
+      
+
+
+.about_nav
+  display: flex
+  position: relative
+  text-align: center
+  a
+    display: inline-block
+    position: relative
+    padding: 84px 0
+    font-size: 32px
+    font-weight: 700
+    width: 50%
+    &.green
+      background-color: #45B97C
+    &.red
+      background-color: #F04E45
+    &:hover
+      color: #fff
+
+    svg path
+      fill: currentColor
+
+  &-label
+    display: block
+
+  &-section.section
+    margin-top: 80px
+
+.service
+  &_page
+    position: relative
+
+  &_popup
+    position: fixed
+    width: 100%
+    max-width: 770px
+    padding: 40px
+    background-color: $green-color
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0) translate3d(0,48px,0)
+    opacity: 0
+    pointer-events: none
+    z-index: 99999
+    @extend .easing
+    &-close
+      position: absolute
+      right: 40px
+      top: 40px
+      width: 36px
+      height: 36px
+      padding: 10px
+      background-color: transparent
+      line-height: 16px
+      svg
+        vertical-align: top
+      path
+        @extend .easing
+      &:hover
+        background-color: #fff
+        path
+          fill: $red-color
+
+    h3
+      margin-bottom: 16px
+
+    &.active
+      opacity: 1
+      transform: translate3d(-50%,-50%,0) translate3d(0,0,0)
+      pointer-events: all
+      &~.service_overlay
+        opacity: 1
+        pointer-events: all
+
+  &_overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.8)
+    z-index: 99998
+    cursor: pointer
+    opacity: 0
+    pointer-events: none
+    @extend .easing
+  
+  &_sidebar
+    order: 1
+    width: 38%
+    height: 100vh
+    background-color: $yellow-color
+    display: flex
+    justify-content: flex-start
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 1
+    pointer-events: none
+
+    &-content
+      position: relative
+      align-self: center
+      max-width: 540px
+      padding-left: 40px
+  
+    .page_title
+      line-height: 80px
+      margin-bottom: 32px
+
+    [data-title]
+      padding: 0 12px
+      position: relative
+      
+      &:before
+        content: attr(data-title)
+        position: absolute
+        top: 0
+        right: 0
+        width: 0
+        height: calc(100% + 4px)
+        text-indent: 12px
+        color: #fff
+        background-color: $green-color
+        overflow: hidden
+        transition: width 0.3s ease
+        white-space: nowrap
+        direction: rtl
+        text-align: right
+      &:hover:before
+        width: 100%
+        left: 0
+        right: auto
+        direction: ltr
+        text-align: left
+
+  &_menu
+    li
+      padding: 10px 0
+      position: relative
+      display: block
+    a
+      text-transform: uppercase
+      font-size: 20px
+      font-weight: 700
+      line-height: 32px
+      display: inline-block
+      pointer-events: all
+      &:hover
+        color: $text-color
+      &.active
+        color: $red-color
+
+  &_content
+    width: calc(62% + 30px)
+    width: 100%
+    padding-right: calc(38% - 30px)
+    height: 100vh
+    overflow: hidden
+    overflow-y: scroll
+    -webkit-overflow-scrolling: touch
+    background-color: $red-color
+
+  &_section
+    min-height: 100vh
+    display: flex
+    justify-content: flex-end
+    position: relative
+    transform: translateZ(0)
+
+    &#sv_2 .servi_img
+      opacity: 0
+      &[style]
+        opacity: 1
+
+    &-graphics
+      position: absolute
+      width: 100%
+      max-width: 620px
+      height: 100%
+      top: 0
+      right: 0
+      transform: translateZ(0)
+      pointer-events: none
+
+      .servi_img
+        position: absolute
+        height: 224px
+        top: 50%
+        left: -184px
+        margin-top: -64px
+        transform: translate3d(0px, -75%, 0px) translate3d(0px, -88px, 0px) rotate(14deg)
+        will-change: transform
+        transition: 0.06s transform linear
+
+    &-content
+      position: relative
+      align-self: center
+      max-width: 620px
+      padding-right: 98px
+      transform: translateZ(0)
+
+  &_title
+    text-transform: uppercase
+    font-size: $fs2
+    line-height: 52px
+    margin-bottom: 18px
+
+  &_desc
+    color: #fff
+    font-size: 14px
+    line-height: 22px
+    &>.btn:last-child
+      margin-top: 16px
+
+    .btn:hover
+      background-color: #fff
+      color: $red-color
+
+
+.fix_page
+  &_header
+    position: fixed
+    left: 0
+    bottom: 0
+    padding: 40px
+    width: 100%
+
+    .page_title
+      margin-bottom: 0
+
+    .show_more
+      position: absolute
+      right: 20%
+      font-size: $fs3
+      font-weight: 500
+      bottom: 36px
+      z-index: 1
+      animation: show_more 0.6s $iconic_cubic forwards
+      animation-delay: 1s
+      opacity: 0
+      @keyframes show_more
+        0%
+          transform: translate3d(0,16px,0)
+          opacity: 0
+        100%
+          transform: translate3d(0,0,0)
+          opacity: 1
+      &:before
+        content: ""
+        position: absolute
+        width: 0
+        height: 10px
+        background-color: $green-color
+        bottom: 4px
+        right: -24px
+        left: auto
+        z-index: -1
+        transition: 0.3s width ease
+        will-change: width
+
+      &:hover:before
+        left: -24px
+        right: auto
+        width: calc(100% + 48px)
+
+
+.articles
+  &_page
+    position: relative
+    height: 100vh
+
+  &_fragments
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    height: 100%
+    transform: translateZ(0)
+    animation: fragments_in 0.8s $iconic_cubic forwards
+    animation-delay: 0.4s
+    opacity: 0
+
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      transition: 0.06s transform linear
+      &:nth-of-type(1)
+        margin-left: -340px
+        margin-top: -240px
+      &:nth-of-type(2)
+        margin-left: -100px
+        margin-top: -160px
+      &:nth-of-type(3)
+        margin-left: 160px
+        margin-top: -220px
+      &:nth-of-type(4)
+        margin-left: 350px
+        margin-top: -180px
+      &:nth-of-type(5)
+        margin-left: 20px
+        margin-top: 220px
+      &:nth-of-type(6)
+        margin-left: 200px
+        margin-top: 260px
+      &:nth-of-type(7)
+        margin-left: 400px
+        margin-top: 180px
+
+  &_content
+    position: absolute
+    width: 100vw
+    top: 50%
+    left: 0
+    transform: translate3d(0,-50%,0)
+    padding-right: 128px
+
+  &_list
+    white-space: nowrap
+    display: inline-block
+    position: relative
+    will-change: transform
+    &>li
+      display: inline-block
+      width: 360px
+      white-space: normal
+      margin-left: 40px
+      position: relative
+      transform: translate3d(0,0,0)
+      opacity: 0
+      animation: arts_item_in 1.2s ease forwards
+      z-index: 1
+      @keyframes arts_item_in
+        0%
+          transform: translate3d(96px,0,0)
+          opacity: 0
+        100%
+          transform: translate3d(0,0,0)
+          opacity: 1
+
+      @for $i from 1 through 12
+        &:nth-of-type(#{$i})
+          animation-delay: #{$i*0.1s}
+
+      &:before
+        content: ""
+        position: absolute
+        width: 200px
+        height: calc(100% + 80px)
+        left: -40px
+        top: -40px
+        background-color: #3EC2CF
+        transform: translateZ(0) scaleY(0)
+        transform-origin: bottom left
+        transition: 0.6s transform 
+        z-index: -1
+      &:hover
+        &:before
+          transform: translateZ(0) scaleY(1)
+          transform-origin: top left
+
+        .article_full
+          color: #fff
+
+
+
+.article
+  &_title
+    font-weight: 500
+    max-width: 320px
+    line-height: 32px
+    margin-bottom: 20px
+
+  &_excerpt
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 24px
+
+  &_full
+    font-size: 14px
+    line-height: 22px
+    display: inline-block
+    color: $green-color
+
+
+@keyframes fragments_in
+  0%
+    transform: translate3d(0,-32px,0) scale(0.9)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,0) scale(1)
+    opacity: 1
+
+
+.contact
+  &_content
+    position: absolute
+    top: 50%
+    right: 0
+    width: 70%
+    transform: translate3d(0,-50%,0)
+
+  &_fragments
+    position: absolute
+    width: 30%
+    top: 0
+    height: 100%
+    left: 0
+    animation: fragments_in 0.8s $iconic_cubic forwards
+    animation-delay: 0.4s
+    opacity: 0
+
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+
+    img:nth-of-type(1)
+      margin-top: -300px
+      margin-left: 80px
+
+    img:nth-of-type(2)
+      margin-top: -110px
+      margin-left: -40px
+
+    img:nth-of-type(3)
+      margin-top: 80px
+      margin-left: -56px
+
+    img:nth-of-type(4)
+      margin-top: 150px
+      margin-left: 120px
+
+    img:nth-of-type(5)
+      margin-top: 310px
+
+  &_section
+    position: relative
+    margin-bottom: 48px
+    max-width: 800px
+    .section_title
+      margin-bottom: 24px
+
+  &_info_list
+    @extend .clearfix
+    position: relative
+    font-size: 14px
+    line-height: 20px
+    li
+      float: left
+      width: 35%
+      margin-bottom: 10px
+      &:nth-of-type(2n+2)
+        width: 65%
+
+    a,b
+      font-weight: 500
+
+    a
+      position: relative
+      font-size: 1
+      &:before
+        content: ""
+        position: absolute
+        width: 0
+        height: 6px
+        background-color: $green-color
+        bottom: 0
+        z-index: -1
+        right: 0
+        left: auto
+        transition: 0.4s width ease
+        will-change: width
+      &:hover:before
+        width: calc(100% + 12px)
+        right: auto
+        left: -12px
+
+  &_form_line
+    display: flex
+    &+.contact_form_line
+      margin-top: 16px
+
+  &_form_prop
+    position: relative
+    flex-basis: 33.333%
+    padding-top: 20px
+    &.full
+      flex-basis: 100%
+
+    &.textarea
+      flex-basis: 100%
+
+    &.submit
+      flex-basis: 10%
+    
+    &:not(:last-child)
+      margin-right: 30px
+
+    label
+      position: absolute
+      left: 0
+      line-height: 50px
+      top: 20px
+      pointer-events: none
+      text-transform: none
+      font-size: $fs5
+      @extend .easing
+
+    input,textarea
+      height: 50px
+      min-height: 50px
+      max-height: 50px
+      width: 100%
+      max-width: 100%
+      resize: none
+      &:focus,
+      &:valid
+        &~label
+          top: 0
+          font-size: 12px
+
+.projects
+  &_content
+    padding-top: 160px
+    background-color: #45B97C
+
+.page_loader
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 3px
+  z-index: 99999
+  opacity: 0
+  pointer-events: none
+  @extend .easing
+  &:before
+    content: ""
+    position: absolute
+    width: 0
+    top: 0
+    left: 0
+    height: 100%
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2)
+    background-color: $green-color
+    transition: 0.3s width ease
+
+.page_loading .page_loader
+  opacity: 1
+  &:before
+    width: 70%
+    transition: 4s width ease
+
+.page_loaded .page_loader
+  opacity: 1
+  &:before
+    width: 100%
+    transition: 0.3s width ease
+
+
+.blog
+  &_content
+    padding: 144px 40px
+    max-width: 70%
+
+  &_sidebar
+    position: fixed
+    background-color: $green-color
+    width: 30%
+    height: 100%
+    top: 0
+    right: 0
+    padding: 40px
+    padding-top: 144px
+
+    .section_title
+      margin-bottom: 54px
+
+  &_list
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+
+  &_item
+    position: relative
+    width: calc(33.3333% - 20px)
+    margin-bottom: 64px
+    margin-right: 30px
+    &:nth-of-type(3n+3)
+      margin-right: 0
+
+    &-thumb
+      position: relative
+      background-color: #D8D8D8
+      width: 100%
+      height: calc(60vw / 3 - 90px)
+      display: block
+      transition: none
+      margin-bottom: 20px
+      overflow: hidden
+      img
+        width: 100%
+        height: 100%
+        object-position: center
+        object-fit: cover
+        vertical-align: top
+
+    &-title
+      font-weight: 500
+      margin-bottom: 16px
+
+    &-more
+      color: $green-color
+
+  &_cat-list
+    font-size: 24px
+    font-weight: 500
+    line-height: 48px
+    li
+      margin-left: -16px
+
+    a
+      display: inline-block
+      position: relative
+      padding: 0 16px
+      z-index: 1
+      &:before
+        content: ""
+        position: absolute
+        top: 2px
+        right: 0
+        width: 0
+        height: 100%
+        background-color: #3EC2CF
+        transition: 0.3s width ease
+        z-index: -1
+
+    li[class*="current"] a,
+    a[class*="current"],
+    a:hover
+      color: $text-color
+      &:before
+        width: 100%
+        right: auto
+        left: 0
+
+    li[class*="current"] a,
+    a[class*="current"]
+      pointer-events: none
+
+
+  &_nav
+    cursor: default
+    a:first-child,
+    span:first-child
+      margin-left: -8px
+    a,span
+      display: inline-block
+      padding: 0 8px
+
+    .current
+      font-weight: 600
+      color: $green-color
+      cursor: default
+
+  &_loadmore
+    font-weight: 600
+    display: inline-block
+    position: relative
+    &.active
+      color: transparent
+      pointer-events: none
+
+    &.active .blog_loadingmore
+      top: 50%
+      transform: translate3d(-50%,-50%,0)
+      opacity: 1
+      &:before,
+      &:after
+        width: 2px
+        opacity: 0
+      i
+        opacity: 1
+        animation: loadingmore 1s ease infinite
+        animation-delay: 0.2s
+        transition-delay: 0.2s
+
+      i:first-child
+        animation-delay: 0s
+        transition-delay: 0s
+
+      i:last-child
+        animation-delay: 0.4s
+        transition-delay: 0.4s
+
+    &:not(.active):hover
+      color: $green-color
+      .blog_loadingmore
+        top: 100%
+        transform: translate3d(-50%,0,0)
+        opacity: 1
+
+  &_loadingmore
+    position: absolute
+    width: 24px
+    height: 24px
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    opacity: 0
+    pointer-events: none
+    @extend .easing
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 16px
+      height: 2px
+      background-color: #D8D8D8
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(0deg)
+      @extend .easing
+    &:after
+      transform: translate3d(-50%,-50%,0) rotate(90deg)
+
+    i
+      position: absolute
+      width: 4px
+      height: 4px
+      background-color: $green-color
+      border-radius: 50%
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      @extend .easing
+      opacity: 0
+      will-change: transform, opacity
+      z-index: 1
+
+      @keyframes loadingmore
+        0%
+          transform: translate3d(-50%,-50%,0) translate3d(0,70%,0)
+        50%
+          transform: translate3d(-50%,-50%,0) translate3d(0,-70%,0)
+        100%
+          transform: translate3d(-50%,-50%,0) translate3d(0,70%,0)
+
+    i:first-child
+      margin-left: -10px
+
+    i:last-child
+      margin-left: 10px
+    
+
+.single
+  &_content
+    position: relative
+    max-width: 768px
+    margin: 0 auto
+    padding: 144px 40px
+    padding-bottom: 64px
+    &:after
+      content: ""
+      position: relative
+      display: block
+      width: 64%
+      height: 1px
+      background-color: #dedede
+      margin: 0 auto
+      margin-top: 64px
+
+  &_title
+    margin-bottom: 32px
+
+  &_meta
+    font-size: 14px
+    margin-bottom: 64px
+    a
+      font-weight: 500
+
+  &_entry
+
+    blockquote
+      padding-left: 1.5rem
+      border-left: 3px solid $green-color
+      padding-bottom: 0.25rem
+      margin-bottom: 1.25rem
+      font-size: 18px
+
+    blockquote p
+      margin-bottom: 0
+
+    blockquote p:not(:last-child)
+      margin-bottom: 0.75rem
+
+  &_tags
+    margin-top: 48px
+
+  &_related
+    max-width: 1170px
+    padding: 0 15px
+    margin: 0 auto
+
+    .blog_item-thumb
+      height: 240px
+
+a[rel="tag"]
+  display: inline-block
+  background-color: #dedede
+  font-size: 14px
+  padding: 0 6px
+  padding-bottom: 2px
+  &:hover
+    background-color: $green-color
+    color: $text-color
+
+.section_title.text_reveal
+  span
+    padding-bottom: 4px

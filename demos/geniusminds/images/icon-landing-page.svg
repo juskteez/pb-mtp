@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="42px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 55.2 (78181) - https://sketchapp.com -->
+    <title>E12A5910-D7BC-427F-95A8-13C0BC59F9E4</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pricing" transform="translate(-782.000000, -393.000000)" fill-rule="nonzero">
+            <g id="icon-landing-page" transform="translate(782.000000, 393.000000)">
+                <path d="M44,42 L2,42 C0.895,42 0,41.105 0,40 L0,2 C0,0.895 0.895,0 2,0 L44,0 C45.105,0 46,0.895 46,2 L46,40 C46,41.105 45.105,42 44,42 Z" id="Path" fill="#1D2A38"></path>
+                <rect id="Rectangle" fill="#FFFFFF" x="2" y="7" width="42" height="33"></rect>
+                <circle id="Oval" fill="#E86C60" cx="3.5" cy="3.5" r="1.5"></circle>
+                <circle id="Oval" fill="#EFD358" cx="8.5" cy="3.5" r="1.5"></circle>
+                <circle id="Oval" fill="#72C472" cx="13.5" cy="3.5" r="1.5"></circle>
+                <path d="M19,28 L7,28 C6.448,28 6,27.4891429 6,26.8571429 L6,13.1428571 C6,12.5108571 6.448,12 7,12 L19,12 C19.552,12 20,12.5108571 20,13.1428571 L20,26.8571429 C20,27.4891429 19.552,28 19,28 Z" id="Path" fill="#FFD701"></path>
+                <path d="M39,14 L25,14 C24.448,14 24,13.553 24,13 C24,12.447 24.448,12 25,12 L39,12 C39.552,12 40,12.447 40,13 C40,13.553 39.552,14 39,14 Z" id="Path" fill="#B3B3B3"></path>
+                <path d="M39,21 L25,21 C24.448,21 24,20.553 24,20 C24,19.447 24.448,19 25,19 L39,19 C39.552,19 40,19.447 40,20 C40,20.553 39.552,21 39,21 Z" id="Path" fill="#B3B3B3"></path>
+                <path d="M39,28 L25,28 C24.448,28 24,27.553 24,27 C24,26.447 24.448,26 25,26 L39,26 C39.552,26 40,26.447 40,27 C40,27.553 39.552,28 39,28 Z" id="Path-Copy-2" fill="#B3B3B3"></path>
+                <path d="M39,35 L7,35 C6.448,35 6,34.553 6,34 C6,33.447 6.448,33 7,33 L39,33 C39.552,33 40,33.447 40,34 C40,34.553 39.552,35 39,35 Z" id="Path" fill="#B3B3B3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

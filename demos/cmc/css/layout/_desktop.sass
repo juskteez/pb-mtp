@@ -1,0 +1,2357 @@
+/* Desktop */
+
+.wrap:not(.cols):not(.nopad)
+  padding-left: 15px
+  padding-right: 15px
+
+body
+  background-color: $main-bg-color
+
+.cmc
+  &_main_header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    box-shadow: 0 2px 10px rgba(71,76,78,0.05)
+    z-index: 30
+    background-color: #fff
+    //transform: translateZ(0)
+
+  &_sub_header
+    background-color: $main-darker-color
+    color: #fff
+    a
+      color: #fff
+      &:hover
+        color: $main-border-color
+
+  &_sub_menu_list,
+  &_sub_contact
+    line-height: 40px
+    vertical-align: top
+    font-size: $fs5
+    cursor: default
+
+    li
+      display: inline-block
+      margin-left: 24px
+
+    a
+      display: inline-block
+
+    a.btn:hover
+      background-color: rgba(0,0,0,0.15)
+
+  &_sub_contact
+    font-size: $fs6
+    li
+      display: inline-block
+      margin-left: 0
+      margin-right: 20px
+
+    a[href^="tel"],
+    a[href^="call"],
+    a[href^="mailto"]
+      &:before
+        content: ""
+        position: relative
+        display: inline-block
+        width: 24px
+        height: 24px
+        vertical-align: middle
+        background-position: left center
+        background-repeat: no-repeat
+
+    a[href^="tel"],
+    a[href^="call"]
+      &:before
+        background-image: url("../images/h-ico_phone.svg")
+
+    a[href^="mailto"]
+      &:before
+        background-image: url("../images/h-ico_mail.svg")
+        background-position: left 48%
+
+  &_logo_wrap .logo
+    line-height: 72px
+    img
+      vertical-align: middle
+
+  &_main_menu_list
+    line-height: 72px
+    cursor: default
+    font-size: 0
+    display: inline-block
+    li,
+    a
+      display: inline-block
+      position: relative
+
+    li.divided
+      border-left: 1px solid #F4F9FB
+
+    li:hover > ul
+      opacity: 1
+      pointer-events: all
+      transform: translate3d(0,0,0)
+
+    ul
+      position: absolute
+      line-height: 36px
+      background-color: #fff
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05), 0 12px 24px rgba(45,157,213,0.1)
+      white-space: nowrap
+      min-width: 100%
+      padding-bottom: 6px
+      opacity: 0
+      pointer-events: none
+      transform: translate3d(0,24px,0)
+      @extend .easing
+
+      li
+        display: block
+
+      a
+        display: block
+        font-size: $fs6
+        &:hover
+          box-shadow: none
+          background-color: $main-bg-color
+
+    &>li:hover > a:not(.active)
+      box-shadow: inset 0 -3px $main-border-color
+      color: $main-color
+
+    a
+      font-weight: bold
+      font-size: $fs5
+      padding: 0 16px
+      vertical-align: top
+      position: relative
+      &:hover
+        box-shadow: inset 0 -3px $main-border-color
+      &.active
+        color: $main-color
+        box-shadow: inset 0 -3px currentColor
+
+  &_main_menu_ico
+    padding: 0
+    width: 72px
+    height: 72px
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+    &:after
+      content: attr(data-cart)
+      position: absolute
+      background-color: $red-color
+      color: #fff
+      font-weight: bold
+      font-size: $fs6
+      line-height: 16px
+      min-width: 16px
+      text-align: center
+      border-radius: 8px
+      box-shadow: 0 0 0 2px #fff
+      top: 50%
+      left: 50%
+      transform: translate3d(0,-100%,0)
+
+    &.cart
+      position: relative
+      display: inline-block
+      vertical-align: top
+      border-left: 1px solid #F4F9FB
+
+  &_main_footer
+    position: relative
+    padding-top: 64px
+    font-size: $fs6
+    color: $text-lighter-color
+    @extend .white_blue
+    &_logo
+      display: inline-block
+      margin-bottom: 16px
+
+    &_contact_list
+      line-height: 18px
+      li
+        margin-bottom: 12px
+        padding-left: 24px
+        position: relative
+        &:before
+          content: ""
+          position: absolute
+          width: 16px
+          height: 16px
+          top: 0
+          left: 0
+          background-position: center
+          background-repeat: no-repeat
+          margin-top: -1px
+
+        &.address:before
+          background-image: url("../images/fc-ico_address.svg")
+        &.phone:before
+          background-image: url("../images/fc-ico_phone.svg")
+        &.fax:before
+          background-image: url("../images/fc-ico_fax.svg")
+
+      span
+        color: $text-color
+
+    &_menu_col
+      float: left
+      width: 25%
+      padding-left: 24px
+
+      h4
+        padding-top: 3px
+        margin-bottom: 24px
+        font-size: 12px
+        line-height: 24px
+
+    &_menu_list
+      line-height: 24px
+      li
+        margin-bottom: 10px
+
+    &_copyright
+      border-top: 1px solid $main-border-color
+      margin-top: 64px
+
+      p
+        padding: 32px 0
+        line-height: 16px
+        margin-bottom: 0
+
+    &_ext_links
+      padding: 32px 0
+      line-height: 16px
+      li
+        display: inline-block
+        margin-right: 24px
+
+
+  &_content
+    padding-top: 112px
+    min-height: calc(100vh - 464px)
+    overflow: hidden
+
+.main_slider
+  position: relative
+  height: calc(100vh - 112px)
+  max-height: 960px
+  overflow: hidden
+  &.slick-dotted.slick-slider
+    margin-bottom: 0
+    z-index: 1
+
+  &,& *
+    outline: none
+
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  &_single
+    background-size: cover
+    background-position: center
+
+  &_single .wrap.cols,
+  &_single .wrap.cols .col-10
+    height: 100%
+
+  &_image
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    img
+      max-width: 470px !important
+      vertical-align: top
+
+
+  &_info
+    position: absolute
+    top: 50%
+    transform: translate3d(0,-50%,0)
+    h2
+      color: $main-color
+      font-weight: bold
+      font-size: 38px
+      margin-bottom: 24px
+      line-height: 48px
+    p
+      line-height: 30px
+      margin-bottom: 16px
+      font-family: $font-parag
+
+    .mark_list
+      font-family: $font-parag
+      font-size: 14px
+      line-height: 24px
+      margin-bottom: 32px
+      li:not(:last-child)
+        margin-bottom: 6px
+
+  .slick-arrow
+    display: none
+
+.slick-slider.slick-dotted .slick-dots
+  position: absolute
+  bottom: 24px
+  li
+    margin: 0
+    button
+      &:before
+        content: ""
+        background-color: $main-color
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        top: 5px
+        left: 5px
+        transform: translateZ(0)
+        box-shadow: 0 0 0 0 $main-color
+        will-change: box-shadow
+        @extend .easing
+    &.slick-active button:before
+      box-shadow: 0 0 0 4px $main-color
+      background-color: #fff
+
+.mark_list
+  li
+    position: relative
+    &:before
+      content: ""
+      display: inline-block
+      width: 24px
+      height: 24px
+      vertical-align: middle
+      background-image: url("../images/list_check.svg")
+      background-position: left center
+      background-repeat: no-repeat
+
+
+.page_section:not(.home_vids_wrap):not(.no_space)
+  padding-top: 72px
+  padding-bottom: 72px
+
+.section_cta
+  background-color: $main-color
+  color: #fff
+  background-size: cover
+  background-position: center
+  &_title
+    margin-bottom: 16px
+  &_desc
+    font-family: $font-parag
+
+  &_foot[class^="col-"]
+    position: static
+    a.as
+      position: absolute
+      white-space: nowrap
+      right: 0
+      top: 50%
+      transform: translate3d(0,-50%,0)
+
+.light_blue
+  background-color: $main-bg-color
+
+.shine_blue
+  background-color: #F4F9FB
+
+.white_blue
+  background-color: #fff
+
+.main_bg
+  background-color: $main-color
+  color: #fff
+
+  .section_header
+    &_title
+      color: #fff
+    &_desc
+      color: #D6E7F0
+
+  a
+    color: #fff
+
+.section_header
+  position: relative
+  text-align: center
+  &.left_header
+    text-align: left
+    .section_header_desc
+      margin-left: 0
+  &.right_header
+    text-align: right
+    .section_header_desc
+      margin-right: 0
+  &_title
+    font-size: 38px
+    font-weight: bold
+    color: $main-color
+    line-height: 54px
+    margin-bottom: 24px
+    &.small
+      margin-bottom: 8px
+      font-size: 32px
+  &_desc
+    font-size: 16px
+    color: $text-lighter-color
+    font-family: $font-parag
+    line-height: 30px
+    margin-bottom: 56px
+    max-width: 770px
+    margin-left: auto
+    margin-right: auto
+
+.dc_map
+  position: absolute
+  top: -80px
+  right: 100%
+  width: 100%
+
+.dc_map_spec
+  position: absolute
+  right: 100%
+  top: 86px
+  margin-right: 60px
+  white-space: nowrap
+  li
+    margin-bottom: 16px
+    position: relative
+    padding-left: 24px
+  p
+    color: $text-lighter-color
+    font-family: $font-parag
+    font-size: 12px
+    line-height: 14px
+  h5
+    font-size: 12px
+    font-weight: bold
+    line-height: 16px
+    margin-bottom: 4px
+
+  li:before
+    content: ""
+    position: absolute
+    display: inline-block
+    left: 0
+    width: 16px
+    height: 2px
+    top: 6px
+    margin-right: 6px
+    border-radius: 2px
+  li.main-bone:before
+    background-color: $main-color
+  li.orange-bone:before
+    background-color: $orange-color
+  li.green-bone:before
+    background-color: $green-color
+
+
+.si_list.intro_list
+  margin-bottom: 128px
+  @extend .clearfix
+  li
+    padding-left: 69px
+    position: relative
+    margin-bottom: 32px
+
+  .si_list
+    &_icon
+      position: absolute
+      top: 0
+      left: 15px
+      width: 32px
+      height: 32px
+      line-height: 32px
+      text-align: center
+      img
+        vertical-align: middle
+
+    &_title
+      font-size: 24px
+      font-weight: bold
+      line-height: 32px
+      margin-bottom: 8px
+      big
+        font-size: 32px
+    &_desc
+      font-size: 14px
+      font-family: $font-parag
+      height: 72px
+      margin-bottom: 0
+      color: $text-lighter-color
+      line-height: 24px
+
+.si_list.potential_list
+  @extend .clearfix
+  li
+    padding-top: 16px
+    padding-bottom: 16px
+    margin-bottom: 32px
+    &:not(:nth-of-type(3n+3)):after
+      content: ""
+      position: absolute
+      width: 1px
+      height: 100%
+      background-color: $main-border-color
+      right: 0
+      top: 0
+    &:nth-of-type(1):before,
+    &:nth-of-type(2):before,
+    &:nth-of-type(3):before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 1px
+      background-color: $main-border-color
+      bottom: -16px
+      left: 0
+
+  .si_list
+    &_icon
+      position: relative
+      height: 40px
+      padding-left: 20px
+      padding-right: 20px
+      img
+        vertical-align: top
+
+    &_title
+      font-size: 16px
+      color: $main-color
+      font-weight: bold
+      line-height: 24px
+      margin-top: 6px
+      margin-bottom: 10px
+      padding-left: 20px
+      padding-right: 20px
+      big
+        font-size: 32px
+    &_desc
+      font-size: 14px
+      font-family: $font-parag
+      height: 72px
+      margin-bottom: 0
+      line-height: 24px
+      padding-left: 20px
+      padding-right: 20px
+
+.si_list.provided_list
+  text-align: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  @extend .clearfix
+  li
+    width: 25%
+
+  li > a
+    display: block
+    background-color: rgba(255,255,255,0.05)
+    padding-top: 42px
+    margin: 3px
+    position: relative
+    height: 210px
+    will-change: box-shadow
+    &:hover
+      padding-top: 32px
+      box-shadow: 0 10px 32px 0 rgba(21,98,136,0.40), inset 0 0 0 1px rgba(255,255,255,0.10);
+
+      .si_list_spec_link
+        opacity: 1
+        &:after
+          opacity: 1
+          margin-left: 0
+
+
+  .si_list
+    &_icon
+      height: 72px
+      width: 72px
+      background: rgba(214,231,240,0.20)
+      border-radius: 50%
+      margin-left: auto
+      margin-right: auto
+      line-height: 72px
+      @extend .easing
+      img
+        vertical-align: middle
+
+    &_title
+      font-weight: bold
+      display: block
+      margin-top: 24px
+      line-height: 32px
+      @extend .easing
+
+    &_spec_link
+      position: absolute
+      bottom: 20px
+      font-size: 12px
+      font-weight: bold
+      line-height: 18px
+      text-transform: uppercase
+      left: 0
+      width: 100%
+      @extend .easing
+      opacity: 0
+      &:after
+        content: ""
+        width: 18px
+        height: 18px
+        display: inline-block
+        background-image: url("../images/btn_arrow.svg")
+        background-position: right center
+        background-repeat: no-repeat
+        vertical-align: top
+        margin-left: -14px
+        opacity: 0
+        will-change: opacity
+        @extend .easing
+
+.slick-slider,
+.slick-slider.slick-dotted
+  overflow: hidden
+
+  .slick-list *
+    outline: none
+
+.home_videos,
+.home_videos.slick-slider.slick-dotted
+  height: calc(100vh - 112px)
+  margin-bottom: 0
+
+  &_single,
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  &_single
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(41,63,74,0.8)
+      transform: translateZ(0)
+
+  &_thumb
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    transform: translateZ(0)
+    &:before
+      content: attr(title)
+      position: absolute
+      left: 0
+      width: 100%
+      text-align: center
+      color: #fff
+      font-weight: bold
+      font-size: 32px
+      line-height: 64px
+      top: 50%
+      transform: translate3d(0,-30vh,0)
+
+    &:after
+      content: ""
+      position: absolute
+      background-image: url("../images/play_btn.svg")
+      background-position: 53% center
+      background-repeat: no-repeat
+      background-color: $main-color
+      border-radius: 50%
+      width: 110px
+      height: 110px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      box-shadow: 0 0 0 0 $main-color
+      will-change: box-shadow
+      @extend .easing
+
+    &:hover:after
+      box-shadow: 0 0 0 10px $main-color
+
+  .slick-dots
+    bottom: 32px
+    pointer-events: none
+    button
+      pointer-events: all
+
+
+.page
+  &_support
+    text-align: center
+    &.page_support_detailed
+      .col-5
+        position: relative
+        padding-top: 32px
+        padding-bottom: 32px
+        &:before
+          content: ""
+          position: absolute
+          width: calc(100% - 30px)
+          height: 100%
+          background-color: #f9f9f9
+          top: 0
+          left: 50%
+          transform: translate3d(-50%,0,0)
+          z-index: 0
+
+        *
+          z-index: 1
+          position: relative
+
+      h5
+        margin-bottom: 8px
+
+      p:not(.page_support_desc)
+        margin-bottom: 0
+
+      p:not(:last-child):not(.page_support_desc)
+        font-size: 24px
+        font-weight: 500
+
+    p
+      font-size: 32px
+      line-height: 32px
+      margin-bottom: 16px
+      a
+        color: $main-color
+
+    p.page_support_desc
+      font-size: 14px
+      font-family: $font-parag
+      max-width: 370px
+      margin-left: auto
+      margin-right: auto
+      line-height: 24px
+      min-height: 48px
+      color: $text-lighter-color
+
+    p .page_support_mail
+      font-size: 16px
+      line-height: 32px
+      color: $main-color
+      font-weight: 600
+
+  &_content_body
+    padding-bottom: 96px
+    padding-top: 48px
+
+    &+.page_section,
+    &+.page_section:not(.home_vids_wrap):not(.no_space):not(.yes_space)
+      padding-top: 0
+
+  &_director
+    position: fixed
+    z-index: 10
+    top: 0
+    left: 0
+    padding: 32px 48px
+    line-height: 32px
+    a
+      text-transform: uppercase
+      color: $text-lighter-color
+      font-weight: 600
+      font-size: $fs5
+      position: relative
+      &:hover
+        color: $text-color
+      &.back
+        &:before
+          content: ""
+          position: relative
+          width: 24px
+          height: 32px
+          display: inline-block
+          background-image: url("../images/btn_arrowb.svg")
+          background-position: center left
+          background-repeat: no-repeat
+          vertical-align: middle
+          @extend .easing
+        &:hover:before
+          transform: translate3d(-6px,0,0)
+
+
+  &_breadcrumbs
+    padding: 0 15px
+    padding-bottom: 32px
+    color: $text-lighter-color
+    a
+      color: $text-lighter-color
+      font-weight: 600
+      display: inline-block
+      margin: 0 4px
+
+    a,
+    a:last-child
+      &:hover
+        color: $text-color
+    a:last-child
+      color: $main-color
+    a:first-child
+      margin-left: 0
+
+  &_links_box
+    background-color: #fff
+    padding: 20px 24px
+    h2,h3,h4
+      &.uppercase
+        color: $text-lighter-color
+
+  &_links_list
+    line-height: 24px
+    font-size: $fs5
+    font-weight: 600
+    margin: 0 -24px
+    a
+      display: block
+      padding: 6px 24px
+      &.active
+        background-color: #F7FAFC
+        color: $main-color
+
+  &_header
+    text-align: center
+    padding: 72px 15px
+    background-position: center
+    background-size: cover
+    &.spaced
+      padding: 96px 15px
+      padding-top: 128px
+    &_title
+      font-size: 38px
+      font-weight: bold
+      margin-bottom: 24px
+      line-height: 48px
+      color: $main-color
+
+    &_desc
+      font-family: $font-parag
+      color: $text-lighter-color
+      line-height: 30px
+      margin-bottom: 0
+      &.centered_bound
+        max-width: 770px
+        margin-left: auto
+        margin-right: auto
+
+    &_features
+      font-size: $fs5
+      color: $main-darker-color
+      font-family: $font-parag
+      margin-top: 72px
+      line-height: 24px
+      li:not(:last-child)
+        margin-bottom: 10px
+
+      li:before
+        content: ""
+        position: relative
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: currentColor
+        display: inline-block
+        vertical-align: middle
+        margin-top: -2px
+        margin-right: 6px
+
+  &_box
+    background-color: #fff
+    padding: 20px
+    &_title
+      margin-bottom: 16px
+      &+.table
+        margin-top: -10px
+
+  &_divider
+    height: 1px
+    background-color: $main-border-color
+    margin: 32px 0
+
+  &_info
+    &_list
+      margin-left: -15px
+      margin-right: -15px
+      @extend .clearfix
+    &_label
+      font-size: $fs6
+      text-transform: uppercase
+      letter-spacing: 1px
+      color: $text-lighter-color
+      margin-bottom: 6px
+    &_value
+      font-family: $font-parag
+      margin-bottom: 0
+    &_item
+      margin-top: 24px
+      padding: 0 15px
+      float: left
+      width: 100%
+      &.half
+        width: 50%
+      &:first-child,
+      &:first-child.half+.half
+        margin-top: 0
+
+    &_actions
+      margin-top: 48px
+
+  &_filter
+    display: inline-block
+    line-height: 40px
+    font-size: $fs5
+    font-weight: 600
+    color: $text-lighter-color
+    margin-right: 20px
+    margin-top: 16px
+    &_label
+      padding-right: 6px
+
+    &s
+      margin-bottom: 16px
+
+  &_pagination
+    font-size: 0
+    a
+      font-size: 14px
+      line-height: 38px
+      height: 36px
+      min-width: 36px
+      text-align: center
+      background-color: #fff
+      display: inline-block
+      color: $text-lighter-color
+      font-weight: 600
+      padding: 0 8px
+      box-shadow: inset 0 0 0 1px transparent
+      &.current
+        box-shadow: inset 0 0 0 1px $main-color
+      &:not(:last-child)
+        margin-right: 2px
+      &:hover
+        box-shadow: inset 0 0 0 1px $main-border-color
+
+    a.prev:before,
+    a.first:before,
+    a.next:after,
+    a.last:after
+      content: ""
+      display: inline-block
+      width: 12px
+      height: 12px
+      background-position: center
+      background-repeat: no-repeat
+      vertical-align: middle
+      position: relative
+      transform: translate3d(0,-1px,0)
+
+    a.next
+      margin-left: 14px
+      &:after
+        background-image: url("../images/next.svg")
+    a.prev
+      margin-right: 16px
+      &:before
+        background-image: url("../images/prev.svg")
+    a.last:after
+      background-image: url("../images/forward.svg")
+      margin-left: 6px
+    a.first:before
+      background-image: url("../images/backward.svg")
+      margin-right: 6px
+
+    a.first,
+    a.last
+      padding: 0 14px
+
+.login
+  .cmc_content
+    padding-top: 0
+
+  &_page_wrap
+
+  &_page_wrap,
+  &_form_wrap,
+  &_toreg_wrap
+    position: relative
+    height: 100vh
+    @extend .clearfix
+
+  &_form_wrap
+    float: left
+    width: calc(100% - 470px)
+
+  &_toreg_wrap
+    float: right
+    width: 470px
+    padding: 50px
+    background-color: $main-color
+    background-image: url("../images/prereg_bg.jpg")
+    background-position: center
+    background-size: cover
+    color: #fff
+
+    .prereg_title
+      line-height: 40px
+
+  .cmc_main_footer
+    background-color: transparent
+    position: fixed
+    padding-left: 48px
+    left: 0
+    bottom: 0
+    width: 100%
+    &_copyright
+      margin-top: 0
+      border-top: none
+
+      .float_right
+        color: #fff
+        width: 470px
+        text-align: center
+
+.pricing_wrap+.pricing_benefits
+  margin-top: 48px
+.pricing_opts
+  margin-bottom: 32px
+  font-size: 0
+  text-align: center
+  a
+    display: inline-block
+    line-height: 32px
+    padding: 12px 24px
+    background: rgba(214,231,240,0.50)
+    font-size: $fs4
+    font-weight: bold
+    position: relative
+    &.active
+      color: $main-color
+      &:before
+        content: ""
+        position: absolute
+        width: 4px
+        height: 4px
+        background-color: $main-color
+        top: 75%
+        left: 50%
+        transform: translate3d(-50%,0,0)
+        border-radius: 50%
+
+  a:first-child
+    padding-left: 32px
+  a:last-child
+    padding-right: 32px
+
+.pricing_table
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  @extend .clearfix
+  &_single_wrap
+    box-shadow: inset 0 0 0 1px $main-bg-color
+    padding: 24px
+    text-align: center
+    margin-bottom: 30px
+    background-color: #fff
+    @extend .easing
+    &:hover,
+    &.active
+      box-shadow: inset 0 0 0 1px #D6E7F0, 0 16px 32px 0 rgba(21,98,136,0.14)
+
+  &>.col-4.pricing_table_single[class^="col"]
+    float: none
+    width: calc(100% / 3)
+
+  &_desc
+    color: $text-lighter-color
+    font-size: 14px
+
+  &_id
+    font-size: $fs5
+    text-transform: uppercase
+    color: $main-color
+    font-weight: bold
+    line-height: 20px
+    margin-bottom: 0
+
+  &_name
+    font-size: $fs2
+    font-weight: bold
+    line-height: 32px
+    margin-bottom: 16px
+    span
+      font-weight: lighter
+
+  &_value
+    background-color: $main-bg-color
+    margin: 0 -23px
+    height: 116px
+    position: relative
+    margin-bottom: 32px
+    &_price,
+    &_currency
+      position: absolute
+      width: 100%
+      left: 0
+      text-align: center
+
+    &_price
+      font-size: 32px
+      font-weight: lighter
+      color: $main-color
+      top: 18%
+      &.old_price
+        font-size: 16px
+        top: 12%
+        width: auto
+        left: 50%
+        transform: translate3d(-50%,0,0)
+        color: rgba(21,98,136,0.30)
+        &:before
+          content: ""
+          top: 0
+          left: 0
+          width: 100%
+          height: 1px
+          background-color: currentColor
+          top: 43%
+          position: absolute
+        &~.pricing_table_value_price
+          top: 26%
+        &~.pricing_table_value_currency
+          top: 64%
+
+    &.value_op
+      .data-op
+        content: attr(data-op)
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 1px
+        line-height: 24px
+        color: #fff
+        background-color: $main-color
+        position: absolute
+        padding: 0 8px
+        top: 100%
+        left: 50%
+        transform: translate3d(-50%,-50%,0)
+        &:before,
+        &:after
+          content: ""
+          position: absolute
+          border-style: solid
+          color: $main-color
+          border-color: transparent transparent transparent currentColor
+          border-width: 12px
+          left: 100%
+        &:after
+          right: 100%
+          left: auto
+          border-color: transparent currentColor transparent transparent
+
+        &.sale_value
+          background-color: $red-color
+          &:before,
+          &:after
+            color: $red-color
+
+    &_currency
+      font-size: 14px
+      text-transform: uppercase
+      letter-spacing: 1px
+      font-weight: bold
+      color: $text-lighter-color
+      top: 60%
+
+  &_props
+    font-family: $font-parag
+    font-size: $fs5
+    line-height: 18px
+    li
+      margin-bottom: 22px
+      color: $text-lighter-color
+      span:last-child
+        color: $text-color
+      span:not(.marked):first-child:after
+        content: ":"
+
+      span.marked:before
+        content: ""
+        display: inline-block
+        width: 18px
+        height: 18px
+        background-image: url("../images/list_check.svg")
+        background-position: center left
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-right: 4px
+
+      &:last-child
+        margin-bottom: 32px
+
+.pricing
+  &_wrap.pricing_floating_email,
+  &_wrap.pricing_floating_dc
+    position: absolute
+    z-index: 1
+    right: 0
+    bottom: -160px
+  &_wrap.pricing_floating_dc
+    bottom: -80px
+  &_note
+    text-align: center
+    font-family: $font-parag
+    font-style: italic
+    color: $text-lighter-color
+    margin-bottom: 32px
+    position: relative
+    a
+      color: $main-color
+      border-bottom: 1px dotted transparent
+      &:hover
+        border-bottom-color: currentColor
+
+    &:after
+      content: ""
+      position: relative
+      width: 100%
+      max-width: 370px
+      height: 1px
+      display: block
+      margin: 0 auto
+      background-color: $main-border-color
+      margin-top: 32px
+
+  &_benefits
+    h3
+      text-align: center
+      color: $text-lighter-color
+      margin-bottom: 40px
+    &_list
+      position: relative
+      @extend .clearfix
+      li[class^="col"]
+        padding-left: 64px
+        margin-bottom: 32px
+    &_ico
+      position: absolute
+      left: 15px
+      top: 0
+      width: 48px
+      height: 48px
+      line-height: 32px
+      img
+        vertical-align: middle
+
+    &_title
+      font-size: $fs4
+      line-height: 24px
+      margin-top: 4px
+      margin-bottom: 10px
+    &_desc
+      font-size: $fs5
+      font-family: $font-parag
+      color: $text-lighter-color
+
+  &_extras
+    padding: 0 7px
+    margin: 0 -15px
+    li
+      float: left
+      width: calc(100%/3)
+      background-color: #fff
+      padding: 8px 16px
+      border: 8px solid $main-bg-color
+      position: relative
+      padding-right: 130px
+
+    &_title
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 0
+      line-height: 20px
+      padding: 8px 0
+    &_price
+      position: absolute
+      right: 0
+      font-size: 12px
+      text-transform: uppercase
+      background-color: #EAF3F7
+      color: $text-lighter-color
+      top: 50%
+      transform: translate3d(0,-50%,0)
+      line-height: 24px
+      padding-right: 6px
+      padding-left: 2px
+      &:before
+        content: ""
+        position: absolute
+        right: 100%
+        top: 0
+        width: 20px
+        height: 24px
+        border-style: solid
+        border-width: 12px 10px 12px 10px
+        border-color: transparent #EAF3F7 transparent transparent
+
+
+.shop_process
+  background-color: #F4F9FB
+  position: relative
+  margin-bottom: 48px
+  &_bar
+    position: relative
+    width: 100%
+    height: 8px
+    background-color: $main-border-color
+    &[current-step="2"] span
+      width: #{100%/3*2}
+    &[current-step="3"] span
+      width: 100%
+
+    span
+      position: relative
+      width: #{100%/3}
+      height: 100%
+      background-color: $main-color
+      display: block
+      overflow: hidden
+      &:before
+        content: ""
+        position: absolute
+        width: 100vw
+        height: 100%
+        background-image: url("../images/progress.svg")
+        top: 0
+        left: 0
+        animation: process_running 10s linear infinite
+  &_wrap
+    @extend .clearfix
+
+  &_step
+    position: relative
+    width: calc(100% / 3)
+    float: left
+    height: 64px
+    color: rgba(122,142,151,0.5)
+    &.active
+      color: $main-color
+      .shop_process_ico img
+        &:first-child
+          opacity: 1
+        &:last-child
+          opacity: 0
+    a
+      display: block
+      position: relative
+      width: 100%
+      height: 100%
+      line-height: 68px
+      font-family: $font-title
+      font-size: 18px
+      font-weight: 600
+      color: currentColor
+      padding-left: 20px
+  &_ico
+    position: relative
+    width: 24px
+    height: 24px
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    transform: translate3d(0,-2px,0)
+    margin-right: 6px
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0)
+      &:first-child
+        opacity: 0
+
+@keyframes process_running
+  0%
+    transform: translate3d(0,0,0)
+  100%
+    transform: translate3d(-360px,0,0)
+
+.cart,
+.checkout,
+.order,
+.light_page
+  background-color: #fff
+
+  .cmc
+    &_main_footer:before
+      content: ""
+      position: absolute
+      width: 100%
+      max-width: 470px
+      height: 1px
+      left: 50%
+      top: 0
+      transform: translate3d(-50%,0,0)
+      background-color: $main-border-color
+
+.checkout .cmc_main_header#main_header
+  pointer-events: none
+
+.order .total_sum
+  margin-bottom: 0
+
+.page
+  &_desc
+    font-family: $font-parag
+    font-size: $fs5
+    color: $text-lighter-color
+    margin-bottom: 24px
+
+    .clear
+      color: #474C4E
+
+  &_title
+    margin-bottom: 16px
+    &_btn
+      margin-top: -10px
+
+  &_pcode
+    text-transform: uppercase
+    font-size: $fs4
+    letter-spacing: 2px
+    font-weight: bold
+    color: $text-lighter-color
+    margin-bottom: 24px
+    span
+      color: #474C4E
+
+  &_overlayer
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.8)
+    z-index: 90
+    transition: 0.3s all ease
+    opacity: 0
+    will-change: opacity
+    transform: translateZ(0)
+    pointer-events: none
+
+  &_popup
+    position: fixed
+    background-color: #fff
+    top: 50%
+    left: 50%
+    width: 570px
+    min-height: 300px
+    transform: translate3d(-50%,-50%,0) perspective(1000px) rotateX(-10deg) translate3d(0,48px,0)
+    z-index: 100
+    display: flex
+    transition: 0.3s all ease
+    opacity: 0
+    will-change: opacity
+    pointer-events: none
+    &.active,
+    &.active~.page_overlayer
+      opacity: 1
+      pointer-events: all
+
+    &.active
+      transform: translate3d(-50%,-50%,0) perspective(1000px) rotateX(0) translate3d(0,0,0)
+
+    @extend .clearfix
+    &.wide
+      width: 970px
+
+    &_content,
+    &_sidebar
+      padding: 24px 30px
+
+    &_sidebar
+      background-color: #F4F9FB
+      width: 270px
+      &+.page_popup_content
+        width: calc(100% - 270px)
+
+    &_closer
+      position: absolute
+      right: 24px
+      top: 24px
+      width: 24px
+      height: 24px
+      opacity: 0.5
+      &:hover
+        opacity: 1
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        width: 14px
+        height: 1px
+        background-color: $text-lighter-color
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%,-50%,0) rotate(45deg)
+      &:after
+        transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+.table
+  position: relative
+  width: 100%
+  margin-bottom: 48px
+  thead
+    font-size: $fs6
+    text-transform: uppercase
+    letter-spacing: 2px
+    font-weight: 600
+    color: $text-lighter-color
+    line-height: 20px
+  &.wide
+    td
+      padding-top: 24px
+      padding-bottom: 24px
+  td
+    border-bottom: 1px solid $main-border-color
+    padding-top: 16px
+    padding-bottom: 16px
+    vertical-align: top
+    &:not(:first-child)
+      padding-left: 16px
+
+    &:last-child
+      text-align: right
+
+  &.cart_table
+    tbody td
+      padding-top: 24px
+      padding-bottom: 24px
+    td:first-child
+      padding-left: 32px
+
+    td:nth-of-type(4)
+      padding-right: 24px
+
+  .input-wrap:last-child
+    margin-bottom: 0
+
+  tr:hover .table_row_removal
+    opacity: 0.5
+    &:hover
+      opacity: 1
+
+  &_row_removal
+    position: absolute
+    width: 24px
+    height: 24px
+    left: -8px
+    margin-top: 0
+    opacity: 0
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 10px
+      height: 1px
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) rotate(45deg)
+      background-color: $text-lighter-color
+    &:after
+      transform: translate3d(-50%,-50%,0) rotate(-45deg)
+
+  &_product_domain
+    color: $main-color
+    border-bottom: 1px dotted transparent
+    &:hover
+      border-bottom-color: currentColor
+
+.ticket
+  &_label
+    font-size: $fs7
+    text-transform: uppercase
+    display: inline-block
+    background-color: $text-lighter-color
+    color: #fff
+    font-weight: bold
+    padding: 0 6px
+    line-height: 16px
+    font-family: $font-parag
+    margin-bottom: 8px
+    &.replied
+      background-color: $green-color
+    &.open
+      background-color: $orange-color
+    &.feedback
+      background-color: $main-color
+
+.table_product,
+.product_addon
+  &_title,
+  &_list
+    color: $text-color
+    font-size: $fs5
+    font-family: $font-parag
+    margin-bottom: 4px
+    &:last-child
+      margin-bottom: 0
+    &.label
+      display: inline-block
+
+  &_list
+    font-size: $fs6
+    color: $text-lighter-color
+
+    a
+      color: $main-color
+      border-bottom: 1px dotted transparent
+      &:hover
+        border-bottom: 1px dotted currentColor
+
+  &_domain,
+  &_date
+    font-family: $font-parag
+    font-size: $fs5
+  &_code,
+  &_price
+    font-weight: bold
+    font-size: 14px
+    color: #474C4E
+    line-height: 24px
+    padding: 8px 0
+    display: inline-block
+    &.sum_price
+      color: $main-color
+
+  &_code
+    font-family: $font-parag
+
+.product_addon
+  &_title
+    font-size: $fs4
+    margin-bottom: 16px
+    font-weight: 500
+
+  &_list
+    li
+      margin-bottom: 8px
+
+    span
+      color: #474C4E
+
+  &_slider
+    &_wrap
+      position: relative
+      margin-bottom: 24px
+
+    &_label,
+    &_sum
+      font-family: $font-parag
+      color: $text-lighter-color
+      line-height: 20px
+    &_sum
+      position: absolute
+      font-size: $fs5
+      right: 0
+      top: 0
+      span
+        color: $main-color
+
+    &_marks
+      display: flex
+      justify-content: space-between
+      color: $text-lighter-color
+      font-family: $font-parag
+      font-size: $fs7
+
+    &_row
+      position: relative
+      background-color: $main-border-color
+      height: 6px
+      border-radius: 3px
+      margin: 14px 0
+
+    &_progress
+      position: relative
+      height: 100%
+      width: 0
+      background-color: $main-color
+      border-radius: 3px
+
+    &_handle
+      position: absolute
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      background-color: #fff
+      color: #474C4E
+      box-shadow: inset 0 0 0 4px currentColor
+      top: 50%
+      right: 0
+      transform: translate3d(50%,-50%,0)
+      &:hover
+        color: $main-color
+
+      &:before
+        content: ""
+        position: absolute
+        width: 200%
+        height: 200%
+        top: -50%
+        left: -50%
+
+  &_actions
+    text-align: right
+
+
+.table_addon
+  &s
+    font-family: $font-parag
+    font-size: $fs6
+    li:not(:last-child)
+      margin-bottom: 6px
+
+    .price
+      color: $main-color
+
+  &_title
+    font-size: $fs6
+    color: $text-color
+    font-weight: normal
+    font-family: $font-parag
+    margin-bottom: 0
+
+  &_edit
+    font-family: $font-title
+    color: $text-lighter-color
+    text-transform: uppercase
+    font-weight: bold
+    font-size: $fs6
+    letter-spacing: 1.4px
+
+.product_total
+  &_sum,
+  &_actions
+    .col-6:nth-of-type(2n+2)
+      text-align: right
+
+.total_sum
+  margin-bottom: 24px
+  @extend .clearfix
+  &_list
+    max-width: 420px
+    float: right
+    @extend .clearfix
+    dt,
+    dd
+      width: 40%
+      float: left
+      line-height: 24px
+      margin-bottom: 18px
+
+    dt
+      text-align: left
+      font-weight: bold
+      color: $text-lighter-color
+
+    dt span,
+    dd
+      color: #474C4E
+      font-weight: bold
+
+    dd
+      width: 60%
+
+  .price
+    font-size: 18px
+
+  &_price.price
+    color: $main-color
+    font-size: $fs2
+
+.payment
+  &_method
+    background-color: #F4F9FB
+    margin-bottom: 2px
+    box-shadow: inset 0 0 0 1px $main-border-color
+    &.active
+      .payment_content
+        max-height: 50vh
+        padding: 24px
+
+      .payment_title
+        pointer-events: none
+        color: #474C4E
+  &_content
+    padding: 0 24px
+    overflow: hidden
+    max-height: 0
+    will-change: max-height
+    transition: 0.4s all ease
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+
+  &_title
+    display: block
+    padding: 16px 24px
+    padding-bottom: 0
+    line-height: 20px
+    font-weight: bold
+    position: relative
+    color: $text-lighter-color
+    &:after
+      content: ""
+      display: block
+      height: 1px
+      background-color: $main-border-color
+      margin-top: 15px
+
+  &_banks
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &_bank
+    background-color: #fff
+    width: calc(100% / 4 - 15px)
+    margin-bottom: 20px
+    height: 60px
+    position: relative
+    &:hover
+      box-shadow: inset 0 0 0 1px $main-border-color
+
+    &.active
+      box-shadow: inset 0 0 0 2px $main-color
+
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate3d(-50%,-50%,0) scale(0.5)
+
+  &_inputs .input-wrap:last-child
+    margin-bottom: 0
+
+  &_note
+    font-family: $font-parag
+    font-size: $fs5
+    color: $text-lighter-color
+
+  &_address
+    &:not(:last-child)
+      margin-bottom: 24px
+    &_title
+      color: $main-color
+      text-transform: uppercase
+      margin-bottom: 4px
+
+    li
+      position: relative
+      padding-left: 20px
+      line-height: 24px
+      font-size: $fs5
+      font-family: $font-parag
+      &:before
+        content: ""
+        position: absolute
+        width: 14px
+        height: 24px
+        top: 0
+        left: 0
+        background-position: center
+        background-repeat: no-repeat
+
+      &.address:before
+        background-image: url("../images/pm_address.svg")
+      &.phone:before
+        background-image: url("../images/pm_phone.svg")
+
+.checkout
+  &_actions
+    display: flex
+    justify-content: space-between
+    margin-top: 32px
+    .back
+      display: inline-block
+      line-height: 24px
+      margin: 12px 0
+      margin-right: 16px
+      text-transform: uppercase
+      font-size: $fs6
+      font-weight: bold
+      color: $text-lighter-color
+      opacity: 0.5
+      letter-spacing: 2px
+      &:hover
+        opacity: 1
+
+      &:before
+        content: ""
+        position: relative
+        width: 16px
+        height: 22px
+        display: inline-block
+        background-image: url(../images/btn_arrowb.svg)
+        background-position: center left
+        background-repeat: no-repeat
+        vertical-align: top
+
+  &_payments
+    margin-top: 64px
+
+.product
+  &_sums_box
+    background-color: #F4F9FB
+    position: relative
+    padding: 16px 20px
+    margin-bottom: 24px
+
+    &_title
+      margin-bottom: 4px
+
+  &_sums
+    .coupon_sum
+      border-bottom: 1px solid #EFF5F9
+      margin-bottom: 24px
+
+    .total_sum
+
+      dt
+        font-size: $fs5
+
+      dd
+        text-align: right
+
+      .price
+        font-size: $fs4
+
+      .price.total_sum_price
+        font-size: $fs3
+
+  &_sums_table
+    margin-bottom: 16px
+
+    tbody tr:last-child td
+      border-bottom: none
+
+    tbody td
+      padding-top: 16px
+      padding-bottom: 16px
+
+      ul
+        margin-bottom: 0
+
+    &:last-child
+      margin-bottom: 0
+      tbody tr:last-child td
+        border-bottom: none
+        padding-bottom: 0
+
+.bill
+  &_table
+    background-color: #F4F9FB
+    padding: 16px 20px
+
+  &_list
+    font-family: $font-parag
+    font-size: $fs5
+    margin-bottom: 48px
+    @extend .clearfix
+    dt,
+    dd
+      float: left
+      position: relative
+      border-top: 1px solid $main-border-color
+      padding: 10px 0
+      line-height: 20px
+      &:first-of-type
+        border-top: none
+        padding-top: 0
+    dt
+      width: 40%
+      font-weight: bold
+    dd
+      width: 60%
+      span
+        display: block
+        font-size: $fs6
+        color: $text-lighter-color
+
+a.print_action
+  position: relative
+  display: inline-block
+  color: $text-lighter-color
+  line-height: 16px
+  font-family: $font-parag
+  font-size: $fs5
+
+  &:before
+    content: ""
+    display: inline-block
+    width: 16px
+    height: 16px
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url("../images/printer.svg")
+    vertical-align: middle
+    margin-right: 6px
+
+.order_title,
+.center_title
+  text-align: center
+  margin-bottom: 24px
+  h1,
+  .page_title
+    color: $main-color
+    font-size: $fs1
+    margin-top: 24px
+
+div.product_status
+  margin-bottom: 12px
+
+.product
+  &_status,
+  &_code,
+  &_text
+    font-family: $font-parag
+    font-size: $fs5
+
+  &_code,
+  &_status
+    font-weight: 500
+
+  &_status
+    color: $text-lighter-color
+    &.running
+      color: $green-color
+    &.runningdate
+      color: $orange-color
+    &.dated
+      color: $red-color
+
+.col_flex
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.contact_address
+  &_col
+    width: calc(100% / 3)
+    max-width: 270px
+    margin-top: 32px
+
+    dt
+      font-size: 10px
+      text-transform: uppercase
+      color: $text-lighter-color
+      font-weight: 600
+
+    dd
+      font-size: 14px
+      margin-bottom: 14px
+      font-family: $font-parag
+
+  &_title
+    color: $main-color
+    font-size: 20px
+    font-weight: 500
+    margin-bottom: 16px
+
+
+.faq_list
+  position: relative
+  &_single
+    position: relative
+    background-color: #F9F9F9
+    margin-bottom: 10px
+    font-family: $font-parag
+    @extend .easing
+    &.active
+      box-shadow: inset 0 0 0 1px #EBEDEE
+
+      .faq_list_title
+        color: $main-color
+
+      .faq_list_title:after
+        transform: translate3d(0,-50%,0) rotate(0)
+
+  &_title
+    position: relative
+    padding: 16px 24px
+    line-height: 26px
+    font-size: 18px
+    font-weight: 600
+    cursor: pointer
+    @extend .easing
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 10px
+      height: 2px
+      background-color: $text-lighter-color
+      right: 24px
+      top: 50%
+      transform: translate3d(0,-50%,0)
+      @extend .easing
+    &:after
+      transform: translate3d(0,-50%,0) rotate(-90deg)
+
+  &_content
+    color: $text-lighter-color
+    font-size: 14px
+    padding: 16px 24px
+    display: none
+    border-top: 1px solid #EBEDEE
+
+.domain_search_form
+  position: relative
+  width: 100%
+  max-width: 770px
+  margin-left: auto
+  margin-right: auto
+
+  .input_wrap .input
+    width: 100%
+    border-color: transparent
+    box-shadow: 0 2px 4px 0 rgba(21,98,136,0.10)
+    &:hover
+      box-shadow: 0 2px 4px 0 rgba(21,98,136,0.2)
+    &:focus
+      box-shadow: 0 4px 8px 0 rgba(21,98,136,0.2)
+    &.invalid
+      border-color: $red-color
+
+  .btn.submit_domain
+    position: absolute
+    right: 8px
+    top: 8px
+    min-width: 170px
+
+  .input_wrap.field_invalid ~ .domain_search_form_note
+    opacity: 1
+
+  &_note
+    font-family: $font-parag
+    font-size: 12px
+    line-height: 24px
+    text-align: left
+    padding: 10px 0
+    padding-left: 24px
+    opacity: 0
+    color: $red-color
+    font-weight: 600
+    @extend .easing
+    p
+      margin-bottom: 0
+
+  &_support
+    position: absolute
+    top: 64px
+    right: 0
+    font-size: 14px
+    padding: 10px 0
+    padding-right: 8px
+
+    a
+      color: $main-color
+      font-weight: 600
+
+.service_feature
+  &s
+    position: relative
+    margin-top: 32px
+  &_single
+    text-align: center
+  &_ico
+    height: 32px
+    position: relative
+    line-height: 32px
+    margin-bottom: 16px
+    img
+      vertical-align: middle
+
+  &_title
+    font-size: 16px
+    color: $main-color
+    margin-bottom: 10px
+
+  &_desc
+    font-size: 14px
+    font-family: $font-parag
+    color: $text-lighter-color
+
+.domain_result
+  &_header
+    max-width: 770px
+    margin-left: auto
+    margin-right: auto
+
+    &_title
+      font-size: 24px
+      font-weight: bold
+      color: $main-color
+      margin-bottom: 0
+
+    &.unavailable
+      .domain_result_header_title
+        color: $text-lighter-color
+        margin-bottom: 16px
+        span
+          color: $text-color
+
+  &_ico
+    margin-bottom: 10px
+
+  &_body
+    &_title
+      margin-top: 64px
+      &:first-child
+        margin-top: 0
+
+  &_single
+    text-align: right
+    padding: 16px 24px
+    padding-right: 202px
+    position: relative
+    background-color: #FFF
+    box-shadow: inset 0 0 0 1px $main-border-color
+    margin-bottom: 10px
+
+    .btn.domain_result_single_action
+      position: absolute
+      top: 50%
+      right: 24px
+      transform: translate3d(0,-50%,0)
+      padding-left: 0
+      padding-right: 0
+      width: 156px
+      text-align: center
+      font-size: 12px
+
+    &_main
+      margin-top: -114px
+
+    &_main .domain_result_single_title
+      font-size: 24px
+
+    &.unavailable .domain_result_single_title
+      color: $gray-color
+
+    &_title
+      position: absolute
+      left: 24px
+      top: 50%
+      transform: translate3d(0,-50%,0)
+      font-size: 18px
+      font-weight: bold
+      line-height: 24px
+
+    &_stats
+      font-size: 14px
+      p
+        margin-bottom: 0
+
+    .special_domain
+      font-size: 10px
+      text-transform: uppercase
+      background-color: $text-lighter-color
+      color: #fff
+      display: inline-block
+      line-height: 22px
+      padding: 0 6px
+      vertical-align: middle
+      position: relative
+      cursor: default
+      @extend .easing
+      &:hover
+        background-color: $main-color
+      &:before
+        content: ""
+        position: relative
+        display: inline-block
+        width: 10px
+        height: 20px
+        margin-right: 4px
+        background-image: url("../images/sd_mark.svg")
+        background-repeat: no-repeat
+        background-position: center
+        vertical-align: top
+      &:after
+        content: attr(span-tooltip)
+        position: absolute
+        background-color: rgba(0,0,0,0.8)
+        bottom: 100%
+        left: 50%
+        width: 160px
+        text-align: center
+        text-transform: none
+        font-family: $font-parag
+        line-height: 16px
+        padding: 4px 8px
+        color: #fff
+        transform: translate3d(-50%,0,0)
+        pointer-events: none
+        opacity: 0
+        @extend .easing
+      &:hover:after
+        transform: translate3d(-50%,-8px,0)
+        opacity: 1
+
+    .domain_price
+      color: $main-color
+      font-size: 20px
+      font-weight: 600
+      line-height: 22px
+      vertical-align: middle
+      &.discounted,
+      &.on_renew
+        font-size: 12px
+        color: $text-lighter-color
+        line-height: 20px
+      &.on_renew,
+      &.on_renew .currency
+        font-size: 10px
+        line-height: 18px
+        color: $text-color
+
+      &.discounted
+        position: relative
+        display: inline-block
+        &:after
+          content: ""
+          position: absolute
+          width: 100%
+          height: 1px
+          background-color: currentColor
+          top: 50%
+          left: 0
+
+      &.acquired
+        color: $red-color
+        font-size: 14px
+
+      &:first-child:last-child
+        padding-top: 11px
+        padding-bottom: 11px
+
+      .currency
+        font-size: 12px

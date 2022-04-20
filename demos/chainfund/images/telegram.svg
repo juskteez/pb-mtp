@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>telegram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing-02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-658.000000, -4116.000000)" opacity="0.5">
+        <g id="footer" transform="translate(0.000000, 3601.000000)" fill="#D9E6F9" fill-rule="nonzero">
+            <g id="Socials" transform="translate(658.000000, 513.000000)">
+                <g id="telegram">
+                    <path d="M3.68034331,8.87706607 L0.501314275,7.88161254 C-0.185182568,7.67780879 -0.195909081,7.20584221 0.651485459,6.86259379 L13.0513347,2.07856891 C13.6198399,1.82113259 14.1668921,2.20728707 13.9523618,3.07613463 L11.8392387,13.0303389 C11.6890675,13.7382887 11.260007,13.8991864 10.6700488,13.577391 L7.45460208,11.2056669 C6.69905097,11.9404015 6.02246218,12.5979807 5.90747691,12.7085435 C5.72512619,12.8801677 5.58568152,13.0303389 5.26388612,13.0303389 C4.84555211,13.0303389 4.9206377,12.8694412 4.77046652,12.4725602 L3.68034331,8.87706607 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

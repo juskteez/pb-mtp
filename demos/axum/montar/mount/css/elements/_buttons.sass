@@ -1,0 +1,79 @@
+/* Buttons */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"]
+	font-family: $font-title
+	font-size: $fs2
+	font-weight: 700
+	display: inline-block
+	line-height: 64px
+	padding: 0 40px
+	border-radius: 0
+	background-color: $main-color
+	color: #fff
+	transition: 0.3s all ease
+	vertical-align: middle
+	cursor: pointer
+	position: relative
+	text-align: center
+	white-space: nowrap
+	&:after
+		content: ""
+		position: absolute
+		width: 90%
+		height: 30%
+		top: 80%
+		left: 5%
+		background-color: $main-color
+		filter: blur(10px)
+		opacity: 0.7
+		z-index: -1
+
+	&:not(.subscribe-btn):hover
+		transform: translateY(-3px)
+
+	&:hover
+		background-color: $main-darker-color
+		border-color: $main-darker-color
+		color: #fff
+
+	&.small
+		line-height: 50px
+		padding: 0 24px
+		font-size: $fs3
+		&.outline
+			line-height: 46px
+			padding: 0 22px
+
+	&.outline
+		background-color: transparent
+		font-weight: 400
+		color: $main-color
+		line-height: 54px
+		border: 2px solid $main-lightest-color
+		&:after
+			display: none
+		&:hover
+			border-color: $main-color
+
+	&.play
+		&:before
+			content: ""
+			position: relative
+			display: inline-block
+			margin-right: 8px
+			width: 12px
+			height: 12px
+			background-image: url('../images/play.svg')
+			background-size: auto 12px
+			background-repeat: no-repeat
+			background-position: center
+			margin-left: -2px
+
+		img
+			position: absolute
+			bottom: 120%
+			left: 80%

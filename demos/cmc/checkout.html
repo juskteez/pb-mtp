@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Thông tin thanh toán - CMC Telecom</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body class="checkout">
+<div id="body">
+  <header id="main_header" class="cmc_main_header">
+    <div class="cmc_sub_header">
+      <div class="wrap">
+        <div class="float_left cmc_sub_contact">
+          <ul class="cmc_sub_contact_list">
+            <li><a href="tel:18002020">Hotline 24/7: 1800 2020</a></li>
+            <li><a href="mailto:support@cmctelecom.vn">support@cmctelecom.vn</a></li>
+          </ul>
+        </div>
+        <div class="float_right cmc_sub_menu">
+          <ul class="cmc_sub_menu_list">
+            <li><a href="news.html">Tin tức</a></li>
+            <li><a href="faq.html">Hỏi đáp</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="login.html" class="btn small light">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cmc_main_menu_wrap">
+      <div class="wrap">
+        <div class="float_left cmc_logo_wrap">
+          <a href="index.html" class="logo"><img src="images/logo.svg" alt=""></a>
+        </div>
+        <div class="float_right cmc_main_menu">
+          <ul class="cmc_main_menu_list">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li>
+              <a href="service-datacenter.html">Data Center</a>
+              <ul>
+                <li><a href="service-server.html">Thuê Máy chủ</a></li>
+                <li><a href="service-servercenter.html">Thuê chỗ đặt máy chủ</a></li>
+                <li><a href="service-rack.html">Thuê tủ rack</a></li>
+                <li><a href="service-datacenter.html">Thuê không gian DC</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-datamanagement.html">Dịch vụ Quản trị</a>
+              <ul>
+                <li><a href="">Manage Backup</a></li>
+                <li><a href="">Manage Cloud</a></li>
+                <li><a href="">Manage Security</a></li>
+                <li><a href="">Manage Connectivity</a></li>
+                <li><a href="">Manage Infrastructure</a></li>
+                <li><a href="">Manage Monitoring</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-cloudserver.html">Cloud</a>
+              <ul>
+                <li><a href="">CMC Cloud</a></li>
+                <li><a href="">AWS</a></li>
+                <li><a href="">MS Azure</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-onlineservices.html">Dịch vụ Online</a>
+              <ul>
+                <li><a href="service-domain.html">Domain</a></li>
+                <li><a href="service-hosting.html">Hosting</a></li>
+                <li><a href="service-vps.html">VPS</a></li>
+                <li><a href="service-email.html">Email Server</a></li>
+                <li><a href="service-ssl.html">SSL</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="javascript:;" class="cmc_main_menu_trigger"><span></span></a>
+          <a href="cart.html" class="cmc_main_menu_ico cart" data-cart="2"><img src="images/ico_cart.svg"/></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="content" class="cmc_content">
+    <div class="wrap cols page_content_body">
+      <div class="col-d-12">
+        <div class="shop_process">
+          <div class="shop_process_wrap">
+            <div class="shop_process_step step-1 active">
+              <a href="javascript:;">
+                <span class="shop_process_ico">
+                  <img src="images/cart_active.svg">
+                  <img src="images/cart_inactive.svg">
+                </span>
+                <span class="shop_process_label">Giỏ hàng</span>
+              </a>
+            </div>
+            <div class="shop_process_step step-2 active">
+              <a href="javascript:;">
+                <span class="shop_process_ico">
+                  <img src="images/checkout_active.svg">
+                  <img src="images/checkout_inactive.svg">
+                </span>
+                <span class="shop_process_label">Thanh toán</span>
+              </a>
+            </div>
+            <div class="shop_process_step step-3">
+              <a href="javascript:;">
+                <span class="shop_process_ico">
+                  <img src="images/checkedout_active.svg">
+                  <img src="images/checkedout_inactive.svg">
+                </span>
+                <span class="shop_process_label">Hoàn tất Thanh toán</span>
+              </a>
+            </div>
+          </div>
+          <div class="shop_process_bar" current-step="2"><span></span></div>
+        </div>
+      </div>
+      <div class="col-d-8 col-t-12 cols">
+        <div class="col-d-10 col-t-12">
+          <h1 class="h2 page_title">Địa chỉ thanh toán</h1>
+          <p class="page_desc">
+            Hợp đồng và hóa đơn sẽ được gửi đến địa chỉ của bạn
+          </p>
+          <form action="order.html" class="form checkout_form">
+            <div class="checkout_billing">
+              <div class="input-wrap">
+                <label for="">Họ và tên</label>
+                <input type="text" class="input">
+              </div>
+              <div class="input-wrap">
+                <label for="">Số điện thoại</label>
+                <input type="tel" class="input">
+              </div>
+              <div class="input-wrap">
+                <label for="">Địa chỉ</label>
+                <input type="text" class="input">
+              </div>
+              <div class="input-combo">
+                <div class="input-wrap adult">
+                  <label for="">Thành phố</label>
+                  <select name="" id="" class="input select">
+                    <option value="" default disabled>Chọn Thành phố</option>
+                    <option value="1" selected>Hà Nội</option>
+                    <option value="2">TP. Hồ Chí Minh</option>
+                    <option value="3">Quảng Ninh</option>
+                  </select>
+                </div>
+                <div class="input-wrap teen">
+                  <label for="">Quốc gia</label>
+                  <select name="" id="" class="input select">
+                    <option value="" default disabled>Chọn Quốc gia</option>
+                    <option value="1" selected>Việt Nam</option>
+                    <option value="2">Khác</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="checkout_payments">
+              <h2 class="h2 page_title">Phương thức thanh toán</h2>
+              <div class="payment_methods">
+                <div class="payment_method active">
+                  <a href="javascript:;" class="h5 payment_title">Chuyển khoản Ngân hàng</a>
+                  <div class="payment_content">
+                    <div class="payment_banks">
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_vcb.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_tcb.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_vpb.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_vtb.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_agb.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_mtb.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_bidv.png" alt=""></a>
+                      <a href="javascript:;" class="payment_bank" bank-id="" title=""><img src="images/banks/bank_hsbc.png" alt=""></a>
+                    </div>
+                    <div class="payment_inputs">
+                      <div class="input-combo">
+                        <div class="input-wrap aged">
+                          <label for="">Tên Tài Khoản</label>
+                          <input type="text" class="input" placeholder="Tên ghi trên thẻ ATM, In hoa và Không dấu">
+                        </div>
+                        <div class="input-wrap kid">
+                          <label for="">Hết hạn</label>
+                          <input type="text" class="input date" placeholder="MM/YY">
+                        </div>
+                      </div>
+                      <div class="input-wrap">
+                        <label for="">Số thẻ</label>
+                        <input type="text" class="input" placeholder="XXXX XXXX XXXX XXXX">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="payment_method">
+                  <a href="javascript:;" class="h5 payment_title">Visa/Master Card</a>
+                  <div class="payment_content">
+                    <div class="payment_inputs">
+                      <div class="input-wrap">
+                        <label for="">Số thẻ</label>
+                        <input type="text" class="input" placeholder="XXXX XXXX XXXX XXXX">
+                      </div>
+                      <div class="input-combo">
+                        <div class="input-wrap average">
+                          <label for="">Hết hạn</label>
+                          <input type="text" class="input date" placeholder="MM/YY">
+                        </div>
+                        <div class="input-wrap average">
+                          <label for="">Mã bảo mật (CVC)</label>
+                          <input type="text" class="input" placeholder="XXX">
+                          <div class="input-help">
+                            <span class="tooltip">Mã số bảo bật thẻ Visa/Master Card của bạn, thường nằm ở mặt sau của thẻ</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="payment_method">
+                  <a href="javascript:;" class="h5 payment_title">Giao dịch trực tiếp</a>
+                  <div class="payment_content">
+                    <p class="payment_note">Quý khách vui lòng đến các văn phòng sau để giao dịch: </p>
+                    <div class="payment_address">
+                      <h5 class="h5 payment_address_title">CHI NHÁNH HÀ NỘI</h5>
+                      <ul>
+                        <li class="address">Tầng 12 tòa nhà CMC, 11 đường Duy Tân, quận Cầu Giấy, Hà Nội</li>
+                        <li class="phone"><a href="tel:+842471090200">+84 24 710 90200</a></li>
+                      </ul>
+                    </div>
+                    <div class="payment_address">
+                      <h5 class="h5 payment_address_title">CHI NHÁNH HẢI PHÒNG</h5>
+                      <ul>
+                        <li class="address">104 Văn Cao, quận Ngô Quyền, thành phố Hải Phòng</li>
+                        <li class="phone"><a href="tel:+84471090403">+84 4 7109 0403</a></li>
+                      </ul>
+                    </div>
+                    <div class="payment_address">
+                      <h5 class="h5 payment_address_title">CHI NHÁNH MIỀN TRUNG</h5>
+                      <ul>
+                        <li class="address">383 Nguyễn Văn Linh, phường Thạc Gián, quận Thanh Khê, thành phố Đà Nẵng</li>
+                        <li class="phone"><a href="tel:+842363654456">+84 236 3654 456</a></li>
+                      </ul>
+                    </div>
+                    <div class="payment_address">
+                      <h5 class="h5 payment_address_title">CHI NHÁNH MIỀN NAM</h5>
+                      <ul>
+                        <li class="address">Tầng 4, tòa nhà Paxsky3, số 225 Bis Đường Nam Kỳ Khởi Nghĩa, Phường 7, Quận 3, TP. HCM</li>
+                        <li class="phone"><a href="tel:+842871090100">+84 28 710 90100</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout_actions">
+              <a href="cart.html" class="back">Quay lại giỏ hàng</a>
+              <button type="submit" class="btn submit">Xác nhận Thanh Toán</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-d-4 col-t-12 product_sums">
+        <div class="product_sums_box">
+          <h3 class="h4 product_sums_box_title">Thông tin sản phẩm</h3>
+          <table class="table product_sums_table">
+            <thead>
+              <tr>
+                <td>Dịch vụ</td>
+                <td>Thành tiền</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h3 class="table_product_title">Hosting</h3>
+                  <ul class="table_product_list">
+                    <li>1 năm</li>
+                  </ul>
+                </td>
+                <td><span class="price product_price table_product_price sum_price">26.400.000 VNĐ</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="table_product_title">Hosting</h3>
+                  <ul class="table_product_list">
+                    <li>1 năm</li>
+                  </ul>
+                </td>
+                <td><span class="price product_price table_product_price sum_price">26.400.000 VNĐ</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="table_product_title">Hosting</h3>
+                  <ul class="table_product_list">
+                    <li>1 năm</li>
+                  </ul>
+                </td>
+                <td><span class="price product_price table_product_price sum_price">26.400.000 VNĐ</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="coupon_sum">
+          <div class="input-wrap coupon_wrap">
+            <label for="">Bạn có mã khuyến mại? Nhập vào ô dưới</label>
+            <input type="text" class="input small" placeholder="XXX-XXX" required>
+            <a href="javascript:;" class="btn small">Xác nhận</a>
+          </div>
+        </div>
+        <div class="total_sum">
+          <dl class="total_sum_list">
+            <dt>Tổng cộng</dt>
+            <dd><span class="price product_price total_sub_price">53.340.000 VNĐ</span></dd>
+            <dt>VAT (10%)</dt>
+            <dd><span class="price product_price total_vat_price">5.334.000 VNĐ</span></dd>
+            <dt><span>Tổng thanh toán</span></dt>
+            <dd><span class="price product_price total_sum_price">58.674.000 VNĐ</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+// Editable variables
+$base-width: 1440
+$col-count: 12
+$base-gutter: 30
+$tablet-gutter: 24
+$mobile-gutter: 20
+
+// Fixed variables
+$divided-gutter: $base-gutter/2*1px
+$divided-tgutter: $tablet-gutter/2*1px
+$divided-mgutter: $tablet-gutter/2*1px
+$col-width: (($base-width/$col-count) / $base-width) * 100%
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.wrap
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  width: 100%
+  max-width: $base-width*1px
+  &:not(.cols)
+    @extend .clearfix
+
+.cols
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  &.nowrap
+    flex-wrap: nowrap
+  +container_align('d')
+
+  *[class^="col-"]
+    padding-left: $divided-gutter
+    padding-right: $divided-gutter
+    position: relative
+    //margin-bottom: $base-gutter*1px
+    +item_align('d')
+
+    &.gt:after
+      content: ""
+      position: relative
+      width: auto
+      height: 100px
+      max-height: 100%
+      display: block
+      background-color: rgba(255,0,0,0.1)
+      box-shadow: inset 0 0 0 1px  rgba(255,0,0,0.6)
+
+    &.nopad,
+    &.cols
+      padding-left: 0
+      padding-right: 0
+
+  img
+    max-width: 100%
+
+
+@for $i from 1 through 12
+  .col-d-#{$i}
+    width: $col-width*$i
+
+@media screen and (max-width: 1280px)
+
+  .wrap
+    max-width: 720px
+
+  .cols
+    +container_align('t')
+
+    *[class^="col-"]
+      padding-left: $divided-tgutter
+      padding-right: $divided-tgutter
+      +item_align('t')
+
+  @for $i from 1 through 12
+    .col-t-#{$i}
+      width: $col-width*$i
+
+
+@media screen and (max-width: 767px)
+
+  .wrap
+    max-width: 400px
+
+  .cols
+    +container_align('m')
+
+    *[class^="col-"]
+      padding-left: $divided-mgutter
+      padding-right: $divided-mgutter
+      +item_align('m')
+
+  @for $i from 1 through 12
+    .col-m-#{$i}
+      width: $col-width*$i
+
+@media screen and (max-width: 767px) and (min-width: 415px) and (orientation: landscape)
+
+  .wrap
+    max-width: 480px
+
+  .cols
+    +container_align('ml')
+
+    *[class^="col-"]
+      padding-left: $divided-mgutter
+      padding-right: $divided-mgutter
+      +item_align('ml')
+
+  @for $i from 1 through 12
+    .col-m-#{$i}
+      width: $col-width*$i

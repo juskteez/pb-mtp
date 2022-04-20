@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
+  <title>Animation Essential Definition</title>
+  
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/> -->
+  <!-- <link rel="shortcut icon" type="image/png" href="favicon.png"/> -->
+
+  <link href="style.css" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="body" class="defi-body">
+  <section>
+    <h2 class="defi-title">Animation Essential Definition</h2>
+
+    <h3 class="defi-subtitle">Lazy image</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="ani-img"><img class="lazy" src="../images/placeholder.png" data-src="../images/newsletter-1.jpg" data-srcset="../images/newsletter-1.jpg" alt=""></div>
+      </div>
+      <div class="ani-col prop">
+        <ol>
+          <li><b>Show a loading icon</b> while real image is loading</li>
+          <li><b>Fade-in</b> + <b>Scale-in</b> after real image is loaded</li>
+        </ol>
+        <!-- <ul>
+          <li><b>Show a loading icon</b> while real image is loading</li>
+          <li><b>Fade in</b> + <b>Scale in</b> after real image is loaded</li>
+        </ul> -->
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.375s</span></dd>
+          </dl>
+          <dl>
+            <dt>image fade-in opacity</dt>
+            <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+          </dl>
+          <dl>
+            <dt>image scale</dt>
+            <dd>from <span>1.2</span> <u></u> <span>1.0</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Text link</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <ul class="footer-menu">
+          <li><a href="javascript:;">Our story</a></li>
+          <li><a href="javascript:;">Our blog</a></li>
+          <li><a href="javascript:;">Store locator</a></li>
+          <li><a href="javascript:;">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> whenever user cursor touch the element</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Input</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="form-input">
+          <input type="email" id="input-2" placeholder="Placeholder message" value="phongvu@beeketing.net" required>
+          <p class="form-input-msg msg-valid">Email is available!</p>
+          <p class="form-input-msg msg-invalid">Please enter a valid email address!</p>
+        </div>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> while user interact with the element</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Button & interactive icon</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <button class="primary">Button</button>
+        <!-- <button class="proceeding">Proceeding</button> -->
+        <a href="javascript:;" class="icon ib4 i-facebook social-btn"></a>
+        <a href="javascript:;" class="icon ib4 i-twitter social-btn"></a>
+        <a href="javascript:;" class="icon ib4 i-youtube social-btn"></a>
+        <a href="javascript:;" class="icon ib4 i-instagram social-btn"></a>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> when user cursor touch & interact with the element</li>
+          <li><b>Shrug down</b> a bit when user clicked the element</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+          <dl>
+            <dt>shrug down / translateY</dt>
+            <dd><span>1px</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Carousel</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="slideshow-wrapper">
+          <input type="radio" name="slideshows" id="ss-1" class="carousel-anchor" checked>
+          <input type="radio" name="slideshows" id="ss-2" class="carousel-anchor">
+          <input type="radio" name="slideshows" id="ss-3" class="carousel-anchor">
+          <input type="radio" name="slideshows" id="ss-4" class="carousel-anchor">
+          <input type="radio" name="slideshows" id="ss-5" class="carousel-anchor">
+          <div class="slideshow">
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <a href="javascript:;" name="slideshows" class="carousel-control prev" title="Previous slide"></a>
+            <a href="javascript:;" name="slideshows" class="carousel-control next" title="Next slide"></a>
+          </div>
+          <div class="slideshow-pag">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          </div>
+        </div>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> when user cursor touch & interact with arrow elements (previous/next button)</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>slide animation duration</dt>
+            <dd><span>0.6s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+          <dl>
+            <dt>arrow animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Popups</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <label for="top_drawer" class="btn">Top drawer</label>
+        <label for="bottom_drawer" class="btn">Bottom drawer</label>
+        <label for="left_drawer" class="btn">Left drawer</label>
+        <label for="right_drawer" class="btn">Right drawer</label>
+        <label for="center_popup" class="btn">Center popup</label>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Slide in</b> the drawer box from the edge of the window</li>
+          <li><b>Fade in</b> + <b>Slide up</b> the popup box from near center of the window</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>drawer animation duration</dt>
+            <dd><span>0.375s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+        </div>
+        <div class="dls">
+          <dl>
+            <dt>popup box animation duration</dt>
+            <dd><span>0.375s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+          <dl>
+            <dt>popup slide-up / translateY</dt>
+            <dd>from <span>32px</span> <u></u> <span>0px</span></dd>
+          </dl>
+          <dl>
+            <dt>popup fade-in opacity</dt>
+            <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="defi-title">Initial Animation Properties</h2>
+
+    <p>Used to set up initial element property if the element involve any transition or animation</p>
+
+    <h3 class="defi-subtitle">Easing</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="ani-box"><span></span></div>
+        <div class="ani-box easing-carousel"><span></span></div>
+      </div>
+      <div class="ani-col prop">
+        <div class="dls">
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+        <div class="dls">
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Timing</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <p><b>Small sized sample</b></p>
+        <button class="btn subtle">Button</button>
+        <a href="javascript:;" class="icon ib3 i-facebook social-btn"></a>
+        <a href="javascript:;">Our story</a>
+        <p>&nbsp;</p>
+        <p><b>Regular sized sample</b></p>
+        <label for="right_drawer" class="btn subtle">Drawer</label>
+        <label for="center_popup" class="btn subtle">Popup</label>
+        <p>&nbsp;</p>
+        <p><b>Large sized sample</b></p>
+      </div>
+      <div class="ani-col prop">
+        <p>Animation timing are based on visual weight of the animation element to keep an elegant feel for the webpage</p>
+        <ol>
+          <li>Small sized elements such as buttons, links, icons, droplist,... & simple animations should have a faster animation timing - <b class="c">0.125s</b></li>
+          <li>Regular sized elements such as popups, drawers,... would have a medium animation timing - <b class="c">0.375s</b></li>
+          <li>Large sized elements such as image carousel, drawers,... & complex animations should have a bit longer animation timing - <b class="c">0.6s</b></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="slideshow-wrapper">
+      <input type="radio" name="slideshows2" id="ss2-1" class="carousel-anchor" checked>
+      <input type="radio" name="slideshows2" id="ss2-2" class="carousel-anchor">
+      <input type="radio" name="slideshows2" id="ss2-3" class="carousel-anchor">
+      <input type="radio" name="slideshows2" id="ss2-4" class="carousel-anchor">
+      <input type="radio" name="slideshows2" id="ss2-5" class="carousel-anchor">
+      <div class="slideshow">
+        <div class="slideshow-single">
+          <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <a href="javascript:;" name="slideshows2" class="carousel-control prev" title="Previous slide"></a>
+        <a href="javascript:;" name="slideshows2" class="carousel-control next" title="Next slide"></a>
+      </div>
+      <div class="slideshow-pag">
+        <a href="javascript:;" class="active"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- REGULAR POPUP -->
+<input type="checkbox" name="popups" id="center_popup" class="nodis">
+<div class="popup">
+  <label for="center_popup" class="popup-overlay popup-close"></label>
+  <div class="popup-box">
+    <label for="center_popup" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols text-center">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Center Popup</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="popup-box-actions cols text-center">
+      <div class="col-d-12">
+        <label for="center_popup" class="btn">close anw</label>
+        <label for="center_popup" class="btn primary">Okay close</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT DRAWER -->
+<input type="checkbox" name="popups" id="right_drawer" class="nodis">
+<div class="popup">
+  <label for="right_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box right action-fixed">
+    <label for="right_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Right Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols action-full">
+      <div class="col-d-12">
+        <label for="right_drawer" class="btn primary encourage emp">Close the drawer</label>
+        <label for="right_drawer" class="btn">Close it anyway</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEFT DRAWER -->
+<input type="checkbox" name="popups" id="left_drawer" class="nodis">
+<div class="popup">
+  <label for="left_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box left action-fixed">
+    <label for="left_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Left Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols action-full">
+      <div class="col-d-12">
+        <label for="left_drawer" class="btn primary encourage emp">Close the drawer</label>
+        <label for="left_drawer" class="btn">Close it anyway</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP DRAWER -->
+<input type="checkbox" name="popups" id="top_drawer" class="nodis">
+<div class="popup">
+  <label for="top_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box top">
+    <label for="top_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols text-center">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Top Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols text-center">
+      <div class="col-d-12">
+        <label for="top_drawer" class="btn">close anw</label>
+        <label for="top_drawer" class="btn primary">Okay close</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM DRAWER -->
+<input type="checkbox" name="popups" id="bottom_drawer" class="nodis">
+<div class="popup">
+  <label for="bottom_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box bottom">
+    <label for="bottom_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols text-center">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Top Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols text-center">
+      <div class="col-d-12">
+        <label for="bottom_drawer" class="btn">close anw</label>
+        <label for="bottom_drawer" class="btn primary">Okay close</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/scripts.js"></script>
+  
+</body>
+</html>

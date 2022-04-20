@@ -1,0 +1,554 @@
+/* Mobile Portrait High Resolution */
+.topaz
+  &_ribbon
+    padding: 10px 12px
+    padding-right: 32px
+    text-align: left
+    line-height: 18px
+    font-size: 13px
+  &_topbar
+    background-color: #000
+    color: #fff
+    height: 92px
+    line-height: 44px
+    text-align: center
+
+    .logo_wrap img
+      margin: 0
+      margin-top: 10px
+
+    .top_shipping
+      text-align: center
+      margin-bottom: 0
+      border-bottom: 1px solid rgba(255,255,255,0.1)
+      font-size: 14px
+      width: 100%
+      img
+        max-height: 20px
+
+    .col-6.float_right
+      float: none
+
+.hero
+  text-align: center
+  &_img
+    width: 90vw
+  &.topaz_section
+    padding-top: 64vw
+    padding-bottom: 32px
+
+  .wrap.cols:before
+    right: 0
+    top: -56vw
+    transform-origin: right top
+    transform: scale(0.75)
+
+  h2.h3
+    margin-bottom: 4px
+    line-height: 40px
+    font-size: 16px
+
+  h1.main-color
+    line-height: 32px
+    font-size: 26px
+    margin-right: 0
+    margin-bottom: 48px
+
+  &_review
+    &:before
+      position: absolute
+      bottom: 100%
+      margin-bottom: 4px
+      left: 50%
+      transform: translate3d(-50%,0,0)
+  &_actions
+    margin-bottom: 32px
+    padding-bottom: 20px
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    .btn.wide,
+    .btn
+      padding-left: 36px
+      padding-right: 36px
+    img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      margin-top: 20px
+
+  &_recommend
+    &_brands
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-around
+      align-content: center
+      img
+        height: 11vw
+        margin: 0 6px
+        margin-bottom: 10px
+        opacity: 1
+
+.order
+
+  &.topaz_section
+    padding-top: 48px
+
+  &_image
+    top: auto
+    left: 0
+    position: relative
+    text-align: center
+    margin-bottom: -34vw
+  &_x
+    max-width: 340px
+    width: 90%
+
+  &_guarantee
+    top: 58%
+    img
+      max-height: 114px
+
+  &_details
+    max-width: 100%
+    padding-left: 12px
+    padding-right: 12px
+    left: auto
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+    h2
+      font-size: 28px
+
+    p.h4
+      font-size: 16px
+
+  &_prop
+
+    &_list
+      margin-left: auto
+      margin-right: auto
+
+  &_actions
+    padding-left: 0
+
+  &_price
+    position: relative
+    margin-bottom: 16px
+
+.video
+  &_play_thumb
+    display: block
+    width: 100%
+    height: 38vh
+    position: relative
+    max-height: 620px
+
+    &:before
+      font-size: $fs3
+
+    &:after
+      width: 64px
+      height: 64px
+      background-size: 72px
+      box-shadow: 0 0 0 4px #fff
+    &:hover:after
+      box-shadow: 0 0 0 8px #fff, 0 0 48px #fff
+
+.features
+  &.topaz_section
+    padding-top: 48px
+    padding-bottom: 32px
+
+  .topaz_section_header
+    margin-bottom: 32px
+
+    &_title
+      font-size: 24px
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+
+    &_desc.big
+      font-size: 16px
+
+  &_list.centered-col.col-9
+    max-width: 100%
+    width: 100%
+    .col-3
+      width: 100%
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 32px
+
+  &_title
+    margin-bottom: 10px
+    font-size: 16px
+
+  &_icon
+    margin-bottom: 16px
+    img
+      vertical-align: top
+      max-height: 64px
+
+.technology
+
+  .topaz_section_header
+    padding-top: 0
+    &_subtitle
+      font-size: 16px
+      margin-bottom: 8px
+
+    &_title
+      font-size: 24px
+
+    &_desc
+      font-size: 14px
+
+  .topaz_big_list
+    font-size: 16px
+    margin-top: 24px
+
+  [class^="col-"] .fillglass
+    width: 120vw
+    position: relative
+    max-width: none
+    left: 50%
+    transform: translate3d(-50%,0,0)
+    pointer-events: none
+    margin-bottom: -80px
+
+  [class^="col-"].col-6:first-child
+    float: none
+    width: auto
+    margin-bottom: 80px
+    .text-left
+      text-align: center
+
+  [class^="col-"].col-6:nth-of-type(2):last-child
+    position: relative
+    float: none
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+
+  .cp_1,
+  .cp_2
+    font-size: 14px
+    white-space: nowrap
+    left: 24%
+
+  .cp_2
+    left: 76%
+
+  .tech_divider
+    margin: 32px 12px
+
+.topaz
+  &_3dglass
+    &_header
+      margin-bottom: 32px
+
+    &_title
+      font-size: 24px
+
+    &_desc
+      font-size: 16px
+
+    &_subtitle
+      font-size: 18px
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+
+  &_3dglass_list
+    li
+      padding-bottom: 0
+      h4
+        font-size: 12px
+        padding-right: 30px
+      img
+        right: 16px
+        max-height: 32px
+    li:nth-of-type(2n+2)
+      img
+        right: auto
+        left: 16px
+
+      h4
+        padding-left: 30px
+        padding-right: 0
+
+.ranked
+  height: 180vw
+  background-image: url("../images/ranked_bg_mb.jpg")
+  background-size: 100vw auto
+  background-position: center top
+
+  &_quote
+    top: 110vw
+    left: 50%
+    transform: translate3d(-50%,0,0)
+    text-align: center
+
+  .topaz_section_header_title
+    font-size: 24px
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto
+
+  .topaz_section_header_subtitle
+    font-size: 16px
+
+.reviews
+
+  &.topaz_section
+    padding-bottom: 48px
+
+  &_videos
+    position: relative
+    margin-top: -128px
+    margin-bottom: 48px
+
+    &.clearfix .col-4[class^="col-"],
+    &.clearfix .col-4[class^="col-"]+.col-4:nth-of-type(2)
+      max-width: 320px
+      width: 100%
+      float: none
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 24px
+
+  &_video_thumb
+    height: 44vw
+    box-shadow: 0 6px 14px rgba(0,0,0,0.05)
+    margin-top: 0
+    &:after
+      opacity: 1
+
+    &:before
+      opacity: 0.65
+
+
+  &_list
+    text-align: center
+    max-width: 100vw
+    margin-left: -7px
+    margin-right: -7px
+    white-space: nowrap
+    overflow-x: scroll
+    overflow-y: hidden
+    -webkit-overflow-scrolling: touch
+    padding-left: 44px
+    padding-right: 44px
+
+    li
+      max-width: 320px
+      width: 90%
+      text-align: left
+      white-space: normal
+      float: none
+      display: inline-block
+      margin-bottom: 0
+      margin-top: 0
+      vertical-align: top
+
+    p
+      margin-top: 56px
+      height: auto
+
+    p:before
+      left: 0
+      transform: none
+
+  &_ava
+    float: left
+    margin-right: 16px
+
+  &:after
+    content: "Swipe to see more"
+    display: block
+    text-align: center
+    font-size: 12px
+    margin-top: 16px
+    opacity: 0.45
+
+.swipe_more
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    width: 10px
+    height: 10px
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url("../images/arrow.svg")
+    left: 50%
+    bottom: -30px
+    transform: translate3d(-50%,0,0) translate3d(64px,0,0)
+    opacity: 0.4
+    animation: swipe_more_r 1s ease infinite
+  &:after
+    transform: translate3d(-50%,0,0) translate3d(-64px,0,0) rotateY(180deg)
+    animation: swipe_more_l 1s ease infinite
+
+@keyframes swipe_more_r
+  0%
+    transform: translate3d(-50%,0,0) translate3d(64px,0,0)
+  50%
+    transform: translate3d(-50%,0,0) translate3d(72px,0,0)
+  100%
+    transform: translate3d(-50%,0,0) translate3d(64px,0,0)
+
+@keyframes swipe_more_l
+  0%
+    transform: translate3d(-50%,0,0) translate3d(-64px,0,0) rotateY(180deg)
+  50%
+    transform: translate3d(-50%,0,0) translate3d(-72px,0,0) rotateY(180deg)
+  100%
+    transform: translate3d(-50%,0,0) translate3d(-64px,0,0) rotateY(180deg)
+
+
+.story
+  background-position: center left
+  background-size: auto 128vh
+
+  &.topaz_section
+    padding: 48px 0
+
+  .story_title
+    margin-bottom: 24px
+    font-size: 20px
+
+.extras
+
+  &.topaz_section
+    padding-top: 48px
+
+  .col-10.centered-col
+    width: 100%
+    max-width: 760px
+
+  &_single
+    position: relative
+    margin-bottom: 64px
+    &:nth-of-type(2n+2)
+      .extras_thumb
+        margin-right: auto
+        margin-left: auto
+        float: none
+
+  &_thumb
+    max-width: 320px
+    height: 50vw
+    margin-left: auto
+    margin-right: auto
+    float: none
+
+  &_info
+    position: static
+    transform: none
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto
+    font-size: 14px
+    line-height: 22px
+    margin-top: 16px
+    text-align: center
+
+    h3
+      font-size: 18px
+
+.testimonial
+
+  &.topaz_section
+    padding-top: 48px
+    padding-bottom: 48px
+
+  &_title
+    font-size: 24px
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 32px
+
+  &_ava
+    float: left
+    width: 32px
+    height: 32px
+    background-color: #aaa
+    margin-top: 4px
+
+  &_list li
+    p,
+    .testimonial_actions
+      padding-left: 48px
+
+    p
+      line-height: 24px
+
+  &_type
+    display: block
+    margin-left: 0
+    margin-top: 6px
+
+  &_actions
+    font-size: 12px
+
+.story
+  background-position: 76% 110%
+  background-size: auto 110vw
+
+  .col-12.centered-col .col-8
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    padding-bottom: 64vw
+
+.faq
+  &.topaz_section
+    padding-top: 48px
+    padding-bottom: 32px
+
+  &_title
+    font-size: 24px
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 32px
+
+  &-item_trigger
+    font-weight: 500
+    font-size: 16px
+    margin-bottom: 8px
+    display: inline-block
+    padding-right: 24px
+
+  &-content
+    line-height: 22px
+    font-size: 14px
+
+.footer_cta
+  &.topaz_section
+    padding-top: 32px
+    padding-bottom: 24px
+
+  &_title
+    font-size: 24px
+    max-width: 280px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 24px
+    line-height: 32px
+
+  .btn.wide.big
+    margin-bottom: 32px
+    padding-left: 0
+    padding-right: 0
+    display: block
+    margin-left: 24px
+    margin-right: 24px
+
+  .copyright
+    font-size: 14px
+    color: #666

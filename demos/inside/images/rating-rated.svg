@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="12px" viewBox="0 0 76 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rating-rated</title>
+    <g id="rating-rated" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Icon-color" fill="#7F7F7F" points="71.5 4.5 70 0.192 68.5 4.5 64 4.5 67.6675 7.371 66.226 11.808 70 9.066 73.774 11.808 72.3325 7.371 76 4.5"></polygon>
+        <polygon id="Icon-color" fill="#7F7F7F" points="55.5 4.5 54 0.192 52.5 4.5 48 4.5 51.6675 7.371 50.226 11.808 54 9.066 57.774 11.808 56.3325 7.371 60 4.5"></polygon>
+        <polygon id="Icon-color" fill="#7F7F7F" points="39.5 4.5 38 0.192 36.5 4.5 32 4.5 35.6675 7.371 34.226 11.808 38 9.066 41.774 11.808 40.3325 7.371 44 4.5"></polygon>
+        <polygon id="Icon-color" fill="#7F7F7F" points="23.5 4.5 22 0.192 20.5 4.5 16 4.5 19.6675 7.371 18.226 11.808 22 9.066 25.774 11.808 24.3325 7.371 28 4.5"></polygon>
+        <polygon id="Icon-color" fill="#7F7F7F" points="7.5 4.5 6 0.192 4.5 4.5 0 4.5 3.6675 7.371 2.226 11.808 6 9.066 9.774 11.808 8.3325 7.371 12 4.5"></polygon>
+    </g>
+</svg>

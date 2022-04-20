@@ -1,0 +1,78 @@
+/* Buttons */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"]
+	font-family: $font-stack
+	font-size: $fs6
+	font-weight: 400
+	display: inline-block
+	text-transform: normal
+	line-height: 20px
+	height: 46px
+	padding: 13px 24px
+	border-radius: 23px
+	background-color: $black-color
+	color: #fff
+	border: none
+	vertical-align: middle
+	cursor: pointer
+	position: relative
+	text-align: center
+	white-space: nowrap
+	@extend .easing
+	&:hover
+		background-color: $main-color
+		color: $text-color
+
+	&+&
+		margin-left: 10px
+
+	&.block
+		display: block
+
+	svg,img
+		vertical-align: middle
+		position: relative
+		transform: translate3d(0,-2px,0)
+		margin-right: 8px
+	&.btn--medium
+		height: auto
+		padding: 20px 32px
+		color: #fff
+		border-radius: 30px
+
+
+.intro_trigger
+	color: $text-color
+	display: inline-block
+	padding-left: 12px
+	margin-left: -12px
+	&-text
+		@extend .slide_links
+		&:before
+			width: 100% !important
+	&-i
+		position: relative
+		width: 42px
+		height: 42px
+		display: inline-block
+		vertical-align: middle
+		margin-left: 6px
+	img
+		position: absolute
+		pointer-events: none
+		top: 0
+		left: 0
+		transition: .4s all cubic-bezier(.34,.09,.2,1)
+		transform: translate3d(0,0,0) scale(1)
+	&:hover &-i img:first-child
+		//transform: translate3d(0,0,0) scale(1.19047619)
+	&:hover &-text::before
+		animation: slide_link .5s ease
+
+.wiggler,
+a
+	color: $text-color

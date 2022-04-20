@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="398px" viewBox="0 0 1440 398" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Bitmap</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="488"></rect>
+        <filter x="-11.5%" y="-28.5%" width="122.9%" height="156.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bitmap" transform="translate(0.000000, -90.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill-opacity="0" fill="#0F0F0F" xlink:href="#path-1"></use>
+            <polygon id="Path-3" fill="#E61C20" filter="url(#filter-3)" mask="url(#mask-2)" points="323.042969 196.300781 1631.50781 507.515625 1541.50391 723.503906"></polygon>
+            <path d="M0,-532 L0,159.309441 L1440,483 L1440,488 L0,488 L0,159.309441 L-5.86252697,157.991632 C-97.1417797,137.473416 -162,56.4176356 -162,-37.1392947 L-162,-532 L0,-532 Z" id="Combined-Shape" fill="#0F0F0F" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

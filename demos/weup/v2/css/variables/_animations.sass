@@ -1,0 +1,104 @@
+/* Animation Library */
+$ease-time: 0.125s
+.easing
+	transition: $ease-time all ease
+
+// ANIMATION IN
+        
+@keyframes run_in_right
+  0%
+    transform: translate3d(96px,0,12px)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+        
+@keyframes run_in_left
+  0%
+    transform: translate3d(-96px,0,12px)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+        
+@keyframes run_in_top
+  0%
+    transform: translate3d(0,-64px,12px)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+        
+@keyframes run_in_bottom
+  0%
+    transform: translate3d(0,64px,12px)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+        
+@keyframes run_in_scale_in
+  0%
+    transform: translate3d(0,0,12px) scale(1.25)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,12px) scale(1)
+    opacity: 1
+        
+@keyframes run_in_scale_out
+  0%
+    transform: translate3d(0,0,12px) scale(0.875)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,12px) scale(1)
+    opacity: 1
+
+// ANIMATION OUT
+
+@keyframes run_out_right
+  0%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+  100%
+    transform: translate3d(64px,0,12px)
+    opacity: 0
+
+@keyframes run_out_left
+  0%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+  100%
+    transform: translate3d(-64px,0,12px)
+    opacity: 0
+
+@keyframes run_out_top
+  0%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+  100%
+    transform: translate3d(0,-64px,12px)
+    opacity: 0
+
+@keyframes run_out_bottom
+  0%
+    transform: translate3d(0,0,12px)
+    opacity: 1
+  100%
+    transform: translate3d(0,64px,12px)
+    opacity: 0
+        
+@keyframes run_out_scale_in
+  0%
+    transform: translate3d(0,0,12px) scale(1)
+    opacity: 1
+  100%
+    transform: translate3d(0,0,12px) scale(0.875)
+    opacity: 0
+        
+@keyframes run_out_scale_out
+  0%
+    transform: translate3d(0,0,12px) scale(1)
+    opacity: 1
+  100%
+    transform: translate3d(0,0,12px) scale(1.25)
+    opacity: 0

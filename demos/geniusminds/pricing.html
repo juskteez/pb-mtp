@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <title>Pricing</title>
+
+    <link href="css/style.css" rel="stylesheet" media="all">
+    <link href="css/pricing.css" rel="stylesheet" media="all">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+</head>
+<body class="sub-page">
+<div class="pages pricing-page">
+    <div class="page page--current">
+        <div class="navigators">
+            <div class="topbar" id="topbar">
+                <div class="cols middle">
+                    <div class="col-1 topbar-logo">
+                        <a href="" class="brand">
+                            <svg width="75px" height="37px" viewBox="0 0 75 37">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle fill="#FFFFFF" cx="18.5" cy="18.5" r="18.5"></circle>
+                                    <circle fill="#131313" style="mix-blend-mode: multiply;" opacity="0.400000006" cx="37.5" cy="18.5" r="18.5"></circle>
+                                    <circle fill="#131313" style="mix-blend-mode: multiply;" opacity="0.800000012" cx="56.5" cy="18.5" r="18.5"></circle>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-2 topbar-socials">
+                        <!--<a href="tel:+1234567890" class="wiggler slide_links">+1-234-567-890</a>-->
+                        <ul class="socials">
+                            <!--<li><a href="https://www.facebook.com" class="wiggler">facebook</a></li>-->
+                            <!--<li><a href="https://www.twitter.com" class="wiggler">twitter</a></li>-->
+                            <li><a href="https://www.linkedin.com/company/geniusminds" class="wiggler">Linkedin</a></li>
+                            <li><a href="mailto:hello@geniusminds.com" class="wiggler text-underline">hello@geniusminds.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2 topbar-sound">
+                    </div>
+                    <div class="col-1 text-right topbar-toggle">
+                        <a href="javascript:;" id="menu_trigger" class="wiggler menu_trigger">
+                            menu
+                            <span class="menu_ham"><i></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                <div class="menu-side">
+                    <div class="menu-side-image"></div>
+                    <ul class="menu-ilinks documents text-right">
+                        <li><a href="" class="wiggler slide_links">Privacy</a></li>
+                        <li><a href="" class="wiggler slide_links">Term of Services</a></li>
+                    </ul>
+                </div>
+                <div class="menu-side">
+                    <div class="main_menu">
+                        <a href="index.html" class="wiggler">Home</a>
+                        <a href="about.html" class="wiggler">About</a>
+                        <a href="products.html" class="wiggler">Products</a>
+                        <a href="services.html" class="wiggler">Services</a>
+                        <a href="pricing.html" class="wiggler active">Pricing</a>
+                        <span></span>
+                    </div>
+                    <ul class="quick_contact">
+                        <li><b>Geniusminds, Inc</b></li>
+	                    <li><span><img src="images/pin.svg" alt=""></span> Headquarter address: De Vrijstaat, Spijkerkade 3, 1021JS Amsterdam-Noord, Netherlands</li>
+	                    <li><span><img src="images/pin.svg" alt=""></span> Postal address: Huizerstraatweg 111, 1411 GM Naarden, Netherlands</li>
+                        <!--<li>+1-234-5675-757</li>-->
+                        <li><span><img src="images/email.svg" alt=""></span> <a href="mailto:hello@geniusminds.com" class="wiggler text-underline">hello@geniusminds.com</a></li>
+                    </ul>
+                    <ul class="menu-ilinks socials">
+                        <!--<li>-->
+                        <!--<a href="https://www.facebook.com" class="wiggler">facebook</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="https://www.twitter.com" class="wiggler">twitter</a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="https://www.linkedin.com/company/geniusminds" class="wiggler">Linkedin</a>
+                        </li>
+                        <li><a href="#" class="wiggler">Privacy</a></li>
+                        <li><a href="terms.html" class="wiggler">Term of Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="botbar">
+                <div class="cols">
+                    <div class="col-1">
+                        <p class="copyright">© 2019 Geniusminds, Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cursor cursor--small" id="cursor--small"></div>
+        <div class="cursor cursor--circle" id="cursor--circle"></div>
+
+        <div class="page-content">
+            <div class="pricing-header">
+                <div class="container">
+                    <div class="pricing-header__inner">
+                        <h2 class="title raiser-text pricing-title">Choose your option</h2>
+                        <div class="pricing-header__buttons">
+                            <button class="btn btn-active" data-table="agency-table">Agency</button>
+                            <button class="btn" data-table="employer-table">Employer</button>
+                            <span class="btn-bg"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-tables">
+                <div class="container">
+                    <table class="pricing-table" id="agency-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <img src="images/icon-speaker.svg" alt="">
+                                </th>
+                                <th>
+                                    <img src="images/icon-content.svg" alt="">
+                                </th>
+                                <th>
+                                    <img src="images/icon-landing-page.svg" alt="">
+                                </th>
+                                <th>
+                                    <img src="images/icon-chatbot.svg" alt="">
+                                </th>
+                                <th>
+                                    <img src="images/icon-youtube.svg" alt="">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <span>Omnichannel Recruitment Campaign</span>
+                                </th>
+                                <th>
+                                    <span>Content Creation</span>
+                                </th>
+                                <th>
+                                    <span>Interact-with Landing Pages & Communities</span>
+                                </th>
+                                <th>
+                                    <span>AI Chatbot & Matching Technologies</span>
+                                </th>
+                                <th>
+                                    <span>Youtube Platform</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Package options</th>
+                                <td>
+	                                <p class="mobile--show">Package options</p>
+	                                <span>Media Budget</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Package options</p>
+	                                <span>Kind of Content & Budget</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Package options</p>
+	                                <span>Site of size and/or Community</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Package options</p>
+	                                <span>N/A</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Package options</p>
+	                                <span>Size of Platform</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>KPI</th>
+                                <td>
+	                                <p class="mobile--show">KPI</p>
+	                                <span>Delivery KPI on qualified leads</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">KPI</p>
+	                                <span>N/A</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">KPI</p>
+	                                <span>KPI on site visits</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">KPI</p>
+	                                <span>KPI on conversions & traffic</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">KPI</p>
+	                                <span>N/A</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Pricing</th>
+                                <td>
+	                                <p class="mobile--show">Pricing</p>
+	                                <span>One-time setup fee & media subscription</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Pricing</p>
+	                                <span>One-time setup fee or Subscription fee for ongoing service</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Pricing</p>
+	                                <span>12-month media subscription</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Pricing</p>
+	                                <span>One-time setup fee & 12 month license subscription</span>
+                                </td>
+                                <td>
+	                                <p class="mobile--show">Pricing</p>
+	                                <span>One-time setup fee & 12 month subscription</span>
+                                </td>
+                            </tr>
+                            <tr class="pricing-table__footer">
+                                <td></td>
+                                <td>
+                                    <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="pricing-table" id="employer-table" style="display: none;">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <img src="images/icon-speaker.svg" alt="">
+                            </th>
+                            <th>
+                                <img src="images/icon-content.svg" alt="">
+                            </th>
+                            <th>
+                                <img src="images/icon-landing-page.svg" alt="">
+                            </th>
+                            <th>
+                                <img src="images/icon-chatbot.svg" alt="">
+                            </th>
+                            <th>
+                                <img src="images/icon-youtube.svg" alt="">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <span>Omnichannel Recruitment Campaign</span>
+                            </th>
+                            <th>
+                                <span>Content Creation</span>
+                            </th>
+                            <th>
+                                <span>Interact-with Landing Pages & Communities</span>
+                            </th>
+                            <th>
+                                <span>AI Chatbot & Matching Technologies</span>
+                            </th>
+                            <th>
+                                <span>Youtube Platform</span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Package options</th>
+                            <td>Media Budget</td>
+                            <td>N/A</td>
+                            <td>Kind of Content & Budget</td>
+                            <td>Site of size and/or Community</td>
+                            <td>Size of Platform</td>
+                        </tr>
+                        <tr>
+                            <th>KPI</th>
+                            <td>Delivery KPI on qualified leads</td>
+                            <td>N/A</td>
+                            <td>KPI on site visits</td>
+                            <td>N/A</td>
+                            <td>KPI on conversions & traffic</td>
+                        </tr>
+                        <tr>
+                            <th>Pricing</th>
+                            <td>One-time setup fee & 12 month license subscription</td>
+                            <td>One-time setup fee & media subscription</td>
+                            <td>One-time setup fee or Subscription fee for ongoing service</td>
+                            <td>12-month media subscription</td>
+                            <td>One-time setup fee & 12 month subscription</td>
+                        </tr>
+                        <tr class="pricing-table__footer">
+                            <td></td>
+                            <td>
+                                <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn wiggler wiggler-btn">Get started</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="container">
+                    <div class="faqs-inner">
+                        <div class="faqs-header">
+                            <h2 class="title raiser-text faqs-title">Frequently Asked
+                            Questions</h2>
+                        </div>
+                        <div class="faqs-content">
+                            <div class="faqs-list">
+                                <div class="faqs-item faqs-item--active">
+                                    <h3 class="faqs-item__header text-underline">What is Genius Minds?</h3>
+                                    <div class="faqs-item__content">
+                                        <p>
+                                            Genius Minds is an easy-to-use AI Recruitment platform that helps you find the right hire, right now. Used by staffing agencies and recruiting departments worldwide, this powerful solution lets you manage all your job openings, resumes, candidates and contacts more quickly and efficiently. Which means you can spend less time on the process and more time finding the right person. And isn’t that the point?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqs-item">
+                                    <h3 class="faqs-item__header text-underline">Is my data safe?</h3>
+                                    <div class="faqs-item__content">
+                                        <p>
+                                            Genius Minds is an easy-to-use AI Recruitment platform that helps you find the right hire, right now. Used by staffing agencies and recruiting departments worldwide, this powerful solution lets you manage all your job openings, resumes, candidates and contacts more quickly and efficiently. Which means you can spend less time on the process and more time finding the right person. And isn’t that the point?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqs-item">
+                                    <h3 class="faqs-item__header text-underline">How can I make a payment?</h3>
+                                    <div class="faqs-item__content">
+                                        <p>
+                                            Genius Minds is an easy-to-use AI Recruitment platform that helps you find the right hire, right now. Used by staffing agencies and recruiting departments worldwide, this powerful solution lets you manage all your job openings, resumes, candidates and contacts more quickly and efficiently. Which means you can spend less time on the process and more time finding the right person. And isn’t that the point?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqs-item">
+                                    <h3 class="faqs-item__header text-underline">Is my data safe?</h3>
+                                    <div class="faqs-item__content">
+                                        <p>
+                                            Genius Minds is an easy-to-use AI Recruitment platform that helps you find the right hire, right now. Used by staffing agencies and recruiting departments worldwide, this powerful solution lets you manage all your job openings, resumes, candidates and contacts more quickly and efficiently. Which means you can spend less time on the process and more time finding the right person. And isn’t that the point?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqs-item">
+                                    <h3 class="faqs-item__header text-underline">What is Genius Minds?</h3>
+                                    <div class="faqs-item__content">
+                                        <p>
+                                            Genius Minds is an easy-to-use AI Recruitment platform that helps you find the right hire, right now. Used by staffing agencies and recruiting departments worldwide, this powerful solution lets you manage all your job openings, resumes, candidates and contacts more quickly and efficiently. Which means you can spend less time on the process and more time finding the right person. And isn’t that the point?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="about-bottom-section">
+                <h3 class="title raiser-text about-bottom-section__title">Build a smarter recruitment process
+                    with GeniusMinds</h3>
+                <p class="about-bottom-section__sub-title">Your candidates can't wait.</p>
+                <button class="btn wiggler wiggler-btn about-bottom-section__cta open-sidebar">Get free consultation</button>
+            </section>
+        </div>
+    </div>
+    <div class="page"></div>
+</div>
+<div class="chatbot-overlay"></div>
+<div class="chatbot-window">
+    <div class="chatbot-header">
+        GeniusBot
+        <button class="chatbot-header__close wiggler wiggler-btn">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g stroke="#131313" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M1.636 1.636l12.728 12.728M1.636 14.364L14.364 1.636"/></g></svg>
+        </button>
+    </div>
+    <div class="chatbot-body">
+        <iframe src="chatbot.html" width="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+<div class="sidebar-overlay"></div>
+<div class="sidebar">
+    <div class="sidebar-header">
+        <button class="sidebar-header__close">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g stroke="#131313" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M1.636 1.636l12.728 12.728M1.636 14.364L14.364 1.636"/></g></svg>
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <h3>Get free<br> consultation</h3>
+        <div class="sidebar-form">
+            <form action="">
+                <div class="sidebar-field">
+                    <input type="text" class="sidebar-input" placeholder="Name">
+                </div>
+                <div class="sidebar-field">
+                    <input type="text" class="sidebar-input" placeholder="Phone number">
+                </div>
+                <div class="sidebar-field">
+                    <input type="email" class="sidebar-input" placeholder="Contact email">
+                </div>
+                <div class="sidebar-field">
+                    <textarea class="sidebar-input" placeholder="What do you want us to consult on?"></textarea>
+                </div>
+                <div class="sidebar-actions">
+                    <div class="sidebar-signup">
+                        <label>
+                            <input type="checkbox">
+                            <span>Sign up email newsletter</span>
+                        </label>
+                    </div>
+                    <button class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<a href="javascript:;" class="chatbot_trigger wiggler wiggler-btn">
+	<span>Try chat bot</span>
+	<span class="chatbot_icon">
+        <svg width="28" height="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle stroke="#FFD701" stroke-width="1.5" cx="14" cy="14.5" r="9"/><circle fill="#FFD701" cx="14" cy="16.5" r="2"/><circle fill="#FFD701" cx="26" cy="19.5" r="2"/><circle fill="#FFD701" cx="2" cy="19.5" r="2"/><path d="M6 13.5h2.401a1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 1 1.5-1.5h5.084a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 0 1.5 1.5H22" stroke="#FFD701" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5V1.5" stroke="#FFD701" stroke-width="2" stroke-linecap="round"/><ellipse fill="#FFD701" cx="14" cy="1.5" rx="7" ry="1"/></g></svg>
+      </span>
+</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script> -->
+<script src="js/jursor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/jquery.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+<script>
+    titleSplitter('.pricing-title')
+    // Switch pricing table
+    $('.pricing-header__buttons .btn').click(function (e) {
+        e.preventDefault()
+        var table = $(this).data('table')
+        $('.pricing-header__buttons .btn').removeClass('btn-active')
+        $(this).addClass('btn-active')
+        $('.pricing-tables').find('table').hide()
+        $('.pricing-tables').find('#' + table).show()
+    })
+
+    // Faqs toggle
+    $('.faqs-item__header').click(function (e) {
+        e.preventDefault()
+        // var parent = $(this).closest('.faqs-item')
+        // parent.siblings('.faqs-item').find('.faqs-item__content').slideUp('fast')
+        $(this).next('.faqs-item__content').slideToggle('fast')
+    })
+
+    // Animation
+    const ctrl = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave'
+        }
+    })
+    new ScrollMagic.Scene({
+        offset: ($('.faqs-title').offset().top) * 0.5
+    })
+        .on('start', function () {
+            titleSplitter('.faqs-title')
+        })
+        .addTo(ctrl);
+
+    new ScrollMagic.Scene({
+        offset: ($('.about-bottom-section__title').offset().top) * 0.5
+    })
+        .on('start', function () {
+            titleSplitter('.about-bottom-section__title')
+        })
+        .addTo(ctrl);
+
+    document.addEventListener('scroll', function () {
+        if (scrollY > $('.pricing-header').height() - 50) {
+        	$('.brand').addClass('active')
+        } else {
+	        $('.brand').removeClass('active')
+        }
+    })
+</script>
+</body>
+</html>

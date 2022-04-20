@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>crosshair</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Products" transform="translate(-153.000000, -3331.000000)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(151.000000, 2757.000000)">
+                <g id="Group" transform="translate(0.000000, 352.000000)">
+                    <g id="Group-16-Copy-2" transform="translate(2.000000, 218.000000)">
+                        <g id="crosshair" transform="translate(0.000000, 4.000000)">
+                            <path d="M21,38.375 C30.5802153,38.375 38.375,30.5802153 38.375,21 C38.375,11.4197847 30.5802153,3.625 21,3.625 C11.4197847,3.625 3.625,11.4197847 3.625,21 C3.625,30.5802153 11.4197847,38.375 21,38.375 Z" id="Path" stroke="#1D2A38" stroke-width="2"></path>
+                            <rect id="Rectangle" fill="#1D2A38" x="19.6875" y="0" width="2.625" height="9.1875" rx="1.3125"></rect>
+                            <rect id="Rectangle" fill="#1D2A38" x="32.8125" y="19.6875" width="9.1875" height="2.625" rx="1.3125"></rect>
+                            <rect id="Rectangle" fill="#1D2A38" x="19.6875" y="32.8125" width="2.625" height="9.1875" rx="1.3125"></rect>
+                            <rect id="Rectangle" fill="#1D2A38" x="0" y="19.6875" width="9.1875" height="2.625" rx="1.3125"></rect>
+                            <circle id="Oval" stroke="#1D2A38" stroke-width="2" fill="#FFD701" cx="21" cy="21" r="6.25"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

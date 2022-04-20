@@ -1,0 +1,164 @@
+/* Tablet Landscape */
+
+.main_header
+  .menu_wrap
+    li
+      padding: 0 2px
+
+    a
+      padding: 0 8px
+
+body:not(.overtop) .main_header
+
+  .action_wrap.action_wrap
+    padding: 37px 36px
+    a:not(:last-child)
+      margin-right: 16px
+
+.section
+  &_title
+    font-size: $fs1
+    line-height: 48px
+    margin-bottom: 16px
+    &.h2
+      font-size: $fs1
+      margin-bottom: 10px
+  &_subtitle
+    font-size: $fs3
+    line-height: 32px
+    margin-bottom: 0
+    &+.section_desc
+      margin-top: 16px
+  &_desc
+    font-size: $fs5
+    line-height: 22px
+    &:not(:last-child)
+      margin-bottom: 20px
+    p
+      margin-bottom: 12px
+
+.overtop
+  .hero
+    display: block
+    opacity: 1
+
+.hero
+  .section_subtitle
+    font-size: $fs2
+
+.about
+  padding: 96px 0
+  padding-bottom: 16px
+  &_graphics
+    transform-origin: top right
+    transform: scale(0.6) translate3d(0,24px,0)
+
+.safarix
+  .about
+    .single_oval
+      animation: oval_bounce 3s ease-in-out infinite
+    .single_oval.invert
+      animation: oval_bounce_i 3s ease-in-out infinite
+
+  .feature .fovals
+    .single_foval
+      animation: oval_bounce 3s ease-in-out infinite
+      &.invert
+        animation: oval_bounce_i 3s ease-in-out infinite
+
+.feature
+  padding-top: 110px
+  padding-bottom: 96px
+  .feature_graph
+    transform: translate3d(-50%,0,0) scale(0.7)
+
+  &_tooltip
+    transform: translate3d(0,150%,0) !important
+    top: auto
+    left: 16px
+    bottom: 16px
+    margin-top: 0
+    margin-left: 0
+    z-index: 100
+    font-size: 14px
+    line-height: 22px
+    width: 100%
+    max-width: 370px
+    border-radius: 5px
+    transition: 0.3s all ease
+  &_bubble:hover .feature_tooltip
+    transform: translate3d(0,0,0) !important
+
+.process
+  padding: 72px 0
+  padding-top: 96px
+
+  .cols *[class^="col"].right_col.col-5
+    width: 70%
+    margin-right: -144px
+
+  &_list
+    h3
+      font-size: 14px
+      margin-bottom: 7px
+      white-space: nowrap
+
+  .the_television
+    top: 39%
+    margin-top: 16px
+
+.testimonial
+
+  &_picture
+    right: -40%
+
+  &_content
+    width: 420px
+    margin-top: -32px
+
+  &_controller
+    bottom: 8%
+
+.newsletter
+  position: relative
+  border-bottom: 1px solid #DDE5F0
+  padding-bottom: 32px
+
+  &_context
+    &:before
+      content: ""
+      width: 64px
+      height: 64px
+      background-image: url("../images/newsletter.svg")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 99%
+      display: inline-block
+      float: left
+      margin-right: 16px
+
+    h2
+      font-size: $fs2
+      padding: 0 0
+      max-width: 350px
+      margin-left: 80px
+      line-height: 32px
+      margin-bottom: 24px
+
+  &_form
+    position: relative
+    width: 100%
+    right: auto
+    top: auto
+
+.main_footer
+  .footer_content
+    .col-2.link_col
+      width: 25%
+      margin-bottom: 32px
+
+    .col-3:first-child
+      margin-bottom: 32px
+
+    .col-3:last-child
+      margin-top: -80px

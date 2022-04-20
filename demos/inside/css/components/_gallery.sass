@@ -1,0 +1,193 @@
+
+input[name="popups"]:checked + .popup .gallery-wrap
+  opacity: 1
+  pointer-events: all
+
+  .gallery-anchor
+    pointer-events: all
+
+.gallery
+  height: 100%
+  position: relative
+
+  &-popup .popup-overlay
+    //backdrop-filter: blur(16px)
+    background-color: $n2
+
+  &-popup .popup-box-close
+    color: rgba(white,.4)
+
+  &-popup .popup-box-close:hover
+    color: rgba(white,1)
+
+  &-wrap
+    transition: 0.325s all $carousel-cubic
+    opacity: 0
+    pointer-events: none
+
+  &-wrap,
+  &-single
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column-reverse
+
+  &-thumbs-wrap
+    min-height: 0
+    height: 0
+    position: relative
+    z-index: 1
+    @extend .easing
+
+  &-thumbs-toggle
+    position: absolute
+    padding: 4px
+    text-align: center
+    bottom: 100%
+    width: 100%
+    margin-bottom: 0
+    color: white
+    cursor: pointer
+    &:after
+      content: "Show thumbnails"
+      text-transform: uppercase
+      position: relative
+      font-weight: 500
+      display: inline-block
+      padding: 3px 8px
+      background-color: $n9
+      backdrop-filter: blur(8px)
+      border-radius: 12px
+      will-change: background-color
+      transition: 0.2s all ease
+
+    &:hover:after
+      background-color: $n8
+
+  &-popup input[name="gallery_thumbs"]:checked ~ &-wrap &-thumbs-wrap
+    min-height: 56px
+    height: 56px
+
+  &-popup input[name="gallery_thumbs"]:checked ~ &-wrap &-thumbs-toggle:after
+    content: "Hide thumbnails"
+
+  &-thumbs
+    display: flex
+    height: 56px
+    width: 100%
+    justify-content: center
+    align-items: center
+
+  &-thumbs label
+    width: 48px
+    height: 48px
+    background-color: #efefef
+    display: block
+    margin: 0 2px
+    position: relative
+    cursor: pointer
+    transform: translate3d(0,0,0)
+    @extend .easing
+
+    &:after
+      content: ""
+      position: absolute
+      width: calc(100% + 2px)
+      height: calc(100% + 2px)
+      top: -1px
+      left: -1px
+      border: 2px solid $main-color
+      box-shadow: inset 0 0 0 1px rgba(white,.2)
+      opacity: 0
+      @extend .easing
+
+    &:not(.active):hover
+      transform: translate3d(0,-1px,0)
+
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: contain
+
+  &-single
+    flex-direction: row
+    justify-content: center
+
+  &-single img
+    position: absolute
+    width: auto
+    height: 100%
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+    will-change: height
+
+  &-anchor,
+  &:before,
+  &:after
+    appearance: none
+    width: 72px
+    height: 40px
+    top: 50%
+    transform: translate(0,-50%)
+    will-change: transform
+    z-index: 4
+    border-radius: 50%
+    cursor: pointer
+    @extend .carousel-control:before
+
+  &-anchor
+    height: 50vh
+    opacity: 0
+    &:checked + &
+      left: auto
+      right: 0
+
+    &:checked + & ~ &,
+    &:checked
+      display: none
+
+  &:before,
+  &:after
+    content: ""
+    pointer-events: none
+    width: 40px
+    left: 16px
+    background-color: rgba(white,.12)
+
+  &:after
+    left: auto
+    right: 16px
+
+  &:before
+    transform: translate(0,-50%) rotate(180deg)
+
+  &-wrap:hover &:before,
+  &-wrap:hover &:after,
+  &-anchor:checked + &-anchor:hover ~ &:before
+    background-color: rgba(white,.12)
+
+  &-anchor:not(:checked):hover ~ &:before,
+  &-anchor:checked + &-anchor:hover ~ &:after
+    background-color: rgba(white,.32)
+
+  &-single
+    transform: translate3d(-100%, 0, 0)
+    transition: 0.5s all $carousel-cubic
+
+  @for $i from 1 through 12
+    &-anchor:nth-of-type(#{$i}):checked ~ & &-single:nth-of-type(#{$i})
+      transform: translate3d(0, 0, 0)
+
+    &-anchor:nth-of-type(#{$i}):checked ~ & &-single:nth-of-type(#{$i}) ~ &-single
+      transform: translate3d(100%, 0, 0)
+
+    &-anchor:nth-of-type(#{$i}):checked + &-anchor ~ &-anchor
+      //display: none !important
+
+    &-anchor:nth-of-type(#{$i}):checked ~ &-thumbs-wrap label:nth-of-type(#{$i}):after
+      opacity: 1

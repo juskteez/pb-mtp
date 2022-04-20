@@ -1,0 +1,560 @@
+$main-color: #E70A0A
+$text-color: #151515
+
+*
+	margin: 0
+	padding: 0
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	text-decoration: none
+
+body,
+input,
+button
+	font-family: "Lato", Arial, sans-serif
+	color: $text-color
+	-webkit-appreance: none
+	appreance: none
+	text-rendering: optimizeLegibility !important
+	-webkit-font-smoothing: antialiased !important
+
+.main
+	color: $main-color
+
+.easing
+	transition: 0.2s all ease
+
+.light
+	font-weight: lighter
+
+h1,.h1
+	font-size: 56px
+
+h2,.h2
+	font-size: 32px
+	margin-bottom: 32px
+
+h3,.h3
+	font-size: 24px
+	margin-bottom: 16px
+
+h4,.h4
+	font-size: 16px
+	margin-bottom: 16px
+
+h5,.h5
+	font-size: 14px
+	margin-bottom: 14px
+
+.text-center
+	text-align: center
+	p
+		margin-left: auto
+		margin-right: auto
+
+.spacing
+	height: 2em
+	&.big
+		height: 4em
+
+.lowprofile
+	opacity: 0.6
+
+@keyframes incase
+	0%
+		right: 8px
+	100%
+		right: 200px
+
+@keyframes earbudcase
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+.fpage
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	overflow-x: hidden
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	text-align: left
+
+	.btn
+		text-transform: uppercase
+		background-color: $main-color
+		color: #fff
+		line-height: 72px
+		white-space: nowrap
+		display: inline-block
+		padding: 0 56px
+		border-radius: 36px
+		font-size: 24px
+		font-weight: bold
+		@extend .easing
+		&:hover
+			background-color: #D0011B
+
+
+	input[type="text"]
+		height: 56px
+		line-height: 32px
+		padding: 12px
+		border: none
+		border-radius: 28px
+		text-align: center
+		font-size: 24px
+		font-weight: bold
+		background-color: #fff
+		@extend .easing
+
+	#take_the_coupon
+		border: none
+		border-radius: none
+		background-color: transparent
+		width: 56px
+		height: 56px
+		position: absolute
+		opacity: 0.5
+		right: 0
+		top: 0
+		@extend .easing
+		&:hover
+			opacity: 1
+		&:focus,
+		&:active
+			outline: none
+
+	.centered-title-slash
+		display: inline-block
+		position: relative
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			width: 100vw
+			height: 2px
+			background-color: #333
+			opacity: 0.1
+			top: 50%
+			margin-top: -1px
+			margin-right: 32px
+			right: 100%
+		&:after
+			right: auto
+			left: 100%
+			margin-right: 0
+			margin-left: 32px
+
+	&_header
+		//background-color: $text-color
+		color: #fff
+		padding-top: 90px
+		position: relative
+
+		.fpage_skewbg
+			position: absolute
+			width: calc(50% + 585px)
+			height: 200%
+			top: -115%
+			left: 0
+			transform: skewY(8deg)
+			z-index: -1
+			&.black
+				background-color: #000
+				background-image: url("black_pt.jpg")
+				background-size: 100vw auto
+			&.red
+				background-color: $main-color
+				background-image: url("red_pt.jpg")
+				background-size: 100vw auto
+				z-index: -2
+				left: auto
+				margin-top: 144px
+				right: 0
+
+	.earbudcase
+		position: absolute
+		right: 0
+		opacity: 0
+		animation: earbudcase 1.2s ease forwards
+		animation-delay: 0.6s
+	.case
+		width: 416px
+		position: absolute
+		right: 0
+		top: 0
+	.incase
+		position: absolute
+		width: 252px
+		top: 48px
+		right: 8px
+		animation: incase 2s ease-in-out forwards
+		animation-delay: 2s
+
+	&_title
+		max-width: 500px
+		margin-top: 84px
+
+	&_section
+		position: relative
+		&.gray_couple
+			background: url('the_girl.jpg') no-repeat right bottom, url('the_man.jpg') no-repeat left bottom
+			background-color: #F6F6F6
+			background-size: auto 100%
+			z-index: 1
+			.fpage_wrap
+				padding: 80px 0
+		&.red-poly-bg
+			padding-top: 0
+			color: #fff
+			a
+				color: #fff
+				border-bottom: 1px dotted transparent
+				&:hover
+					border-color: #fff
+
+			.fpage_wrap
+				position: relative
+				z-index: 2
+
+			.fpage_skewbg
+				position: absolute
+				width: 100%
+				height: 150%
+				top: 0%
+				background-color: $main-color
+				transform: skewY(8deg)
+				z-index: 1
+				&:before
+					content: ""
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background-image: url("red_pt.jpg")
+					background-size: 100vw auto
+					background-position: right -119px
+				&:after
+					content: ""
+					width: calc(50% - 335px)
+					height: 120px
+					background-color: $main-color
+					background-image: url("red_pt.jpg")
+					background-size: 100vw auto
+					background-position: top right
+					position: absolute
+					bottom: 100%
+					margin-bottom: -1px
+					right: 0
+
+		&.dark-poly-bg
+			background-color: $text-color
+			background-image: url("black_pt.jpg")
+			background-size: 100vw auto
+			color: rgba(255,255,255,0.4)
+			padding-bottom: 220px
+			margin-bottom: -148px
+
+		&.poly-bg
+			//background-color: #f6f6f6
+			padding-bottom: 160px
+			padding-top: 48px
+
+			.fpage_skewbg
+				position: absolute
+				width: 100%
+				height: 150%
+				top: -20%
+				background-color: #f6f6f6
+				transform: skewY(8deg)
+				z-index: -1
+				&:before
+					content: ""
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background-image: url("white_pt.jpg")
+					background-size: 100vw auto
+					background-position: top center
+				&:after
+					content: ""
+					width: calc(50% + 335px)
+					height: 120px
+					background-color: #fff
+					position: absolute
+					top: 0
+					left: 0
+
+		&.copyright .fpage_wrap
+			padding-top: 0
+			p
+				margin-bottom: 0
+
+	&_wrap
+		max-width: 1000px
+		margin-left: auto
+		margin-right: auto
+		padding: 48px 15px
+
+		&.light_wrap
+			background-color: rgba(255,255,255,0.3)
+			position: relative
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				width: 100vw
+				height: 100%
+				background-color: rgba(255,255,255,0.3)
+				right: 100%
+				top: 0
+			&:after
+				left: 100%
+				right: auto
+
+			h2
+				margin-bottom: 0
+			.eb_product
+				position: absolute
+				max-width: 585px
+				z-index: 2
+				right: 0
+				top: 50%
+				transform: translate3d(0,-56%,0)
+			p:last-child
+				margin-bottom: 0
+		p
+			max-width: 670px
+			line-height: 1.7
+			margin-bottom: 1em
+			&.narrow
+				max-width: 420px
+
+		blockquote
+			padding-left: 32px
+			margin: 2.5em 0
+			border-left: 3px solid #9B9B9B
+
+	&_video
+		margin-left: auto
+		margin-right: auto
+		width: 770px
+		height: 490px
+		margin-top: -200px
+		margin-bottom: 80px
+		position: relative
+		z-index: 1
+		&:before
+			content: ""
+			box-shadow: 0 12px 24px 0 rgba(0,0,0,0.50), 0 16px 48px 0 rgba(0,0,0,0.50)
+			width: 90%
+			height: 76%
+			top: 20%
+			left: 5%
+			position: absolute
+			z-index: -1
+
+	.coupon_code
+		margin-bottom: 10px
+		position: relative
+		max-width: 270px
+		margin-left: auto
+		margin-right: auto
+		input
+			width: 100%
+		&+.narrow
+			margin-bottom: 56px
+			line-height: 1.4
+
+	&_gal-image
+		max-height: 182px
+		margin: 0 85px
+		margin-top: 56px
+
+
+@media screen and (max-width: 1280px)
+	.fpage_header
+		//background-color: $text-color
+		color: #fff
+		padding-top: 48px
+		position: relative
+
+		.fpage_skewbg
+			position: absolute
+			width: calc(50% + 432px)
+			&.red
+				margin-top: 100px
+
+	.fpage_wrap
+		max-width: 900px
+		margin-left: auto
+		margin-right: auto
+		padding: 48px 15px
+
+@media screen and (max-width: 1023px)
+
+	.fpage
+		&_header
+			//background-color: $text-color
+			color: #fff
+			padding-top: 0
+			position: relative
+			text-align: center
+
+			.fpage_skewbg
+				position: absolute
+				width: calc(50% + 344px)
+				top: -125%
+				&.red
+					margin-top: 64px
+
+			.fpage_title
+				margin-left: auto
+				margin-right: auto
+				margin-top: 24px
+				h1
+					font-size: 48px
+
+		.earbudcase
+			margin-top: 120px
+			margin-right: -40px
+
+		.incase
+			width: 200px
+			top: 34px
+			margin-right: -48px
+		.case
+			width: 320px
+
+	.fpage_wrap
+		max-width: 720px
+		margin-left: auto
+		margin-right: auto
+		padding: 48px 15px
+
+		p
+			max-width: 540px
+
+	.fpage_section:first-child .fpage_wrap p:nth-of-type(1)
+		max-width: 420px
+
+	.fpage_section.poly-bg
+		padding-top: 0
+		.fpage_skewbg:after
+			width: calc(50% + 210px)
+
+	.fpage_section.red-poly-bg .fpage_skewbg:after
+		width: calc(50% - 210px)
+
+	.fpage_video
+		width: 100%
+		height: 60vw
+		margin-bottom: 48px
+
+	.fpage_wrap.light_wrap
+		.eb_product
+			max-width: 360px
+
+		p
+			max-width: 380px
+
+	.fpage_section.gray_couple .fpage_wrap
+		p
+			max-width: 420px
+
+	.fpage_gal-image
+		max-height: 182px
+		margin: 0 32px
+		margin-top: 32px
+		&.blocker
+			margin-top: 56px
+
+@media screen and (max-width: 767px)
+
+	.fpage
+		&_header
+			//background-color: $text-color
+			color: #fff
+			padding-top: 0
+			position: relative
+			text-align: center
+			margin-bottom: 36px
+
+			.fpage_skewbg
+				position: absolute
+				width: calc(50% + 42vw)
+				top: -125%
+				&.red
+					margin-top: 48px
+
+			.fpage_title
+				margin-left: auto
+				margin-right: auto
+				margin-top: 24px
+				h1
+					font-size: 32px
+
+		.earbudcase
+			margin-top: 100px
+			margin-right: -40px
+
+		.incase
+			width: 30vw
+			top: 3.5vw
+			margin-right: -26vw
+		.case
+			width: 46vw
+
+	.fpage_wrap.light_wrap
+		.eb_product
+			max-width: 360px
+			width: 100%
+			position: relative
+			margin-left: -5vw
+			margin-bottom: -72px
+
+		p
+			max-width: 380px
+
+	.fpage_section.gray_couple
+		background-image: url("the_girl.jpg")
+		.fpage_wrap
+			padding-left: 20px
+			padding-right: 20px
+
+	.fpage_gal-image
+		max-height: 182px
+		margin: 0 32px
+		margin-top: 32px
+		max-width: 90%
+		box-sizing: border-box
+		&.blocker
+			margin-top: 56px
+			margin-left: 0
+			margin-right: 0
+
+	.btn
+		padding: 0
+		width: 100%
+		font-size: 20px
+
+@media screen and (max-width: 375px)
+
+	.fpage .incase
+		width: 30vw
+		top: 3.5vw
+		margin-right: -31vw
+
+@media screen and (max-width: 374px)
+
+	.fpage .incase
+		width: 30vw
+		top: 3.5vw
+		margin-right: -40vw

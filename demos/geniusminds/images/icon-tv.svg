@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>TV</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Products" transform="translate(-150.000000, -3209.000000)" stroke="#1D2A38" stroke-width="2">
+            <g id="Group-4" transform="translate(151.000000, 2757.000000)">
+                <g id="Group" transform="translate(0.000000, 352.000000)">
+                    <g id="Group-16-Copy" transform="translate(0.000000, 99.000000)">
+                        <g id="TV" transform="translate(0.000000, 2.000000)">
+                            <rect id="Rectangle" fill="#FFD701" x="5.6" y="15.4" width="25.2" height="21" rx="3"></rect>
+                            <path d="M36.4,15.4 L36.4,18.2" id="Path"></path>
+                            <path d="M36.4,23.8 L36.4,36.4" id="Path"></path>
+                            <path d="M15.4,2.8 L21,9.8" id="Path"></path>
+                            <path d="M21,9.8 L29.4,0" id="Path"></path>
+                            <rect id="Rectangle" x="0" y="9.8" width="42" height="32.2" rx="3"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

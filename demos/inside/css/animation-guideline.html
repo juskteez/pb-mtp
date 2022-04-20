@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
+  <title>Animation Essential Definition</title>
+  
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/> -->
+  <!-- <link rel="shortcut icon" type="image/png" href="favicon.png"/> -->
+
+  <link href="style.css" rel="stylesheet" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body class="defi-page">
+
+<div id="body" class="defi-body">
+  <section>
+
+    <h2 class="defi-title">Initial Animation Properties</h2>
+
+    <p>Used to set up initial element property if the element involve any transition or animation</p>
+
+    <h3 class="defi-subtitle">Easing</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="ani-box"><span></span></div>
+        <div class="ani-box easing-carousel"><span></span></div>
+        <p>Easing functions specify the rate of change of a parameter over time.</p>
+        <p>Objects in real life don’t just start and stop instantly, and almost never move at a constant speed. When we open a drawer, we first move it quickly, and slow it down as it comes out. Drop something on the floor, and it will first accelerate downwards, and then bounce back up after hitting the floor.</p>
+      </div>
+      <div class="ani-col prop">
+        <div class="dls">
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+        <div class="dls">
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Timing</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <p><b>Small sized sample</b></p>
+        <button class="btn subtle">Button</button>
+        <a href="javascript:;" class="icon ib3 i-facebook social-btn"></a>
+        <a href="javascript:;">Our story</a>
+        <p>&nbsp;</p>
+        <p><b>Regular sized sample</b></p>
+        <label for="right_drawer" class="btn subtle">Drawer</label>
+        <label for="center_popup" class="btn subtle">Popup</label>
+        <p>&nbsp;</p>
+        <p><b>Large sized sample</b></p>
+      </div>
+      <div class="ani-col prop">
+        <p>Animation timing are based on visual weight of the animation element to keep an elegant feel for the webpage</p>
+        <ol>
+          <li>Small sized elements such as buttons, links, icons, droplist,... & simple animations should have a faster animation timing - <b class="c">0.125s</b></li>
+          <li>Regular sized elements such as popups, drawers,... would have a medium animation timing - <b class="c">0.375s</b></li>
+          <li>Large sized elements such as image carousel, drawers,... & complex animations should have a bit longer animation timing - <b class="c">0.6s</b></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="slideshow-wrapper">
+      <input type="radio" name="slideshows2" id="ss2-1" class="carousel-anchor" checked>
+      <input type="radio" name="slideshows2" id="ss2-2" class="carousel-anchor">
+      <input type="radio" name="slideshows2" id="ss2-3" class="carousel-anchor">
+      <input type="radio" name="slideshows2" id="ss2-4" class="carousel-anchor">
+      <input type="radio" name="slideshows2" id="ss2-5" class="carousel-anchor">
+      <div class="slideshow">
+        <div class="slideshow-single">
+          <div class="slideshow-image"><img src="../images/tamara-bellis-68csPWTnafo-unsplash.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image"><img src="../images/max-rovensky-GU3PW0xQV-w-unsplash.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image"><img src="../images/tamara-bellis-0C2qrwkR1dI-unsplash.jpg" alt=""/></div>
+        </div>
+        <div class="slideshow-single">
+          <div class="slideshow-image"><img src="../images/alexander-krivitskiy-6GmVt60qwlY-unsplash.jpg" alt=""/></div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <a href="javascript:;" name="slideshows2" class="carousel-control prev" title="Previous slide"></a>
+        <a href="javascript:;" name="slideshows2" class="carousel-control next" title="Next slide"></a>
+      </div>
+      <div class="slideshow-pag">
+        <a href="javascript:;" class="active"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Staggering</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="ani-box easing-carousel stagger"><span>0.00s</span></div>
+        <div class="ani-box easing-carousel stagger"><span>0.05s</span></div>
+        <div class="ani-box easing-carousel stagger"><span>0.10s</span></div>
+        <div class="ani-box easing-carousel stagger"><span>0.15s</span></div>
+        <div class="ani-box easing-carousel stagger"><span>0.20s</span></div>
+        <div class="ani-box easing-carousel stagger"><span>0.25s</span></div>
+        <div class="ani-grid">
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+          <div class="ani-grid-item"></div>
+        </div>
+      </div>
+      <div class="ani-col prop">
+        <p>Instead of animating a group of items all at once, we can recreate this same effect by staggering the animations. When each item’s animation is <b>incrementally delayed</b>, they appear as individuals, but still move collectively as a whole. The result is captivating and feels more true to life.</p>
+        <div class="dls">
+          <dl>
+            <dt>animation delay</dt>
+            <dd><span>0.05s</span> between each animation</dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="defi-title">Essential Animation Showcase</h2>
+
+    <h3 class="defi-subtitle">Lazy image</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="ani-img"><img class="lazy" src="../images/placeholder.png" data-src="../images/newsletter-1.jpg" data-srcset="../images/newsletter-1.jpg" alt=""></div>
+      </div>
+      <div class="ani-col prop">
+        <ol>
+          <li><b>Show a loading icon</b> while real image is loading</li>
+          <li><b>Fade-in</b> + <b>Scale-in</b> after real image is loaded</li>
+        </ol>
+        <!-- <ul>
+          <li><b>Show a loading icon</b> while real image is loading</li>
+          <li><b>Fade in</b> + <b>Scale in</b> after real image is loaded</li>
+        </ul> -->
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.375s</span></dd>
+          </dl>
+          <dl>
+            <dt>image fade-in opacity</dt>
+            <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+          </dl>
+          <dl>
+            <dt>image scale</dt>
+            <dd>from <span>1.2</span> <u></u> <span>1.0</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Text link</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <ul class="footer-menu">
+          <li><a href="javascript:;">Our story</a></li>
+          <li><a href="javascript:;">Our blog</a></li>
+          <li><a href="javascript:;">Store locator</a></li>
+          <li><a href="javascript:;">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> whenever user cursor touch the element</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Input</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="form-input">
+          <input type="email" id="input-2" placeholder="Placeholder message" value="phongvu@beeketing.net" required>
+          <p class="form-input-msg msg-valid">Email is available!</p>
+          <p class="form-input-msg msg-invalid">Please enter a valid email address!</p>
+        </div>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> while user interact with the element</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Button & interactive icon</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <button class="primary">Button</button>
+        <button class="outline">Button</button>
+        <!-- <button class="proceeding">Proceeding</button> -->
+        <a href="javascript:;" class="icon ib4 i-facebook social-btn"></a>
+        <a href="javascript:;" class="icon ib4 i-twitter social-btn"></a>
+        <a href="javascript:;" class="icon ib4 i-youtube social-btn"></a>
+        <a href="javascript:;" class="icon ib4 i-instagram social-btn"></a>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> when user cursor touch & interact with the element</li>
+          <li><b>Shrug down</b> a bit when user clicked the element</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+          <dl>
+            <dt>shrug down / translateY</dt>
+            <dd><span>1px</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Accordion list</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="product-content-menu">
+          <div class="product-content-item">
+            <input type="radio" name="pci" class="product-content-switch" id="pci-1" checked>
+            <label for="pci-1" class="product-content-title">Description</label>
+            <div class="product-content wysiwyg-content">
+              <p>Pattern: Floral print / Dot print / Cherry print</p>
+              <p>Style: Casual dress / Elegant dress / Party dress / Vintage dress</p>
+              <p>Model Number: 7818 / 7832 / 7833 / 7834 / 7835</p>
+              <p>Sleeve Length(cm): Three Quarter</p>
+              <p>Material: Polyester</p>
+            </div>
+          </div>
+          <div class="product-content-item">
+            <input type="radio" name="pci" class="product-content-switch" id="pci-2">
+            <label for="pci-2" class="product-content-title">Shipping policies</label>
+            <div class="product-content wysiwyg-content">
+              <ul>
+                <li><strong>100% Secure payment</strong> with SSL Encryption.</li>
+                <li>If you're not <strong>100% satisfied</strong>, let us know and we'll make it right.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-content-item">
+            <input type="radio" name="pci" class="product-content-switch" id="pci-3">
+            <label for="pci-3" class="product-content-title">Return &amp; Warranty</label>
+            <div class="product-content wysiwyg-content">
+              <ul>
+                <li>Orders ship within <strong>5 to 10 business days</strong>.</li>
+                <li><strong>Tip:</strong> Buying 2 products or more at the same time will save you quite a lot on shipping fees.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> when user cursor touch & interact with the element</li>
+          <li><b>Toggle slide</b> the content when click the accordion item</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>animation duration</dt>
+            <dd><span>0.275s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0, 0.24, 1)</span></dd>
+          </dl>
+          <dl>
+            <dt>content fade-in opacity</dt>
+            <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Carousel</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <div class="slideshow-wrapper">
+          <input type="radio" name="slideshows" id="ss-1" class="carousel-anchor" checked>
+          <input type="radio" name="slideshows" id="ss-2" class="carousel-anchor">
+          <input type="radio" name="slideshows" id="ss-3" class="carousel-anchor">
+          <input type="radio" name="slideshows" id="ss-4" class="carousel-anchor">
+          <input type="radio" name="slideshows" id="ss-5" class="carousel-anchor">
+          <div class="slideshow">
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/slideshow-1.jpg" alt=""/></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <a href="javascript:;" name="slideshows" class="carousel-control prev" title="Previous slide"></a>
+            <a href="javascript:;" name="slideshows" class="carousel-control next" title="Next slide"></a>
+          </div>
+          <div class="slideshow-pag">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          </div>
+        </div>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Change appearance</b> when user cursor touch & interact with arrow elements (previous/next button)</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>slide animation duration</dt>
+            <dd><span>0.6s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+          <dl>
+            <dt>arrow animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="defi-subtitle">Popups</h3>
+    <div class="ani-group">
+      <div class="ani-col">
+        <label for="top_drawer" class="btn">Top drawer</label>
+        <label for="bottom_drawer" class="btn">Bottom drawer</label>
+        <label for="left_drawer" class="btn">Left drawer</label>
+        <label for="right_drawer" class="btn">Right drawer</label>
+        <label for="center_popup" class="btn">Center popup</label>
+      </div>
+      <div class="ani-col prop">
+        <ul>
+          <li><b>Slide in</b> the drawer box from the edge of the window</li>
+          <li><b>Fade in</b> + <b>Slide up</b> the popup box from near center of the window</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>drawer animation duration</dt>
+            <dd><span>0.375s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+        </div>
+        <div class="dls">
+          <dl>
+            <dt>popup box animation duration</dt>
+            <dd><span>0.375s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+          <dl>
+            <dt>popup slide-up / translateY</dt>
+            <dd>from <span>32px</span> <u></u> <span>0px</span></dd>
+          </dl>
+          <dl>
+            <dt>popup fade-in opacity</dt>
+            <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="defi-title text-center">Components Animation Showcase</h2>
+    <br/>
+
+  </section>
+
+  
+  <div class="comp comp-header" id="header">
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Droplist menu & Mega menu</h4>
+          <ul>
+            <li><b>Visible & accessible</b> when user cursor hovering within parent menu item or within itself.</li>
+            <li><b>Invisible & inaccessible</b> when user cursor got out of parent menu item and itself.</li>
+          </ul>
+          <div class="dls">
+            <dl>
+              <dt>animation duration</dt>
+              <dd><span>0.2s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+            </dl>
+            <dl>
+              <dt>scale in Y axis / scaleY</dt>
+              <dd>from <span>0.9</span> <u></u> <span>1.0</span></dd>
+            </dl>
+            <dl>
+              <dt>fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+          </div>
+          <h4 class="defi-subtitle">Main menu items</h4>
+          <ul>
+            <li><b>Change background color & text color</b> when user cursor hovering on it.</li>
+          </ul>
+          <div class="dls">
+            <dl>
+              <dt>animation duration</dt>
+              <dd><span>0.125s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span><b>ease</b></span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols content-left">
+      <div class="col-d-12 comp-header-content">
+        <label for="header-menu-trigger" class="icon ib4 i-menu header-menu-trigger mobileonly"></label>
+        <input type="radio" name="menu_trigger" id="header-menu-trigger" class="nodis">
+        <div class="header-logo"><span><img src="../images/logo.png" alt=""></span></div>
+        <div class="header-menu" id="header-menu">
+          <ul id="menu-list">
+            <li>
+              <span>Man</span>
+              <ul>
+                <li><a href="javascript:;">New Arrivals</a></li>
+                <li>
+                  <span>Top</span>
+                  <ul>
+                    <li><a href="javascript:;">New Arrivals</a></li>
+                    <li><a href="javascript:;">Top</a></li>
+                    <li><a href="javascript:;">Bottom</a></li>
+                    <li><a href="javascript:;">Accessories</a></li>
+                    <li><a href="javascript:;">Sales</a></li>
+                  </ul>
+                </li>
+                <li><a href="javascript:;">Bottom</a></li>
+                <li><a href="javascript:;">Accessories</a></li>
+                <li><a href="javascript:;">Sales</a></li>
+              </ul>
+            </li>
+            <li class="mega_menu-parrent">
+              <span>Woman</span>
+              <div class="mega_menu">
+                <div class="wrap cols">
+                  <div class="col-d-3">
+                    <h4 class="h6">Sales</h4>
+                    <ul>
+                      <li><a href="javascript:;">New Arrivals</a></li>
+                      <li><a href="javascript:;">Top</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-d-3">
+                    <h4 class="h6">Shoes</h4>
+                    <ul>
+                      <li><a href="javascript:;">New Arrivals</a></li>
+                      <li><a href="javascript:;">Top</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-d-3">
+                    <h4 class="h6">Clothing</h4>
+                    <ul>
+                      <li><a href="javascript:;">New Arrivals</a></li>
+                      <li><a href="javascript:;">Top</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-d-3">
+                    <h4 class="h6">BACK IN STOCK</h4>
+                    <ul>
+                      <li><a href="javascript:;">New Arrivals</a></li>
+                      <li><a href="javascript:;">Top</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="mega_menu-parrent">
+              <span>News</span>
+              <div class="mega_menu">
+                <div class="wrap cols left-d">
+                  <div class="col-d-3">
+                    <h4 class="h6">Industry news</h4>
+                    <ul>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-d-3">
+                    <h4 class="h6">Media</h4>
+                    <ul>
+                      <li><a href="javascript:;">Bottom</a></li>
+                      <li><a href="javascript:;">Sales</a></li>
+                      <li><a href="javascript:;">Top</a></li>
+                      <li><a href="javascript:;">Accessories</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="javascript:;">Clothing</a></li>
+            <li><a href="javascript:;">Accessories</a></li>
+            <li><a href="javascript:;">Sales</a></li>
+          </ul>
+        </div>
+        <div class="header-actions">
+          <div class="header-action h-a-search">
+            <label for="search_popup" class="icon ib4 i-search"></label>
+          </div>
+          <div class="header-action h-a-subs">
+            <span class="icon ib4 i-account"></span>
+          </div>
+          <div class="header-action h-a-cart">
+            <!-- <a href="javascript:;" class="icon ib4 i-cart" id="minicart_trigger" data-count="12"></a> -->
+            <label class="icon ib4 i-cart" for="cart_drawer" data-count="12"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp comp-slideshow" id="slideshow-1">
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Slideshow</h4>
+          <ul>
+            <li><b>Change appearance</b> when user cursor touch & interact with arrow elements (previous/next button)</li>
+            <li><b>Stagger</b> the slide content when change slides</li>
+          </ul>
+          <div class="dls">
+            <dl>
+              <dt>slide animation duration</dt>
+              <dd><span>0.6s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+            </dl>
+            <dl>
+              <dt>arrow animation duration</dt>
+              <dd><span>0.125s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+            </dl>
+          </div>
+          <div class="dls">
+            <dl>
+              <dt>slide content animation first start</dt>
+              <dd>delay <span>0.1s</span> after switch slide</dd>
+            </dl>
+            <dl>
+              <dt>slide content animation duration</dt>
+              <dd><span>1s</span></dd>
+            </dl>
+            <dl>
+              <dt>slide content cubic-bezier / easing</dt>
+              <dd><span>(0.56, 0, 0.24, 1)</span></dd>
+            </dl>
+            <dl>
+              <dt>slide content movement / translateX</dt>
+              <dd>from <span>48px (forwards)</span>/<span>-48px (backwards)</span> <u></u> <span>0px</span></dd>
+            </dl>
+            <dl>
+              <dt>slide content fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap unwrap-d unwrap-t">
+      <div class="col-d-12">
+        <div class="slideshow-wrapper">
+          <input type="radio" name="slideshowsf" id="ssf-1" class="carousel-anchor" checked>
+          <input type="radio" name="slideshowsf" id="ssf-2" class="carousel-anchor">
+          <input type="radio" name="slideshowsf" id="ssf-3" class="carousel-anchor">
+          <input type="radio" name="slideshowsf" id="ssf-4" class="carousel-anchor">
+          <input type="radio" name="slideshowsf" id="ssf-5" class="carousel-anchor">
+          <div class="slideshow">
+            <div class="slideshow-single">
+              <div class="slideshow-image"><img src="../images/tamara-bellis-68csPWTnafo-unsplash.jpg" alt=""></div>
+              <div class="slideshow-content">
+                <div class="wrap cols content-left right-d">
+                  <div class="col-d-5 col-t-6 col-m-12 center-d">
+                    <h2 class="h1 slideshow-title">First Collection</h2>
+                    <p class="slideshow-desc">Classic American silhouettes reimagined for forever, beyond modernity.</p>
+                    <div class="slideshow-actions">
+                      <a href="javascript:;" class="btn primary">Shop Now</a>
+                      <a href="javascript:;" class="btn outline">Read Story</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image"><img src="../images/max-rovensky-GU3PW0xQV-w-unsplash.jpg" alt=""></div>
+              <div class="slideshow-content">
+                <div class="wrap cols content-right center-d">
+                  <div class="col-d-5 col-t-6 col-m-12 center-d">
+                    <h2 class="h1 slideshow-title">Second Collection</h2>
+                    <p class="slideshow-desc">Classic American silhouettes reimagined for forever, beyond modernity.</p>
+                    <div class="slideshow-actions">
+                      <a href="javascript:;" class="btn primary">Shop Now</a>
+                      <a href="javascript:;" class="btn outline">Read Story</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image overlay"><img src="../images/mike-von-TPUGbQmyVwE-unsplash.jpg" alt=""></div>
+              <div class="slideshow-content">
+                <div class="wrap cols content-left">
+                  <div class="col-d-5 col-t-6 col-m-12 center-d">
+                    <h2 class="h1 slideshow-title">Third Collection</h2>
+                    <p class="slideshow-desc">Classic American silhouettes reimagined for forever, beyond modernity.</p>
+                    <div class="slideshow-actions">
+                      <a href="javascript:;" class="btn primary">Shop Now</a>
+                      <a href="javascript:;" class="btn outline">Read Story</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image whitec"><img src="../images/tamara-bellis-0C2qrwkR1dI-unsplash.jpg" alt=""></div>
+              <div class="slideshow-content">
+                <div class="wrap cols content-left">
+                  <div class="col-d-5 col-t-6 col-m-12 center-d">
+                    <h2 class="h1 slideshow-title">Fourth Collection</h2>
+                    <p class="slideshow-desc">Classic American silhouettes reimagined for forever, beyond modernity.</p>
+                    <div class="slideshow-actions">
+                      <a href="javascript:;" class="btn primary">Shop Now</a>
+                      <a href="javascript:;" class="btn outline">Read Story</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-single">
+              <div class="slideshow-image whitec"><img src="../images/slideshow-1.jpg" alt=""></div>
+              <div class="slideshow-content">
+                <div class="wrap cols content-left">
+                  <div class="col-d-5 col-t-6 col-m-12 center-d">
+                    <h2 class="h1 slideshow-title">Fifth Collection</h2>
+                    <p class="slideshow-desc">Classic American silhouettes reimagined for forever, beyond modernity.</p>
+                    <div class="slideshow-actions">
+                      <a href="javascript:;" class="btn primary">Shop Now</a>
+                      <a href="javascript:;" class="btn outline">Read Story</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <a href="javascript:;" name="slideshowsf" class="carousel-control prev" title="Previous slide"></a>
+            <a href="javascript:;" name="slideshowsf" class="carousel-control next" title="Next slide"></a>
+          </div>
+          <div class="slideshow-pag">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp comp-product-details" id="product-details">
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Product preview</h4>
+          <div class="dls">
+            <dl>
+              <dt>slide animation duration</dt>
+              <dd><span>0.6s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap page-wrap cols center-d">
+      <div class="col-d-12">
+        <h3 class="defi-subtitle text-center">Product preview (click preview for gallery)</h3>
+      </div>
+      <div class="col-d-5 col-m-12" id="preview-anchor">
+        <div class="product-preview-wrap preview-square">
+          <input type="radio" name="pd_preview" id="pdp-1" class="product-preview-anchor" checked>
+          <input type="radio" name="pd_preview" id="pdp-2" class="product-preview-anchor">
+          <input type="radio" name="pd_preview" id="pdp-3" class="product-preview-anchor">
+          <input type="radio" name="pd_preview" id="pdp-4" class="product-preview-anchor">
+          <input type="radio" name="pd_preview" id="pdp-5" class="product-preview-anchor">
+          <input type="radio" name="pd_preview" id="pdp-6" class="product-preview-anchor">
+          <input type="radio" name="pd_preview" id="pdp-7" class="product-preview-anchor">
+          <div class="product-preview" id="preview-box">
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/1.jpg" alt=""></label></div>
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/2.jpg" alt=""></label></div>
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/3.jpg" alt=""></label></div>
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/4.jpg" alt=""></label></div>
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/5.jpg" alt=""></label></div>
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/6.jpg" alt=""></label></div>
+            <div class="product-preview-single"><label for="gallery_view"><img src="../images/product/7.jpg" alt=""></label></div>
+          </div>
+          <div class="product-preview-thumbs" id="product-preview-thumbs">
+            <label for="pdp-1" class="product-preview-thumb active"><img src="../images/product/t/1.jpg" alt=""></label>
+            <label for="pdp-2" class="product-preview-thumb"><img src="../images/product/t/2.jpg" alt=""></label>
+            <label for="pdp-3" class="product-preview-thumb"><img src="../images/product/t/3.jpg" alt=""></label>
+            <label for="pdp-4" class="product-preview-thumb"><img src="../images/product/t/4.jpg" alt=""></label>
+            <label for="pdp-5" class="product-preview-thumb"><img src="../images/product/t/5.jpg" alt=""></label>
+            <label for="pdp-6" class="product-preview-thumb"><img src="../images/product/t/6.jpg" alt=""></label>
+            <label for="pdp-7" class="product-preview-thumb"><img src="../images/product/t/7.jpg" alt=""></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-d-12 product-details" id="detail-contents"></div>
+    </div>
+  </div>
+
+  <div class="comp comp-collection">
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Collection carousel</h4>
+          <div class="dls">
+            <dl>
+              <dt>slide animation duration</dt>
+              <dd><span>0.8s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+            </dl>
+            <dl>
+              <dt>arrow animation duration</dt>
+              <dd><span>0.125s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols">
+      <div class="col-d-12">
+        <h3 class="defi-subtitle text-center">Collection carousel</h3>
+      </div>
+      <div class="col-d-12 collection-carousel-wrap">
+        <input type="radio" name="carousel-1" id="pcr-1" class="carousel-anchor" checked>
+        <input type="radio" name="carousel-1" id="pcr-2" class="carousel-anchor">
+        <input type="radio" name="carousel-1" id="pcr-3" class="carousel-anchor">
+        <div class="collection-carousel-controls carousel-controls">
+          <a href="javascript:;" name="carousel-1" class="carousel-control prev" title="Previous slide"></a>
+          <a href="javascript:;" name="carousel-1" class="carousel-control next" title="Next slide"></a>
+        </div>
+        <div class="collection-carousel wrap unwrap-d unwrap-t">
+          <div class="collection-carousel-slide col-d-12 cols">
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></span>
+                  <span class="product-thumbnail-back"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04b.jpg" data-srcset="../images/product-thumb-04b.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collection-carousel-slide col-d-12 cols">
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie Henley Hoodie Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></span>
+                  <span class="product-thumbnail-back"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04b.jpg" data-srcset="../images/product-thumb-04b.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collection-carousel-slide col-d-12 cols">
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></span>
+                  <span class="product-thumbnail-back"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04b.jpg" data-srcset="../images/product-thumb-04b.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-d-3">
+              <div class="product-card">
+                <a href="product.html" class="product-thumbnail">
+                  <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></span>
+                </a>
+                <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+                <div class="price">
+                  <span>$595.00</span>
+                  <span>$649.00</span>
+                </div>
+                <div class="product-rates" data-rate="15" style=""></div>
+                <div class="product-actions">
+                  <a href="javascript:;" class="btn primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp kinect-comp comp-collection">
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Scroll-into-view</h4>
+          <ul>
+            <li><b>Show up</b> when user scroll the page to the element/component</li>
+            <li>Elements/Components on the same line <b>should have stagger animation</b></li>
+          </ul>
+          <div class="dls">
+            <dl>
+              <dt>animation duration</dt>
+              <dd><span>0.6s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.3, 0.05, 0, 1)</span></dd>
+            </dl>
+            <dl>
+              <dt>animation (stagger) delay</dt>
+              <dd><span>0.05s</span> between each animation</dd>
+            </dl>
+            <dl>
+              <dt>animation slide-up / translateY</dt>
+              <dd>from <span>64px</span> <u></u> <span>0px</span></dd>
+            </dl>
+            <dl>
+              <dt>animation fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols">
+      <div class="col-d-12">
+        <h3 class="defi-subtitle text-center">Scroll-into-view / Staggering animation</h3>
+      </div>
+      <div class="col-d-12 wrap unwrap-t cols product-list">
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-05.jpg" data-srcset="../images/product-thumb-05.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-06.jpg" data-srcset="../images/product-thumb-06.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-07.jpg" data-srcset="../images/product-thumb-07.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-08.jpg" data-srcset="../images/product-thumb-08.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></span>
+              <span class="product-thumbnail-back"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04b.jpg" data-srcset="../images/product-thumb-04b.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-05.jpg" data-srcset="../images/product-thumb-05.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-06.jpg" data-srcset="../images/product-thumb-06.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-07.jpg" data-srcset="../images/product-thumb-07.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-08.jpg" data-srcset="../images/product-thumb-08.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></span>
+              <span class="product-thumbnail-back"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04b.jpg" data-srcset="../images/product-thumb-04b.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-05.jpg" data-srcset="../images/product-thumb-05.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-06.jpg" data-srcset="../images/product-thumb-06.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-07.jpg" data-srcset="../images/product-thumb-07.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-08.jpg" data-srcset="../images/product-thumb-08.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-d-3 kinect-ele">
+          <div class="product-card">
+            <a href="product.html" class="product-thumbnail">
+              <span class="product-thumbnail-front"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></span>
+              <span class="product-thumbnail-back"><img class="lazy" src="../images/placeholder.png" data-src="../images/product-thumb-04b.jpg" data-srcset="../images/product-thumb-04b.jpg" alt=""></span>
+            </a>
+            <h3><a href="product.html">Everyday Henley Hoodie</a></h3>
+            <div class="price">
+              <span>$595.00</span>
+              <span>$649.00</span>
+            </div>
+            <div class="product-rates" data-rate="15" style=""></div>
+            <div class="product-actions">
+              <a href="javascript:;" class="btn primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- REGULAR POPUP -->
+<input type="checkbox" name="popups" id="center_popup" class="nodis">
+<div class="popup">
+  <label for="center_popup" class="popup-overlay popup-close"></label>
+  <div class="popup-box">
+    <label for="center_popup" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols text-center">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Center Popup</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="popup-box-actions cols text-center">
+      <div class="col-d-12">
+        <label for="center_popup" class="btn">close anw</label>
+        <label for="center_popup" class="btn primary">Okay close</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT DRAWER -->
+<input type="checkbox" name="popups" id="right_drawer" class="nodis">
+<div class="popup">
+  <label for="right_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box right action-fixed">
+    <label for="right_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Right Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols action-full">
+      <div class="col-d-12">
+        <label for="right_drawer" class="btn primary encourage emp">Close the drawer</label>
+        <label for="right_drawer" class="btn">Close it anyway</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEFT DRAWER -->
+<input type="checkbox" name="popups" id="left_drawer" class="nodis">
+<div class="popup">
+  <label for="left_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box left action-fixed">
+    <label for="left_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Left Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols action-full">
+      <div class="col-d-12">
+        <label for="left_drawer" class="btn primary encourage emp">Close the drawer</label>
+        <label for="left_drawer" class="btn">Close it anyway</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP DRAWER -->
+<input type="checkbox" name="popups" id="top_drawer" class="nodis">
+<div class="popup">
+  <label for="top_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box top">
+    <label for="top_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols text-center">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Top Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols text-center">
+      <div class="col-d-12">
+        <label for="top_drawer" class="btn">close anw</label>
+        <label for="top_drawer" class="btn primary">Okay close</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM DRAWER -->
+<input type="checkbox" name="popups" id="bottom_drawer" class="nodis">
+<div class="popup">
+  <label for="bottom_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box bottom">
+    <label for="bottom_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols text-center">
+      <div class="col-d-12">
+        <h2 class="h4 popup-title">Your Top Drawer</h2>
+      </div>
+    </div>
+    <div class="popup-box-actions cols text-center">
+      <div class="col-d-12">
+        <label for="bottom_drawer" class="btn">close anw</label>
+        <label for="bottom_drawer" class="btn primary">Okay close</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CURRENCY CART DRAWER -->
+<input type="checkbox" name="popups" id="cart_drawer" class="nodis">
+<div class="popup cart_drawer-popup" id="cart-drawer">
+  <label for="cart_drawer" class="popup-overlay popup-close"></label>
+  <div class="popup-box drawer-box right action-fixed">
+    <label for="cart_drawer" class="icon ib3 i-bclose popup-box-close"></label>
+    <div class="popup-box-content cols">
+      <div class="col-d-12">
+        <h2 class="h5 popup-title">Your shopping cart</h2>
+        <ul class="cart_drawer-list">
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-01.jpg" data-srcset="../images/product-thumb-01.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-02.jpg" data-srcset="../images/product-thumb-02.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-03.jpg" data-srcset="../images/product-thumb-03.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+                <li>This is a custom prop 1</li>
+                <li>This is a custom prop 2</li>
+                <li>This is a custom prop 3</li>
+                <li>This is a custom prop 4</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-04.jpg" data-srcset="../images/product-thumb-04.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-05.jpg" data-srcset="../images/product-thumb-05.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+                <li>This is a custom prop 1</li>
+                <li>This is a custom prop 2</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-06.jpg" data-srcset="../images/product-thumb-06.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-07.jpg" data-srcset="../images/product-thumb-07.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="cart_drawer-thumb"><img src="../images/product-thumb-08.jpg" data-srcset="../images/product-thumb-08.jpg" alt=""></a>
+            <div class="cart_drawer-meta">
+              <p class="cart_drawer-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="cart_drawer price"><span>$199.95</span></p>
+              <ul>
+                <li>M / SEAWEED</li>
+              </ul>
+              <div class="form form-inline quantity-input">
+                <button class="input-btn seg-btn subtle neutral">-</button>
+                <div class="form-input">
+                  <input type="number" class="item_quantity text-center subtle" min="1" max="99" step="1" value="1">
+                </div>
+                <button class="input-btn seg-btn subtle neutral">+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="popup-box-actions cols action-full">
+      <div class="col-d-12">
+        <dl class="cart_drawer-sum">
+          <dt><span class="coupon i-tag">SUMMERsALE</span></dt>
+          <dd><span class="price small">$20.00</span></dd>
+          <dt><span class="h6">Subtotal</span></dt>
+          <dd><span class="price">$2,645.00</span></dd>
+          <dt>Taxes and shipping calculated at checkout</dt>
+        </dl>
+        <label for="cart_drawer" class="btn">Go to cart</label>
+        <label for="cart_drawer" class="btn primary encourage emp">Checkout</label>
+      </div>
+    </div>
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Cart drawer</h4>
+          <p><i>After popup/drawer showed up</i></p>
+          <ul>
+            <li><b>Show list of cart items</b> with staggering effect</li>
+            <li><b>Show cart sum details</b> after a delay time</li>
+          </ul>
+          <div class="dls">
+            <dl>
+              <dt>animations duration</dt>
+              <dd><span>0.375s</span></dd>
+            </dl>
+            <dl>
+              <dt>cart sum animation delay</dt>
+              <dd><span>0.375s</span></dd>
+            </dl>
+            <dl>
+              <dt>animations fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+            </dl>
+          </div>
+          <div class="dls">
+            <dl>
+              <dt>cart items animation first start</dt>
+              <dd>delay <span>0.175s</span> before staggering</dd>
+            </dl>
+            <dl>
+              <dt>cart items animation (stagger) delay</dt>
+              <dd><span>0.05s</span> between each animation</dd>
+            </dl>
+            <dl>
+              <dt>cart items animation duration</dt>
+              <dd><span>0.325s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+            </dl>
+            <dl>
+              <dt>cart items slide-up / translateY</dt>
+              <dd>from <span>24px</span> <u></u> <span>0px</span></dd>
+            </dl>
+            <dl>
+              <dt>cart items fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH POPUP -->
+<input type="checkbox" name="popups" id="search_popup" class="nodis">
+<div class="popup search-popup" id="search-popup">
+  <label for="search_popup" class="popup-overlay popup-close"></label>
+  <div class="search-popup-wrap">
+    <div class="wrap cols center-d search-popup-executer" id="search-popup-executer" data-state="empty">
+      <div class="col-d-6">
+        <form action="" class="form form-inline search-popup-form">
+          <div class="form-input">
+            <input type="search" placeholder="What are you looking for" id="search-input" required>
+          </div>
+          <div class="form-cta">
+            <label for="search_popup" class="form-btn-link popup-close">Cancel</label>
+            <button type="submit" class="nodis"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="wrap cols center-d search-popup-processing text-center">
+      <div class="col-d-6">
+        <img src="../images/loading-icon.svg" class="spinning">
+      </div>
+    </div>
+    <div class="wrap cols center-d search-popup-fallback">
+      <div class="col-d-6">
+        <p>Your search for <span id="skw">"T-Shirt"</span> did not yield any results.</p>
+      </div>
+    </div>
+    <div class="wrap cols center-d search-popup-results">
+      <div class="col-d-6">
+        <ul class="search-popup-results-list">
+          <li>
+            <a href="javascript:;" class="search-popup-result-thumb"></a>
+            <div class="search-popup-result-meta">
+              <p class="search-popup-result-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="search-popup-result-price price"><span>$199.95</span></p>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="search-popup-result-thumb"></a>
+            <div class="search-popup-result-meta">
+              <p class="search-popup-result-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="search-popup-result-price price"><span>$199.95</span></p>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="search-popup-result-thumb"></a>
+            <div class="search-popup-result-meta">
+              <p class="search-popup-result-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="search-popup-result-price price"><span>$199.95</span></p>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="search-popup-result-thumb"></a>
+            <div class="search-popup-result-meta">
+              <p class="search-popup-result-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="search-popup-result-price price"><span>$199.95</span></p>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="search-popup-result-thumb"></a>
+            <div class="search-popup-result-meta">
+              <p class="search-popup-result-name"><a href="javascript:;">Canvas Trenchcoat</a></p>
+              <p class="search-popup-result-price price"><span>$199.95</span></p>
+            </div>
+          </li>
+        </ul>
+        <p><a href="javascript:;" class="page-link small">See all results</a></p>
+      </div>
+    </div>
+    <div class="code-trigger">
+      <div class="ani-group code-expander">
+        <div class="ani-col prop">
+          <h4 class="defi-subtitle">Search states</h4>
+          <p><i>After popup/drawer showed up</i></p>
+          <ul>
+            <li><b>Show loading indicator</b> after user typed in the input field for a while (defer input request)</li>
+            <li><b>Show list of results</b> with staggering effect if there are results</li>
+            <li><b>Show a fallback message</b> if there are no results</li>
+          </ul>
+          <div class="dls">
+            <dl>
+              <dt>animations duration</dt>
+              <dd><span>0.325s</span></dd>
+            </dl>
+            <dl>
+              <dt>cubic-bezier / easing</dt>
+              <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+            </dl>
+            <dl>
+              <dt>animations fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+          </div>
+          <div class="dls">
+            <dl>
+              <dt>results animation (stagger) delay</dt>
+              <dd><span>0.05s</span> between each animation</dd>
+            </dl>
+            <dl>
+              <dt>results stagger cubic-bezier / easing</dt>
+              <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+            </dl>
+            <dl>
+              <dt>results slide-up / translateY</dt>
+              <dd>from <span>24px</span> <u></u> <span>0px</span></dd>
+            </dl>
+            <dl>
+              <dt>results fade-in opacity</dt>
+              <dd>from <span>0.0</span> <u></u> <span>1.0</span></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY VIEW -->
+<input type="checkbox" name="popups" id="gallery_view" class="nodis">
+<div class="popup gallery-popup" id="gallery-view">
+  <label for="gallery_view" class="popup-overlay popup-close"></label>
+  <input type="checkbox" name="gallery_thumbs" id="gallery_thumbs" class="nodis" checked>
+  <div class="gallery-wrap">
+    <input type="radio" name="gallery-single" id="gs-1" class="gallery-anchor" checked>
+    <input type="radio" name="gallery-single" id="gs-2" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-3" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-4" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-5" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-6" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-7" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-8" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-9" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-10" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-11" class="gallery-anchor">
+    <input type="radio" name="gallery-single" id="gs-12" class="gallery-anchor">
+    <div class="gallery-thumbs-wrap">
+      <label for="gallery_thumbs" class="gallery-thumbs-toggle"><span></span></label>
+      <div class="gallery-thumbs">
+        <label for="gs-1" class="active"><img src="../images/product/t/1.jpg"></label>
+        <label for="gs-2"><img src="../images/product/t/2.jpg"></label>
+        <label for="gs-3"><img src="../images/product/t/3.jpg"></label>
+        <label for="gs-4"><img src="../images/product/t/4.jpg"></label>
+        <label for="gs-5"><img src="../images/product/t/5.jpg"></label>
+        <label for="gs-6"><img src="../images/product/t/6.jpg"></label>
+        <label for="gs-7"><img src="../images/product/t/1.jpg"></label>
+        <label for="gs-8"><img src="../images/product/t/2.jpg"></label>
+        <label for="gs-9"><img src="../images/product/t/3.jpg"></label>
+        <label for="gs-10"><img src="../images/product/t/4.jpg"></label>
+        <label for="gs-11"><img src="../images/product/t/5.jpg"></label>
+        <label for="gs-12"><img src="../images/product/t/6.jpg"></label>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="gallery-single"><img src="../images/product/1.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/2.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/3.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/4.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/5.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/6.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/1.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/2.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/3.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/4.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/5.jpg"></div>
+      <div class="gallery-single"><img src="../images/product/6.jpg"></div>
+    </div>
+    <label for="gallery_view" class="icon ib3 i-bclose popup-box-close"></label>
+  </div>
+  <div class="code-trigger">
+    <div class="ani-group code-expander">
+      <div class="ani-col prop">
+        <h4 class="defi-subtitle">Gallery view</h4>
+        <ul>
+          <li><b>Change appearance</b> when user cursor touch & interact with arrow elements (previous/next button)</li>
+        </ul>
+        <div class="dls">
+          <dl>
+            <dt>slide animation duration</dt>
+            <dd><span>0.6s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.56, 0.0, 0.24, 1.0)</span></dd>
+          </dl>
+          <dl>
+            <dt>arrow animation duration</dt>
+            <dd><span>0.125s</span></dd>
+          </dl>
+          <dl>
+            <dt>cubic-bezier / easing</dt>
+            <dd><span>(0.25, 0.1, 0.25, 1.0)</span>/<span><b>ease</b></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/scripts.js"></script>
+  
+</body>
+</html>

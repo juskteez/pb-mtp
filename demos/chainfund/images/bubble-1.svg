@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="181px" height="138px" viewBox="0 0 181 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>bubble-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing-02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-422.000000, -910.000000)">
+        <g id="Group-38" transform="translate(422.000000, 910.000000)" fill="#E3F4EE">
+            <g id="Group-37">
+                <path d="M52.8837012,129.093711 C44.2284209,134.245461 31.4814471,137.731433 19.517554,137.731433 C28.7439116,136.458183 34.0101726,130.939397 35.316337,121.175075 C13.8382056,108.815752 0,89.4127599 0,67.595679 C0,30.2636163 40.5182301,0 90.5,0 C140.48177,0 181,30.2636163 181,67.595679 C181,104.927742 140.48177,135.191358 90.5,135.191358 C77.0783931,135.191358 64.3391867,133.009098 52.8837012,129.093711 Z" id="bubble-1" transform="translate(90.500000, 68.865717) scale(-1, 1) translate(-90.500000, -68.865717) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

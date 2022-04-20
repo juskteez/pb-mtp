@@ -1,0 +1,383 @@
+.about-page
+  .main-content
+    padding: 0 20px
+    @media (min-width: 1440px)
+      padding: 170px 60px 0
+
+.sub-logo
+  margin-bottom: 9px
+  @media (min-width: 1440px)
+    margin-bottom: 0
+  svg
+    width: 127px
+    height: auto
+    @media (min-width: 1440px)
+      width: 210px
+
+.about-title
+  margin-bottom: 20px
+  font-size: 24px
+  line-height: 30px
+  @media (min-width: 1440px)
+    margin-bottom: 25px
+    font-size: 42px
+    line-height: 60px
+
+.sub-title
+  visibility: hidden
+
+.sub-page-header
+  position: relative
+  height: 100vh
+  padding-top: 125px
+  overflow: hidden
+  text-align: center
+  z-index: 1
+  @media (min-width: 1440px)
+    padding-top: 0
+  .mouse-wrapper
+    position: static
+    display: inline-block
+    visibility: hidden
+    p
+      bottom: -90px
+      left: 50%
+      text-indent: 0
+      z-index: 1
+      transform: translateX(-50%)
+      span
+        width: 130px
+        transform: rotate(90deg)
+
+.wave-box
+  width: 945px
+  height: 945px
+  margin: 0 auto
+  position: absolute
+  top: -5%
+  left: 50%
+  z-index: 0
+  visibility: hidden
+  transform: translate3d(-50%, 0, 0)
+  @media (max-width: 480px)
+    top: -12%
+    width: 280px !important
+    height: 280px !important
+  @media (min-width: 480px)
+    top: -12%
+  @media (min-width: 700px)
+    top: -23%
+  @media (min-width: 1024px)
+    margin: 60px auto 0
+  @media (min-width: 1440px)
+    top: -45%
+
+.wave
+  opacity: .4
+  position: absolute
+  top: 5%
+  left: 0
+  background: $main-color
+  width: 100%
+  height: 100%
+  transform-origin: 50% 48%
+  border-radius: 48%
+  animation: drift 3000ms infinite linear
+
+.wave.-three
+  animation: drift 5000ms infinite linear
+
+.wave.-two
+  animation: drift 7000ms infinite linear
+  opacity: .1
+  background: $main-color
+
+.wave:last-child
+  animation: drift 9000ms infinite linear
+  opacity: .5
+  background: $main-color
+
+.our-value
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  flex-direction: column
+  .left-col
+    width: 100%
+  .right-col
+    width: 100%
+  @media (min-width: 1024px)
+    flex-direction: row
+    .left-col
+      width: 37.5%
+      padding-right: 15%
+    .right-col
+      width: 62.5%
+
+.our-value__list
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  flex-direction: column
+  position: relative
+  @media (min-width: 1024px)
+    flex-direction: row
+  span:last-child
+    position: absolute
+    width: 80px
+    height: 80px
+    border-radius: 50%
+    left: 0
+    bottom: 0
+    transform: translate(-50%,0) scale(0.25)
+    pointer-events: none
+    transition: 0.6s all cubic-bezier(.4,0,.15,1)
+    z-index: 1
+
+    &:before
+      //content: "" // Tam bo cho den khi lam tinh nang show anh khi hover
+      content: none
+      position: absolute
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      background-color: $main-color
+      left: 0
+      bottom: 0
+      transition: 0.6s all cubic-bezier(.4,0,.15,1)
+      transform: scale(0)
+      transition-delay: .125s
+      opacity: 0
+  div:nth-of-type(1).active ~ span:last-child,
+  div:nth-of-type(1):hover ~ span:last-child
+    transform: translate(-50%,0) scale(1) translate3d(0,-390px,0)
+    &:before
+      transform: scale(1)
+      transition-delay: .625s
+      opacity: 1
+
+  div:nth-of-type(2).active ~ span:last-child,
+  div:nth-of-type(2):hover ~ span:last-child
+    transform: translate(-50%,0) scale(1) translate3d(calc(475% + 70px),-390px,0)
+    &:before
+      transform: scale(1)
+      transition-delay: .625s
+      opacity: 1
+
+  div:nth-of-type(3).active ~ span:last-child,
+  div:nth-of-type(3):hover ~ span:last-child
+    transform: translate(-50%,0) scale(1) translate3d(0,-245px,0)
+    &:before
+      transform: scale(1)
+      transition-delay: .625s
+      opacity: 1
+
+  div:nth-of-type(4).active ~ span:last-child,
+  div:nth-of-type(4):hover ~ span:last-child
+    transform: translate(-50%,0) scale(1) translate3d(calc(475% + 70px),-245px,0)
+    &:before
+      transform: scale(1)
+      transition-delay: .625s
+      opacity: 1
+
+  div:nth-of-type(5).active ~ span:last-child,
+  div:nth-of-type(5):hover ~ span:last-child
+    transform: translate(-50%,0) scale(1) translate3d(0,-100px,0)
+    &:before
+      transform: scale(1)
+      transition-delay: .625s
+      opacity: 1
+
+  span:last-child
+    transform: translate(-50%,0) scale(1)
+    opacity: 1
+
+.our-value__item
+  position: relative
+  width: 100%
+  margin-bottom: 14px
+  z-index: 10
+  @media (min-width: 1024px)
+    width: calc(50% - 35px)
+    margin-bottom: 50px
+
+.our-value__wrapper
+  position: relative
+  padding-top: 945px
+  padding-bottom: 25px
+  @media (max-width: 480px)
+    padding-top: 220px
+  @media (min-width: 1440px)
+    height: 100vh
+    padding-bottom: 85px
+
+.post-list
+  margin: 0 -60px
+
+.post-list__item-inner
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  flex-direction: column
+  @media (min-width: 1024px)
+    flex-direction: row
+  .post-list__item-image
+    position: relative
+    max-width: 100%
+    flex: 1 0 100%
+    order: 0
+    overflow: hidden
+    @media (min-width: 1024px)
+      max-width: 50%
+      flex: 1 0 50%
+      order: 1
+    &-inner
+      position: relative
+    img
+      width: 100%
+      height: auto
+    .primary-mask
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      background-color: $main-color
+  .post-list__item-content
+    max-width: 100%
+    flex: 1 0 100%
+    padding: 60px 60px 0
+    order: 1
+    @media (min-width: 1024px)
+      max-width: 50%
+      flex: 1 0 50%
+      order: 0
+      padding: 0 60px
+
+.post-list__item-content-inner
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+
+.post-list__item
+  &.last-child
+    padding: 0
+    @media (min-width: 1024px)
+      padding: 120px 0 150px
+    .post-list__item-image
+      max-width: 100%
+      flex: 1 0 100%
+      padding: 0
+      order: 0
+      @media (min-width: 1024px)
+        max-width: 50%
+        flex: 1 0 50%
+        padding: 0 60px
+    .post-list__item-content
+      max-width: 100%
+      flex: 1 0 100%
+      padding: 32px 60px 60px
+      order: 1
+      @media (min-width: 1024px)
+        max-width: 50%
+        flex: 1 0 50%
+        padding: 0 60px 0 0
+  &.first-child
+    padding-bottom: 65px
+    background-color: #f0f3f7
+    @media (min-width: 1440px)
+      padding-bottom: 0
+
+.two-up
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  margin: 0 -60px
+  padding: 80px 0 60px
+  background-color: #F6F8FA
+  @media (min-width: 1024px)
+    flex-direction: row
+    padding: 164px 0 300px
+  .col
+    width: 100%
+    @media (min-width: 1024px)
+      width: 50%
+    &--left
+      padding: 0 60px
+    &--right
+      padding: 0 60px
+      @media (min-width: 1024px)
+        padding-right: 60px
+        padding-left: 0
+
+.about-bottom-section
+  margin: 0 -20px
+  padding: 50px 20px
+  background-color: $main-color
+  text-align: center
+  .wiggler
+    height: auto
+    padding: 20px 32px
+    color: #fff
+    border-radius: 30px
+    &:hover
+      background-color: $black-color
+  @media (min-width: 1440px)
+    margin: 0 -60px
+    padding: 100px 60px 150px
+
+.about-bottom-section__title
+  margin-bottom: 20px
+
+.about-bottom-section__sub-title
+  margin-bottom: 20px
+
+.team-list
+  padding-bottom: 30px
+  padding-top: 50px
+  @media (min-width: 1440px)
+    padding-top: 85px
+    padding-bottom: 60px
+
+.team-list__title
+  margin-bottom: 50px
+  @media (min-width: 1440px)
+    margin-bottom: 30px
+
+.team-list__item
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+  //&.team-list__item--maaike
+  //  margin-top: -20px
+
+.team-list__title
+  text-align: center
+
+.team-list__item-image
+  margin-bottom: 30px
+  border-radius: 50%
+  text-align: center
+  overflow: hidden
+  img
+    width: 245px
+    height: 245px
+    border-radius: 50%
+    filter: gray
+    -webkit-filter: grayscale(1)
+    -webkit-transition: all .8s ease-in-out
+    &:hover
+      filter: none
+      -webkit-filter: grayscale(0)
+      -webkit-transform: scale(1.01)
+    //.team-list__item--maaike &
+    //  width: 100%
+    //  height: auto
+
+.team-list__item-body
+  text-align: center
+
+.team-list__item-title
+  margin-bottom: 7px

@@ -1,0 +1,67 @@
+// Editable variables
+$base-width: 1320
+$col-count: 12
+$base-gutter: 40
+$tablet-gutter: 20
+$mobile-gutter: 16
+
+// Fixed variables
+$divided-gutter: $base-gutter/2*1px
+$divided-tgutter: $tablet-gutter/2*1px
+$divided-mgutter: $tablet-gutter/2*1px
+$col-width: (($base-width/$col-count) / $base-width) * 100%
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
+.cols
+  display: flex
+  position: relative
+  flex-wrap: wrap
+  &.nowrap
+    flex-wrap: nowrap
+
+  +container_align('d')
+
+  &.middle *[class^="col-"]
+    align-self: center
+
+  .pad
+    padding: 0 60px
+
+  .pad-l
+    padding-left: 60px
+
+  .pad-r
+    padding-right: 60px
+
+@for $i from 1 through 6
+  .col-#{$i}
+    width: #{(100/6)*$i*1%}
+    position: relative
+
+@media screen and (max-width: 767px)
+
+  .cols
+    +container_align('m')
+
+    .pad-l
+      padding-left: 20px
+
+    .pad-r
+      padding-right: 20px
+
+    .pad-m
+      padding: 0 20px
+
+    .nopad-m
+      padding: 0
+
+    &.middle *[class^="col-"]
+      align-self: unset
+
+    @for $i from 1 through 6
+      .col-m-#{$i}
+        width: #{(100/6)*$i*1%}

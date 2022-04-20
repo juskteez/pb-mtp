@@ -1,0 +1,48 @@
+/* Tablet Portrait */
+
+.home_uniquepoint
+  &s
+    padding-bottom: 32px
+    .wrap
+      max-width: 940px
+
+  .home_keypoint_title
+    &:not(.small)
+      font-size: 40px
+      line-height: 48px
+
+  &#dcsp
+    .home_uniquepoint_thumb_wrap
+      img
+        height: 400px
+      &:before
+        width: calc(100% + 48px + 240px)
+      &:after
+        left: calc(100% + 24px + 240px)
+        box-shadow: inset 0 56px $main-contrast-color, inset 0 -56px $main-contrast-color
+
+  &#dtdc
+    .home_uniquepoint_thumb_wrap
+      img
+        height: 450px
+        object-position: center
+        object-fit: cover
+      &:before
+        width: calc(50vw + 48px + 50vw)
+        left: calc(-24px - 280px)
+      &:after
+        right: calc(100% + 24px + 280px)
+        box-shadow: inset 0 calc(384px - 330px) $main-contrast-color, inset 0 calc((384px - 330px) * -1) $main-contrast-color
+
+  &#ndndt
+    .home_uniquepoint_thumb_wrap
+      img
+        height: 450px
+        object-position: center
+        object-fit: cover
+      &:before
+        width: calc(50vw + 48px + 50vw)
+        right: calc(-24px - 240px)
+      &:after
+        left: calc(100% + 24px + 240px)
+        box-shadow: inset 0 calc(384px - 350px) $main-contrast-color, inset 0 calc((384px - 350px) * -1) $main-contrast-color

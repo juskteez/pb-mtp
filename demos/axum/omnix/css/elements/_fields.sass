@@ -1,0 +1,49 @@
+/* Fields */
+
+input,
+select,
+textarea,
+button,
+select,
+.unfocus
+	&:focus
+		outline: none
+
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+.input,
+select,
+textarea
+  display: inline-block
+  background-color: #fff
+  border-radius: 3px
+  line-height: 18px
+  padding: 17px 24px
+  height: 56px
+  vertical-align: middle
+  color: $black-color
+  font-size: $fs5
+  appearance: none
+  border: 1px solid rgba(25,167,230,0.20)
+  @extend .easing
+  &.dark
+    background-color: #111518
+    color: #fff
+
+  &.big
+    height: 56px
+    font-size: $fs5
+    line-height: 22px
+    padding: 17px 26px
+
+textarea
+  max-width: 100%
+  min-height: 160px
+
+select
+  //background-image: url("../images/select_arrow.svg")
+  background-position: calc(100% - 16px) center
+  background-repeat: no-repeat

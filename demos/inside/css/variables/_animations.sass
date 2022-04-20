@@ -1,0 +1,29 @@
+/* Animation Library */
+$ease-time: 0.125s
+
+$main-cubic: cubic-bezier(.53,.1,.2,1)
+$carousel-cubic: cubic-bezier(.56,0,.24,1)
+
+
+.easing
+  transition: $ease-time all ease
+
+
+@keyframes proceeding
+  0%
+    transform: translate3d(-50%,0,0) scaleX(2)
+    right: 100%
+    opacity: 1
+  100%
+    transform: translate3d(100%,0,0) scaleX(1)
+    right: 0
+    opacity: 1
+
+.spinning
+  animation: 0.675s spinning linear infinite
+
+@keyframes spinning
+  0%
+    transform: translate3d(0,0,0) rotate(0deg)
+  100%
+    transform: translate3d(0,0,0) rotate(360deg)

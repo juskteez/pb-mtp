@@ -1,0 +1,95 @@
+/* Buttons */
+
+@font-face
+    font-family: 'GraphikWeb'
+    src: url('../css/fonts/Graphik-Semibold.woff2') format('woff2'), url('../css/fonts/Graphik-Semibold.woff') format('woff')
+    font-weight: 600
+    font-style: normal
+
+@font-face
+    font-family: 'GraphikWeb'
+    src: url('../css/fonts/Graphik-Light.woff2') format('woff2'), url('../css/fonts/Graphik-Light.woff') format('woff')
+    font-weight: 300
+    font-style: normal
+
+@font-face
+    font-family: 'GraphikWeb'
+    src: url('../css/fonts/Graphik-Regular.woff2') format('woff2'), url('../css/fonts/Graphik-Regular.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+
+
+
+html,
+body,
+input,
+button,
+select,
+textarea
+  +typo($font-stack,$font-base,normal,'',1.625,$text-color,'')
+
+.lighter
+  font-weight: 400
+
+.bolder,
+.bold
+  font-weight: bold
+
+.uppercase
+  text-transform: uppercase
+
+.lowercase
+  text-transform: lowercase
+
+a
+  @extend .easing
+  color: $text-color
+  color: rgba(255,255,255,0.7)
+  &:hover
+    color: $text-color
+
+  &:not(.btn):not(.main_content-page):not(.pricing-trigger):not(.soundtrack-single)
+    position: relative
+    display: inline-block
+    &:after
+      content: ""
+      position: absolute
+      bottom: -1px
+      right: -8px
+      width: 0
+      height: 1px
+      background-color: #fff
+      animation: link_normal 0.4s ease forwards
+    @keyframes link_normal
+      0%
+        right: 0
+        width: 100%
+      100%
+        right: -8px
+        width: 0
+    &:hover:after
+      width: 100%
+      left: 0
+      right: 0
+      animation: link_hover 0.4s ease forwards
+    @keyframes link_hover
+      0%
+        left: -8px
+        width: 0
+      100%
+        left: 0
+        width: 100%
+
+p
+  margin-bottom: 20px
+  font-size: $fs35
+
+.text-lighter-color
+  color: $text-lighter-color
+
+.purple-color
+  color: $purple-color
+
+.green-color
+  color: $green-darker-color

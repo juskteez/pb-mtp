@@ -1,0 +1,321 @@
+/* Mobile Portrait High Resolution */
+.main_header
+  padding: 20px
+
+.main_sub
+  padding: 10px 0
+  li:not(:last-child)
+    display: none
+
+.main_navigation
+  &-col
+    width: 0
+    &:nth-of-type(2n+2)
+      width: 100%
+
+
+  &-dust
+    display: none
+
+.main_menu
+  font-size: 40px
+  line-height: 52px
+  left: 0
+  text-stroke: 1px $text-color
+  -webkit-text-stroke: 1px $text-color
+  top: 88px
+  transform: none !important
+
+  a
+    padding: 0 20px
+    transform: none !important
+
+  a[data-title]:after
+    text-indent: 20px
+    height: calc(100% + 6px)
+
+.nav_contact-wrap
+  padding: 0 20px
+  bottom: 24px
+
+.nav-stick
+  &.blue
+    margin-left: 48px
+  &.red
+    margin-left: -24px
+  svg
+    height: 56px
+
+.main_footer
+  display: none
+
+.home_slider
+
+  &-content
+    bottom: 72px
+    padding: 0 20px
+
+  &-name
+    line-height: 40px
+    font-size: 40px
+
+  &-desc
+    font-size: 18px
+    line-height: 28px
+
+  &-control
+    bottom: 24px
+    padding: 0 20px
+    &_pag
+      font-size: 14px
+      margin-right: 8px
+
+  &-side_graph
+    height: calc(100% - 240px)
+
+    .side_graph-col
+      width: 11%
+      margin: 0 4%
+
+.manipulated_lines
+  i:nth-of-type(2n+2)
+    display: none
+
+.wrap
+  width: calc(100% - 40px)
+
+.page
+  &_title
+    font-size: 36px
+    line-height: 36px
+    margin-bottom: 24px
+
+  &_desc
+    line-height: 24px
+    font-size: 14px
+
+.partners_list
+  img
+    height: 56px
+    margin: 0 24px
+    margin-bottom: 40px
+    align-self: center
+
+.team_slider-section .page_title
+  max-width: 334px
+
+.about_nav
+  flex-wrap: wrap
+  a
+    padding: 24px 0
+    font-size: 18px
+    width: 100%
+    svg
+      height: 32px
+
+.service
+  &_content
+    width: 100%
+    padding-top: 0
+    padding-right: 0
+
+  &_section
+    min-height: 0
+    padding-top: 96px
+    padding-bottom: 72px
+    z-index: unset
+    &-content
+      align-self: flex-start
+      transform: translateZ(100px)
+      z-index: 1
+
+    &-graphics
+      transform: translateZ(-100px) scale(0.6) translate3d(-80px,0,0)
+      transform-origin: top right
+      z-index: -1
+
+  &_title
+    font-size: 24px
+    line-height: 28px
+
+  &_desc
+    overflow: hidden
+    max-height: 66px
+    transition: 0.6s all ease
+    &_toggle
+      color: #fff
+      font-weight: 500
+      display: inline-block
+      margin-top: 16px
+      border-bottom: 1px dotted
+      transition: 0.3s all ease
+    &_checker:checked
+      &~.service_desc
+        max-height: 300vh
+      &~.service_desc_toggle
+        opacity: 0
+        pointer-events: non
+
+.articles
+  &_page
+    height: auto
+
+  &_fragments
+    position: fixed
+
+  &_content
+    position: static
+    top: auto
+    transform: none
+    padding: 0
+
+  &_list
+    display: block
+    transform: none !important
+    white-space: normal
+    padding: 0 20px
+    padding-bottom: 48px
+    &>li
+      display: block
+      width: 100%
+      margin-left: 0
+      margin-top: 32px
+      &:before
+        display: none
+
+.article
+  &_title
+    max-width: 100%
+    font-size: 24px
+
+  &_excerpt
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 16px
+
+.fix_page_header
+  position: relative
+  left: auto
+  bottom: auto
+  padding: 0 20px
+  padding-top: 96px
+
+.contact_content
+  position: relative
+  top: auto
+  left: auto
+  transform: none
+  padding-top: 24px
+
+.contact_section
+  margin-bottom: 32px
+
+  .section_title
+    margin-bottom: 16px
+
+.contact
+  &_form_line
+    display: block
+    
+  &_form_prop
+    &:not(:last-child)
+      margin-right: 0
+
+
+    textarea
+      height: 140px
+      max-height: 140px
+
+    &.submit .btn
+      width: 100%
+      display: block
+
+@keyframes fragments_in
+  0%
+    transform: translate3d(0,-32px,0) scale(0.55)
+    opacity: 0
+  100%
+    transform: translate3d(0,0,0) scale(0.6)
+    opacity: 1
+
+.overlay
+  .overlay__item
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    padding: 0
+    padding-bottom: 64px
+  .overlay__content
+    position: static
+    min-height: 0
+    max-height: none
+    height: auto
+    overflow: visible
+    padding: 20px
+    margin-left: 0
+    margin-right: 0
+    padding-bottom: 64px
+    &>*:last-child
+      margin-bottom: 64px
+
+.blog
+  &_content
+    padding: 96px 20px
+    max-width: 100%
+
+    .section_title
+      margin-bottom: 32px
+
+  &_sidebar
+    position: static
+    width: 100%
+    padding-top: 56px
+
+    .section_title
+      display: none
+
+  &_cat-list
+    font-size: 18px
+
+  &_item
+    position: relative
+    width: 100%
+    margin-bottom: 32px
+    margin-right: 0
+
+    &-thumb
+      height: 56vw
+      margin-bottom: 12px
+
+.single
+  &_content
+    padding: 96px 20px
+    padding-bottom: 32px
+    &:after
+      width: 100%
+      margin-top: 32px
+
+  &_title
+    margin-bottom: 16px
+    font-size: 24px
+
+  &_meta
+    font-size: 12px
+    margin-bottom: 32px
+
+  &_entry
+    font-size: 14px
+
+    blockquote
+      padding-left: 1.25rem
+      font-size: 16px
+
+  &_related
+    padding: 0 20px
+
+    .section_title
+      text-align: left
+      font-size: 24px
+      margin-bottom: 32px
+
+    .blog_item-thumb
+      height: 60vw

@@ -1,0 +1,72 @@
+/* Fields */
+
+input,
+select,
+textarea,
+button,
+select,
+.unfocus
+	&:focus
+		outline: none
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button
+  visibility: hidden
+  display: none !important
+  pointer-events: none
+  position: absolute
+  right: 0
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+.input,
+select,
+textarea
+  display: inline-block
+  background-color: rgba(255,255,255,0.1)
+  border-radius: 2px
+  line-height: 24px
+  padding: 10px 14px
+  height: 44px
+  vertical-align: middle
+  border: none
+  color: $text-color
+  font-size: $fs6
+  appearance: none
+  position: relative
+  box-shadow: none
+  transition: 0.2s all ease
+  &:focus
+    background-color: #fff
+    color: $gray-darker-color
+
+  &.disabled
+    background-color: rgba(182,205,210,0.1)
+    pointer-events: none
+
+  &.big
+    height: 60px
+    font-size: $fs5
+    padding: 17px 32px
+    border-radius: 30px
+
+textarea
+  max-width: 100%
+  min-height: 150px
+  resize: none
+
+select,
+.social_input_selection
+  background-image: url("../images/select_arrow.svg")
+  background-position: calc(100% - 20px) center
+  background-repeat: no-repeat

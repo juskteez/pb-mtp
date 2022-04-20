@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Giỏ hàng - CMC Telecom</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body class="cart">
+<div id="body">
+  <header id="main_header" class="cmc_main_header">
+    <div class="cmc_sub_header">
+      <div class="wrap">
+        <div class="float_left cmc_sub_contact">
+          <ul class="cmc_sub_contact_list">
+            <li><a href="tel:18002020">Hotline 24/7: 1800 2020</a></li>
+            <li><a href="mailto:support@cmctelecom.vn">support@cmctelecom.vn</a></li>
+          </ul>
+        </div>
+        <div class="float_right cmc_sub_menu">
+          <ul class="cmc_sub_menu_list">
+            <li><a href="news.html">Tin tức</a></li>
+            <li><a href="faq.html">Hỏi đáp</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="login.html" class="btn small light">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cmc_main_menu_wrap">
+      <div class="wrap">
+        <div class="float_left cmc_logo_wrap">
+          <a href="index.html" class="logo"><img src="images/logo.svg" alt=""></a>
+        </div>
+        <div class="float_right cmc_main_menu">
+          <ul class="cmc_main_menu_list">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li>
+              <a href="service-datacenter.html">Data Center</a>
+              <ul>
+                <li><a href="service-server.html">Thuê Máy chủ</a></li>
+                <li><a href="service-servercenter.html">Thuê chỗ đặt máy chủ</a></li>
+                <li><a href="service-rack.html">Thuê tủ rack</a></li>
+                <li><a href="service-datacenter.html">Thuê không gian DC</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-datamanagement.html">Dịch vụ Quản trị</a>
+              <ul>
+                <li><a href="">Manage Backup</a></li>
+                <li><a href="">Manage Cloud</a></li>
+                <li><a href="">Manage Security</a></li>
+                <li><a href="">Manage Connectivity</a></li>
+                <li><a href="">Manage Infrastructure</a></li>
+                <li><a href="">Manage Monitoring</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-cloudserver.html">Cloud</a>
+              <ul>
+                <li><a href="">CMC Cloud</a></li>
+                <li><a href="">AWS</a></li>
+                <li><a href="">MS Azure</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="service-onlineservices.html">Dịch vụ Online</a>
+              <ul>
+                <li><a href="service-domain.html">Domain</a></li>
+                <li><a href="service-hosting.html">Hosting</a></li>
+                <li><a href="service-vps.html">VPS</a></li>
+                <li><a href="service-email.html">Email Server</a></li>
+                <li><a href="service-ssl.html">SSL</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="javascript:;" class="cmc_main_menu_trigger"><span></span></a>
+          <a href="cart.html" class="cmc_main_menu_ico cart" data-cart="2"><img src="images/ico_cart.svg"/></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="content" class="cmc_content">
+    <div class="wrap cols page_content_body">
+      <div class="col-d-12">
+        <div class="shop_process">
+          <div class="shop_process_wrap">
+            <div class="shop_process_step step-1 active">
+              <a href="javascript:;">
+                <span class="shop_process_ico">
+                  <img src="images/cart_active.svg">
+                  <img src="images/cart_inactive.svg">
+                </span>
+                <span class="shop_process_label">Giỏ hàng</span>
+              </a>
+            </div>
+            <div class="shop_process_step step-2">
+              <a href="javascript:;">
+                <span class="shop_process_ico">
+                  <img src="images/checkout_active.svg">
+                  <img src="images/checkout_inactive.svg">
+                </span>
+                <span class="shop_process_label">Thanh toán</span>
+              </a>
+            </div>
+            <div class="shop_process_step step-3">
+              <a href="javascript:;">
+                <span class="shop_process_ico">
+                  <img src="images/checkedout_active.svg">
+                  <img src="images/checkedout_inactive.svg">
+                </span>
+                <span class="shop_process_label">Hoàn tất Thanh toán</span>
+              </a>
+            </div>
+          </div>
+          <div class="shop_process_bar" current-step="1"><span></span></div>
+        </div>
+        <h1 class="h2 page_title">Giỏ hàng của bạn</h1>
+        <p class="page_desc">
+          Đối với mỗi dịch vụ, bạn có thể tùy chọn thêm dịch vụ bổ sung như: <span class="clear">Thêm dung lượng</span>, <span class="clear">RAM</span>, <span class="clear">IP</span>, <span class="clear">Hệ thống Bảo mật</span>, ...
+        </p>
+        <table class="table product_table cart_table">
+          <thead>
+            <tr>
+              <td>Tên dịch vụ</td>
+              <td>Mã dịch vụ</td>
+              <td>Đơn giá/Năm</td>
+              <td>Thời hạn</td>
+              <td>Dịch vụ bổ sung</td>
+              <td>Thành tiền</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="table_product_mini">
+                  <a href="javascript:;" class="product_removal table_row_removal" title="Xóa sản phẩm này"></a>
+                  <h3 class="table_product_title label">Thuê máy chủ - Máy chủ HP</h3>
+                  <ul class="table_product_list">
+                    <li>CPU: Intel Xeon 4C E3-1230V5</li>
+                    <li>RAM: 8G</li>
+                    <li>HDD: 1TB</li>
+                    <li>Băng thông trong nước: 200Mbps</li>
+                    <li>Băng thông quốc tế: 4Mbps</li>
+                  </ul>
+                </div>
+              </td>
+              <td class="top_note"><span class="table_product_code product_code">FGHJ5678</span></td>
+              <td title="Đơn giá"><span class="price product_price table_product_price">1.200.000 VNĐ</span></td>
+              <td title="Thời hạn">
+                <div class="input-wrap">
+                  <select name="" id="" class="input select small">
+                    <option value="" default disabled>Thời hạn</option>
+                    <option value="1">1 năm</option>
+                    <option value="2" selected>2 năm</option>
+                    <option value="3">3 năm</option>
+                  </select>
+                </div>
+              </td>
+              <td title="Dịch vụ bổ sung"><a href="javascript:;" class="btn outline plus product_addon small" popup="#product_addon" product-id=""><svg width="10px" height="10px" viewBox="0 0 10 10"><polygon points="5.98130841 0 5.98130841 4.01869159 10 4.01869159 10 5.98130841 5.98130841 5.98130841 5.98130841 10 4.01869159 10 4.01869159 5.98130841 0 5.98130841 0 4.01869159 4.01869159 4.01869159 4.01869159 0"></polygon></svg> Thêm</a></td>
+              <td class="sum_card_price" title="Tổng giá"><span class="price product_price table_product_price sum_price">26.400.000 VNĐ</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table_product_mini">
+                  <a href="javascript:;" class="product_removal table_row_removal" title="Xóa sản phẩm này"></a>
+                  <h3 class="table_product_title label">Thuê máy chủ - Máy chủ HP</h3>
+                  <ul class="table_product_list">
+                    <li>CPU: Intel Xeon 4C E3-1230V5</li>
+                    <li>RAM: 8G</li>
+                    <li>HDD: 1TB</li>
+                    <li>Băng thông trong nước: 200Mbps</li>
+                    <li>Băng thông quốc tế: 4Mbps</li>
+                  </ul>
+                </div>
+              </td>
+              <td class="top_note"><span class="table_product_code product_code">FGHJ5678</span></td>
+              <td title="Đơn giá"><span class="price product_price table_product_price">1.200.000 VNĐ</span></td>
+              <td title="Thời hạn">
+                <div class="input-wrap">
+                  <select name="" id="" class="input select small">
+                    <option value="" default disabled>Thời hạn</option>
+                    <option value="1">1 năm</option>
+                    <option value="2" selected>2 năm</option>
+                    <option value="3">3 năm</option>
+                  </select>
+                </div>
+              </td>
+              <td title="Dịch vụ bổ sung">
+                <ul class="table_addons">
+                  <li>
+                    <h4 class="table_addon_title">Bổ sung Ram: <b>4GB</b></h4>
+                    <span class="price product_price table_addon_price">+240.000 VNĐ</span>
+                  </li>
+                  <li>
+                    <h4 class="table_addon_title">Bổ sung Ram: <b>4GB</b></h4>
+                    <span class="price product_price table_addon_price">+240.000 VNĐ</span>
+                  </li>
+                  <li><a href="javascript:;" class="table_addon_edit" popup="#product_addon" product-id="">Chỉnh sửa</a></li>
+                </ul>
+              </td>
+              <td class="sum_card_price" title="Tổng giá"><span class="price product_price table_product_price sum_price">26.400.000 VNĐ</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-d-12 cols">
+        <div class="col-d-12 cols product_total_sum cart_total_sum clearfix">
+          <div class="col-d-6 col-t-12 coupon_sum">
+            <div class="input-wrap coupon_wrap">
+              <label for="">Bạn có mã khuyến mại? Nhập vào ô dưới</label>
+              <input type="text" class="input" placeholder="XXX-XXX" required>
+              <a href="javascript:;" class="btn">Xác nhận</a>
+            </div>
+          </div>
+          <div class="col-d-6 col-t-12 total_sum">
+            <dl class="total_sum_list">
+              <dt>Tổng cộng</dt>
+              <dd><span class="price product_price total_sub_price">53.340.000 VNĐ</span></dd>
+              <dt>VAT (10%)</dt>
+              <dd><span class="price product_price total_vat_price">5.334.000 VNĐ</span></dd>
+              <dt><span>Tổng thanh toán</span></dt>
+              <dd><span class="price product_price total_sum_price">58.674.000 VNĐ</span></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="col-d-12 col-t-break cols product_total_actions cart_actions">
+          <div class="col-d-6 col-t-break back_shop">
+            <a href="index.html" class="button outline low">Tiếp tục mua hàng</a>
+          </div>
+          <div class="col-d-6 col-t-break proceed_shop text-right">
+            <a href="checkout.html" class="btn">Thanh Toán</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="main_footer" class="cmc_main_footer">
+    <div class="wrap cols">
+      <div class="col-d-3 col-t-5 col-m-12 cmc_main_footer_contact">
+        <a href="index.html" class="cmc_main_footer_logo"><img src="images/logo-gs.svg" alt=""></a>
+        <ul class="cmc_main_footer_contact_list">
+          <li class="address"><span>Hà Nội:</span> Tầng 2, 3 CMC Tower, 11 Duy Tân, Quận Cầu Giấy</li>
+          <li class="address"><span>TP Hồ Chí Minh:</span> Lô 1, Đường D1, Khu Công nghệ cao, phường Tân Phú, Quận 9</li>
+          <li class="phone"><span>Hotline 24/7:</span> <a href="tel:18002020">1800 2020</a></li>
+          <li class="fax"><span>Fax:</span> + 84 24 3767 4686</li>
+        </ul>
+      </div>
+      <div class="col-d-9 col-t-7 col-m-12 cmc_main_footer_menu clearfix">
+        <div class="cmc_main_footer_menu_col">
+          <h4 class="uppercase">CMC Telecom</h4>
+          <ul class="cmc_main_footer_menu_list">
+            <li><a href="news.html">Tin tức</a></li>
+            <li><a href="faq.html">Hỏi đáp</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="recruit.html">Tuyển dụng</a></li>
+          </ul>
+        </div>
+        <div class="cmc_main_footer_menu_col nomobile">
+          <h4 class="uppercase">Data Center</h4>
+          <ul class="cmc_main_footer_menu_list">
+            <li><a href="service-servers.html">Thuê máy chủ</a></li>
+            <li><a href="service-server-center.html">Thuê chỗ đặt máy chủ</a></li>
+            <li><a href="service-rack.html">Thuê tủ rack</a></li>
+            <li><a href="service-data-center.html">Thuê không gian DC</a></li>
+          </ul>
+        </div>
+        <div class="cmc_main_footer_menu_col nomobile">
+          <h4 class="uppercase">Dịch vụ Quản trị</h4>
+          <ul class="cmc_main_footer_menu_list">
+            <li><a href="service-.html">Manage Backup</a></li>
+            <li><a href="service-.html">Manage Cloud</a></li>
+            <li><a href="service-.html">Manage Security</a></li>
+            <li><a href="service-.html">Manage Connectivity</a></li>
+            <li><a href="service-.html">Manage Infrastructure</a></li>
+            <li><a href="service-.html">Manage Monitoring</a></li>
+          </ul>
+        </div>
+        <div class="cmc_main_footer_menu_col nomobile">
+          <h4 class="uppercase">Dịch vụ Online</h4>
+          <ul class="cmc_main_footer_menu_list">
+            <li><a href="service-domain.html">Domain</a></li>
+            <li><a href="service-hosting.html">Hosting</a></li>
+            <li><a href="service-vps.html">VPS</a></li>
+            <li><a href="service-email-server.html">Email server</a></li>
+            <li><a href="service-ssl.html">SSL</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-d-12 cmc_main_footer_copyright">
+        <ul class="float_left cmc_main_footer_ext_links">
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href="">Điều khoản</a></li>
+          <li><a href="">Sơ đồ Website</a></li>
+        </ul>
+        <p class="float_right">© Copyrights 2017 CMC Telecom. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="page_popup wide product_addon_popup" id="product_addon">
+    <div class="page_popup_sidebar product_addon_info">
+      <h3 class="product_addon_title">Thuê máy chủ - Máy chủ HP</h3>
+      <ul class="product_addon_list">
+        <li>CPU: <span>Intel Xeon 4C E3-1230V5</span></li>
+        <li>RAM: <span>8G</span></li>
+        <li>HDD: <span>1TB</span></li>
+        <li>Băng thông trong nước: <span>200Mbps</span></li>
+        <li>Băng thông quốc tế: <span>4Mbps</span></li>
+      </ul>
+    </div>
+    <div class="page_popup_content product_addon_content">
+      <a href="javascript:;" class="page_popup_closer"></a>
+      <h3 class="h3">Dịch vụ bổ sung</h3>
+      <div class="product_addon_slider_wrap">
+        <div class="product_addon_slider_label">Bổ sung Ram</div>
+        <div class="product_addon_slider_sum"><span mark-id="bsr">300.000 VNĐ</span> / tháng</div>
+        <div class="product_addon_slider">
+          <div class="product_addon_slider_row" mark-id="bsr" mark-point="6" mark-active="3">
+            <div class="product_addon_slider_progress" style="width: 40%"><a href="javascript:;" class="product_addon_slider_handle" mark-id="bsr"></a></div>
+          </div>
+          <div class="product_addon_slider_marks" mark-point="6" mark-active="3">
+            <span mark-id="bsr-1">0GB</span>
+            <span mark-id="bsr-2">1GB</span>
+            <span mark-id="bsr-3" class="active">2GB</span>
+            <span mark-id="bsr-4">3GB</span>
+            <span mark-id="bsr-5">4GB</span>
+            <span mark-id="bsr-6">5GB</span>
+          </div>
+        </div>
+      </div>
+      <div class="product_addon_slider_wrap">
+        <div class="product_addon_slider_label">Bổ sung Dung lượng</div>
+        <div class="product_addon_slider_sum"><span mark-id="bsr">0 VNĐ</span> / tháng</div>
+        <div class="product_addon_slider">
+          <div class="product_addon_slider_row" mark-id="bsr" mark-point="6" mark-active="1">
+            <div class="product_addon_slider_progress"><a href="javascript:;" class="product_addon_slider_handle" mark-id="bsr"></a></div>
+          </div>
+          <div class="product_addon_slider_marks" mark-point="6" mark-active="1">
+            <span mark-id="bsr-1" class="active">0GB</span>
+            <span mark-id="bsr-2">50GB</span>
+            <span mark-id="bsr-3">100GB</span>
+            <span mark-id="bsr-4">150GB</span>
+            <span mark-id="bsr-5">200GB</span>
+            <span mark-id="bsr-6">250GB</span>
+          </div>
+        </div>
+      </div>
+      <div class="product_addon_actions">
+        <a href="javascript:;" class="btn">Xác nhận Bổ sung</a>
+      </div>
+    </div>
+  </div>
+  <a href="javascript:;" class="page_overlayer"></a>
+</div>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

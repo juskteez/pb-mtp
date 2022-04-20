@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="42px" viewBox="0 0 37 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>database</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Products" transform="translate(-760.000000, -733.000000)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(153.000000, 215.000000)">
+                <g id="Group-2-Copy-2" transform="translate(586.000000, 483.000000)">
+                    <g id="database" transform="translate(21.000000, 35.000000)">
+                        <path d="M18.375,0 C9.58125,0 0,2.1 0,6.5625 C0,11.025 9.58125,13.125 18.375,13.125 C27.16875,13.125 36.75,11.025 36.75,6.5625 C36.75,2.1 27.16875,0 18.375,0 Z" id="Path" fill="#FFD701"></path>
+                        <path d="M1,12.4110215 L1,21 C1,24.160375 8.7523125,26.5625 18.375,26.5625 C27.9976875,26.5625 35.75,24.160375 35.75,21 L35.75,12.4110215 C31.7918413,14.634587 25.5013835,15.75 18.375,15.75 C11.2486165,15.75 4.95815874,14.634587 1,12.4110215 Z" id="Path" stroke="#1D2A38" stroke-width="2"></path>
+                        <path d="M1,26.8485215 L1,35.4375 C1,38.597875 8.7523125,41 18.375,41 C27.9976875,41 35.75,38.597875 35.75,35.4375 L35.75,26.8485215 C31.7918413,29.072087 25.5013835,30.1875 18.375,30.1875 C11.2486165,30.1875 4.95815874,29.072087 1,26.8485215 Z" id="Path" stroke="#1D2A38" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

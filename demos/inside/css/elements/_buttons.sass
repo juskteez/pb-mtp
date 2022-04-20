@@ -1,0 +1,260 @@
+/* Buttons */
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"]
+  font-family: $font-parag
+  font-size: $fs6
+  font-weight: 400
+  display: inline-block
+  text-transform: uppercase
+  line-height: 16px
+  height: 40px
+  padding: 12px 16px
+  border-radius: 0
+  background-color: $n10
+  margin-bottom: 0
+  color: $neutral
+  border: none
+  vertical-align: middle
+  cursor: pointer
+  position: relative
+  text-align: center
+  white-space: nowrap
+  will-change: transform
+  overflow: hidden
+  user-select: none
+  @extend .easing
+
+  &:not(:last-child)
+    margin-right: 4px
+
+  &.emp
+    font-size: $fs4
+    line-height: 24px
+    height: 48px
+
+  &.subtle,
+  &.segment
+    height: 32px
+    font-size: $fs6
+    line-height: 24px
+    padding: 4px 8px
+
+  &.segment
+    min-width: 32px
+    text-align: center
+
+    &[disabled].outline,
+    &.disabled.outline
+      background-color: transparent
+
+  &.image.segment
+    width: calc((100% - (4px * 6)) / 6)
+    height: unset
+    padding: 0
+    position: relative
+    font-size: 0
+    line-height: 0
+    box-shadow: inset 0 0 0 1px $n10, inset 0 0 0 2px #fff
+    +breakpoint('m')
+      width: calc((100% - (4px * 4)) / 4)
+
+    @media screen and (min-width: 1680px)
+      width: calc((100% - (4px * 8)) / 8)
+
+    &.selected,
+    &.selected:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+      box-shadow: inset 0 0 0 1px $p5, inset 0 0 0 2px #fff
+      background-color: $n10
+
+    &:not(.selected):not([disabled]):not(.disabled):not(.loading):not(.proceeding):not(.outline):hover
+      box-shadow: inset 0 0 0 1px $n6, inset 0 0 0 2px #fff
+      background-color: $n10
+
+    &:before
+      content: ""
+      display: block
+      padding-top: 100%
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      padding: 2px
+      top: 0
+      left: 0
+      object-fit: contain
+      object-position: center
+
+  &.color.segment
+    width: 32px
+    height: 32px
+    font-size: 0
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: currentColor
+      box-shadow: inset 0 0 0 1px $n10, inset 0 0 0 2px #fff
+      @extend .easing
+
+    &.selected:before
+      box-shadow: inset 0 0 0 1px $p5, inset 0 0 0 2px #fff
+
+    &:not(.selected):hover:before
+      box-shadow: inset 0 0 0 1px $n6, inset 0 0 0 2px #fff
+
+    &[disabled]:before,
+    &.disabled:before
+      box-shadow: inset 0 0 0 1px rgba($p5,0), inset 0 0 0 3px #fff
+    &[disabled],
+    &.disabled
+      opacity: .5
+      mask-image: url(../images/m-color_disabled.svg)
+      mask-size: 100%
+      mask-position: center
+      mask-repeat: no-repeat
+
+  &.segment.selected
+    @extend .primary
+    pointer-events: none
+    &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+      color: white
+
+  &.micro
+    height: 24px
+    font-size: $fs7
+    line-height: 16px
+    padding: 4px 8px
+
+  &[disabled],
+  &.disabled,
+  &.loading,
+  &.proceeding
+    pointer-events: none
+
+  &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):not(.outline):hover
+    background-color: $n9
+
+  &:active
+    transform: translate3d(0,1px,0)
+    background-color: $n9
+    transition: 0.0275s all ease
+
+  &.primary
+    background-color: $p6
+    color: white
+
+    &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+      background-color: lighten($p6, 10%)
+
+    &:active
+      background-color: lighten($p6, 10%)
+      transition: 0.0275s all ease
+
+  &.encourage
+    background-color: #009500
+    color: white
+
+    &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+      background-color: lighten(#009500, 6%)
+
+    &:active
+      background-color: lighten(#009500, 6%)
+      transition: 0.0275s all ease
+
+  &.outline
+    background-color: transparent
+    box-shadow: inset 0 0 0 1px $p6
+    color: $p6
+
+    &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+      box-shadow: inset 0 0 0 1px lighten($p6, 10%)
+      color: lighten($p6, 10%)
+
+    &:active
+      box-shadow: inset 0 0 0 1px lighten($p6, 10%)
+      transition: 0.0275s all ease
+
+  &[disabled],
+  &.disabled,
+  &.loading,
+  &.proceeding
+    background-color: $n10
+    color: $n8
+
+    &.outline
+      box-shadow: inset 0 0 0 1px rgba($neutral,.05)
+      background-color: rgba($neutral,.05)
+
+  &.proceeding
+    &:after
+      content: ""
+      position: absolute
+      width: 32px
+      height: 100%
+      background-color: $n10
+      top: 0
+      right: 100%
+      will-change: transform, right
+      animation: proceeding 0.875s cubic-bezier(.21,.07,.18,.99) infinite
+      animation-fill-mode: none
+      transform: translate3d(-50%,0,0) scaleX(0)
+      opacity: 0
+
+
+
+.overlay + [class*="-content"],
+.whitec + [class*="-content"]
+  .btn,
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"]
+    background-color: #fff
+    color: $p5
+
+    &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):not(.outline):hover
+      background-color: $p5
+      color: white
+
+    &.outline
+      background-color: transparent
+      box-shadow: inset 0 0 0 1px white
+      color: white
+
+      &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+        box-shadow: inset 0 0 0 1px lighten($p6, 10%)
+        color: lighten($p6, 10%)
+
+      &:active
+        box-shadow: inset 0 0 0 1px lighten($p6, 10%)
+        transition: 0.0275s all ease
+
+.input-btn
+  @extend .btn.outline
+
+.input-btn.seg-btn
+  width: 40px
+  min-width: 40px
+  box-shadow: inset 0 0 0 1px $n10
+  color: $n4
+
+  &:not([disabled]):not(.disabled):not(.loading):not(.proceeding):hover
+    box-shadow: inset 0 0 0 1px $n9
+    background-color: $n10
+
+  &:active
+    box-shadow: inset 0 0 0 1px $n3
+    transition: 0.0275s all ease
+
+  &.subtle
+    width: 32px
+    min-width: 32px

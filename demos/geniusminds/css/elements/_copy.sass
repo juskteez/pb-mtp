@@ -1,0 +1,41 @@
+/* Buttons */
+
+html,
+body,
+input,
+button,
+select,
+textarea
+	+typo($font-stack,$font-base,normal,'',1.625,$text-color,'')
+
+.lighter
+	font-weight: 400
+
+.bolder,
+.bold
+	font-weight: bold
+
+.uppercase,
+.allcap-1,
+.allcap-2
+	text-transform: uppercase
+
+.lowercase
+	text-transform: lowercase
+
+.allcap
+	&-1,
+	&-2
+		letter-spacing: 0.2em
+	&-1
+		a
+			@extend .easing
+			color: $text-color
+			&:hover
+				color: $black-color
+
+p
+	margin-bottom: 1.2em
+
+.text-lighter-color
+	color: $text-lighter-color

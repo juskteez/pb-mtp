@@ -1,0 +1,121 @@
+.page_loaded .fpage_header:before
+	opacity: 1
+
+.gif_played .fpage:before
+	opacity: 0
+	pointer-events: none
+
+.fpage
+	&_xz:before
+		content: ""
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #000
+		background-image: url("images/spinner.svg")
+		background-size: 64px
+		background-repeat: no-repeat
+		background-position: center
+		transition: 0.5s opacity ease
+		z-index: 999
+
+	&_wrap
+		max-width: 720px
+
+	&_hero_title
+		top: 15%
+
+	&_header_video
+		display: none
+
+	&_header_gif
+		//background-image: url("images/earbuds.jpg")
+		background-position: center
+		background-size: 5100vw auto
+		top: 40%
+		transition: 0s all ease
+		left: 0
+		position: absolute
+		width: 100%
+		height: 50%
+		background-repeat: no-repeat
+
+	&_header
+		// background-image: url("images/earbuds.gif")
+		// background-size: 100% auto
+		// background-position: center
+		// background-repeat: no-repeat
+
+		.fpage_wrap
+			height: 100%
+
+	&_headerx:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 50vw
+		//background-image: url("images/earbuds.gif")
+		background-size: cover
+		background-position: center
+		top: 50%
+		left: 0
+		transform: translate3d(0,-50%,0)
+		opacity: 0
+
+	&_hero_cta
+		top: 65%
+
+	&_side
+		height: 320px
+
+	&_info_box
+		max-width: 360px
+		padding: 0 48px
+		padding-right: 15px
+
+		p
+			font-size: 16px
+			line-height: 26px
+
+		h2
+			font-size: 32px
+
+	&_side.left_side .fpage_info_box
+		padding-right: 56px
+		padding-left: 15px
+
+	&_section.section-features
+		background-position: 120% bottom
+		background-size: auto 60%
+
+	.section-video
+		.vid_gradient_title
+			font-size: 48px
+
+	.section-insta
+		padding: 48px 0
+		padding-bottom: 0
+
+	.section-meet
+		.fpage-meet_side
+			height: 50vw
+			max-height: 580px
+			&.meet-image
+				width: 38%
+				background-position: center left
+
+			&.meet-info
+				width: 62%
+
+			.meet-info-wrap
+				max-width: none
+				transform: translate3d(0,-50%,0)
+				padding: 0 48px
+				h2
+					margin-bottom: 16px
+				p
+					margin-bottom: 12px
+					&:last-of-type
+						margin-bottom: 24px

@@ -1,0 +1,130 @@
+// Editable variables
+$base-width: 1200
+$col-count: 12
+$base-gutter: 30
+$tablet-gutter: 24
+$mobile-gutter: 20
+
+// Fixed variables
+$divided-gutter: $base-gutter/2*1px
+$divided-tgutter: $tablet-gutter/2*1px
+$divided-mgutter: $tablet-gutter/2*1px
+$col-width: (($base-width/$col-count) / $base-width) * 100%
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
+.cols,
+.wrap
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  width: 100%
+  max-width: $base-width*1px
+  @extend .clearfix
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.cols *[class^="col"]
+  float: left
+  padding: 0 $divided-gutter
+  position: relative
+
+  &.nopad
+    padding: 0
+
+  img
+    max-width: 100%
+  
+  *[class^="col"]:first-of-type
+    margin-left: -$divided-gutter
+    &.col-12
+      width: calc(100% + #{$divided-gutter*2})
+
+  *[class^="col"]:last-of-type
+    margin-right: -$divided-gutter
+    &.col-12
+      width: calc(100% + #{$divided-gutter*2})
+
+  &.centered-col
+    float: none
+    margin-left: auto
+    margin-right: auto
+
+@for $i from 1 through 12
+  .col-#{$i}
+    width: $col-width*$i
+
+    @for $h from 1 through $i
+      $i-width: (100/$i)
+      $h-width: ($i-width*$h) * 1%
+      .col-#{$h}
+        width: calc(#{$h-width} + #{$base-gutter / ($i/$h)}px)
+
+        &:nth-of-type(#{$i/$h}n+#{$i/$h}):not(.centered-col)
+          margin-right: -$divided-gutter
+
+        &:nth-of-type(#{$i/$h}n+#{$i/$h}) + *[class^="col"]:not(.centered-col)
+          margin-left: -$divided-gutter
+
+@media screen and (max-width: $base-width*1px)
+
+  .cols,
+  .wrap
+    max-width: 720px
+
+  @for $i from 1 through 12
+    .col-#{$i}
+
+      @for $h from 1 through $i
+        $i-width: (100/$i)
+        $h-width: ($i-width*$h) * 1%
+        .col-#{$h}
+          width: calc(#{$h-width} + #{$tablet-gutter / ($i/$h)}px)
+
+          &:nth-of-type(#{$i/$h}n+#{$i/$h}):not(.centered-col)
+            margin-right: -$divided-tgutter
+          &:nth-of-type(#{$i/$h}n+#{$i/$h}) + *[class^="col"]:not(.centered-col)
+            margin-left: -$divided-tgutter
+
+  .cols *[class^="col"]
+    padding: 0 $divided-tgutter
+
+    *[class^="col"]:first-child,
+    *[class^="col"]:first-of-type
+      margin-left: -$divided-tgutter
+      &.col-12
+        width: calc(100% + #{$divided-tgutter*2})
+
+    *[class^="col"]:last-child,
+    *[class^="col"]:last-of-type
+      margin-right: -$divided-tgutter
+      &.col-12
+        width: calc(100% + #{$divided-tgutter*2})
+
+
+@media screen and (max-width: 767px)
+  .cols,
+  .wrap
+    max-width: 400px
+
+  @for $i from 1 through 12
+    *[class^="col"] .col-#{$i}
+      &:nth-of-type(#{12/$i}n+#{12/$i}):not(.centered-col),
+      &:nth-of-type(#{12/$i}n+#{12/$i}) + *[class^="col"]:not(.centered-col)
+        margin-left: -$divided-mgutter
+        margin-right: -$divided-mgutter
+
+  .cols *[class^="col"]
+    float: none
+    width: auto
+    padding: 0 $divided-mgutter
+
+    *[class^="col"]
+      margin-left: -$divided-mgutter
+      margin-right: -$divided-mgutter

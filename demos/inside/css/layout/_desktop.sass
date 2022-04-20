@@ -1,0 +1,407 @@
+/* Desktop */
+
+body
+  background-color: $site-background
+
+  span[style*="border-radius: 12px;"],
+  span[style*="border-radius: 3px !important;"]
+    display: none !important
+    visibility: hidden !important
+    opacity: 0 !important
+    z-index: -1
+    pointer-events: none !important
+
+#body
+  //overflow-x: hidden
+  max-width: 100vw
+
+.comp
+  position: relative
+  padding: 24px 0
+
+  &-collection
+    overflow: hidden
+    z-index: 1
+
+  &-collection
+    margin-bottom: -24px
+    padding-bottom: 48px
+    margin-bottom: -48px
+    padding-bottom: 72px
+
+  &-header + &-slideshow
+    padding-top: 0
+
+  &-title
+    margin-bottom: 24px
+
+  &-breadcrumbs
+    padding-bottom: 0
+
+$kinect-delay: 0.05s
+$kinect-duration: 0.6s
+$kinect-transition: $kinect-duration all cubic-bezier(.3,.05,0,1)
+$kinect-transition-out: $kinect-duration all cubic-bezier(.6,0,.6,1)
+$kinect-levels: $kinect-delay
+
+.kinect
+  &-comp:not(.kinect-childs),
+  &-ele
+    &:not(.collection-carousel-wrap)
+      opacity: 0
+      transform: translate3d(0,64px,0)
+      transition: $kinect-transition-out
+
+    &.kinected:not(.collection-carousel-wrap)
+      transform: translate3d(0,0,0)
+      transition: $kinect-transition
+      opacity: 1
+
+    // Level 0 Kinect Engage
+
+    &.col-d-6:nth-of-type(2n+2),
+    &.col-d-4:nth-of-type(3n+3),
+    &.col-d-3:nth-of-type(4n+4),//----------
+    &.col-d-6:nth-of-type(2n+2) .collection-title,
+    &.kinected.col-d-3:nth-of-type(4n+1),
+    &.kinected.col-d-4:nth-of-type(3n+1),
+    &.kinected.col-d-6:nth-of-type(2n+1),//--------------
+    &.kinected.col-d-6:nth-of-type(2n+1) .collection-title,
+    & .collection-carousel .col-d-3:nth-of-type(4n+4) .product-card,
+    &.kinected .collection-carousel .col-d-3:nth-of-type(4n+1) .product-card
+      transition-delay: #{$kinect-delay * 0}
+
+    &.col-d-3:nth-of-type(4n+3),
+    &.col-d-4:nth-of-type(3n+2),
+    &.col-d-6:nth-of-type(2n+2),
+    &.kinected.col-d-3:nth-of-type(4n+2),
+    &.kinected.col-d-4:nth-of-type(3n+2),
+    &.kinected.col-d-6:nth-of-type(2n+2),
+    & .collection-carousel .col-d-3:nth-of-type(4n+3) .product-card,
+    &.kinected .collection-carousel .col-d-3:nth-of-type(4n+2) .product-card
+      transition-delay: #{$kinect-delay * 1}
+
+    &.col-d-3:nth-of-type(4n+2),
+    &.col-d-4:nth-of-type(3n+1),
+    &.kinected.col-d-3:nth-of-type(4n+3),
+    &.kinected.col-d-4:nth-of-type(3n+3),
+    & .collection-carousel .col-d-3:nth-of-type(4n+2) .product-card,
+    &.kinected .collection-carousel .col-d-3:nth-of-type(4n+3) .product-card
+      transition-delay: #{$kinect-delay * 2}
+      
+    &.col-d-3:nth-of-type(4n+1),
+    &.col-d-4:nth-of-type(3n+1),
+    &.col-d-6:nth-of-type(2n+1),
+    &.kinected.col-d-3:nth-of-type(4n+4),
+    & .collection-carousel .col-d-3:nth-of-type(4n+1) .product-card,
+    &.kinected .collection-carousel .col-d-3:nth-of-type(4n+4) .product-card
+      transition-delay: #{$kinect-delay * 3}
+
+    // Level 1 Kinect Engage
+    &.col-d-6:nth-of-type(2n+2) .collection-title,
+    &.kinected.col-d-6:nth-of-type(2n+1) .collection-title
+      transition-delay: #{($kinect-delay * 0) + ($kinect-levels * 1)}
+
+    &.col-d-6:nth-of-type(2n+1) .collection-title,
+    &.kinected.col-d-6:nth-of-type(2n+2) .collection-title
+      transition-delay: #{($kinect-delay * 1) + ($kinect-levels * 1)}
+
+    // Level 2 Kinect Engage
+    &.kinected .image_with_text-title,
+    &.kinected .newsletter-title
+      transition-delay: #{($kinect-delay * 0) + ($kinect-levels * 2)}
+
+    &.kinected .image_with_text-desc,
+    &.kinected .newsletter-desc
+      transition-delay: #{($kinect-delay * 1) + ($kinect-levels * 2)}
+
+    &.kinected .image_with_text-actions,
+    &.kinected .newsletter-form
+      transition-delay: #{($kinect-delay * 2) + ($kinect-levels * 2)}
+
+
+.breadcrumbs
+  font-size: 10px
+  letter-spacing: 0.2px
+  text-transform: uppercase
+  cursor: default
+
+  li
+    display: inline
+
+  li:not(:last-child):after
+    content: " / "
+    color: $n5
+
+
+.c-c
+  &-actions
+    text-align: right
+
+.wysiwyg
+  &-content
+    p
+      margin-bottom: 6px
+      line-height: 21px
+      font-size: $fs5
+    p:last-child
+      margin-bottom: 0
+
+.divider
+  &-v:before
+    content: ""
+    display: block
+    background-color: $n10
+    height: 1px
+    margin: 24px 0
+
+.popup
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 20
+  pointer-events: none
+
+  &-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $n4
+    opacity: 0
+    transition: 0.325s all $carousel-cubic
+    will-change: opacity
+
+  &-box
+    position: absolute
+    width: 100%
+    max-width: 544px
+    min-height: 60px
+    background-color: white
+    top: 40%
+    left: 50%
+    opacity: 0
+    transform: translate3d(-50%, -50%, 0) translate3d(0, 32px, 0)
+    transition: 0.325s all $carousel-cubic
+
+    &.drawer-box
+      height: 100%
+      top: 0
+      //transition-duration: 0.465s
+      max-width: 420px
+      opacity: 1
+
+    &.right
+      transform: translate3d(100%, 0, 0)
+      left: auto
+      right: 0
+
+    &.left
+      transform: translate3d(-100%, 0, 0)
+      left: 0
+      right: auto
+
+    &.top,
+    &.bottom
+      width: 100%
+      max-width: unset
+      height: unset
+
+    &.top
+      transform: translate3d(0, -100%, 0)
+      top: 0
+      left: auto
+      right: auto
+
+    &.bottom
+      transform: translate3d(0, 100%, 0)
+      bottom: 0
+      top: auto
+      left: auto
+      right: auto
+
+    &.action-fixed
+      display: flex
+      flex-direction: column
+
+    &.action-fixed .popup-box-content
+      flex-grow: 2
+
+  &-box-content
+    padding-top: 16px
+    padding-bottom: 16px
+    overflow-x: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    overflow-scrolling: touch
+
+    [class*="col-"] p:last-child
+      margin-bottom: 0
+
+  &-box-content:not(:first-child)
+    padding-top: 32px
+
+  &-box-actions
+    border-top: 1px solid $n10
+    padding-top: 16px
+    padding-bottom: 16px
+
+    &.action-full .btn
+      width: 100%
+
+    &.action-full .btn:not(:first-child)
+      margin-top: 12px
+
+    .btn.primary
+      min-width: 128px
+
+  &-box-close
+    position: absolute
+    top: 0
+    right: 0
+
+input[name="popups"]:checked + .popup
+  pointer-events: all
+  .popup-overlay
+    opacity: 1
+  .popup-box
+    transform: translate3d(-50%, -50%, 0) translate3d(0, 0, 0)
+    opacity: 1
+
+    &.drawer-box
+      transform: translate3d(0, 0, 0)
+
+.overlay,
+.whitec
+  & + [class*="-content"]
+    h2, h3, h4, h5
+      color: white
+
+    p
+      color: rgba(white,.8)
+
+  &:not(.whitec):after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba(black,.24)
+
+.price
+  font-weight: 500
+  margin-top: 6px
+
+  &.small
+    font-size: 14px
+    font-weight: normal
+    line-height: 14px
+    vertical-align: top
+
+  span:not(:first-child):last-child
+    opacity: .3
+    text-decoration: line-through
+
+.lazy,
+.lazied
+  background-image: url('../images/rolling.svg')
+  background-repeat: no-repeat
+  background-position: center
+  transition: 0.375s opacity ease
+
+.lazied
+  animation: lazy_appear 0.375s ease
+  background-image: none
+  will-change: opacity, transform
+
+@keyframes lazy_appear
+  0%
+    opacity: 0
+    transform: translate3d(0,0,0) scale(1.05)
+  100%
+    opacity: 1
+    transform: translate3d(0,0,0) scale(1)
+
+.carousel
+
+  &-controls
+    z-index: 5
+
+  &-anchor
+    appearance: none
+    display: none
+
+  &-anchor:first-of-type:checked ~ &-controls &-control.prev,
+  &-anchor:last-of-type:checked ~ &-controls &-control.next
+    opacity: .32
+    &:hover,
+    &:active
+      opacity: .32
+      background-color: transparent
+      transform: translate(0,-50%) translate(0,0)
+      cursor: default
+      &::after
+        opacity: .2
+
+    &.prev:hover,
+    &.prev:active
+      transform: translate(0,-50%) scaleX(-1)
+
+  &-control
+    position: absolute
+    width: 40px
+    height: 40px
+    top: 50%
+    transform: translate(0,-50%)
+    right: 16px
+    will-change: transform
+    pointer-events: all
+    z-index: 4
+
+    &:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: rgba(white,.48)
+      mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDBweCIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIwIDAgNDAgNDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aS1jb250cm9sPC90aXRsZT4KICAgIDxnIGlkPSJpLWNvbnRyb2wiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0yMCw0MCBDMzEuMDQ1Njk1LDQwIDQwLDMxLjA0NTY5NSA0MCwyMCBDNDAsOC45NTQzMDUgMzEuMDQ1Njk1LDAgMjAsMCBDOC45NTQzMDUsMCAwLDguOTU0MzA1IDAsMjAgQzAsMzEuMDQ1Njk1IDguOTU0MzA1LDQwIDIwLDQwIFogTTE3Ljg3Mzc3NzgsMjcuNDc1NTU1NiBMMTYuNTI0NDQ0NCwyNi4zMTgyMjIyIEwyMS45NDA0NDQ0LDIwIEwxNi41MjQ0NDQ0LDEzLjY4MTc3NzggTDE3Ljg3Mzc3NzgsMTIuNTI0NDQ0NCBMMjMuNzg1Nzc3OCwxOS40MjIyMjIyIEMyNC4wNzExMTExLDE5Ljc1NDY2NjcgMjQuMDcxMTExMSwyMC4yNDYyMjIyIDIzLjc4NTc3NzgsMjAuNTc4NjY2NyBMMTcuODczNzc3OCwyNy40NzU1NTU2IFoiIGlkPSJCdXR0b24tY29sb3IiIGZpbGw9IiMwMDAwMDAiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+)
+      mask-position: center
+      mask-repeat: no-repeat
+      //backdrop-filter: blur(4px)
+      @extend .easing
+
+    &:after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDBweCIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIwIDAgNDAgNDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aS1jb250cm9sX2Fycm93PC90aXRsZT4KICAgIDxnIGlkPSJpLWNvbnRyb2xfYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0xNy44NzM3Nzc4LDI3LjQ3NTU1NTYgTDE2LjUyNDQ0NDQsMjYuMzE4MjIyMiBMMjEuOTQwNDQ0NCwyMCBMMTYuNTI0NDQ0NCwxMy42ODE3Nzc4IEwxNy44NzM3Nzc4LDEyLjUyNDQ0NDQgTDIzLjc4NTc3NzgsMTkuNDIyMjIyMiBDMjQuMDcxMTExMSwxOS43NTQ2NjY3IDI0LjA3MTExMTEsMjAuMjQ2MjIyMiAyMy43ODU3Nzc4LDIwLjU3ODY2NjcgTDE3Ljg3Mzc3NzgsMjcuNDc1NTU1NiBaIiBpZD0iQnV0dG9uLWNvbG9yLXBhdGgiIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4=)
+      background-position: center
+      background-repeat: no-repeat
+      opacity: 0.2
+      @extend .easing
+
+    &:hover:after
+      opacity: 0.4
+
+    &:active
+      transform: translate(0,-50%) translate(0,1px)
+
+    &.prev
+      right: auto
+      left: 16px
+      transform: translate(0,-50%) scaleX(-1)
+
+    &.prev:active
+      transform: translate(0,-50%) scaleX(-1) translate(0,1px)
+
+    &:hover:before
+      background-color: white

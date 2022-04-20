@@ -1,0 +1,390 @@
+/* Alignment */
+.clearfix:after
+	content: ""
+	display: block
+	clear: both
+
+.align-center
+	margin-left: auto
+	margin-right: auto
+
+.text-
+	&center
+		text-align: center
+
+	&right
+		text-align: right
+
+	&left
+		text-align: left
+
+.float_
+	&none
+		float: none
+		&_force
+			float: none !important
+
+	&right
+		float: right
+		&_force
+			float: right !important
+
+	&left
+		float: left
+		&_force
+			float: left !important
+
+.code
+	&-trigger
+		border-radius: 50%
+		width: 24px
+		height: 24px
+		display: block
+		background-color: rgba(#fff,.9)
+		box-shadow: 0 0 0 1px $n9
+		background-image: url(../images/code-icon.svg)
+		background-position: center
+		background-repeat: no-repeat
+		position: sticky
+		top: 8px
+		left: 8px
+		//margin-left: calc((100vw - 1170px + 32px) / 2 * -1)
+		transform: translate3d(0,0,0)
+		z-index: 20
+		@extend .easing
+
+		&:hover
+			box-shadow: 0 0 0 1px $p5
+			z-index: 110
+			
+		& + .wrap
+			margin-top: -24px
+
+		&:hover .code-expander
+			opacity: 1
+			transform: translate3d(0,0,0) scale(1)
+			pointer-events: all
+		
+		&::before
+			content: ""
+			position: absolute
+			width: 20px
+			height: 32px
+			background-color: transparent
+			top: 0
+			left: 50%
+
+	&-expander
+		position: absolute
+		background-color: #fff
+		left: 32px
+		width: 520px
+		padding: 12px
+		box-shadow: 0 8px 16px -6px $n10, 0 8px 24px -8px $n10, 0 0 0 1px $n10
+		transform: translate3d(0,0,0) scale(0.98)
+		transform-origin: left 12px
+		will-change: opacity
+		opacity: 0
+		pointer-events: none
+		max-height: 60vh
+		overflow-x: hidden
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+		@extend .easing
+
+		&.ani-group
+			padding-bottom: 12px
+			display: block
+
+.popup .code-trigger
+	opacity: 0
+
+input[name="popups"]:checked + .popup .code-trigger
+	opacity: 1
+			
+.popup,
+.popup-box
+	.code-trigger
+		position: absolute
+
+	&.drawer-box.right .code-trigger
+		left: -32px
+		&::before
+			left: auto
+			right: 50%
+
+		.code-expander
+			left: auto
+			right: 32px
+			transform-origin: right 12px
+
+.defi
+	&-page
+		overflow-x: hidden
+	&-body#body
+		max-width: 1170px
+		margin: 0 auto
+		padding: 48px 15px
+
+		.comp
+			margin-left: calc((100vw - 1170px + 32px) / 2 * -1)
+			margin-right: calc((100vw - 1170px  + 32px) / 2 * -1)
+			width: auto
+
+			@media screen and (max-width: 1170px)
+				margin-left: -16px
+				margin-right: -16px
+
+		.comp.comp-collection
+			overflow: visible
+
+		.comp.comp-slideshow
+			padding: 8px 0
+
+			& > .wrap
+				margin-top: -32px
+				margin-bottom: -8px
+
+	&-group
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding-bottom: 48px
+
+		&:not(:last-child)
+			border-bottom: 1px solid #ddd
+
+		&>*
+			width: 30%
+			margin-bottom: 8px
+			//background-color: rgba(0,0,0,0.1)
+
+		&.color-group>*
+			width: calc(10% - 2px)
+
+		&>*:nth-of-type(3n+2)
+			text-align: center
+
+		&>*:nth-of-type(3n+3):not(button):not(.btn)
+			text-align: right
+
+	&-title:not(:first-child)
+		margin-top: 64px
+
+	&-subtitle
+		text-transform: uppercase
+		font-size: 24px
+		color: rgba(0,0,0,0.3)
+		letter-spacing: 0.1em
+		margin-bottom: 16px
+		padding-top: 48px
+
+h4.defi-subtitle
+	padding-top: 16px
+	font-size: 20px
+	letter-spacing: 0.0em
+	font-weight: bold
+	color: $p5
+
+	&:first-child
+		padding-top: 0
+
+span.c,
+b.c
+	background-color: $p10
+	padding: 2px 3px
+	box-shadow: inset 0 0 0 1px $p7
+	border-radius: 4px
+	font-family: Menlo, monospace
+
+.ani
+	&-group
+		display: flex
+		justify-content: space-between
+		padding-bottom: 48px
+
+		&:not(:last-child)
+			border-bottom: 1px solid #ddd
+
+		& + .slideshow-wrapper
+			margin-top: -48px
+
+	&-col
+		width: 48%
+		font-size: 14px
+		line-height: 20px
+
+		&:first-child:last-child
+			width: 100%
+
+		.btn
+			margin-bottom: 9px
+
+		b
+			font-weight: 500
+
+	&-col.prop
+
+		ol,ul
+			margin-bottom: 1.5em
+
+		ol li,
+		ul li
+			list-style: decimal
+			margin-left: 19px
+		ul li
+			list-style: disc
+			margin-left: 17px
+			padding-left: 2px
+			//color: rgb(65, 158, 90)
+
+		p
+			color: $n5
+
+		b
+			letter-spacing: -0.05em
+
+		dl
+			display: flex
+			min-width: 160px
+			font-size: 10px
+			font-family: Menlo, monospace
+
+		dt,dd
+			border: 1px solid #ddd
+			padding: 2px 8px
+			width: 50%
+
+		dt
+			background-color: #efefef
+			font-weight: bold
+			border-right: none
+
+		.dls dl:not(:last-child)
+			dt,dd
+				border-bottom: none
+
+		.dls:not(:last-child)
+			margin-bottom: 16px
+
+		u:before
+			content: "--->"
+			font-style: normal
+			opacity: .4
+			text-decoration: none
+
+		span
+			background-color: $p10
+			padding: 2px 3px
+			box-shadow: inset 0 0 0 1px $p7
+			border-radius: 4px
+
+	&-col:last-child
+		width: 40%
+
+	&-img
+		position: relative
+		width: 100%
+		padding-top: 33.3333%
+		overflow: hidden
+		background-color: #ececec
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			object-position: center
+			object-fit: cover
+			background-color: #ececec
+
+	&-grid
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		margin: -4px
+		margin-top: 16px
+
+		&-item
+			width: calc(20% - 8px)
+			flex-basis: calc(20% - 8px)
+			padding-top: 15%
+			position: relative
+			background-color: $main-color
+			background-image: linear-gradient(135deg, rgba(210,87,45,1) 0%, rgba(255,151,36,1) 100%)
+			margin: 4px
+			animation: scale_in 2.75s $carousel-cubic infinite
+
+	&-box
+		position: relative
+		width: 100%
+		height: 26px
+		background-color: $p10
+		overflow: hidden
+
+		&:not(:last-child)
+			margin-bottom: 16px
+		&.stagger:not(:last-child)
+			margin-bottom: 1px
+
+		span
+			position: absolute
+			width: 32px
+			height: 100%
+			left: 0
+			top: 0
+			background-color: $p6
+			animation: left_to_right 2.8s ease infinite
+			will-change: left, transform
+			color: white
+			font-family: monospace
+			font-size: 12px
+			font-weight: 700
+			text-align: center
+			line-height: 25px
+			letter-spacing: -0.5px
+
+		&.easing-carousel span
+			animation-timing-function: $carousel-cubic
+
+		&.easing-carousel.stagger span
+			width: 48px
+
+	@for $i from 0 through 24
+		&-box.easing-carousel.stagger:nth-of-type(#{$i}) span,
+		&-grid-item:nth-of-type(#{$i})
+			animation-delay: #{0.05s * $i}
+
+@keyframes left_to_right
+	0%
+		left: 0
+		transform: translate3d(0,0,0)
+	25%
+		left: 0
+		transform: translate3d(0,0,0)
+	75%
+		left: 100%
+		transform: translate3d(-100%,0,0)
+	100%
+		left: 100%
+		transform: translate3d(-100%,0,0)
+
+@keyframes scale_in
+	0%
+		transform: translate3d(0,16%,0) scaleY(1)
+		opacity: 0
+	5%
+		transform: translate3d(0,16%,0) scaleY(1)
+		opacity: 0
+	40%
+		transform: translate3d(0,0,0) scaleY(1)
+		opacity: 1
+	60%
+		transform: translate3d(0,0,0) scaleY(1)
+		opacity: 1
+	95%
+		transform: translate3d(-10%,0,0) scaleY(1)
+		opacity: 0
+	100%
+		transform: translate3d(-10%,0,0) scaleY(1)
+		opacity: 0

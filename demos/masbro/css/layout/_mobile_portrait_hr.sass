@@ -1,0 +1,166 @@
+/* Mobile Portrait High Resolution */
+.smoothscroll
+	-webkit-overflow-scrolling: touch
+
+.flying_objects
+	display: none
+
+.overtop
+	#main_nav
+		.actions_wrap
+			transform: translate3d(-100%,0,0)
+
+#main_nav
+	.actions_wrap
+		position: fixed
+		left: 0
+		width: 100%
+		top: calc(100vh - 150px)
+		transform: translate3d(-100%,0,0)
+		padding: 0 30px
+		transition: 0.3s all ease
+		z-index: 14
+		.btn
+			width: 100%
+			padding-top: 6px
+			padding-bottom: 6px
+			border-radius: 28px
+			font-size: $fs3
+
+	.nav_menu_list
+		width: 100%
+		padding-top: 72px
+
+.toggle_nav #main_nav
+	.actions_wrap
+		transform: translate3d(0,0,0)
+
+.section#home-hero
+	.wrap.cols .home_orbit
+		width: auto
+		height: 65vw
+		img
+			width: 100%
+			max-width: 90% !important
+			left: 19px
+
+	.section-desc
+		width: 100%
+
+.h1
+	font-size: 24px
+
+.nav_toggler
+	left: 4px
+
+#main_nav .nav_menu_list li
+	padding: 0 10px
+
+.section.page-section .col-8
+	padding-left: 20px
+	padding-right: 20px
+
+.page-breadcrumbs
+	margin-bottom: 24px
+
+.section#home-keuntungan
+	padding-top: 64px
+	text-align: center
+
+.keun-features
+	margin-top: -72px
+	li.col-3
+		transform: none !important
+		margin-bottom: 16px
+		margin-top: 32px
+		float: none !important
+		height: auto
+
+		p
+			max-width: 290px
+			padding-right: 10px
+			padding-left: 10px
+			margin-left: auto
+			margin-right: auto
+
+	.keun-feature-icon
+		margin-left: auto
+		margin-right: auto
+
+.wrap.cols .direct_down
+	margin-right: -20px
+
+.section#home-engagements
+	padding-bottom: 330px
+	.section-header-wrap
+		padding: 0 6px
+
+	.engage-element-wrap
+		transform: scale(1)
+		.engage-phone
+			width: 100%
+			max-width: calc(100% - 32px)
+		.engage-shadow
+			width: 100%
+			max-width: 400px
+			height: 90vw
+			max-height: 356px
+			background-size: 100% auto
+
+.engage-list
+	.col-3.prl_obj,
+	.col-3.prl_obj:nth-of-type(2)~.col-3.prl_obj
+		margin-top: 16px
+		padding: 0 18px
+
+	.engage-block
+		padding: 14px
+		border-radius: 14px
+
+		.engage-out-sum
+			height: auto
+			padding-right: 0
+
+.section#home-credit
+	margin-top: -96px
+	&:before
+		top: -64px
+	.wrap.cols
+		margin-top: -96px
+		padding-bottom: 180px
+
+.credit-graph
+	height: 500px
+	.credit-graph-chart
+		display: none
+
+.credit-hand-phone
+	bottom: -360px
+	transform: translate3d(-50%, -300px, 0px) rotate(0deg) !important
+
+#footer-cta
+	padding: 48px 0
+	.section-title
+		font-size: 24px
+	.section-desc
+		margin-bottom: 32px
+
+	.download-btn+.download-btn
+		margin-top: 24px
+
+#main_footer
+	padding-top: 32px
+	padding-bottom: 32px
+	p.text-lighter-color
+		max-width: 290px
+		margin-left: auto
+		margin-right: auto
+
+	.contact-list,
+	.reference-list
+		margin-bottom: 24px
+		a
+			display: block
+			margin-bottom: 6px
+	.footer-logo
+		display: none

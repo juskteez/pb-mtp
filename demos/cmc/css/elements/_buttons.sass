@@ -1,0 +1,146 @@
+/* Buttons */
+
+.btn_disabled
+  pointer-events: none
+  filter: grayscale(1)
+
+.btn,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button
+  display: inline-block
+  background-color: $main-color
+  border-radius: 0
+  line-height: 26px
+  padding: 12px 24px
+  vertical-align: middle
+  height: 48px
+  color: #fff
+  font-size: $fs5
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-weight: 700
+  @extend .easing
+  &:hover
+    background-color: $main-darker-color
+    color: #fff
+
+  &.outline
+    background-color: transparent
+    color: #4a4a4a
+    box-shadow: inset 0 0 0 1px #B7B7B7
+    &:hover
+      color: $main-color
+      box-shadow: inset 0 0 0 1px $main-color
+
+    &.disabled
+      opacity: 0.4
+
+  &.white
+    color: $main-color
+    background-color: #fff
+    &:hover
+      color: $main-darker-color
+      background-color: $main-bg-color
+
+  &.gray
+    background-color: #6A6A6A
+    &:hover
+      background-color: $text-color
+
+  &.small
+    padding: 8px 24px
+    height: 40px
+  &.tiny
+    padding: 4px 12px
+    line-height: 16px
+    font-size: 10px
+    height: 24px
+    text-transform: uppercase
+
+  &.block
+    padding-left: 0
+    padding-right: 0
+    display: block
+    text-align: center
+    width: 100%
+
+  svg
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    margin-left: 8px
+    margin-top: -4px
+    margin-right: -4px
+    g
+      fill: currentColor
+
+  &.wide
+    padding-left: 40px
+    padding-right: 40px
+
+  &+&
+    margin-left: 10px
+
+  &.arrowed
+    &:after
+      content: ""
+      width: 24px
+      height: 24px
+      display: inline-block
+      background-image: url("../images/btn_arrow.svg")
+      background-position: right center
+      background-repeat: no-repeat
+      vertical-align: middle
+
+  &.plus svg
+    margin-right: 2px
+    margin-left: -4px
+    &.back
+      margin-left: 2px
+      margin-right: -4px
+
+  &.google
+    text-transform: none
+    font-family: $font-parag
+    letter-spacing: 0
+    font-weight: normal
+    background-color: #fff
+    box-shadow: 0 2px 4px 0 rgba(21,98,136,0.05)
+    color: $text-lighter-color
+    padding-left: 48px
+    padding-right: 48px
+    background-image: url("../images/gg_ico.png")
+    background-position: 20px center
+    background-repeat: no-repeat
+    background-size: auto 20px
+    &:hover
+      box-shadow: 0 4px 6px 0 rgba(21,98,136,0.1)
+      color: $text-color
+
+  &.disabled,
+  &[disabled]
+    @extend .btn_disabled
+
+input:invalid
+  & ~ .btn,
+  & ~ input[type="button"],
+  & ~ input[type="submit"],
+  & ~ input[type="reset"],
+  & ~ button,
+  & ~ .button
+    @extend .btn_disabled
+
+@media screen and (max-width: 767px)
+  .btn,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  button,
+  .button
+    line-height: 22px
+    font-size: 12px
+    padding: 8px 16px
+    height: 38px

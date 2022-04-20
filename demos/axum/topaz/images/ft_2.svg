@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>ft_2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="48" cy="48" r="48"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Topaz" transform="translate(-672.000000, -2469.000000)">
+            <g id="Group-18" transform="translate(251.000000, 2469.000000)">
+                <g id="ft_2" transform="translate(421.000000, 0.000000)">
+                    <g id="Path-4-+-Path-4-Mask">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <circle stroke="#4A4A4A" stroke-width="2" cx="48" cy="48" r="47"></circle>
+                        </g>
+                        <path d="M141.273438,37.5351563 L44.8254792,24.9397386 L44.8254792,24.9397386 C33.8727858,23.5093948 23.8343506,31.2287843 22.4040067,42.1814778 C21.8776865,46.2117137 22.5917792,50.3066519 24.4511696,53.9208576 L102.847656,206.304688 L141.273438,37.5351563 Z" id="Path-4" stroke="#4A4A4A" stroke-width="2" mask="url(#mask-2)"></path>
+                        <path d="M158.273438,44.5351562 L44.8040136,29.7168563 L44.8040136,29.7168563 C38.7800322,28.9301671 33.2588928,33.1758314 32.4722037,39.1998128 C32.1827276,41.4164426 32.5754786,43.6686586 33.5981433,45.6564717 L119.847656,213.304688 L158.273438,44.5351562 Z" id="Path-4" stroke="#4A4A4A" stroke-width="2" mask="url(#mask-2)"></path>
+                        <path d="M180.273438,68.5351563 L47.891274,51.2469869 L47.891274,51.2469869 C47.3436393,51.1754697 46.8417175,51.5614392 46.7702003,52.1090739 C46.7438843,52.3105857 46.779589,52.5153326 46.8725585,52.6960429 L141.847656,237.304688 L180.273438,68.5351563 Z" id="Path-4" stroke="#4A4A4A" stroke-width="2" opacity="0.200000003" mask="url(#mask-2)"></path>
+                        <circle id="Oval-4" stroke="#4A4A4A" stroke-width="0.5" fill="#4A4A4A" opacity="0.5" mask="url(#mask-2)" cx="69" cy="43" r="1"></circle>
+                        <path d="M73.5,43.5 L113.703125,48.5097656" id="Line-3" stroke="#4A4A4A" stroke-width="2" opacity="0.5" stroke-linecap="round" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M35.5,63.5 L43.5,78.5" id="Line" stroke="#4A4A4A" stroke-width="3" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="28px" viewBox="0 0 25 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Montar-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Montar-Design" transform="translate(-710.000000, -1177.000000)" fill="#DA0000">
+            <g id="Group-40" transform="translate(0.000000, 823.000000)">
+                <g id="play" transform="translate(680.000000, 328.000000)">
+                    <path d="M54.4360786,40.5324058 L31.6284348,53.2071381 C31.3650923,53.3559839 31.1389645,53.3731582 30.9500448,53.2586614 C30.7611251,53.1441646 30.6666667,52.9380735 30.6666667,52.640382 L30.6666667,27.3596171 C30.6666667,27.0619268 30.7611251,26.8558353 30.9500448,26.7413387 C31.1389645,26.6268421 31.3650923,26.6440154 31.6284348,26.7928625 L54.4360786,39.4675938 C54.6994223,39.616437 54.8310922,39.7939063 54.8310922,40.0000017 C54.8310922,40.2060932 54.6994223,40.3835625 54.4360786,40.5324058 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

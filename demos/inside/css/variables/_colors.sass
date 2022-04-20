@@ -1,0 +1,118 @@
+//$main-color: #8D8841
+$main-color: #d2572d
+//$main-color: #b16e4e
+$main-darker-color: #CA0407
+$main-dark-color: #9A7554
+$main-light-color: #DAE6E8
+$main-lightest-color: #F4F9FA
+$gray-color: #4A4A4A
+$black-color: #000000
+$text-color: #131313
+$text-lighter-color: #444444
+$red-faded: rgba(255, 75, 98, 0.4)
+$red-color: #F04E45
+$red-darker-color: #D0021B
+$green-faded: rgba(109, 198, 106, 0.4)
+$green-color: #45B97C
+$green-darker-color: #2EB827
+$blue-faded: rgba(50, 124, 237, 0.4)
+$blue-color: #19A7E6
+$blue-darker-color: #3E5592
+$orange-color: #E65E1D
+$yellow-color: #F8C623
+
+// PALETTE
+$primary: $main-color
+$neutral: $black-color
+$site-background: white
+
+$p1:   darken($primary,40%)
+$p2:   darken($primary,30%)
+$p3:   darken($primary,20%)
+$p4:   darken($primary,10%)
+$p5:   $primary
+$p6:  lighten($primary,10%)
+$p7:  lighten($primary,20%)
+$p8:  lighten($primary,30%)
+$p9:  lighten($primary,40%)
+$p10: lighten($primary,46%)
+
+$n1:  rgba($neutral,1)
+$n2:  rgba($neutral,.9)
+$n3:  rgba($neutral,.8)
+$n4:  rgba($neutral,.7)
+$n5:  rgba($neutral,.6)
+$n6:  rgba($neutral,.5)
+$n7:  rgba($neutral,.4)
+$n8:  rgba($neutral,.3)
+$n9:  rgba($neutral,.2)
+$n10: rgba($neutral,.08)
+
+.c
+  pointer-events: none
+  &.p1
+    background-color: $p1
+  &.p2
+    background-color: $p2
+  &.p3
+    background-color: $p3
+  &.p4
+    background-color: $p4
+  &.p5
+    background-color: $p5
+  &.p6
+    background-color: $p6
+  &.p7
+    background-color: $p7
+  &.p8
+    background-color: $p8
+  &.p9
+    background-color: $p9
+  &.p10
+    background-color: $p10
+
+  &.n1
+    background-color: $n1
+  &.n2
+    background-color: $n2
+  &.n3
+    background-color: $n3
+  &.n4
+    background-color: $n4
+  &.n5
+    background-color: $n5
+  &.n6
+    background-color: $n6
+  &.n7
+    background-color: $n7
+  &.n8
+    background-color: $n8
+  &.n9
+    background-color: $n9
+  &.n10
+    background-color: $n10
+
+/* Placeholder Color */
+$placeholder-depth: 1
+$placeholder-color: $n8
+
+::-webkit-input-placeholder
+  opacity: $placeholder-depth
+  color: $placeholder-color
+  -webkit-appearance: none
+  appearance: none
+  line-height: normal
+
+::-moz-placeholder
+  opacity: $placeholder-depth
+  color: $placeholder-color
+  -webkit-appearance: none
+  appearance: none
+  line-height: normal
+
+::-ms-input-placeholder
+  opacity: $placeholder-depth
+  color: $placeholder-color
+  -webkit-appearance: none
+  appearance: none
+  line-height: normal

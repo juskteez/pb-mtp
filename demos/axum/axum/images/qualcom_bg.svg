@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1340px" viewBox="0 0 1440 1340" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="path-1" x="0" y="0" width="1440" height="910"></rect>
+    <filter x="-10.4%" y="-77.3%" width="120.8%" height="254.6%" filterUnits="objectBoundingBox" id="filter-3">
+      <feGaussianBlur stdDeviation="16" in="SourceGraphic"></feGaussianBlur>
+    </filter>
+    <linearGradient x1="50%" y1="5.65385268%" x2="50%" y2="100%" id="linearGradient-4">
+      <stop stop-color="#201F1F" offset="0%"></stop>
+      <stop stop-color="#131313" offset="36.8920195%"></stop>
+      <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="qualcom_bg">
+      <g id="Bitmap" transform="translate(0.000000, 430.000000)">
+        <mask id="mask-2" fill="white">
+          <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#333333" xlink:href="#path-1"></use>
+        <image mask="url(#mask-2)" x="0" y="-215" width="1440" height="1340" xlink:href="qualcomm_bg.jpg"></image>
+        <ellipse id="Oval-2" fill="#E61C20" opacity="0.06" filter="url(#filter-3)" mask="url(#mask-2)" cx="720.5" cy="965" rx="720.5" ry="97"></ellipse>
+      </g>
+      <rect id="Rectangle-10" fill="url(#linearGradient-4)" x="0" y="0" width="1440" height="1340"></rect>
+    </g>
+  </g>
+</svg>

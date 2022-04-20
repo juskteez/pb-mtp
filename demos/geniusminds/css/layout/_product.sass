@@ -1,0 +1,287 @@
+.product-page
+  .main-content
+    padding: 0
+    @media (min-width: 1440px)
+      padding: 0
+    .title
+      font-size: 24px
+      line-height: 30px
+      @media (min-width: 1440px)
+        font-size: 42px
+        line-height: 63px
+
+.product-section-1
+  padding: 50px 0
+  @media (min-width: 1024px)
+    padding: 100px 0 130px
+
+.product-section-1__inner
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  padding: 0
+  @media (min-width: 1024px)
+    flex-direction: row
+    padding: 0 155px
+
+.product-section-1__title
+  margin-bottom: 20px
+  padding: 0 40px
+  @media (min-width: 1024px)
+    padding: 0
+
+.product-section-1__image
+  width: 100%
+  margin-bottom: 30px
+  img
+    width: 100%
+    height: auto
+  @media (min-width: 1024px)
+    width: 42.87%
+    margin-bottom: 0
+
+.product-section-1__body
+  width: 100%
+  @media (min-width: 1024px)
+    width: 43.26%
+  ul
+    li
+      @extend .section-paragraph
+      position: relative
+      margin-bottom: 5px
+      padding-left: 20px
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $main-color
+        transform: translate3d(0,-50%,0)
+
+.grid-layout__col4
+  display: flex
+  justify-content: center
+  align-items: stretch
+  flex-direction: column
+  flex-wrap: wrap
+  @media (min-width: 768px)
+    flex-direction: row
+    flex-wrap: wrap
+    margin-left: -10px
+    margin-right: -10px
+  @media (min-width: 1440px)
+    padding: 0 7.05%
+    margin-left: -20px
+    margin-right: -20px
+  .grid-col
+    width: 100%
+    margin-bottom: 20px
+    @media (min-width: 768px)
+      width: 50%
+      padding: 0 10px
+    @media (min-width: 1440px)
+      width: 25%
+      margin-bottom: 30px
+      padding: 0 20px
+  .team-list &
+    padding: 0
+  .services-list__item &
+    @media (max-width: 767px)
+      margin-left: 20px
+      margin-right: 20px
+
+.product-section-1__item
+  position: relative
+  height: 100%
+  padding: 35px 20px 1px
+  background-color: #f0f3f7
+  border-radius: 3px
+  text-align: center
+
+.product-section-1__item-icon
+  margin-bottom: 23px
+
+// Section 2
+.product-section-2
+  margin: 0 -20px
+  padding: 50px 20px
+  background-color: #f0f3f7
+  @media (min-width: 1024px)
+    margin: 0 -60px
+    padding: 100px 60px 125px
+
+.product-section-2__inner
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  @media (min-width: 1024px)
+    flex-direction: row
+    padding: 0 60px
+
+  .product-section-2__description
+    margin-bottom: 20px
+    @media (min-width: 1024px)
+      margin-bottom: 49px
+
+.product-section-2__title
+  @media (min-width: 1024px)
+    padding: 0 60px
+
+.product-section-2__image
+  order: 0
+  width: 100%
+  margin-bottom: 30px
+  img
+    width: 100%
+    height: auto
+  @media (min-width: 1024px)
+    order: 1
+    width: 48.4%
+    margin-bottom: 0
+
+.product-section-2__body
+  order: 1
+  width: 100%
+  @media (min-width: 1024px)
+    order: 0
+    width: 48%
+
+.product-section-2__item
+  margin-bottom: 8px
+  .section-title
+    margin-bottom: 10px
+
+.product-section-3
+  padding: 50px 0
+  @media (min-width: 1024px)
+    padding: 100px 0 130px
+
+.product-section-3__header,
+.product-section-1__header
+  max-width: 650px
+  margin: 0 auto 30px
+  text-align: center
+  @media (min-width: 1024px)
+    margin: 0 auto 81px
+
+.product-section-3__inner
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  padding: 0
+  @media (min-width: 1024px)
+    flex-direction: row
+    padding: 0 155px
+
+.product-section-3__title
+  margin-bottom: 20px
+  padding: 0 40px
+  @media (min-width: 1024px)
+    padding: 0
+
+.product-section-3__image
+  width: 100%
+  margin-bottom: 30px
+  img
+    width: 100%
+    height: auto
+  @media (min-width: 1024px)
+    width: 42.87%
+    margin-bottom: 0
+
+.product-section-3__body
+  width: 100%
+  @media (min-width: 1024px)
+    width: 43.26%
+
+.product-section-3__item
+  display: flex
+.product-section-3__item-icon
+  width: 42px
+  margin-right: 35px
+
+.product-section-4
+  margin: 0 -20px
+  padding: 50px 20px 20px
+  background-color: #f0f3f7
+  @media (min-width: 1024px)
+    margin: 0 -60px
+    padding: 116px 60px 90px
+
+.product-section-4__inner
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  @media (min-width: 1024px)
+    flex-direction: row
+    padding: 0 77px
+
+.product-section-4__body
+  order: 1
+  width: 100%
+  @media (min-width: 1024px)
+    order: 0
+    width: 47.2%
+
+.product-section-4__image
+  order: 0
+  width: 100%
+  margin-bottom: 30px
+  img
+    width: 100%
+    height: auto
+  @media (min-width: 1024px)
+    order: 1
+    width: 47.12%
+    margin-bottom: 0
+    padding-top: 30px
+
+.product-section-4__description
+  margin-bottom: 30px
+.product-section-4__item
+  display: inline-flex
+  margin-bottom: 24px
+.product-section-4__item-icon
+  width: 42px
+  margin-right: 33px
+  
+  
+.product-hero
+  background: rgba(#F0F3F7, .5) url(../images/bg-header-products.svg) no-repeat right bottom
+  padding: 235px 0 202px
+  position: relative
+  margin: 0
+  @media (min-width: 1440px)
+    margin: 0
+  &__inner
+    padding-left: 80px
+    display: flex
+    > *
+      flex: 1
+  &__content
+    max-width: 500px
+    text-align: center
+    @media (min-width: 1440px)
+      text-align: left
+  &__img
+    position: absolute
+    right: 0
+    bottom: 0
+  @media (max-width: 767px)
+    padding-bottom: 0
+    padding-top: 105px
+    &__inner
+      padding-left: 20px
+      padding-right: 20px
+      flex-flow: column
+      > *
+        width: 100%
+    &__img
+      position: relative
+      margin-top: 30px
+    .title br
+      display: none
+
